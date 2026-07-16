@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foreign Education Destination</title>
-    <!-- Google Fonts for Modern Look -->
+    <!-- Google Fonts & FontAwesome Icons for Social Media -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* CSS Styling */
         * {
@@ -32,6 +33,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo-container {
@@ -48,7 +51,7 @@
 
         .logo-text h1 {
             font-size: 1.4rem;
-            color: #0d47a1; /* Professional Blue */
+            color: #0d47a1;
             font-weight: 700;
         }
 
@@ -57,29 +60,40 @@
             color: #666;
         }
 
-        /* Hero / Welcome Section WITH AI BACKGROUND */
+        /* Top Social Icons */
+        .social-links-top a {
+            color: #555;
+            font-size: 1.3rem;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .social-links-top a:hover {
+            transform: scale(1.2);
+        }
+        .social-links-top .fa-facebook:hover { color: #1877F2; }
+        .social-links-top .fa-instagram:hover { color: #E4405F; }
+        .social-links-top .fa-tiktok:hover { color: #000000; }
+        .social-links-top .fa-youtube:hover { color: #FF0000; }
+
+        /* Hero / Welcome Section With AI Background */
         .hero {
-            /* 1. Naya AI Background Image URL */
             background-image: linear-gradient(135deg, rgba(13, 71, 161, 0.9) 0%, rgba(21, 101, 192, 0.85) 100%), 
                               url('https://images.unsplash.com/photo-1577017040065-650ee4d43339?q=80&w=2070&auto=format&fit=crop');
-            
-            /* 2. Image Positioning Details */
-            background-size: cover; /* Poore section ko cover kare */
-            background-position: center; /* Image ka center dikhe */
-            background-repeat: no-repeat; /* Image repeat na ho */
-            background-attachment: fixed; /* Parallax effect (image slowly move kare scroll par) */
-            
-            /* 3. Padding aur Color changes text visibility ke liye */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: white;
-            padding: 120px 5%; /* Thodi zyada height */
+            padding: 120px 5%;
             text-align: center;
         }
 
         .hero h2 {
-            font-size: 3rem; /* Thoda bada heading */
+            font-size: 3rem;
             margin-bottom: 20px;
             font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Taake image par bhi text read ho */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
         }
 
         .hero p {
@@ -91,7 +105,7 @@
         }
 
         .btn-consult {
-            background-color: #ffb300; /* Warm Yellow Button */
+            background-color: #ffb300;
             color: #111;
             padding: 14px 35px;
             border: none;
@@ -106,8 +120,6 @@
 
         .btn-consult:hover {
             background-color: #ffa000;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
 
         /* Services Section */
@@ -147,6 +159,62 @@
             font-size: 1.2rem;
         }
 
+        /* Student Videos Section */
+        .videos-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4ecf7 100%);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .videos-section h3 {
+            font-size: 2rem;
+            color: #0d47a1;
+            margin-bottom: 10px;
+        }
+
+        .videos-section p {
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-card h4 {
+            margin-top: 15px;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
         /* Contact & Inquiry Section */
         .contact {
             background-color: #fff;
@@ -158,11 +226,6 @@
             font-size: 2rem;
             color: #0d47a1;
             margin-bottom: 15px;
-        }
-
-        .contact p {
-            margin-bottom: 30px;
-            color: #666;
         }
 
         .contact-form {
@@ -193,17 +256,30 @@
             transition: 0.3s;
         }
 
-        .contact-form button:hover {
-            background-color: #1565c0;
-        }
-
-        /* Footer */
+        /* Footer Style & Footer Social Icons */
         footer {
             background-color: #111;
             color: #aaa;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             font-size: 0.9rem;
+        }
+
+        .footer-socials {
+            margin-bottom: 15px;
+        }
+
+        .footer-socials a {
+            color: #aaa;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .footer-socials a:hover {
+            color: #fff;
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -218,9 +294,16 @@
                 <p>Your Pathway to Global Success</p>
             </div>
         </div>
+        <!-- HEADER SOCIAL LINKS: Yahan "#" hata kar apne original links lagayein -->
+        <div class="social-links-top">
+            <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
     </header>
 
-    <!-- Hero / Main Banner WITH BACKGROUND IMAGE applied via CSS -->
+    <!-- Hero / Main Banner -->
     <section class="hero">
         <h2>Apna Future Global Banayein!</h2>
         <p>Duniya ki behtareen universities mein admission, visa guidance aur scholarships dhoondhne mein hamare experts ki madad lein.</p>
@@ -258,6 +341,27 @@
         </div>
     </section>
 
+    <!-- Videos / Success Stories -->
+    <section class="videos-section">
+        <h3>Our Students, Our Pride! 🎉</h3>
+        <p>Suniye un students ki zubani jo hamari consultancy ke zariye kamyab huye.</p>
+        
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <h4>Student Success Story - UK Visa Approved 🇬🇧</h4>
+            </div>
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <h4>Student Review - Canada Scholarship Journey 🇨🇦</h4>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Form Section -->
     <section class="contact" id="contact">
         <h3>Humse Raabta Karen</h3>
@@ -272,8 +376,15 @@
         </form>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Social Media Links -->
     <footer>
+        <!-- FOOTER SOCIAL LINKS: Yahan "#" hata kar apne original links lagayein -->
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/fedestination?igsh=MTk0YXUxYzhuZThwOA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/fedestination?utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@fedestination?si=A0Zfy6hLLgBj7qtp" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.tiktok.com/@fedestination?_r=1&_t=ZN-984zQ2CCxvf" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
         <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
     </footer>
 
