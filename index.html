@@ -135,6 +135,57 @@
             font-size: 1.2rem;
         }
 
+        /* Countries Section (NEW) */
+        .countries {
+            background-color: #f1f5f9;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .countries h3 {
+            font-size: 2rem;
+            color: #0d47a1;
+            margin-bottom: 15px;
+        }
+
+        .countries p {
+            margin-bottom: 40px;
+            color: #666;
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .country-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .country-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            color: #1565c0;
+        }
+
+        .country-flag {
+            font-size: 2.5rem;
+        }
+
         /* Contact & Inquiry Section */
         .contact {
             background-color: #fff;
@@ -273,6 +324,49 @@
             <div class="service-card">
                 <h4>✈️ Travel & Arrival Support</h4>
                 <p>From booking affordable flights and pre-departure briefings to arranging airport pick-ups and initial settling-in support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Destinations Section -->
+    <section class="countries">
+        <h3>Study Destinations</h3>
+        <p>We offer expert consultancy and services for top global education hubs:</p>
+        <div class="countries-grid">
+            <!-- UK -->
+            <div class="country-card">
+                <span class="country-flag">🇬🇧</span>
+                <span>United Kingdom</span>
+            </div>
+            <!-- Europe -->
+            <div class="country-card">
+                <span class="country-flag">🇪🇺</span>
+                <span>Europe</span>
+            </div>
+            <!-- Australia -->
+            <div class="country-card">
+                <span class="country-flag">🇦🇺</span>
+                <span>Australia</span>
+            </div>
+            <!-- Malaysia -->
+            <div class="country-card">
+                <span class="country-flag">🇲🇾</span>
+                <span>Malaysia</span>
+            </div>
+            <!-- New Zealand -->
+            <div class="country-card">
+                <span class="country-flag">🇳🇿</span>
+                <span>New Zealand</span>
+            </div>
+            <!-- UAE -->
+            <div class="country-card">
+                <span class="country-flag">🇦🇪</span>
+                <span>UAE</span>
+            </div>
+            <!-- Turkey -->
+            <div class="country-card">
+                <span class="country-flag">🇹🇷</span>
+                <span>Turkey</span>
             </div>
         </div>
     </section>
