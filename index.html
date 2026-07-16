@@ -9,6 +9,11 @@
     <!-- Font Awesome for Social Media & Country Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Smooth Scrolling Enable */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* CSS Styling */
         * {
             margin: 0;
@@ -294,6 +299,18 @@
             background-color: #1565c0;
         }
 
+        /* Beautiful Popup Alert Style */
+        .success-message {
+            display: none;
+            background-color: #2e7d32;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
         /* Footer */
         footer {
             background-color: #111;
@@ -344,7 +361,7 @@
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Study Destinations Section (NOW UPPER) -->
+    <!-- Study Destinations Section -->
     <section class="countries">
         <h3>Study Destinations</h3>
         <p>We offer expert consultancy and services for top global education hubs:</p>
@@ -416,7 +433,7 @@
         </div>
     </section>
 
-    <!-- Services Section (NOW LOWER) -->
+    <!-- Services Section -->
     <section class="services">
         <h3>Our Services</h3>
         <div class="services-grid">
@@ -463,12 +480,16 @@
         <h3>Contact Us</h3>
         <p>Fill out the form below, and our experts will get in touch with you shortly!</p>
         
-        <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <textarea name="message" rows="5" placeholder="Which country and course are you interested in?" required></textarea>
+        <form class="contact-form" id="inquiryForm">
+            <input type="text" id="userName" name="name" placeholder="Your Name" required>
+            <input type="email" id="userEmail" name="email" placeholder="Your Email" required>
+            <input type="tel" id="userPhone" name="phone" placeholder="Your Phone Number" required>
+            <textarea id="userMessage" name="message" rows="5" placeholder="Which country and course are you interested in?" required></textarea>
             <button type="submit">Submit Form</button>
+            <!-- Success Message Notification -->
+            <div class="success-message" id="successNotification">
+                🎉 Thank you! Your inquiry has been submitted successfully. We will contact you shortly.
+            </div>
         </form>
     </section>
 
@@ -494,6 +515,43 @@
         </div>
         <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
     </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // 1. Interactive Country Cards Click Event
+        document.querySelectorAll('.country-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const countryName = card.querySelector('.country-name').textContent;
+                const messageBox = document.getElementById('userMessage');
+                
+                // Pre-fill the message box with the selected country
+                messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
+                
+                // Smooth scroll to the contact form
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                
+                // Focus on the message box so user can write further details
+                messageBox.focus();
+            });
+        });
+
+        // 2. Form Submission Event
+        const form = document.getElementById('inquiryForm');
+        const successAlert = document.getElementById('successNotification');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevents page from reloading and breaking
+            
+            // Show custom success notification
+            successAlert.style.display = 'block';
+            
+            // Auto hide message after 5 seconds and reset form
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+                form.reset();
+            }, 5000);
+        });
+    </script>
 
 </body>
 </html>
