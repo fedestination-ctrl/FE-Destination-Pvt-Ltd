@@ -4,50 +4,745 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foreign Education Destination</title>
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Social Media & Country Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css for entrance animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
-        /* Basic styling */
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
-        section { margin-bottom: 40px; padding: 20px; border: 1px solid #ddd; }
-        .social-links a { margin-right: 15px; text-decoration: none; color: blue; }
+        /* Smooth Scrolling Enable */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* CSS Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            color: #0d47a1; /* Professional Blue */
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Hero / Welcome Section with Entrance Animation */
+        .hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .btn-consult {
+            background-color: #ffb300; /* Warm Yellow Button */
+            color: #111;
+            padding: 12px 35px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 179, 0, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .btn-consult:hover {
+            background-color: #ffa000;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 179, 0, 0.6);
+        }
+
+        /* Study Destinations Section */
+        .countries {
+            background-color: #f1f5f9;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .countries h3 {
+            font-size: 2.2rem;
+            color: #0d47a1;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .countries p {
+            margin-bottom: 50px;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .country-card {
+            position: relative;
+            height: 280px;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .country-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 1;
+        }
+
+        .country-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
+            z-index: 2;
+            transition: opacity 0.4s ease;
+        }
+
+        .country-content {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .country-icon {
+            font-size: 2.5rem;
+            color: #ffb300; 
+            transition: transform 0.4s ease;
+            filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));
+        }
+
+        .country-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .country-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(13, 71, 161, 0.25);
+        }
+
+        .country-card:hover .country-bg {
+            transform: scale(1.15);
+        }
+
+        .country-card:hover .country-icon {
+            transform: scale(1.2) translateY(-5px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .services h3 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #0d47a1;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease-in-out;
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-top: 4px solid #0d47a1;
+        }
+
+        .service-card h4 {
+            color: #1565c0;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Animated Student Success Section */
+        .student-section {
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .student-section h3 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .student-section p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* Sliding Track Animation */
+        .success-slider {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            animation: slideLeft 25s linear infinite;
+        }
+
+        .success-slider:hover {
+            animation-play-state: paused; /* Hover karne par slide ruk jayegi */
+        }
+
+        .student-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 25px;
+            border-radius: 15px;
+            width: 320px;
+            text-align: left;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .student-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .student-img-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* Circle shape */
+            object-fit: cover; /* Photo stretch nahi hogi */
+            border: 2px solid #ffb300; /* Beautiful golden yellow border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .student-details h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .student-details span {
+            font-size: 0.85rem;
+            color: #ffb300;
+        }
+
+        .student-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #e0e0e0;
+            margin-bottom: 0;
+            opacity: 1;
+        }
+
+        @keyframes slideLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Contact & Inquiry Section */
+        .contact {
+            background-color: #f1f5f9;
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .contact h3 {
+            font-size: 2rem;
+            color: #0d47a1;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #0d47a1;
+            box-shadow: 0 0 8px rgba(13, 71, 161, 0.2);
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #0d47a1;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #1565c0;
+            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
+        }
+
+        /* Success Message Notification */
+        .success-message {
+            display: none;
+            background-color: #2e7d32;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Social Media Floating/Hover Style */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #aaa;
+            font-size: 1.8rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Unique Social Colors on Hover */
+        .social-icons a.fb:hover { color: #1877F2; transform: translateY(-5px) scale(1.2); }
+        .social-icons a.ig:hover { color: #E1306C; transform: translateY(-5px) scale(1.2); }
+        .social-icons a.tk:hover { color: #00f2fe; transform: translateY(-5px) scale(1.2); }
+        .social-icons a.yt:hover { color: #FF0000; transform: translateY(-5px) scale(1.2); }
+
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>Foreign Education Destination</h1>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">TikTok</a>
-            <a href="#">YouTube</a>
+        <div class="logo-container">
+            <img src="LOGO.jpeg" alt="Foreign Education Destination Logo">
+            <div class="logo-text">
+                <h1>Foreign Education Destination</h1>
+                <p>Your Pathway to Global Success</p>
+            </div>
         </div>
     </header>
 
-    <!-- Destinations Section (Upar) -->
-    <section id="destinations">
-        <h2>Our Destinations</h2>
-        <p>We offer consultancy and services for UK, Europe, Australia, Malaysia, New Zealand, UAE, Turkey.</p>
+    <!-- Hero Section with Animation -->
+    <section class="hero">
+        <h2 class="animate__animated animate__fadeInDown">Build Your Global Future!</h2>
+        <p class="animate__animated animate__fadeInUp">We help you secure admissions, visa guidance, and top scholarships at the world's leading universities.</p>
+        <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Services Section (Neeche) -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>Expert guidance for your study abroad journey.</p>
+    <!-- Study Destinations Section (Positioned Above Services) -->
+    <section class="countries">
+        <h3>Study Destinations</h3>
+        <p>We offer expert consultancy and services for top global education hubs:</p>
+        <div class="countries-grid">
+            
+            <!-- United Kingdom -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-landmark country-icon"></i>
+                    <span class="country-name">United Kingdom</span>
+                </div>
+            </div>
+
+            <!-- Europe -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-globe-europe country-icon"></i>
+                    <span class="country-name">Europe</span>
+                </div>
+            </div>
+
+            <!-- Australia -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-graduation-cap country-icon"></i>
+                    <span class="country-name">Australia</span>
+                </div>
+            </div>
+
+            <!-- Malaysia -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2280547/pexels-photo-2280547.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-archway country-icon"></i>
+                    <span class="country-name">Malaysia</span>
+                </div>
+            </div>
+
+            <!-- New Zealand -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3042211/pexels-photo-3042211.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-mountain country-icon"></i>
+                    <span class="country-name">New Zealand</span>
+                </div>
+            </div>
+
+            <!-- UAE -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/162031/dubai-tower-arabia-united-arab-emirates-162031.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-city country-icon"></i>
+                    <span class="country-name">UAE</span>
+                </div>
+            </div>
+
+            <!-- Turkey -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2048548/pexels-photo-2048548.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-mosque country-icon"></i>
+                    <span class="country-name">Turkey</span>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Contact Form (Formspree) -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/xpqvpanq" method="POST">
-            <label>Your email:</label><br>
-            <input type="email" name="email" required><br><br>
+    <!-- Services Section -->
+    <section class="services">
+        <h3>Our Services</h3>
+        <div class="services-grid">
+            <!-- 1. Admission Guidance -->
+            <div class="service-card">
+                <h4>🎓 Admission Guidance</h4>
+                <p>Complete guidance to secure admissions in top universities across the UK, USA, Canada, and Australia.</p>
+            </div>
             
-            <label>Your message:</label><br>
-            <textarea name="message" required></textarea><br><br>
+            <!-- 2. Visa Assistance -->
+            <div class="service-card">
+                <h4>📝 Visa Assistance</h4>
+                <p>Expert support for document preparation, file processing, and mock visa interview training.</p>
+            </div>
             
-            <button type="submit">Send</button>
+            <!-- 3. Scholarship Support -->
+            <div class="service-card">
+                <h4>💰 Scholarship Support</h4>
+                <p>Assistance in finding and applying for the best scholarships and financial aid tailored to your academic record.</p>
+            </div>
+
+            <!-- 4. Student Accommodation -->
+            <div class="service-card">
+                <h4>🏠 Student Accommodation</h4>
+                <p>We help you find safe, comfortable, and affordable student housing, hostels, or shared apartments close to your campus.</p>
+            </div>
+
+            <!-- 5. Student Insurance -->
+            <div class="service-card">
+                <h4>🛡️ Travel & Health Insurance</h4>
+                <p>Hassle-free guidance to secure mandatory international student health cover (OSHC) and travel insurance.</p>
+            </div>
+
+            <!-- 6. Pre-Departure & Travel Support -->
+            <div class="service-card">
+                <h4>✈️ Travel & Arrival Support</h4>
+                <p>From booking affordable flights and pre-departure briefings to arranging airport pick-ups and initial settling-in support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Student Success Section (With High Quality Student Live Photos) -->
+    <section class="student-section">
+        <h3>Success Stories</h3>
+        <p>See what our students say about our professional guidance!</p>
+        
+        <div style="overflow: hidden; width: 100%;">
+            <div class="success-slider">
+                
+                <!-- Student 1 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ali Ahmed" class="student-img-avatar">
+                        <div class="student-details">
+                            <h5>Ali Ahmed</h5>
+                            <span>UK Graduate Study</span>
+                        </div>
+                    </div>
+                    <p>"FED helped me secure admission at a top UK University. The entire visa processing was smooth and stress-free."</p>
+                </div>
+                
+                <!-- Student 2 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
+                        <div class="student-details">
+                            <h5>Ayesha Khan</h5>
+                            <span>Europe (Germany)</span>
+                        </div>
+                    </div>
+                    <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
+                </div>
+                
+                <!-- Student 3 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Bilal Shah" class="student-img-avatar">
+                        <div class="student-details">
+                            <h5>Bilal Shah</h5>
+                            <span>Australia Study</span>
+                        </div>
+                    </div>
+                    <p>"Their accommodation guidance was amazing. Found a safe and affordable place near my campus before landing."</p>
+                </div>
+                
+                <!-- Student 4 -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Fatima Zahra" class="student-img-avatar">
+                        <div class="student-details">
+                            <h5>Fatima Zahra</h5>
+                            <span>Malaysia (UTM)</span>
+                        </div>
+                    </div>
+                    <p>"The scholarship assistance they offered helped me save 50% on my tuition fees. Truly grateful to the team."</p>
+                </div>
+
+                <!-- Duplicate Cards for Infinite Loop Animation -->
+                <div class="student-card">
+                    <div class="student-header">
+                        <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ali Ahmed" class="student-img-avatar">
+                        <div class="student-details">
+                            <h5>Ali Ahmed</h5>
+                            <span>UK Graduate Study</span>
+                        </div>
+                    </div>
+                    <p>"FED helped me secure admission at a top UK University. The entire visa processing was smooth and stress-free."</p>
+                </div>
+                
+                <div class="student-card">
+                    <div class="student-header">
+                        <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
+                        <div class="student-details">
+                            <h5>Ayesha Khan</h5>
+                            <span>Europe (Germany)</span>
+                        </div>
+                    </div>
+                    <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact" id="contact">
+        <h3>Contact Us</h3>
+        <p>Fill out the form below, and our experts will get in touch with you shortly!</p>
+        
+        <form class="contact-form" id="inquiryForm" action="https://formspree.io/f/xpqvpanq" method="POST">
+            <input type="text" id="userName" name="name" placeholder="Your Name" required>
+            <input type="email" id="userEmail" name="email" placeholder="Your Email" required>
+            <input type="tel" id="userPhone" name="phone" placeholder="Your Phone Number" required>
+            <textarea id="userMessage" name="message" rows="5" placeholder="Which country and course are you interested in?" required></textarea>
+            <button type="submit">Submit Form</button>
+            <div class="success-message" id="successNotification">
+                🎉 Thank you! Your inquiry has been submitted successfully. We will contact you shortly.
+            </div>
         </form>
     </section>
+
+    <!-- Footer with Social Media Links -->
+    <footer>
+        <div class="social-icons">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer" class="fb">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/fedestination?igsh=MTk0YXUxYzhuZThwOA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="ig">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@fedestination?_r=1&_t=ZN-984zQ2CCxvf" target="_blank" rel="noopener noreferrer" class="tk">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer" class="yt">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+        <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Interactive Country Cards Click Event
+        document.querySelectorAll('.country-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const countryName = card.querySelector('.country-name').textContent;
+                const messageBox = document.getElementById('userMessage');
+                
+                messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                messageBox.focus();
+            });
+        });
+
+        // Form Submission via Formspree
+        const form = document.getElementById('inquiryForm');
+        const successAlert = document.getElementById('successNotification');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    successAlert.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => {
+                        successAlert.style.display = 'none';
+                    }, 5000);
+                } else {
+                    alert("Oops! Kuch masla hua hai, please dobara koshish karein.");
+                }
+            }).catch(error => {
+                alert("Internet connection ka issue hai. Please check karein.");
+            });
+        });
+    </script>
 
 </body>
 </html>
