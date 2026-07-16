@@ -258,7 +258,7 @@
             font-weight: 600;
         }
 
-        /* Animated Student Success Section (Brand New!) */
+        /* Animated Student Success Section */
         .student-section {
             background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
             color: white;
@@ -309,9 +309,13 @@
             margin-bottom: 15px;
         }
 
-        .student-avatar {
-            font-size: 2.5rem;
-            color: #ffb300;
+        .student-img-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* Circle shape */
+            object-fit: cover; /* Photo stretch nahi hogi */
+            border: 2px solid #ffb300; /* Beautiful golden yellow border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .student-details h5 {
@@ -460,7 +464,7 @@
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Study Destinations Section -->
+    <!-- Study Destinations Section (Positioned Above Services) -->
     <section class="countries">
         <h3>Study Destinations</h3>
         <p>We offer expert consultancy and services for top global education hubs:</p>
@@ -574,17 +578,18 @@
         </div>
     </section>
 
-    <!-- Animated Student Success Section -->
+    <!-- Animated Student Success Section (With High Quality Student Live Photos) -->
     <section class="student-section">
         <h3>Success Stories</h3>
         <p>See what our students say about our professional guidance!</p>
         
         <div style="overflow: hidden; width: 100%;">
             <div class="success-slider">
-                <!-- Card 1 -->
+                
+                <!-- Student 1 -->
                 <div class="student-card">
                     <div class="student-header">
-                        <i class="fas fa-user-graduate student-avatar"></i>
+                        <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ali Ahmed" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Ali Ahmed</h5>
                             <span>UK Graduate Study</span>
@@ -592,10 +597,11 @@
                     </div>
                     <p>"FED helped me secure admission at a top UK University. The entire visa processing was smooth and stress-free."</p>
                 </div>
-                <!-- Card 2 -->
+                
+                <!-- Student 2 -->
                 <div class="student-card">
                     <div class="student-header">
-                        <i class="fas fa-user-graduate student-avatar"></i>
+                        <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Ayesha Khan</h5>
                             <span>Europe (Germany)</span>
@@ -603,10 +609,11 @@
                     </div>
                     <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
                 </div>
-                <!-- Card 3 -->
+                
+                <!-- Student 3 -->
                 <div class="student-card">
                     <div class="student-header">
-                        <i class="fas fa-user-graduate student-avatar"></i>
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Bilal Shah" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Bilal Shah</h5>
                             <span>Australia Study</span>
@@ -614,10 +621,11 @@
                     </div>
                     <p>"Their accommodation guidance was amazing. Found a safe and affordable place near my campus before landing."</p>
                 </div>
-                <!-- Card 4 -->
+                
+                <!-- Student 4 -->
                 <div class="student-card">
                     <div class="student-header">
-                        <i class="fas fa-user-graduate student-avatar"></i>
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Fatima Zahra" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Fatima Zahra</h5>
                             <span>Malaysia (UTM)</span>
@@ -625,10 +633,11 @@
                     </div>
                     <p>"The scholarship assistance they offered helped me save 50% on my tuition fees. Truly grateful to the team."</p>
                 </div>
-                <!-- Duplicate cards for infinite loop effect -->
+
+                <!-- Duplicate Cards for Infinite Loop Animation -->
                 <div class="student-card">
                     <div class="student-header">
-                        <i class="fas fa-user-graduate student-avatar"></i>
+                        <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ali Ahmed" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Ali Ahmed</h5>
                             <span>UK Graduate Study</span>
@@ -636,9 +645,10 @@
                     </div>
                     <p>"FED helped me secure admission at a top UK University. The entire visa processing was smooth and stress-free."</p>
                 </div>
+                
                 <div class="student-card">
                     <div class="student-header">
-                        <i class="fas fa-user-graduate student-avatar"></i>
+                        <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Ayesha Khan</h5>
                             <span>Europe (Germany)</span>
@@ -646,6 +656,7 @@
                     </div>
                     <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -704,7 +715,7 @@
             });
         });
 
-        // Form Submission
+        // Form Submission via Formspree
         const form = document.getElementById('inquiryForm');
         const successAlert = document.getElementById('successNotification');
 
