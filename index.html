@@ -6,7 +6,7 @@
     <title>Foreign Education Destination</title>
     <!-- Google Fonts for Modern Look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Social Media Icons -->
+    <!-- Font Awesome for Social Media & Country Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* CSS Styling */
@@ -98,43 +98,6 @@
             transform: translateY(-2px);
         }
 
-        /* Services Section */
-        .services {
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        .services h3 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: #0d47a1;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .service-card h4 {
-            color: #1565c0;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
         /* Modern Countries Section with Background Images & Animations */
         .countries {
             background-color: #f1f5f9;
@@ -173,9 +136,9 @@
             justify-content: center;
             align-items: center;
             color: white;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             cursor: pointer;
         }
 
@@ -200,24 +163,26 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
             z-index: 2;
             transition: opacity 0.4s ease;
         }
 
-        /* Content styling (Flag and Text) */
+        /* Content styling (Icon and Text) */
         .country-content {
             position: relative;
             z-index: 3;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
-        .country-flag {
-            font-size: 3rem;
+        .country-icon {
+            font-size: 2.5rem;
+            color: #ffb300; /* Warm golden color for icons */
             transition: transform 0.4s ease;
+            filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));
         }
 
         .country-name {
@@ -229,20 +194,59 @@
         /* Hover Animations */
         .country-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
         }
 
         .country-card:hover .country-bg {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
 
-        .country-card:hover .country-flag {
-            transform: scale(1.2) rotate(5deg);
+        .country-card:hover .country-icon {
+            transform: scale(1.2) translateY(-5px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .services h3 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #0d47a1;
+            font-weight: 700;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card h4 {
+            color: #1565c0;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
         }
 
         /* Contact & Inquiry Section */
         .contact {
-            background-color: #fff;
+            background-color: #f1f5f9;
             padding: 60px 5%;
             text-align: center;
         }
@@ -340,7 +344,79 @@
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Services Section -->
+    <!-- Study Destinations Section (NOW UPPER) -->
+    <section class="countries">
+        <h3>Study Destinations</h3>
+        <p>We offer expert consultancy and services for top global education hubs:</p>
+        <div class="countries-grid">
+            
+            <!-- United Kingdom -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-landmark country-icon"></i>
+                    <span class="country-name">United Kingdom</span>
+                </div>
+            </div>
+
+            <!-- Europe -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-globe-europe country-icon"></i>
+                    <span class="country-name">Europe</span>
+                </div>
+            </div>
+
+            <!-- Australia -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-graduation-cap country-icon"></i>
+                    <span class="country-name">Australia</span>
+                </div>
+            </div>
+
+            <!-- Malaysia -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2280547/pexels-photo-2280547.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-archway country-icon"></i>
+                    <span class="country-name">Malaysia</span>
+                </div>
+            </div>
+
+            <!-- New Zealand -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3042211/pexels-photo-3042211.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-mountain country-icon"></i>
+                    <span class="country-name">New Zealand</span>
+                </div>
+            </div>
+
+            <!-- UAE -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/162031/dubai-tower-arabia-united-arab-emirates-162031.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-city country-icon"></i>
+                    <span class="country-name">UAE</span>
+                </div>
+            </div>
+
+            <!-- Turkey -->
+            <div class="country-card">
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2048548/pexels-photo-2048548.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-content">
+                    <i class="fas fa-mosque country-icon"></i>
+                    <span class="country-name">Turkey</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section (NOW LOWER) -->
     <section class="services">
         <h3>Our Services</h3>
         <div class="services-grid">
@@ -379,78 +455,6 @@
                 <h4>✈️ Travel & Arrival Support</h4>
                 <p>From booking affordable flights and pre-departure briefings to arranging airport pick-ups and initial settling-in support.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Study Destinations Section -->
-    <section class="countries">
-        <h3>Study Destinations</h3>
-        <p>We offer expert consultancy and services for top global education hubs:</p>
-        <div class="countries-grid">
-            
-            <!-- United Kingdom -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇬🇧</span>
-                    <span class="country-name">United Kingdom</span>
-                </div>
-            </div>
-
-            <!-- Europe -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇪🇺</span>
-                    <span class="country-name">Europe</span>
-                </div>
-            </div>
-
-            <!-- Australia -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇦🇺</span>
-                    <span class="country-name">Australia</span>
-                </div>
-            </div>
-
-            <!-- Malaysia -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇲🇾</span>
-                    <span class="country-name">Malaysia</span>
-                </div>
-            </div>
-
-            <!-- New Zealand -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇳🇿</span>
-                    <span class="country-name">New Zealand</span>
-                </div>
-            </div>
-
-            <!-- UAE -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇦🇪</span>
-                    <span class="country-name">UAE</span>
-                </div>
-            </div>
-
-            <!-- Turkey -->
-            <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=80');"></div>
-                <div class="country-content">
-                    <span class="country-flag">🇹🇷</span>
-                    <span class="country-name">Turkey</span>
-                </div>
-            </div>
-
         </div>
     </section>
 
