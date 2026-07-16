@@ -135,55 +135,109 @@
             font-size: 1.2rem;
         }
 
-        /* Countries Section (NEW) */
+        /* Modern Countries Section with Background Images & Animations */
         .countries {
             background-color: #f1f5f9;
-            padding: 60px 5%;
+            padding: 80px 5%;
             text-align: center;
         }
 
         .countries h3 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #0d47a1;
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .countries p {
-            margin-bottom: 40px;
-            color: #666;
+            margin-bottom: 50px;
+            color: #555;
+            font-size: 1.1rem;
         }
 
         .countries-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .country-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #333;
+            position: relative;
+            height: 280px;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+
+        /* Background image container for zoom effect */
+        .country-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: 1;
+        }
+
+        /* Dark Overlay for readability */
+        .country-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+            z-index: 2;
+            transition: opacity 0.4s ease;
+        }
+
+        /* Content styling (Flag and Text) */
+        .country-content {
+            position: relative;
+            z-index: 3;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
-            transition: 0.3s;
-        }
-
-        .country-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-            color: #1565c0;
+            gap: 12px;
         }
 
         .country-flag {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            transition: transform 0.4s ease;
+        }
+
+        .country-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Hover Animations */
+        .country-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .country-card:hover .country-bg {
+            transform: scale(1.1);
+        }
+
+        .country-card:hover .country-flag {
+            transform: scale(1.2) rotate(5deg);
         }
 
         /* Contact & Inquiry Section */
@@ -333,41 +387,70 @@
         <h3>Study Destinations</h3>
         <p>We offer expert consultancy and services for top global education hubs:</p>
         <div class="countries-grid">
-            <!-- UK -->
+            
+            <!-- United Kingdom -->
             <div class="country-card">
-                <span class="country-flag">🇬🇧</span>
-                <span>United Kingdom</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇬🇧</span>
+                    <span class="country-name">United Kingdom</span>
+                </div>
             </div>
+
             <!-- Europe -->
             <div class="country-card">
-                <span class="country-flag">🇪🇺</span>
-                <span>Europe</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇪🇺</span>
+                    <span class="country-name">Europe</span>
+                </div>
             </div>
+
             <!-- Australia -->
             <div class="country-card">
-                <span class="country-flag">🇦🇺</span>
-                <span>Australia</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇦🇺</span>
+                    <span class="country-name">Australia</span>
+                </div>
             </div>
+
             <!-- Malaysia -->
             <div class="country-card">
-                <span class="country-flag">🇲🇾</span>
-                <span>Malaysia</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇲🇾</span>
+                    <span class="country-name">Malaysia</span>
+                </div>
             </div>
+
             <!-- New Zealand -->
             <div class="country-card">
-                <span class="country-flag">🇳🇿</span>
-                <span>New Zealand</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇳🇿</span>
+                    <span class="country-name">New Zealand</span>
+                </div>
             </div>
+
             <!-- UAE -->
             <div class="country-card">
-                <span class="country-flag">🇦🇪</span>
-                <span>UAE</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇦🇪</span>
+                    <span class="country-name">UAE</span>
+                </div>
             </div>
+
             <!-- Turkey -->
             <div class="country-card">
-                <span class="country-flag">🇹🇷</span>
-                <span>Turkey</span>
+                <div class="country-bg" style="background-image: url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="country-content">
+                    <span class="country-flag">🇹🇷</span>
+                    <span class="country-name">Turkey</span>
+                </div>
             </div>
+
         </div>
     </section>
 
