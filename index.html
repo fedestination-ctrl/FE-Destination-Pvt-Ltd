@@ -29,7 +29,28 @@
         html {
             scroll-behavior: smooth;
         }
+// Country Cards Click Event - Ab naye pages open honge
+document.querySelectorAll('.country-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const countryName = card.querySelector('.country-name').textContent.trim();
+        
+        // Yahan file ke naam define karein
+        const countryPages = {
+            "United Kingdom": "uk.html",
+            "Europe": "europe.html",
+            "Australia": "australia.html",
+            "Malaysia": "malaysia.html",
+            "New Zealand": "newzealand.html",
+            "UAE": "uae.html",
+            "Turkey": "turkey.html"
+        };
 
+        // Agar file exist karti hai toh usay open karein
+        if (countryPages[countryName]) {
+            window.location.href = countryPages[countryName];
+        }
+    });
+});
         /* CSS Styling */
         * {
             margin: 0;
