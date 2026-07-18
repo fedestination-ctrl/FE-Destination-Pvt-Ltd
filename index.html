@@ -742,18 +742,17 @@ document.querySelectorAll('.country-card').forEach(card => {
     </footer>
 
     <!-- Interactive JavaScript -->
-    <script>
-        // Interactive Country Cards Click Event
-        document.querySelectorAll('.country-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const countryName = card.querySelector('.country-name').textContent;
-                const messageBox = document.getElementById('userMessage');
-                
-                messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
-                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                messageBox.focus();
-            });
-        });
+    // YEH WALA CODE DELETE KAR DEIN:
+document.querySelectorAll('.country-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const countryName = card.querySelector('.country-name').textContent;
+        const messageBox = document.getElementById('userMessage');
+        
+        messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        messageBox.focus();
+    });
+});
 
         // Form Submission via Formspree
         const form = document.getElementById('inquiryForm');
