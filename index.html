@@ -20,7 +20,7 @@
     <title>Foreign Education Destination</title>
     <!-- Google Fonts for Modern Look -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Social Media & Country Icons -->
+    <!-- Font Awesome for Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Animate.css for entrance animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -72,7 +72,7 @@
 
         .logo-text h1 {
             font-size: 1.4rem;
-            color: #0d47a1; /* Professional Blue */
+            color: #0d47a1;
             font-weight: 700;
         }
 
@@ -81,7 +81,7 @@
             color: #666;
         }
 
-        /* Hero / Welcome Section with Entrance Animation */
+        /* Hero / Welcome Section */
         .hero {
             background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
             color: white;
@@ -107,7 +107,7 @@
         }
 
         .btn-consult {
-            background-color: #ffb300; /* Warm Yellow Button */
+            background-color: #ffb300;
             color: #111;
             padding: 12px 35px;
             border: none;
@@ -190,7 +190,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.75) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%);
             z-index: 2;
             transition: opacity 0.4s ease;
         }
@@ -201,20 +201,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
-        .country-icon {
-            font-size: 2.5rem;
-            color: #ffb300; 
+        /* Real Flag Icon Styling inside Card */
+        .country-flag-icon {
+            width: 55px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
             transition: transform 0.4s ease;
-            filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));
         }
 
         .country-name {
             font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         .country-card:hover {
@@ -226,8 +230,8 @@
             transform: scale(1.15);
         }
 
-        .country-card:hover .country-icon {
-            transform: scale(1.2) translateY(-5px);
+        .country-card:hover .country-flag-icon {
+            transform: scale(1.15) translateY(-3px);
         }
 
         /* Services Section */
@@ -293,7 +297,6 @@
             margin-bottom: 30px;
         }
 
-        /* Sliding Track Animation */
         .success-slider {
             display: flex;
             gap: 30px;
@@ -329,7 +332,6 @@
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid #ffb300;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .student-details h5 {
@@ -355,7 +357,7 @@
             100% { transform: translateX(-50%); }
         }
 
-        /* Contact & Inquiry Section */
+        /* Contact Section */
         .contact {
             background-color: #f1f5f9;
             padding: 60px 5%;
@@ -387,12 +389,10 @@
             border-radius: 5px;
             font-size: 1rem;
             width: 100%;
-            transition: all 0.3s ease;
         }
 
         .contact-form input:focus, .contact-form textarea:focus {
             border-color: #0d47a1;
-            box-shadow: 0 0 8px rgba(13, 71, 161, 0.2);
             outline: none;
         }
 
@@ -410,10 +410,8 @@
 
         .contact-form button:hover {
             background-color: #1565c0;
-            box-shadow: 0 4px 15px rgba(21, 101, 192, 0.3);
         }
 
-        /* Success Message Notification */
         .success-message {
             display: none;
             background-color: #2e7d32;
@@ -422,7 +420,6 @@
             border-radius: 5px;
             margin-top: 15px;
             font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
         /* Footer */
@@ -434,7 +431,6 @@
             font-size: 0.9rem;
         }
 
-        /* Social Media Floating/Hover Style */
         .social-icons {
             display: flex;
             justify-content: center;
@@ -445,7 +441,7 @@
         .social-icons a {
             color: #aaa;
             font-size: 1.8rem;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
         }
@@ -454,7 +450,6 @@
         .social-icons a.ig:hover { color: #E1306C; transform: translateY(-5px) scale(1.2); }
         .social-icons a.tk:hover { color: #00f2fe; transform: translateY(-5px) scale(1.2); }
         .social-icons a.yt:hover { color: #FF0000; transform: translateY(-5px) scale(1.2); }
-
     </style>
 </head>
 <body>
@@ -476,14 +471,14 @@
         </ul>
     </nav>
 
-    <!-- Hero Section with Animation -->
+    <!-- Hero Section -->
     <section class="hero">
         <h2 class="animate__animated animate__fadeInDown">Build Your Global Future!</h2>
         <p class="animate__animated animate__fadeInUp">We help you secure admissions, visa guidance, and top scholarships at the world's leading universities.</p>
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Study Destinations Section -->
+    <!-- Study Destinations Section with Real Flag Icons -->
     <section class="countries">
         <h3>Study Destinations</h3>
         <p>We offer expert consultancy and services for top global education hubs:</p>
@@ -493,7 +488,7 @@
             <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="country-flag-icon">
                     <span class="country-name">United Kingdom</span>
                 </div>
             </div>
@@ -502,7 +497,7 @@
             <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/eu.png" alt="Europe Flag" class="country-flag-icon">
                     <span class="country-name">Europe</span>
                 </div>
             </div>
@@ -511,16 +506,16 @@
             <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag" class="country-flag-icon">
                     <span class="country-name">Australia</span>
                 </div>
             </div>
 
             <!-- Malaysia -->
             <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2280547/pexels-photo-2280547.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3124584/pexels-photo-3124584.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/my.png" alt="Malaysia Flag" class="country-flag-icon">
                     <span class="country-name">Malaysia</span>
                 </div>
             </div>
@@ -529,7 +524,7 @@
             <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3042211/pexels-photo-3042211.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag" class="country-flag-icon">
                     <span class="country-name">New Zealand</span>
                 </div>
             </div>
@@ -538,16 +533,16 @@
             <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/162031/dubai-tower-arabia-united-arab-emirates-162031.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag" class="country-flag-icon">
                     <span class="country-name">UAE</span>
                 </div>
             </div>
 
             <!-- Turkey -->
             <div class="country-card">
-                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2048548/pexels-photo-2048548.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
+                <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <i class="fas fa-flag country-icon"></i>
+                    <img src="https://flagcdn.com/w80/tr.png" alt="Turkey Flag" class="country-flag-icon">
                     <span class="country-name">Turkey</span>
                 </div>
             </div>
@@ -561,7 +556,7 @@
         <div class="services-grid">
             <div class="service-card">
                 <h4>🎓 Admission Guidance</h4>
-                <p>Complete guidance to secure admissions in top universities across the UK, USA, Canada, and Australia.</p>
+                <p>Complete guidance to secure admissions in top universities across global study destinations.</p>
             </div>
             <div class="service-card">
                 <h4>📝 Visa Assistance</h4>
@@ -573,20 +568,20 @@
             </div>
             <div class="service-card">
                 <h4>🏠 Student Accommodation</h4>
-                <p>We help you find safe, comfortable, and affordable student housing, hostels, or shared apartments close to your campus.</p>
+                <p>We help you find safe, comfortable, and affordable student housing close to your campus.</p>
             </div>
             <div class="service-card">
                 <h4>🛡️ Travel & Health Insurance</h4>
-                <p>Hassle-free guidance to secure mandatory international student health cover (OSHC) and travel insurance.</p>
+                <p>Hassle-free guidance to secure mandatory international student health cover and travel insurance.</p>
             </div>
             <div class="service-card">
                 <h4>✈️ Travel & Arrival Support</h4>
-                <p>From booking affordable flights and pre-departure briefings to arranging airport pick-ups and initial settling-in support.</p>
+                <p>From booking affordable flights to arranging airport pick-ups and initial settling-in support.</p>
             </div>
         </div>
     </section>
 
-    <!-- Animated Student Success Section -->
+    <!-- Success Stories Section -->
     <section class="student-section">
         <h3>Success Stories</h3>
         <p>See what our students say about our professional guidance!</p>
@@ -609,35 +604,13 @@
                         <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
                         <div class="student-details">
                             <h5>Ayesha Khan</h5>
-                            <span>Europe (Germany)</span>
+                            <span>Europe Study</span>
                         </div>
                     </div>
-                    <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
-                </div>
-                
-                <div class="student-card">
-                    <div class="student-header">
-                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Bilal Shah" class="student-img-avatar">
-                        <div class="student-details">
-                            <h5>Bilal Shah</h5>
-                            <span>Australia Study</span>
-                        </div>
-                    </div>
-                    <p>"Their accommodation guidance was amazing. Found a safe and affordable place near my campus before landing."</p>
-                </div>
-                
-                <div class="student-card">
-                    <div class="student-header">
-                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Fatima Zahra" class="student-img-avatar">
-                        <div class="student-details">
-                            <h5>Fatima Zahra</h5>
-                            <span>Malaysia (UTM)</span>
-                        </div>
-                    </div>
-                    <p>"The scholarship assistance they offered helped me save 50% on my tuition fees. Truly grateful to the team."</p>
+                    <p>"Got my student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
                 </div>
 
-                <!-- Duplicate Cards for Infinite Loop Animation -->
+                <!-- Duplicate Cards for Infinite Loop -->
                 <div class="student-card">
                     <div class="student-header">
                         <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ali Ahmed" class="student-img-avatar">
@@ -647,17 +620,6 @@
                         </div>
                     </div>
                     <p>"FED helped me secure admission at a top UK University. The entire visa processing was smooth and stress-free."</p>
-                </div>
-                
-                <div class="student-card">
-                    <div class="student-header">
-                        <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
-                        <div class="student-details">
-                            <h5>Ayesha Khan</h5>
-                            <span>Europe (Germany)</span>
-                        </div>
-                    </div>
-                    <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
                 </div>
             </div>
         </div>
@@ -680,33 +642,22 @@
         </form>
     </section>
 
-    <!-- Footer with Social Media Links -->
+    <!-- Footer -->
     <footer>
         <div class="social-icons">
-            <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer" class="fb">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/fedestination?igsh=MTk0YXUxYzhuZThwOA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="ig">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.tiktok.com/@fedestination?_r=1&_t=ZN-984zQ2CCxvf" target="_blank" rel="noopener noreferrer" class="tk">
-                <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer" class="yt">
-                <i class="fab fa-youtube"></i>
-            </a>
+            <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer" class="fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fedestination" target="_blank" rel="noopener noreferrer" class="ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@fedestination" target="_blank" rel="noopener noreferrer" class="tk"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer" class="yt"><i class="fab fa-youtube"></i></a>
         </div>
         <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
     </footer>
 
     <!-- Interactive JavaScript -->
     <script>
-        // Country Cards Click Event - Ab naye pages open honge
         document.querySelectorAll('.country-card').forEach(card => {
             card.addEventListener('click', () => {
                 const countryName = card.querySelector('.country-name').textContent.trim();
-                
-                // Yahan file ke naam define kiye hain jo aap individual countries ke liye banayengi
                 const countryPages = {
                     "United Kingdom": "uk.html",
                     "Europe": "europe.html",
@@ -717,37 +668,30 @@
                     "Turkey": "turkey.html"
                 };
 
-                // Agar file exist karti hai toh usay open karein
                 if (countryPages[countryName]) {
                     window.location.href = countryPages[countryName];
                 }
             });
         });
 
-        // Form Submission via Formspree
         const form = document.getElementById('inquiryForm');
         const successAlert = document.getElementById('successNotification');
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
             fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
                     successAlert.style.display = 'block';
                     form.reset();
-                    setTimeout(() => {
-                        successAlert.style.display = 'none';
-                    }, 5000);
+                    setTimeout(() => { successAlert.style.display = 'none'; }, 5000);
                 } else {
                     alert("Oops! Kuch masla hua hai, please dobara koshish karein.");
                 }
-            }).catch(error => {
+            }).catch(() => {
                 alert("Internet connection ka issue hai. Please check karein.");
             });
         });
