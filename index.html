@@ -29,28 +29,7 @@
         html {
             scroll-behavior: smooth;
         }
-// Country Cards Click Event - Ab naye pages open honge
-document.querySelectorAll('.country-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const countryName = card.querySelector('.country-name').textContent.trim();
-        
-        // Yahan file ke naam define karein
-        const countryPages = {
-            "United Kingdom": "uk.html",
-            "Europe": "europe.html",
-            "Australia": "australia.html",
-            "Malaysia": "malaysia.html",
-            "New Zealand": "newzealand.html",
-            "UAE": "uae.html",
-            "Turkey": "turkey.html"
-        };
 
-        // Agar file exist karti hai toh usay open karein
-        if (countryPages[countryName]) {
-            window.location.href = countryPages[countryName];
-        }
-    });
-});
         /* CSS Styling */
         * {
             margin: 0;
@@ -323,7 +302,7 @@ document.querySelectorAll('.country-card').forEach(card => {
         }
 
         .success-slider:hover {
-            animation-play-state: paused; /* Hover karne par slide ruk jayegi */
+            animation-play-state: paused;
         }
 
         .student-card {
@@ -347,9 +326,9 @@ document.querySelectorAll('.country-card').forEach(card => {
         .student-img-avatar {
             width: 60px;
             height: 60px;
-            border-radius: 50%; /* Circle shape */
-            object-fit: cover; /* Photo stretch nahi hogi */
-            border: 2px solid #ffb300; /* Beautiful golden yellow border */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffb300;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
@@ -471,7 +450,6 @@ document.querySelectorAll('.country-card').forEach(card => {
             display: inline-block;
         }
 
-        /* Unique Social Colors on Hover */
         .social-icons a.fb:hover { color: #1877F2; transform: translateY(-5px) scale(1.2); }
         .social-icons a.ig:hover { color: #E1306C; transform: translateY(-5px) scale(1.2); }
         .social-icons a.tk:hover { color: #00f2fe; transform: translateY(-5px) scale(1.2); }
@@ -491,12 +469,13 @@ document.querySelectorAll('.country-card').forEach(card => {
             </div>
         </div>
     </header>
-<nav style="text-align: center; padding: 10px; background: #0d47a1;">
-    <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
-        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
-        <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
-    </ul>
-</nav>
+    <nav style="text-align: center; padding: 10px; background: #0d47a1;">
+        <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
+            <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+            <li><a href="about.html" style="color: white; text-decoration: none;">About Us</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section with Animation -->
     <section class="hero">
         <h2 class="animate__animated animate__fadeInDown">Build Your Global Future!</h2>
@@ -504,7 +483,7 @@ document.querySelectorAll('.country-card').forEach(card => {
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Study Destinations Section (Positioned Above Services) -->
+    <!-- Study Destinations Section -->
     <section class="countries">
         <h3>Study Destinations</h3>
         <p>We offer expert consultancy and services for top global education hubs:</p>
@@ -580,37 +559,26 @@ document.querySelectorAll('.country-card').forEach(card => {
     <section class="services">
         <h3>Our Services</h3>
         <div class="services-grid">
-            <!-- 1. Admission Guidance -->
             <div class="service-card">
                 <h4>🎓 Admission Guidance</h4>
                 <p>Complete guidance to secure admissions in top universities across the UK, USA, Canada, and Australia.</p>
             </div>
-            
-            <!-- 2. Visa Assistance -->
             <div class="service-card">
                 <h4>📝 Visa Assistance</h4>
                 <p>Expert support for document preparation, file processing, and mock visa interview training.</p>
             </div>
-            
-            <!-- 3. Scholarship Support -->
             <div class="service-card">
                 <h4>💰 Scholarship Support</h4>
                 <p>Assistance in finding and applying for the best scholarships and financial aid tailored to your academic record.</p>
             </div>
-
-            <!-- 4. Student Accommodation -->
             <div class="service-card">
                 <h4>🏠 Student Accommodation</h4>
                 <p>We help you find safe, comfortable, and affordable student housing, hostels, or shared apartments close to your campus.</p>
             </div>
-
-            <!-- 5. Student Insurance -->
             <div class="service-card">
                 <h4>🛡️ Travel & Health Insurance</h4>
                 <p>Hassle-free guidance to secure mandatory international student health cover (OSHC) and travel insurance.</p>
             </div>
-
-            <!-- 6. Pre-Departure & Travel Support -->
             <div class="service-card">
                 <h4>✈️ Travel & Arrival Support</h4>
                 <p>From booking affordable flights and pre-departure briefings to arranging airport pick-ups and initial settling-in support.</p>
@@ -618,15 +586,13 @@ document.querySelectorAll('.country-card').forEach(card => {
         </div>
     </section>
 
-    <!-- Animated Student Success Section (With High Quality Student Live Photos) -->
+    <!-- Animated Student Success Section -->
     <section class="student-section">
         <h3>Success Stories</h3>
         <p>See what our students say about our professional guidance!</p>
         
         <div style="overflow: hidden; width: 100%;">
             <div class="success-slider">
-                
-                <!-- Student 1 -->
                 <div class="student-card">
                     <div class="student-header">
                         <img src="https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ali Ahmed" class="student-img-avatar">
@@ -638,7 +604,6 @@ document.querySelectorAll('.country-card').forEach(card => {
                     <p>"FED helped me secure admission at a top UK University. The entire visa processing was smooth and stress-free."</p>
                 </div>
                 
-                <!-- Student 2 -->
                 <div class="student-card">
                     <div class="student-header">
                         <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Ayesha Khan" class="student-img-avatar">
@@ -650,7 +615,6 @@ document.querySelectorAll('.country-card').forEach(card => {
                     <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
                 </div>
                 
-                <!-- Student 3 -->
                 <div class="student-card">
                     <div class="student-header">
                         <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Bilal Shah" class="student-img-avatar">
@@ -662,7 +626,6 @@ document.querySelectorAll('.country-card').forEach(card => {
                     <p>"Their accommodation guidance was amazing. Found a safe and affordable place near my campus before landing."</p>
                 </div>
                 
-                <!-- Student 4 -->
                 <div class="student-card">
                     <div class="student-header">
                         <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150" alt="Fatima Zahra" class="student-img-avatar">
@@ -696,7 +659,6 @@ document.querySelectorAll('.country-card').forEach(card => {
                     </div>
                     <p>"Got my European student visa within weeks! Strongly recommend their professional guidance and visa preparation."</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -721,19 +683,15 @@ document.querySelectorAll('.country-card').forEach(card => {
     <!-- Footer with Social Media Links -->
     <footer>
         <div class="social-icons">
-            <!-- Facebook -->
             <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer" class="fb">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <!-- Instagram -->
             <a href="https://www.instagram.com/fedestination?igsh=MTk0YXUxYzhuZThwOA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="ig">
                 <i class="fab fa-instagram"></i>
             </a>
-            <!-- TikTok -->
             <a href="https://www.tiktok.com/@fedestination?_r=1&_t=ZN-984zQ2CCxvf" target="_blank" rel="noopener noreferrer" class="tk">
                 <i class="fab fa-tiktok"></i>
             </a>
-            <!-- YouTube -->
             <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer" class="yt">
                 <i class="fab fa-youtube"></i>
             </a>
@@ -743,15 +701,26 @@ document.querySelectorAll('.country-card').forEach(card => {
 
     <!-- Interactive JavaScript -->
     <script>
-        // Interactive Country Cards Click Event
+        // Country Cards Click Event - Ab naye pages open honge
         document.querySelectorAll('.country-card').forEach(card => {
             card.addEventListener('click', () => {
-                const countryName = card.querySelector('.country-name').textContent;
-                const messageBox = document.getElementById('userMessage');
+                const countryName = card.querySelector('.country-name').textContent.trim();
                 
-                messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
-                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-                messageBox.focus();
+                // Yahan file ke naam define kiye hain jo aap individual countries ke liye banayengi
+                const countryPages = {
+                    "United Kingdom": "uk.html",
+                    "Europe": "europe.html",
+                    "Australia": "australia.html",
+                    "Malaysia": "malaysia.html",
+                    "New Zealand": "newzealand.html",
+                    "UAE": "uae.html",
+                    "Turkey": "turkey.html"
+                };
+
+                // Agar file exist karti hai toh usay open karein
+                if (countryPages[countryName]) {
+                    window.location.href = countryPages[countryName];
+                }
             });
         });
 
@@ -783,9 +752,10 @@ document.querySelectorAll('.country-card').forEach(card => {
             });
         });
     </script>
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/923451450072" target="_blank" style="position:fixed; bottom:30px; right:30px; z-index:9999; font-size:50px; color:#25d366;">
-    <i class="fab fa-whatsapp"></i>
-</a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923451450072" target="_blank" style="position:fixed; bottom:30px; right:30px; z-index:9999; font-size:50px; color:#25d366;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
