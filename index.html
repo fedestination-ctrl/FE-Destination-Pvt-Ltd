@@ -14,6 +14,16 @@
     "https://www.youtube.com/@fedestination"
   ]
 }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Education Destination</title>
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Social Media & Country Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css for entrance animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         /* Smooth Scrolling Enable */
         html {
@@ -732,17 +742,18 @@ document.querySelectorAll('.country-card').forEach(card => {
     </footer>
 
     <!-- Interactive JavaScript -->
-    // YEH WALA CODE DELETE KAR DEIN:
-document.querySelectorAll('.country-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const countryName = card.querySelector('.country-name').textContent;
-        const messageBox = document.getElementById('userMessage');
-        
-        messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        messageBox.focus();
-    });
-});
+    <script>
+        // Interactive Country Cards Click Event
+        document.querySelectorAll('.country-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const countryName = card.querySelector('.country-name').textContent;
+                const messageBox = document.getElementById('userMessage');
+                
+                messageBox.value = `Hi, I am interested in studying in ${countryName}. Please share details about the available universities, courses, and fee structure.`;
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                messageBox.focus();
+            });
+        });
 
         // Form Submission via Formspree
         const form = document.getElementById('inquiryForm');
