@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - FE Destination Pvt Ltd</title>
+    <title>Our Services - Foreign Education Destination</title>
     <!-- Google Fonts & Font Awesome -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,7 @@
         }
 
         body {
-            background-color: #d4effc;
+            background-color: #f0f4f8; /* Clean professional light background matched to logo theme */
             color: #1e293b;
             overflow-x: hidden;
         }
@@ -26,7 +26,40 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Header / Navbar spacing if needed */
+        /* Navigation Header */
+        .header {
+            background-color: #0b2545;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Page Header */
         .page-header {
             text-align: center;
             padding: 60px 20px 20px;
@@ -34,7 +67,7 @@
 
         .page-header h1 {
             font-size: 2.8rem;
-            color: #0f172a;
+            color: #0b2545;
             margin-bottom: 10px;
         }
 
@@ -65,14 +98,14 @@
         .service-number {
             font-size: 1.1rem;
             font-weight: 700;
-            color: #0284c7;
+            color: #134074;
             margin-bottom: 8px;
             display: inline-block;
         }
 
         .service-title {
             font-size: 2.3rem;
-            color: #0f172a;
+            color: #0b2545;
             margin-bottom: 15px;
             line-height: 1.2;
         }
@@ -80,7 +113,7 @@
         .service-subtitle {
             font-size: 1.1rem;
             font-weight: 600;
-            color: #0284c7;
+            color: #134074;
             margin-bottom: 12px;
         }
 
@@ -107,7 +140,7 @@
         }
 
         .service-list li i {
-            color: #0284c7;
+            color: #134074;
             margin-top: 4px;
         }
 
@@ -129,13 +162,13 @@
             height: 350px;
             object-fit: cover;
             border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 15px 30px rgba(11, 37, 69, 0.1);
         }
 
         /* CTA Section at Bottom */
         .cta-section {
             position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             text-align: center;
             padding: 100px 20px;
             color: #ffffff;
@@ -148,6 +181,7 @@
             letter-spacing: 2px;
             margin-bottom: 15px;
             font-weight: 600;
+            color: #93c5fd;
         }
 
         .cta-title {
@@ -156,8 +190,8 @@
         }
 
         .cta-btn {
-            background-color: #38bdf8;
-            color: #0f172a;
+            background-color: #134074;
+            color: #ffffff;
             padding: 15px 35px;
             font-size: 1.05rem;
             font-weight: 700;
@@ -165,12 +199,11 @@
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 20px rgba(19, 64, 116, 0.3);
         }
 
         .cta-btn:hover {
-            background-color: #0ea5e9;
-            color: #ffffff;
+            background-color: #0b2545;
             transform: translateY(-2px);
         }
 
@@ -194,6 +227,18 @@
     </style>
 </head>
 <body>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="logo-area">Foreign Education Destination</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html" style="color: #38bdf8;">Services</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="page-header">
         <h1>Our Comprehensive Services</h1>
@@ -325,42 +370,15 @@
             <h2 class="service-title">Language Test Preparation – IELTS, PTE, German A1</h2>
             <p class="service-desc"><strong>IELTS:</strong> One of the world’s most well-known English language competency exams is the International English Language Testing System (IELTS), which is widely recognized by colleges, companies, and immigration agencies in English-speaking nations.</p>
             <p class="service-subtitle">Types of IELTS</p>
-            <p class="service-desc"><strong>IELTS Academic:</strong> For applicants seeking professional registration or higher education in English-speaking countries. Suitable for those needing to prove English proficiency in an academic setting.</p>
-            <p class="service-desc"><strong>IELTS General Training:</strong> Ideal for secondary school, job seekers, or immigration applicants moving to English-speaking countries (e.g., UK, Canada, Australia). Measures practical English for work and social use.</p>
-            <p class="service-subtitle">Why Choose IELTS?</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-check"></i> <div><strong>Global Recognition:</strong> Accepted by 10,000+ institutions worldwide, including universities, employers, and immigration authorities in the UK, US, Australia, and Canada.</div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Test Flexibility:</strong> IELTS Academic and General Training cater to both academic and general migration purposes.</div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Comprehensive Assessment:</strong> Assesses all four skills: <strong>Listening, Reading, Writing, and Speaking</strong>.</div></li>
-            </ul>
+            <p class="service-desc"><strong>IELTS Academic:</strong> For applicants seeking professional registration or higher education in English-speaking countries.</p>
+            <p class="service-desc"><strong>IELTS General Training:</strong> Ideal for secondary school, job seekers, or immigration applicants moving to English-speaking countries.</p>
         </div>
         <div class="service-image">
             <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="IELTS Test Preparation">
         </div>
     </section>
 
-    <!-- 09. PTE Section -->
-    <section class="service-section">
-        <div class="service-content">
-            <h2 class="service-title">PTE</h2>
-            <p class="service-desc">The Pearson Test of English (PTE) is a globally accepted English language proficiency test used by universities, immigration offices, and employers across English-speaking countries such as Australia, New Zealand, the UK, and Canada. It’s ideal for students and professionals alike.</p>
-            <p class="service-subtitle">Types of PTE</p>
-            <p class="service-desc"><strong>PTE Academic Test:</strong> For those applying to undergraduate or graduate university programs in English-speaking countries. Focuses on academic English, covering reading, writing, speaking, and listening skills.</p>
-            <p class="service-desc"><strong>PTE General Training:</strong> Suitable for improving everyday English for work, relocation, or migration purposes. Emphasizes communication in daily life and work environments.</p>
-            <p class="service-subtitle">Why Choose PTE?</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-check"></i> <div><strong>Fast Results:</strong> Scores usually available in under 48 hours, making it one of the fastest language tests.</div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Global Recognition:</strong> Accepted by thousands of universities, companies, and immigration bodies globally.</div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Test Completely Computer-Based:</strong> Fully automated scoring ensures consistency and accuracy without human bias.</div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Flexible Test Dates:</strong> Available year-round, letting candidates choose from multiple test dates.</div></li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="PTE Test Preparation">
-        </div>
-    </section>
-
-    <!-- Bottom CTA Section (Book Your Consultation / Start Your Journey) -->
+    <!-- Bottom CTA Section -->
     <section class="cta-section">
         <div class="cta-subtitle">Ready to Begin?</div>
         <h2 class="cta-title">Start Your Consultation Today</h2>
