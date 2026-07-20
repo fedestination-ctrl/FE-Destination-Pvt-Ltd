@@ -1,1 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - FE Destination Pvt Ltd</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
+        body {
+            background-color: #d4effc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .service-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Header / Navbar spacing if needed */
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        /* Service Section Layout */
+        .service-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            gap: 50px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .service-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .service-content {
+            flex: 1;
+        }
+
+        .service-number {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0284c7;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .service-title {
+            font-size: 2.3rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .service-subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0284c7;
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .service-list li {
+            font-size: 0.98rem;
+            color: #334155;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .service-list li i {
+            color: #0284c7;
+            margin-top: 4px;
+        }
+
+        .service-list li span {
+            display: block;
+            font-size: 0.88rem;
+            color: #64748b;
+        }
+
+        .service-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .service-image img {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        /* CTA Section at Bottom */
+        .cta-section {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            text-align: center;
+            padding: 100px 20px;
+            color: #ffffff;
+            margin-top: 60px;
+        }
+
+        .cta-subtitle {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .cta-title {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 15px 35px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: #0ea5e9;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .service-section, .service-section.reverse {
+                flex-direction: column;
+                gap: 30px;
+                padding: 40px 5%;
+            }
+            .service-image img {
+                height: 280px;
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            .cta-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-header">
+        <h1>Our Comprehensive Services</h1>
+        <p>Empowering your global education journey with expert support at every step.</p>
+    </div>
+
+    <!-- 01. Study Abroad Guidance -->
+    <section class="service-section">
+        <div class="service-content">
+            <span class="service-number">01.</span>
+            <h2 class="service-title">Study Abroad Guidance</h2>
+            <p class="service-desc">Our study abroad guidance service assists students in exploring educational opportunities overseas, providing expert advice on universities, courses, and locations to ensure a successful application process.</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-chevron-right"></i> University Selection Assistance</li>
+                <li><i class="fa-solid fa-chevron-right"></i> Application Process Support</li>
+                <li><i class="fa-solid fa-chevron-right"></i> Pre-Departure Orientation</li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Study Abroad Guidance">
+        </div>
+    </section>
+
+    <!-- 02. Visa Support Services -->
+    <section class="service-section reverse">
+        <div class="service-content">
+            <span class="service-number">02.</span>
+            <h2 class="service-title">Visa Support Services</h2>
+            <p class="service-desc">We offer personalized visa support services by guiding clients through the complex visa application process, ensuring all requirements are met to facilitate smooth entry into their chosen country.</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-chevron-right"></i> Visa Documentation Review</li>
+                <li><i class="fa-solid fa-chevron-right"></i> Interview Preparation</li>
+                <li><i class="fa-solid fa-chevron-right"></i> Application Submission Assistance</li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Visa Support Services">
+        </div>
+    </section>
+
+    <!-- 03. Test Preparation Services -->
+    <section class="service-section">
+        <div class="service-content">
+            <span class="service-number">03.</span>
+            <h2 class="service-title">Test Preparation Services</h2>
+            <p class="service-desc">We provide tailored test preparation services for standardized exams required for study abroad, ensuring students are well-prepared to achieve the scores needed for admission.</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-chevron-right"></i> IELTS Preparation Courses</li>
+                <li><i class="fa-solid fa-chevron-right"></i> TOEFL Preparation Courses</li>
+                <li><i class="fa-solid fa-chevron-right"></i> GRE and GMAT Coaching</li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Test Preparation Services">
+        </div>
+    </section>
+
+    <!-- 04. Our Study Abroad Services / Student Visa Services -->
+    <section class="service-section reverse">
+        <div class="service-content">
+            <span class="service-number">04.</span>
+            <h2 class="service-title">Our Study Abroad Services</h2>
+            <div class="service-subtitle">Student visa services</div>
+            <p class="service-desc">Applying for a student visa can be tough. Our expert consultants offer:</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>Visa Application Help</strong><span>Step-by-step guidance to complete your visa application correctly</span></div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Interview Practice</strong><span>Mock interviews and tips to boost your confidence for the visa interview</span></div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Document Preparation</strong><span>Assistance in collecting and organizing all necessary documents</span></div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Ongoing Support</strong><span>Continuous updates and support until you get your visa</span></div></li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Student Visa Services">
+        </div>
+    </section>
+
+    <!-- 05. University and Course Selection -->
+    <section class="service-section">
+        <div class="service-content">
+            <h2 class="service-title">University and Course Selection</h2>
+            <p class="service-desc">Picking the right university and course is important for your studies and future career. We provide:</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>Personalized Counseling</strong><span>One-on-one sessions to understand your interests, strengths, and career goals</span></div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>University Suggestions</strong><span>Recommendations based on your preferences, academic background, and goals</span></div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Application Assistance</strong><span>Help with completing and submitting applications to various universities</span></div></li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="University and Course Selection">
+        </div>
+    </section>
+
+    <!-- 06. Admission Guidance -->
+    <section class="service-section reverse">
+        <div class="service-content">
+            <h2 class="service-title">Admission Guidance</h2>
+            <p class="service-desc">Getting into a good university needs a strong application. Our services include:</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Application Review</strong><span>Detailed feedback on your application documents</span></div></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Statement of Purpose (SOP) Writing</strong><span>Guidance on writing an effective and compelling SOP</span></div></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Recommendation Letters</strong><span>Help in obtaining and preparing recommendation letters</span></div></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Interview Practice</strong><span>Coaching to help you perform well in university interviews</span></div></li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Admission Guidance">
+        </div>
+    </section>
+
+    <!-- 07. Scholarship Assistance -->
+    <section class="service-section">
+        <div class="service-content">
+            <h2 class="service-title">Scholarship Assistance</h2>
+            <p class="service-desc">Are you worried about how to get scholarships to study abroad? We are here to help you:</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Scholarship Search</strong><span>Identifying scholarships that match your profile</span></div></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Application Help</strong><span>Assistance with completing and submitting scholarship applications</span></div></li>
+                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Financial Aid Counseling</strong><span>Advice on other financial aid options, such as grants and loans</span></div></li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Scholarship Assistance">
+        </div>
+    </section>
+
+    <!-- 08. Language Test Preparation – IELTS, PTE, German A1 -->
+    <section class="service-section reverse">
+        <div class="service-content">
+            <h2 class="service-title">Language Test Preparation – IELTS, PTE, German A1</h2>
+            <p class="service-desc"><strong>IELTS:</strong> One of the world’s most well-known English language competency exams is the International English Language Testing System (IELTS), which is widely recognized by colleges, companies, and immigration agencies in English-speaking nations.</p>
+            <p class="service-subtitle">Types of IELTS</p>
+            <p class="service-desc"><strong>IELTS Academic:</strong> For applicants seeking professional registration or higher education in English-speaking countries. Suitable for those needing to prove English proficiency in an academic setting.</p>
+            <p class="service-desc"><strong>IELTS General Training:</strong> Ideal for secondary school, job seekers, or immigration applicants moving to English-speaking countries (e.g., UK, Canada, Australia). Measures practical English for work and social use.</p>
+            <p class="service-subtitle">Why Choose IELTS?</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>Global Recognition:</strong> Accepted by 10,000+ institutions worldwide, including universities, employers, and immigration authorities in the UK, US, Australia, and Canada.</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Test Flexibility:</strong> IELTS Academic and General Training cater to both academic and general migration purposes.</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Comprehensive Assessment:</strong> Assesses all four skills: <strong>Listening, Reading, Writing, and Speaking</strong>.</div></li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="IELTS Test Preparation">
+        </div>
+    </section>
+
+    <!-- 09. PTE Section -->
+    <section class="service-section">
+        <div class="service-content">
+            <h2 class="service-title">PTE</h2>
+            <p class="service-desc">The Pearson Test of English (PTE) is a globally accepted English language proficiency test used by universities, immigration offices, and employers across English-speaking countries such as Australia, New Zealand, the UK, and Canada. It’s ideal for students and professionals alike.</p>
+            <p class="service-subtitle">Types of PTE</p>
+            <p class="service-desc"><strong>PTE Academic Test:</strong> For those applying to undergraduate or graduate university programs in English-speaking countries. Focuses on academic English, covering reading, writing, speaking, and listening skills.</p>
+            <p class="service-desc"><strong>PTE General Training:</strong> Suitable for improving everyday English for work, relocation, or migration purposes. Emphasizes communication in daily life and work environments.</p>
+            <p class="service-subtitle">Why Choose PTE?</p>
+            <ul class="service-list">
+                <li><i class="fa-solid fa-check"></i> <div><strong>Fast Results:</strong> Scores usually available in under 48 hours, making it one of the fastest language tests.</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Global Recognition:</strong> Accepted by thousands of universities, companies, and immigration bodies globally.</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Test Completely Computer-Based:</strong> Fully automated scoring ensures consistency and accuracy without human bias.</div></li>
+                <li><i class="fa-solid fa-check"></i> <div><strong>Flexible Test Dates:</strong> Available year-round, letting candidates choose from multiple test dates.</div></li>
+            </ul>
+        </div>
+        <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="PTE Test Preparation">
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section (Book Your Consultation / Start Your Journey) -->
+    <section class="cta-section">
+        <div class="cta-subtitle">Ready to Begin?</div>
+        <h2 class="cta-title">Start Your Consultation Today</h2>
+        <a href="tel:+923451450072" class="cta-btn" onclick="window.location.href='mailto:info@fedestination.com';">Start Your Journey</a>
+    </section>
+
+</body>
+</html>
