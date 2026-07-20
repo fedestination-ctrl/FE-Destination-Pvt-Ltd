@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Foreign Education Destination</title>
     <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -17,12 +17,12 @@
         }
 
         body {
-            background-color: #f0f4f8; /* Clean professional light background matched to logo theme */
+            background-color: #f8fafc;
             color: #1e293b;
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .service-title {
+        h1, h2, h3, .card-title {
             font-family: 'Playfair Display', serif;
         }
 
@@ -33,12 +33,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .logo-area {
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         nav ul {
@@ -59,169 +61,179 @@
             color: #38bdf8;
         }
 
-        /* Page Header */
-        .page-header {
+        /* Hero Header Section */
+        .services-hero {
+            background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
+            color: #ffffff;
             text-align: center;
-            padding: 60px 20px 20px;
+            padding: 80px 20px;
+            margin-bottom: 50px;
         }
 
-        .page-header h1 {
-            font-size: 2.8rem;
-            color: #0b2545;
-            margin-bottom: 10px;
-        }
-
-        .page-header p {
-            font-size: 1.1rem;
-            color: #475569;
-        }
-
-        /* Service Section Layout */
-        .service-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 8%;
-            gap: 50px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .service-section.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .service-content {
-            flex: 1;
-        }
-
-        .service-number {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #134074;
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-
-        .service-title {
-            font-size: 2.3rem;
-            color: #0b2545;
+        .services-hero h1 {
+            font-size: 3rem;
             margin-bottom: 15px;
-            line-height: 1.2;
         }
 
-        .service-subtitle {
-            font-size: 1.1rem;
+        .services-hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* Services Grid Layout */
+        .services-container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(11, 37, 69, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(11, 37, 69, 0.12);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(11, 37, 69, 0.85);
+            color: #ffffff;
+            padding: 5px 12px;
+            font-size: 0.8rem;
             font-weight: 600;
-            color: #134074;
-            margin-bottom: 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
         }
 
-        .service-desc {
-            font-size: 1rem;
-            color: #475569;
+        .card-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            color: #0b2545;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #64748b;
             line-height: 1.6;
             margin-bottom: 20px;
+            flex-grow: 1;
         }
 
-        .service-list {
+        .card-features {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 8px;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
         }
 
-        .service-list li {
-            font-size: 0.98rem;
+        .card-features li {
+            font-size: 0.9rem;
             color: #334155;
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            align-items: center;
+            gap: 8px;
         }
 
-        .service-list li i {
-            color: #134074;
-            margin-top: 4px;
+        .card-features li i {
+            color: #0284c7;
+            font-size: 0.85rem;
         }
 
-        .service-list li span {
-            display: block;
-            font-size: 0.88rem;
-            color: #64748b;
-        }
-
-        .service-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .service-image img {
-            width: 100%;
-            max-width: 500px;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(11, 37, 69, 0.1);
-        }
-
-        /* CTA Section at Bottom */
+        /* Bottom CTA Section */
         .cta-section {
-            position: relative;
-            background: linear-gradient(rgba(11, 37, 69, 0.85), rgba(11, 37, 69, 0.85)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(11, 37, 69, 0.9), rgba(11, 37, 69, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
             text-align: center;
-            padding: 100px 20px;
+            padding: 90px 20px;
             color: #ffffff;
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         .cta-subtitle {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            color: #38bdf8;
             font-weight: 600;
-            color: #93c5fd;
         }
 
         .cta-title {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
         }
 
         .cta-btn {
-            background-color: #134074;
-            color: #ffffff;
-            padding: 15px 35px;
-            font-size: 1.05rem;
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 14px 32px;
+            font-size: 1rem;
             font-weight: 700;
             border-radius: 8px;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(19, 64, 116, 0.3);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.25);
         }
 
         .cta-btn:hover {
-            background-color: #0b2545;
+            background-color: #0ea5e9;
+            color: #ffffff;
             transform: translateY(-2px);
         }
 
-        /* Responsive Design */
-        @media (max-width: 900px) {
-            .service-section, .service-section.reverse {
-                flex-direction: column;
-                gap: 30px;
-                padding: 40px 5%;
+        /* Responsive */
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.3rem;
             }
-            .service-image img {
-                height: 280px;
-            }
-            .page-header h1 {
-                font-size: 2.2rem;
-            }
-            .cta-title {
-                font-size: 2.2rem;
+            .services-container {
+                grid-template-columns: 1fr;
+                padding: 0 15px 50px;
             }
         }
     </style>
@@ -240,149 +252,124 @@
         </nav>
     </header>
 
-    <div class="page-header">
-        <h1>Our Comprehensive Services</h1>
-        <p>Empowering your global education journey with expert support at every step.</p>
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <h1>Tailored Pathways for Your Global Future</h1>
+        <p>We bridge the gap between your academic ambitions and world-class international universities through expert, end-to-end guidance.</p>
+    </section>
+
+    <!-- Services Grid Container -->
+    <div class="services-container">
+
+        <!-- Card 1 -->
+        <div class="service-card">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Study Abroad">
+                <span class="card-tag">Advising</span>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Study Abroad Consulting</h3>
+                <p class="card-desc">Personalized roadmap sessions to help you evaluate international study options, matching your profile with top global institutions.</p>
+                <ul class="card-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Profile & Career Evaluation</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Destination & Country Insights</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Strategic Roadmap Planning</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Test Prep">
+                <span class="card-tag">Training</span>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Language & Test Prep</h3>
+                <p class="card-desc">Master standardized language and entrance exams with targeted coaching designed to secure high scores required by top universities.</p>
+                <ul class="card-features">
+                    <li><i class="fa-solid fa-circle-check"></i> IELTS & PTE Academic Prep</li>
+                    <li><i class="fa-solid fa-circle-check"></i> German Language (A1 Level)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Mock Tests & Expert Feedback</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="University Selection">
+                <span class="card-tag">Placement</span>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">University & Course Selection</h3>
+                <p class="card-desc">Navigate thousands of programs effortlessly. We help you choose the right degree aligned with your financial capacity and career goals.</p>
+                <ul class="card-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Comprehensive Course Matching</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Tuition & Living Cost Analysis</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Direct University Partnerships</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Admission Support">
+                <span class="card-tag">Applications</span>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Admission & Application Support</h3>
+                <p class="card-desc">Craft powerful applications that stand out. From compelling Statements of Purpose (SOP) to immaculate document portfolios.</p>
+                <ul class="card-features">
+                    <li><i class="fa-solid fa-circle-check"></i> SOP & Essay Editing</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Recommendation Letter Guidance</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Timely Application Submission</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Visa Assistance">
+                <span class="card-tag">Immigration</span>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Student Visa Services</h3>
+                <p class="card-desc">Eliminate visa uncertainties with meticulous file preparation, financial documentation reviews, and comprehensive interview practice.</p>
+                <ul class="card-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Complete Visa File Check</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Mock Interview Sessions</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Compliance & Embassy Guidelines</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Scholarship Support">
+                <span class="card-tag">Funding</span>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Scholarships & Financial Aid</h3>
+                <p class="card-desc">Unlock financial opportunities. We identify eligible partial or fully-funded scholarships and assist you in crafting winning grant applications.</p>
+                <ul class="card-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Global Scholarship Matching</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Financial Document Proofing</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bursary & Grant Advising</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-
-    <!-- 01. Study Abroad Guidance -->
-    <section class="service-section">
-        <div class="service-content">
-            <span class="service-number">01.</span>
-            <h2 class="service-title">Study Abroad Guidance</h2>
-            <p class="service-desc">Our study abroad guidance service assists students in exploring educational opportunities overseas, providing expert advice on universities, courses, and locations to ensure a successful application process.</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-chevron-right"></i> University Selection Assistance</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Application Process Support</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Pre-Departure Orientation</li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Study Abroad Guidance">
-        </div>
-    </section>
-
-    <!-- 02. Visa Support Services -->
-    <section class="service-section reverse">
-        <div class="service-content">
-            <span class="service-number">02.</span>
-            <h2 class="service-title">Visa Support Services</h2>
-            <p class="service-desc">We offer personalized visa support services by guiding clients through the complex visa application process, ensuring all requirements are met to facilitate smooth entry into their chosen country.</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-chevron-right"></i> Visa Documentation Review</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Interview Preparation</li>
-                <li><i class="fa-solid fa-chevron-right"></i> Application Submission Assistance</li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Visa Support Services">
-        </div>
-    </section>
-
-    <!-- 03. Test Preparation Services -->
-    <section class="service-section">
-        <div class="service-content">
-            <span class="service-number">03.</span>
-            <h2 class="service-title">Test Preparation Services</h2>
-            <p class="service-desc">We provide tailored test preparation services for standardized exams required for study abroad, ensuring students are well-prepared to achieve the scores needed for admission.</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-chevron-right"></i> IELTS Preparation Courses</li>
-                <li><i class="fa-solid fa-chevron-right"></i> TOEFL Preparation Courses</li>
-                <li><i class="fa-solid fa-chevron-right"></i> GRE and GMAT Coaching</li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Test Preparation Services">
-        </div>
-    </section>
-
-    <!-- 04. Our Study Abroad Services / Student Visa Services -->
-    <section class="service-section reverse">
-        <div class="service-content">
-            <span class="service-number">04.</span>
-            <h2 class="service-title">Our Study Abroad Services</h2>
-            <div class="service-subtitle">Student visa services</div>
-            <p class="service-desc">Applying for a student visa can be tough. Our expert consultants offer:</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-check"></i> <div><strong>Visa Application Help</strong><span>Step-by-step guidance to complete your visa application correctly</span></div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Interview Practice</strong><span>Mock interviews and tips to boost your confidence for the visa interview</span></div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Document Preparation</strong><span>Assistance in collecting and organizing all necessary documents</span></div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Ongoing Support</strong><span>Continuous updates and support until you get your visa</span></div></li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Student Visa Services">
-        </div>
-    </section>
-
-    <!-- 05. University and Course Selection -->
-    <section class="service-section">
-        <div class="service-content">
-            <h2 class="service-title">University and Course Selection</h2>
-            <p class="service-desc">Picking the right university and course is important for your studies and future career. We provide:</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-check"></i> <div><strong>Personalized Counseling</strong><span>One-on-one sessions to understand your interests, strengths, and career goals</span></div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>University Suggestions</strong><span>Recommendations based on your preferences, academic background, and goals</span></div></li>
-                <li><i class="fa-solid fa-check"></i> <div><strong>Application Assistance</strong><span>Help with completing and submitting applications to various universities</span></div></li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="University and Course Selection">
-        </div>
-    </section>
-
-    <!-- 06. Admission Guidance -->
-    <section class="service-section reverse">
-        <div class="service-content">
-            <h2 class="service-title">Admission Guidance</h2>
-            <p class="service-desc">Getting into a good university needs a strong application. Our services include:</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Application Review</strong><span>Detailed feedback on your application documents</span></div></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Statement of Purpose (SOP) Writing</strong><span>Guidance on writing an effective and compelling SOP</span></div></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Recommendation Letters</strong><span>Help in obtaining and preparing recommendation letters</span></div></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Interview Practice</strong><span>Coaching to help you perform well in university interviews</span></div></li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Admission Guidance">
-        </div>
-    </section>
-
-    <!-- 07. Scholarship Assistance -->
-    <section class="service-section">
-        <div class="service-content">
-            <h2 class="service-title">Scholarship Assistance</h2>
-            <p class="service-desc">Are you worried about how to get scholarships to study abroad? We are here to help you:</p>
-            <ul class="service-list">
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Scholarship Search</strong><span>Identifying scholarships that match your profile</span></div></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Application Help</strong><span>Assistance with completing and submitting scholarship applications</span></div></li>
-                <li><i class="fa-solid fa-chevron-right"></i> <div><strong>Financial Aid Counseling</strong><span>Advice on other financial aid options, such as grants and loans</span></div></li>
-            </ul>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Scholarship Assistance">
-        </div>
-    </section>
-
-    <!-- 08. Language Test Preparation – IELTS, PTE, German A1 -->
-    <section class="service-section reverse">
-        <div class="service-content">
-            <h2 class="service-title">Language Test Preparation – IELTS, PTE, German A1</h2>
-            <p class="service-desc"><strong>IELTS:</strong> One of the world’s most well-known English language competency exams is the International English Language Testing System (IELTS), which is widely recognized by colleges, companies, and immigration agencies in English-speaking nations.</p>
-            <p class="service-subtitle">Types of IELTS</p>
-            <p class="service-desc"><strong>IELTS Academic:</strong> For applicants seeking professional registration or higher education in English-speaking countries.</p>
-            <p class="service-desc"><strong>IELTS General Training:</strong> Ideal for secondary school, job seekers, or immigration applicants moving to English-speaking countries.</p>
-        </div>
-        <div class="service-image">
-            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80" alt="IELTS Test Preparation">
-        </div>
-    </section>
 
     <!-- Bottom CTA Section -->
     <section class="cta-section">
-        <div class="cta-subtitle">Ready to Begin?</div>
-        <h2 class="cta-title">Start Your Consultation Today</h2>
-        <a href="tel:+923451450072" class="cta-btn" onclick="window.location.href='mailto:info@fedestination.com';">Start Your Journey</a>
+        <div class="cta-subtitle">Begin Your Global Journey</div>
+        <h2 class="cta-title">Ready to Study Abroad? Book a Consultation</h2>
+        <a href="tel:+923451450072" class="cta-btn" onclick="window.location.href='mailto:info@fedestination.com';">Connect With Our Experts</a>
     </section>
 
 </body>
