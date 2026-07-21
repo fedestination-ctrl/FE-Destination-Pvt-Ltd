@@ -47,8 +47,7 @@
 
         /* Header Section */
         header {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background-color: #0d47a1;
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -56,6 +55,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .logo-container {
@@ -65,20 +65,39 @@
         }
 
         .logo-container img {
-            height: 50px;
+            height: 45px;
             width: auto;
             border-radius: 5px;
         }
 
         .logo-text h1 {
-            font-size: 1.4rem;
-            color: #0d47a1;
+            font-size: 1.3rem;
+            color: #ffffff;
             font-weight: 700;
         }
 
         .logo-text p {
-            font-size: 0.8rem;
-            color: #666;
+            font-size: 0.75rem;
+            color: #e0e0e0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffb300;
         }
 
         /* Hero / Welcome Section */
@@ -451,14 +470,14 @@
                 <p>Your Pathway to Global Success</p>
             </div>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav style="text-align: center; padding: 10px; background: #0d47a1;">
-    <ul style="list-style: none; display: flex; gap: 25px; align-items: center; justify-content: center;">
-        <li><a href="index.html" style="color: #ffffff; text-decoration: none; font-weight: 600;">Home</a></li>
-        <li><a href="about.html" style="color: #ffffff; text-decoration: none; font-weight: 600;">About Us</a></li>
-        <li><a href="services.html" style="color: #ffffff; text-decoration: none; font-weight: 600;">Services</a></li>
-    </ul>
-</nav>
 
     <!-- Hero Section -->
     <section class="hero">
