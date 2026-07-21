@@ -453,7 +453,7 @@
         </div>
     </header>
     <nav style="text-align: center; padding: 10px; background: #0d47a1;">
-    <ul style="list-style: none; display: flex; gap: 25px; align-items: center;">
+    <ul style="list-style: none; display: flex; gap: 25px; align-items: center; justify-content: center;">
         <li><a href="index.html" style="color: #ffffff; text-decoration: none; font-weight: 600;">Home</a></li>
         <li><a href="about.html" style="color: #ffffff; text-decoration: none; font-weight: 600;">About Us</a></li>
         <li><a href="services.html" style="color: #ffffff; text-decoration: none; font-weight: 600;">Services</a></li>
@@ -570,7 +570,7 @@
         </div>
     </section>
 
-    <!-- Student Success Stories Section (18 Students Added) -->
+    <!-- Student Success Stories Section -->
     <section class="student-section">
         <h3>Student Success Stories</h3>
         <p>Real feedback from our students who successfully achieved their study abroad goals.</p>
@@ -783,6 +783,11 @@
         <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923451423456" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 32px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Interactive JavaScript -->
     <script>
         document.querySelectorAll('.country-card').forEach(card => {
@@ -817,19 +822,13 @@
                 if (response.ok) {
                     successAlert.style.display = 'block';
                     form.reset();
-                    setTimeout(() => { successAlert.style.display = 'none'; }, 5000);
                 } else {
-                    alert("Oops! Kuch masla hua hai, please dobara koshish karein.");
+                    alert("Something went wrong. Please try again.");
                 }
             }).catch(() => {
-                alert("Internet connection ka issue hai. Please check karein.");
+                alert("Internet connection error.");
             });
         });
     </script>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/923451450072" target="_blank" style="position:fixed; bottom:30px; right:30px; z-index:9999; font-size:50px; color:#25d366;">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 </body>
 </html>
