@@ -45,67 +45,113 @@
             overflow-x: hidden;
         }
 
-        /* Header Section */
-        header {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            padding: 15px 5%;
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Education Destination - Your Pathway to Global Success</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navigation Header - Matches Services & About Us */
+        .header {
+            background-color: #0b2545;
+            padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
-        .logo-container {
+        .logo-area {
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            list-style: none;
             display: flex;
+            gap: 25px;
             align-items: center;
-            gap: 15px;
         }
 
-        .logo-container img {
-            height: 50px;
-            width: auto;
-            border-radius: 5px;
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
-        .logo-text h1 {
-            font-size: 1.4rem;
-            color: #0d47a1;
-            font-weight: 700;
+        nav ul li a:hover {
+            color: #38bdf8;
         }
 
-        .logo-text p {
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        /* Hero / Welcome Section */
+        /* Home Hero Section Example */
         .hero {
-            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 100%);
-            color: white;
-            padding: 100px 5%;
+            background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
+            color: #ffffff;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            padding: 100px 20px;
         }
 
-        .hero h2 {
-            font-size: 2.8rem;
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 20px;
-            font-weight: 700;
-            animation: fadeInDown 1s ease-in-out;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
+            color: #cbd5e1;
             max-width: 700px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-            animation: fadeInUp 1.2s ease-in-out;
+            margin: 0 auto;
+            line-height: 1.6;
         }
+    </style>
+</head>
+<body>
 
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="logo-area">Foreign Education Destination</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" style="color: #38bdf8;">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Page Hero Section -->
+    <section class="hero">
+        <h1>Your Pathway to Global Success</h1>
+        <p>Welcome to Foreign Education Destination. Explore our expert services and trusted guidance to fulfill your international study dreams.</p>
+    </section>
+
+</body>
+</html>
         .btn-consult {
             background-color: #ffb300;
             color: #111;
