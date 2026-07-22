@@ -466,7 +466,7 @@
     <!-- Header Section -->
     <header>
         <div class="logo-container">
-            <img src="LOGO.jpeg" alt="Foreign Education Destination Logo">
+            <img src="LOGO.png" alt="Foreign Education Destination Logo">
             <div class="logo-text">
                 <h1>Foreign Education Destination</h1>
                 <p>Your Pathway to Global Success</p>
@@ -823,31 +823,9 @@
                     "UAE": "uae.html",
                     "Turkey": "turkey.html"
                 };
-
                 if (countryPages[countryName]) {
                     window.location.href = countryPages[countryName];
                 }
-            });
-        });
-
-        const form = document.getElementById('inquiryForm');
-        const successAlert = document.getElementById('successNotification');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    successAlert.style.display = 'block';
-                    form.reset();
-                } else {
-                    alert("Something went wrong. Please try again.");
-                }
-            }).catch(() => {
-                alert("Internet connection error.");
             });
         });
     </script>
