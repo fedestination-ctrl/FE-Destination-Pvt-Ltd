@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Foreign Education Destination",
-  "url": "https://fedestination.com/",
-  "sameAs": [
-    "https://www.facebook.com/fedestination",
-    "https://www.instagram.com/fedestination",
-    "https://www.tiktok.com/@fedestination",
-    "https://www.youtube.com/@fedestination"
-  ]
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Foreign Education Destination",
+      "url": "https://fedestination.com/",
+      "sameAs": [
+        "https://www.facebook.com/fedestination",
+        "https://www.instagram.com/fedestination",
+        "https://www.tiktok.com/@fedestination",
+        "https://www.youtube.com/@fedestination"
+      ]
+    }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foreign Education Destination | Your Global Pathway</title>
@@ -29,11 +29,13 @@
     <style>
         html { scroll-behavior: smooth; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #0A1128; color: #F8FAFC; line-height: 1.6; overflow-x: hidden; }
+        
+        /* Day Mode / Light Fresh Theme Colors */
+        body { background-color: #F8FAFC; color: #1E293B; line-height: 1.6; overflow-x: hidden; }
 
         /* Header Style */
         header {
-            background: rgba(10, 17, 40, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(15px);
             padding: 16px 5%;
             display: flex;
@@ -42,42 +44,43 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border-bottom: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         .logo-container { display: flex; align-items: center; gap: 15px; perspective: 1000px; }
-        .logo-container img { height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3); }
-        .logo-text h1 { font-size: 1.25rem; color: #FFFFFF; font-weight: 700; letter-spacing: 0.5px; }
-        .logo-text p { font-size: 0.72rem; color: #00F2FE; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .logo-container img { height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 114, 255, 0.2); }
+        .logo-text h1 { font-size: 1.25rem; color: #0F172A; font-weight: 700; letter-spacing: 0.5px; }
+        .logo-text p { font-size: 0.72rem; color: #0072FF; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
         nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
-        nav ul li a { color: #94A3B8; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease; }
-        nav ul li a:hover { color: #00F2FE; text-shadow: 0 0 12px rgba(0, 242, 254, 0.6); }
+        nav ul li a { color: #475569; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease; }
+        nav ul li a:hover { color: #0072FF; }
 
-        /* Hero Banner with Fresh Gradient Overlay */
+        /* Hero Banner */
         .hero {
-            background: linear-gradient(135deg, rgba(10, 17, 40, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1920');
+            background: linear-gradient(135deg, rgba(240, 249, 255, 0.9), rgba(224, 242, 254, 0.95)), url('https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1920');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: #0F172A;
             padding: 150px 5% 130px 5%;
             text-align: center;
             position: relative;
         }
-        .hero h2 { font-size: 3.4rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -0.5px; background: linear-gradient(to right, #FFFFFF, #00F2FE, #4FACFE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { font-size: 1.2rem; max-width: 750px; margin: 0 auto 35px auto; color: #94A3B8; font-weight: 400; }
+        .hero h2 { font-size: 3.4rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -0.5px; color: #0F172A; }
+        .hero h2 span { background: linear-gradient(to right, #0072FF, #00C6FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; max-width: 750px; margin: 0 auto 35px auto; color: #475569; font-weight: 400; }
         .btn-consult {
-            background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
-            color: #0A1128; padding: 16px 42px; border: none; border-radius: 35px;
+            background: linear-gradient(135deg, #0072FF 0%, #00C6FF 100%);
+            color: #FFFFFF; padding: 16px 42px; border: none; border-radius: 35px;
             font-weight: 700; text-decoration: none; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); display: inline-block;
-            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.4); cursor: pointer; font-size: 1.05rem;
+            box-shadow: 0 6px 20px rgba(0, 114, 255, 0.3); cursor: pointer; font-size: 1.05rem;
         }
-        .btn-consult:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 12px 35px rgba(0, 242, 254, 0.7); }
+        .btn-consult:hover { transform: translateY(-5px) scale(1.03); box-shadow: 0 12px 30px rgba(0, 114, 255, 0.5); }
 
         /* Stats Grid Section */
         .stats-section {
-            background: #0E162D;
+            background: #FFFFFF;
             padding: 45px 5%;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid #E2E8F0;
         }
         .stats-grid {
             display: grid;
@@ -87,22 +90,143 @@
             margin: 0 auto;
         }
         .stat-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(0, 242, 254, 0.2);
+            background: #F8FAFC;
+            border: 1px solid #E2E8F0;
             padding: 25px;
             border-radius: 16px;
             text-align: center;
-            backdrop-filter: blur(10px);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
-        .stat-card:hover { transform: translateY(-5px); border-color: #00F2FE; box-shadow: 0 10px 25px rgba(0,242,254,0.15); }
-        .stat-card h3 { font-size: 2.5rem; font-weight: 800; color: #00F2FE; margin-bottom: 5px; }
-        .stat-card p { font-size: 0.95rem; color: #94A3B8; font-weight: 500; }
+        .stat-card:hover { transform: translateY(-5px); border-color: #0072FF; box-shadow: 0 10px 25px rgba(0,114,255,0.1); }
+        .stat-card h3 { font-size: 2.5rem; font-weight: 800; color: #0072FF; margin-bottom: 5px; }
+        .stat-card p { font-size: 0.95rem; color: #64748B; font-weight: 500; }
+
+        /* NEW SECTION 1: Popular And Partner Universities */
+        .partner-universities {
+            padding: 90px 5%;
+            background-color: #FFFBEB; /* Light warm yellow tint matching image vibe */
+            text-align: center;
+            border-bottom: 1px solid #FEF3C7;
+        }
+        .partner-universities h3 { font-size: 2.5rem; color: #1E293B; margin-bottom: 10px; font-weight: 700; }
+        .partner-universities p { margin-bottom: 45px; color: #64748B; font-size: 1.05rem; }
+        .uni-slider-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1250px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .uni-track {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding: 10px;
+        }
+        .uni-track::-webkit-scrollbar { display: none; }
+        .uni-logo-card {
+            background: #FFFFFF;
+            min-width: 190px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            border: 1px solid #E2E8F0;
+            flex-shrink: 0;
+            font-weight: 700;
+            color: #1E293B;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .uni-arrow {
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+            font-size: 1.1rem;
+            color: #0F172A;
+            flex-shrink: 0;
+        }
+        .uni-arrow:hover { background: #0072FF; color: #FFFFFF; border-color: #0072FF; }
+
+        /* NEW SECTION 2: Study Abroad Journey Step by Step */
+        .journey-section {
+            padding: 90px 5%;
+            background-color: #F3E8FF; /* Soft elegant purple tint matching image vibe */
+        }
+        .journey-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .journey-container h3 { font-size: 2.5rem; color: #3B0764; margin-bottom: 10px; font-weight: 700; }
+        .journey-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .journey-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .journey-step-item {
+            background: #FFFFFF;
+            padding: 18px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1E293B;
+            cursor: pointer;
+            border: 1px solid #E9D5FF;
+            transition: all 0.3s ease;
+        }
+        .journey-step-item:hover {
+            transform: translateX(5px);
+            border-color: #9333EA;
+            color: #9333EA;
+        }
+        .journey-image-box {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(59, 7, 100, 0.15);
+            height: 450px;
+        }
+        .journey-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media(max-width: 900px) {
+            .journey-grid { grid-template-columns: 1fr; }
+            .journey-image-box { height: 300px; }
+        }
 
         /* Study Destinations Gallery Section */
-        .countries { padding: 90px 5%; background-color: #0A1128; text-align: center; }
-        .countries h3 { font-size: 2.5rem; color: #FFFFFF; margin-bottom: 12px; font-weight: 700; }
-        .countries p { margin-bottom: 45px; color: #94A3B8; font-size: 1.05rem; }
+        .countries { padding: 90px 5%; background-color: #FFFFFF; text-align: center; }
+        .countries h3 { font-size: 2.5rem; color: #0F172A; margin-bottom: 12px; font-weight: 700; }
+        .countries p { margin-bottom: 45px; color: #64748B; font-size: 1.05rem; }
         
         .countries-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -112,7 +236,7 @@
             position: relative; height: 320px; border-radius: 20px; overflow: hidden;
             display: flex; flex-direction: column; justify-content: flex-end; padding: 25px;
             color: white; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); cursor: pointer; border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); cursor: pointer; border: 1px solid #E2E8F0;
         }
         .country-bg {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
@@ -120,69 +244,70 @@
         }
         .country-card::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to top, rgba(10, 17, 40, 0.95) 15%, rgba(10, 17, 40, 0.2) 75%); z-index: 2;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9) 15%, rgba(15, 23, 42, 0.1) 75%); z-index: 2;
         }
         .country-content { position: relative; z-index: 3; display: flex; align-items: center; gap: 15px; text-align: left; }
-        .country-flag-icon { width: 55px; height: 38px; object-fit: cover; border-radius: 6px; border: 2px solid #FFFFFF; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        .country-info span { font-size: 0.75rem; color: #00F2FE; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block; }
+        .country-flag-icon { width: 55px; height: 38px; object-fit: cover; border-radius: 6px; border: 2px solid #FFFFFF; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .country-info span { font-size: 0.75rem; color: #38BDF8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; display: block; }
         .country-info .country-name { font-size: 1.4rem; font-weight: 700; color: #FFFFFF; }
-        .country-card:hover { transform: translateY(-10px); border-color: #00F2FE; box-shadow: 0 20px 40px rgba(0, 242, 254, 0.25); }
+        .country-card:hover { transform: translateY(-10px); border-color: #0072FF; box-shadow: 0 20px 40px rgba(0, 114, 255, 0.2); }
         .country-card:hover .country-bg { transform: scale(1.12); }
 
         /* Rich Services Cards */
-        .services { padding: 90px 5%; text-align: center; background-color: #0E162D; }
-        .services h3 { font-size: 2.5rem; margin-bottom: 50px; color: #FFFFFF; font-weight: 700; }
+        .services { padding: 90px 5%; text-align: center; background-color: #F8FAFC; }
+        .services h3 { font-size: 2.5rem; margin-bottom: 50px; color: #0F172A; font-weight: 700; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .service-card {
-            background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px);
-            padding: 40px 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #FFFFFF;
+            padding: 40px 30px; border-radius: 20px; border: 1px solid #E2E8F0;
             transition: all 0.35s ease; text-align: left; position: relative; overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
         .service-card::after {
             content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px;
-            background: linear-gradient(90deg, transparent, #00F2FE, transparent); opacity: 0; transition: opacity 0.3s ease;
+            background: linear-gradient(90deg, transparent, #0072FF, transparent); opacity: 0; transition: opacity 0.3s ease;
         }
-        .service-card:hover { transform: translateY(-8px); border-color: rgba(0, 242, 254, 0.5); background: rgba(30, 41, 59, 0.8); box-shadow: 0 15px 35px rgba(0,0,0,0.4); }
+        .service-card:hover { transform: translateY(-8px); border-color: #0072FF; box-shadow: 0 15px 35px rgba(0,114,255,0.1); }
         .service-card:hover::after { opacity: 1; }
-        .service-icon { font-size: 2.3rem; margin-bottom: 20px; display: inline-block; background: rgba(0, 242, 254, 0.1); color: #00F2FE; padding: 15px; border-radius: 14px; }
-        .service-card h4 { color: #FFFFFF; margin-bottom: 12px; font-size: 1.3rem; font-weight: 700; }
-        .service-card p { color: #94A3B8; font-size: 0.95rem; }
+        .service-icon { font-size: 2.3rem; margin-bottom: 20px; display: inline-block; background: rgba(0, 114, 255, 0.08); color: #0072FF; padding: 15px; border-radius: 14px; }
+        .service-card h4 { color: #0F172A; margin-bottom: 12px; font-size: 1.3rem; font-weight: 700; }
+        .service-card p { color: #64748B; font-size: 0.95rem; }
 
         /* Success Testimonial Ticker */
-        .student-section { background: linear-gradient(135deg, #0A1128 0%, #1E293B 100%); padding: 85px 0; text-align: center; overflow: hidden; }
-        .student-section h3 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; color: #FFFFFF; }
-        .student-section p { opacity: 0.8; margin-bottom: 40px; color: #94A3B8; font-size: 1.05rem; }
+        .student-section { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 85px 0; text-align: center; overflow: hidden; border-top: 1px solid #BAE6FD; border-bottom: 1px solid #BAE6FD; }
+        .student-section h3 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; color: #0F172A; }
+        .student-section p { margin-bottom: 40px; color: #475569; font-size: 1.05rem; }
         .success-slider { display: flex; gap: 30px; width: max-content; animation: slideLeft 45s linear infinite; }
         .success-slider:hover { animation-play-state: paused; }
         .student-card {
-            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); padding: 30px;
-            border-radius: 20px; width: 350px; text-align: left; border: 1px solid rgba(255,255,255,0.08);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: #FFFFFF; padding: 30px;
+            border-radius: 20px; width: 350px; text-align: left; border: 1px solid #CBD5E1;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
-        .student-details h5 { font-size: 1.15rem; font-weight: 700; color: #00F2FE; margin-bottom: 4px; }
-        .student-details span { font-size: 0.85rem; color: #94A3B8; display: block; margin-bottom: 15px; font-weight: 500; }
-        .student-card p { font-size: 0.92rem; color: #F8FAFC; margin-bottom: 0; line-height: 1.6; }
+        .student-details h5 { font-size: 1.15rem; font-weight: 700; color: #0072FF; margin-bottom: 4px; }
+        .student-details span { font-size: 0.85rem; color: #64748B; display: block; margin-bottom: 15px; font-weight: 500; }
+        .student-card p { font-size: 0.92rem; color: #334155; margin-bottom: 0; line-height: 1.6; }
         @keyframes slideLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* Contact Section Style */
-        .contact { background-color: #0A1128; padding: 90px 5%; text-align: center; position: relative; }
-        .contact h3 { font-size: 2.5rem; color: #FFFFFF; margin-bottom: 12px; font-weight: 700; }
-        .contact p { margin-bottom: 40px; color: #94A3B8; font-size: 1.05rem; }
-        .contact-form { max-width: 650px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; background: rgba(15, 23, 42, 0.7); padding: 40px; border-radius: 24px; border: 1px solid rgba(0, 242, 254, 0.2); backdrop-filter: blur(15px); }
+        .contact { background-color: #FFFFFF; padding: 90px 5%; text-align: center; position: relative; }
+        .contact h3 { font-size: 2.5rem; color: #0F172A; margin-bottom: 12px; font-weight: 700; }
+        .contact p { margin-bottom: 40px; color: #64748B; font-size: 1.05rem; }
+        .contact-form { max-width: 650px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; background: #F8FAFC; padding: 40px; border-radius: 24px; border: 1px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .contact-form input, .contact-form textarea {
-            padding: 16px 20px; background: rgba(10, 17, 40, 0.85); border: 1px solid rgba(255,255,255,0.12);
-            border-radius: 12px; font-size: 1rem; color: #FFFFFF; width: 100%; transition: all 0.3s;
+            padding: 16px 20px; background: #FFFFFF; border: 1px solid #CBD5E1;
+            border-radius: 12px; font-size: 1rem; color: #0F172A; width: 100%; transition: all 0.3s;
         }
-        .contact-form input:focus, .contact-form textarea:focus { border-color: #00F2FE; box-shadow: 0 0 15px rgba(0, 242, 254, 0.3); outline: none; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: #0072FF; box-shadow: 0 0 15px rgba(0, 114, 255, 0.15); outline: none; }
         .contact-form button {
-            background: linear-gradient(135deg, #00F2FE, #4FACFE); color: #0A1128; padding: 16px; border: none; border-radius: 12px;
-            font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(0, 242, 254, 0.3);
+            background: linear-gradient(135deg, #0072FF, #00C6FF); color: #FFFFFF; padding: 16px; border: none; border-radius: 12px;
+            font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(0, 114, 255, 0.3);
         }
-        .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5); }
+        .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 114, 255, 0.5); }
         .success-message { display: none; background-color: #10B981; color: white; padding: 16px; border-radius: 12px; font-weight: 600; }
 
         /* Footer */
-        footer { background-color: #050A1A; color: #64748B; text-align: center; padding: 50px 20px; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.06); }
+        footer { background-color: #0F172A; color: #94A3B8; text-align: center; padding: 50px 20px; font-size: 0.9rem; border-top: 1px solid #1E293B; }
         .social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 25px; }
         .social-icons a { color: #94A3B8; font-size: 1.6rem; transition: all 0.3s ease; display: inline-block; }
         .social-icons a.fb:hover { color: #1877F2; transform: translateY(-5px) scale(1.1); }
@@ -213,7 +338,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2 class="animate__animated animate__fadeInDown">Build Your Global Future Today</h2>
+        <h2 class="animate__animated animate__fadeInDown">Build Your <span>Global Future</span> Today</h2>
         <p class="animate__animated animate__fadeInUp">Secure admissions, premium scholarship allocations, and high-success visa consultancy for world-class universities.</p>
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
@@ -236,6 +361,53 @@
             <div class="stat-card">
                 <h3>10+</h3>
                 <p>Years of Trust</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 1: Popular And Partner Universities -->
+    <section class="partner-universities">
+        <h3>Popular And Partner Universities</h3>
+        <p>Universities And Institutions We Serve</p>
+        <div class="uni-slider-wrapper">
+            <div class="uni-arrow" onclick="scrollUni('left')"><i class="fas fa-chevron-left"></i></div>
+            <div class="uni-track" id="uniTrack">
+                <div class="uni-logo-card">DePaul University</div>
+                <div class="uni-logo-card">Suffolk University</div>
+                <div class="uni-logo-card">Colorado State</div>
+                <div class="uni-logo-card">Arizona State Univ</div>
+                <div class="uni-logo-card">Queens College</div>
+                <div class="uni-logo-card">James Madison Univ</div>
+                <div class="uni-logo-card">LIU Post</div>
+                <div class="uni-logo-card">Mercer University</div>
+                <div class="uni-logo-card">MacEwan University</div>
+                <div class="uni-logo-card">University of Kansas</div>
+                <div class="uni-logo-card">Univ of Windsor</div>
+                <div class="uni-logo-card">University of Essex</div>
+                <div class="uni-logo-card">University of Waterloo</div>
+            </div>
+            <div class="uni-arrow" onclick="scrollUni('right')"><i class="fas fa-chevron-right"></i></div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION 2: Study Abroad Journey Step by Step -->
+    <section class="journey-section">
+        <div class="journey-container">
+            <h3>Study Abroad Journey Step by Step</h3>
+            <p style="color: #6B21A8; margin-bottom: 20px;">Your clear pathway to studying overseas</p>
+            <div class="journey-grid">
+                <div class="journey-steps">
+                    <div class="journey-step-item"><span>1. Select Your Program</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                    <div class="journey-step-item"><span>2. Submit Application</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                    <div class="journey-step-item"><span>3. Receive Offer Letter</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                    <div class="journey-step-item"><span>4. Fulfill Conditions</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                    <div class="journey-step-item"><span>5. Pay Tuition Deposit</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                    <div class="journey-step-item"><span>6. Get Unconditional Offer</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                    <div class="journey-step-item"><span>7. Apply For Visa</span> <i class="fas fa-chevron-right" style="color: #9333EA;"></i></div>
+                </div>
+                <div class="journey-image-box">
+                    <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Graduation Students">
+                </div>
             </div>
         </div>
     </section>
@@ -437,6 +609,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+
+        // University Slider Scroll Logic
+        function scrollUni(direction) {
+            const track = document.getElementById('uniTrack');
+            const scrollAmount = 250;
+            if (direction === 'left') {
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
 
         // Country card redirect mapping
         document.querySelectorAll('.country-card').forEach(card => {
