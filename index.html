@@ -37,7 +37,245 @@
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+/*================ HERO V2 =================*/
 
+.hero{
+
+background:linear-gradient(135deg,#071426,#112240);
+
+position:relative;
+
+padding:100px 7%;
+
+overflow:hidden;
+
+}
+
+.hero-overlay{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+top:0;
+
+left:0;
+
+background:url('worldmap.png');
+
+background-size:cover;
+
+opacity:.08;
+
+}
+
+.hero-content{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:relative;
+
+z-index:2;
+
+gap:70px;
+
+}
+
+.hero-left{
+
+flex:1;
+
+color:white;
+
+}
+
+.hero-right{
+
+flex:1;
+
+text-align:center;
+
+}
+
+.hero-right img{
+
+width:100%;
+
+max-width:480px;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+.hero-tag{
+
+background:#ffd166;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+display:inline-block;
+
+color:#071426;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+line-height:1.2;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+color:#ffd166;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+opacity:.9;
+
+max-width:650px;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn-secondary{
+
+padding:15px 35px;
+
+border:2px solid white;
+
+border-radius:40px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-secondary:hover{
+
+background:white;
+
+color:#071426;
+
+}
+
+.hero-stats{
+
+display:flex;
+
+gap:60px;
+
+margin-top:60px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-stats h2{
+
+font-size:38px;
+
+color:#ffd166;
+
+}
+
+.hero-stats span{
+
+color:white;
+
+opacity:.8;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.hero-content{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero-stats{
+
+justify-content:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+}
         body {
             background-color: #f8f9fa;
             color: #333;
@@ -105,31 +343,84 @@
             color: #ffd166;
         }
 
-        /* Hero / Welcome Section - Logo matching Theme */
-        .hero {
-            background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
-            color: white;
-            padding: 100px 5%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+        <!-- ================= HERO SECTION ================= -->
 
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            animation: fadeInDown 1s ease-in-out;
-        }
+<section class="hero">
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-            animation: fadeInUp 1.2s ease-in-out;
-        }
+    <div class="hero-overlay"></div>
 
+    <div class="hero-content">
+
+        <div class="hero-left">
+
+            <span class="hero-tag">
+                🌍 Study Abroad With Confidence
+            </span>
+
+            <h1>
+                Build Your <span>Global Future</span>
+            </h1>
+
+            <p>
+
+                Foreign Education Destination helps students secure admissions,
+                scholarships, visa guidance and complete application support
+                for the world's leading universities.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn-consult">
+                    🎓 Free Consultation
+                </a>
+
+                <a href="#countries" class="btn-secondary">
+                    Explore Destinations
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+
+                    <h2>1500+</h2>
+
+                    <span>Students Guided</span>
+
+                </div>
+
+                <div>
+
+                    <h2>95%</h2>
+
+                    <span>Visa Success</span>
+
+                </div>
+
+                <div>
+
+                    <h2>12+</h2>
+
+                    <span>Countries</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-right">
+
+            <img src="student.png" alt="Study Abroad Student">
+<img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700" alt="Student">
+        </div>
+
+    </div>
+
+</section>
         .btn-consult {
             background-color: #ffd166;
             color: #0b132b;
