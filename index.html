@@ -17,37 +17,24 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foreign Education Destination</title>
-    <!-- Google Fonts for Modern Look -->
+    <title>Foreign Education Destination | Global EdTech Hub</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Social Media Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Animate.css for entrance animations -->
+    <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS Library for Modern Scroll Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Smooth Scrolling Enable */
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0b132b; color: #e2e8f0; line-height: 1.6; overflow-x: hidden; }
 
-        /* CSS Styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header Section - Logo matching Dark Theme */
+        /* Header Style */
         header {
-            background-color: #0b132b;
+            background: rgba(11, 19, 43, 0.95);
+            backdrop-filter: blur(10px);
             padding: 15px 5%;
             display: flex;
             justify-content: space-between;
@@ -55,432 +42,135 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            border-bottom: 2px solid #ffd166;
+            border-bottom: 1px solid rgba(255, 209, 102, 0.2);
         }
+        .logo-container { display: flex; align-items: center; gap: 15px; perspective: 1000px; }
+        .logo-container img { height: 48px; width: auto; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        .logo-text h1 { font-size: 1.2rem; color: #ffffff; font-weight: 700; letter-spacing: 0.5px; }
+        .logo-text p { font-size: 0.7rem; color: #ffd166; }
+        nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+        nav ul li a { color: #cbd5e1; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease; }
+        nav ul li a:hover { color: #ffd166; }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            perspective: 1000px; /* 3D Depth create karne ke liye */
-        }
-
-        .logo-container img {
-            height: 48px;
-            width: auto;
-            border-radius: 6px;
-            transition: transform 0.1s ease;
-            transform-style: preserve-3d;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .logo-text h1 {
-            font-size: 1.3rem;
-            color: #ffffff;
-            font-weight: 700;
-        }
-
-        .logo-text p {
-            font-size: 0.75rem;
-            color: #ffd166;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #ffd166;
-        }
-
-        /* Hero / Welcome Section - Logo matching Theme */
+        /* Hero Digital Gradient */
         .hero {
-            background: linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+            background: radial-gradient(circle at center, #1c2541 0%, #0b132b 100%);
             color: white;
-            padding: 100px 5%;
+            padding: 90px 5% 70px 5%;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-            animation: fadeInUp 1.2s ease-in-out;
-        }
-<!-- Stats Bar Section -->
-<section style="background-color: #ffd166; padding: 30px 5%; color: #0b132b; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center; gap: 20px;">
-    <div>
-        <h3 style="font-size: 2rem; font-weight: 700;">5,000+</h3>
-        <p style="font-weight: 600;">Successful Students</p>
-    </div>
-    <div>
-        <h3 style="font-size: 2rem; font-weight: 700;">99%</h3>
-        <p style="font-weight: 600;">Visa Success Rate</p>
-    </div>
-    <div>
-        <h3 style="font-size: 2rem; font-weight: 700;">50+</h3>
-        <p style="font-weight: 600;">Global Universities</p>
-    </div>
-    <div>
-        <h3 style="font-size: 2rem; font-weight: 700;">10+</h3>
-        <p style="font-weight: 600;">Years Experience</p>
-    </div>
-</section>
+        .hero h2 { font-size: 3rem; margin-bottom: 20px; font-weight: 700; background: linear-gradient(to right, #fff, #ffd166); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.15rem; max-width: 700px; margin: 0 auto 30px auto; color: #94a3b8; }
         .btn-consult {
-            background-color: #ffd166;
-            color: #0b132b;
-            padding: 12px 35px;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4);
-            animation: pulse 2s infinite;
+            background: linear-gradient(135deg, #ffd166 0%, #ffaa00 100%);
+            color: #0b132b; padding: 14px 38px; border: none; border-radius: 30px;
+            font-weight: 700; text-decoration: none; transition: all 0.3s ease; display: inline-block;
+            box-shadow: 0 4px 20px rgba(255, 209, 102, 0.4); cursor: pointer;
         }
+        .btn-consult:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(255, 209, 102, 0.6); }
 
-        .btn-consult:hover {
-            background-color: #ffc300;
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 209, 102, 0.6);
+        /* Digital Stats Bar (Glassmorphism) */
+        .stats-bar {
+            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 30px 5%; margin-top: 20px;
         }
+        .stat-item h3 { font-size: 2.2rem; font-weight: 700; color: #ffd166; }
+        .stat-item p { font-size: 0.9rem; color: #94a3b8; font-weight: 500; }
 
-        /* Study Destinations Section */
-        .countries {
-            background-color: #f1f5f9;
-            padding: 80px 5%;
-            text-align: center;
+        /* Filter & Search Bar Section */
+        .countries { padding: 80px 5%; background-color: #0d1b2a; text-align: center; }
+        .countries h3 { font-size: 2.3rem; color: #ffffff; margin-bottom: 10px; font-weight: 700; }
+        .countries p { margin-bottom: 30px; color: #94a3b8; font-size: 1rem; }
+        
+        .filter-buttons { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+        .filter-btn {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            color: #cbd5e1; padding: 8px 20px; border-radius: 20px; cursor: pointer; font-weight: 600;
+            transition: all 0.3s ease;
         }
+        .filter-btn.active, .filter-btn:hover { background: #ffd166; color: #0b132b; border-color: #ffd166; }
 
-        .countries h3 {
-            font-size: 2.2rem;
-            color: #0b132b;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .countries p {
-            margin-bottom: 50px;
-            color: #555;
-            font-size: 1.1rem;
-        }
-
+        /* Countries Grid */
         .countries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px; max-width: 1200px; margin: 0 auto;
         }
-
         .country-card {
-            position: relative;
-            height: 280px;
-            border-radius: 15px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
+            position: relative; height: 280px; border-radius: 16px; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: white; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); cursor: pointer; border: 1px solid rgba(255,255,255,0.08);
         }
-
         .country-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-            z-index: 1;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center; transition: transform 0.6s ease; z-index: 1;
         }
-
         .country-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%);
-            z-index: 2;
-            transition: opacity 0.4s ease;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(11,19,43,0.2) 0%, rgba(11,19,43,0.85) 100%); z-index: 2;
         }
+        .country-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .country-flag-icon { width: 50px; height: 35px; object-fit: cover; border-radius: 4px; border: 2px solid rgba(255,255,255,0.8); }
+        .country-name { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+        .country-card:hover { transform: translateY(-8px); border-color: #ffd166; box-shadow: 0 15px 35px rgba(255, 209, 102, 0.15); }
+        .country-card:hover .country-bg { transform: scale(1.1); }
 
-        .country-content {
-            position: relative;
-            z-index: 3;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .country-flag-icon {
-            width: 55px;
-            height: 40px;
-            object-fit: cover;
-            border-radius: 4px;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-            transition: transform 0.4s ease;
-        }
-
-        .country-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        .country-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(11, 19, 43, 0.25);
-        }
-
-        .country-card:hover .country-bg {
-            transform: scale(1.15);
-        }
-
-        .country-card:hover .country-flag-icon {
-            transform: scale(1.15) translateY(-3px);
-        }
-
-        /* Services Section */
-        .services {
-            padding: 80px 5%;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        .services h3 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #0b132b;
-            font-weight: 700;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
+        /* Digital Services Grid */
+        .services { padding: 80px 5%; text-align: center; background-color: #0b132b; }
+        .services h3 { font-size: 2.3rem; margin-bottom: 40px; color: #ffffff; font-weight: 700; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto; }
         .service-card {
-            background: #f8f9fa;
-            padding: 35px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease-in-out;
-            border-top: 4px solid transparent;
+            background: rgba(28, 37, 65, 0.6); backdrop-filter: blur(10px);
+            padding: 35px 30px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease; text-align: left;
         }
+        .service-card:hover { transform: translateY(-5px); border-color: #ffd166; background: rgba(28, 37, 65, 0.9); }
+        .service-card h4 { color: #ffd166; margin-bottom: 12px; font-size: 1.2rem; font-weight: 600; }
+        .service-card p { color: #94a3b8; font-size: 0.92rem; }
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-            border-top: 4px solid #ffd166;
-        }
-
-        .service-card h4 {
-            color: #1c2541;
-            margin-bottom: 15px;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        /* Animated Student Success Section */
-        .student-section {
-            background: linear-gradient(135deg, #1c2541 0%, #0b132b 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .student-section h3 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .student-section p {
-            opacity: 0.8;
-            margin-bottom: 30px;
-        }
-
-        .success-slider {
-            display: flex;
-            gap: 25px;
-            width: max-content;
-            animation: slideLeft 45s linear infinite;
-        }
-
-        .success-slider:hover {
-            animation-play-state: paused;
-        }
-
+        /* Student Success Ticker Section */
+        .student-section { background: linear-gradient(135deg, #1c2541 0%, #0b132b 100%); padding: 60px 0; text-align: center; overflow: hidden; }
+        .student-section h3 { font-size: 2.2rem; margin-bottom: 8px; font-weight: 700; color: #fff; }
+        .student-section p { opacity: 0.7; margin-bottom: 30px; color: #94a3b8; font-size: 0.95rem; }
+        .success-slider { display: flex; gap: 25px; width: max-content; animation: slideLeft 40s linear infinite; }
+        .success-slider:hover { animation-play-state: paused; }
         .student-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(5px);
-            padding: 25px;
-            border-radius: 15px;
-            width: 320px;
-            text-align: left;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(8px); padding: 25px;
+            border-radius: 16px; width: 320px; text-align: left; border: 1px solid rgba(255,255,255,0.06);
         }
-
-        .student-details h5 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #ffd166;
-            margin-bottom: 3px;
-        }
-
-        .student-details span {
-            font-size: 0.85rem;
-            color: #fff;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .student-card p {
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #e0e0e0;
-            margin-bottom: 0;
-            opacity: 1;
-        }
-
-        @keyframes slideLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        .student-details h5 { font-size: 1.05rem; font-weight: 600; color: #ffd166; margin-bottom: 2px; }
+        .student-details span { font-size: 0.8rem; color: #94a3b8; display: block; margin-bottom: 10px; }
+        .student-card p { font-size: 0.88rem; color: #cbd5e1; margin-bottom: 0; }
+        @keyframes slideLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* Contact Section */
-        .contact {
-            background-color: #f1f5f9;
-            padding: 60px 5%;
-            text-align: center;
-        }
-
-        .contact h3 {
-            font-size: 2rem;
-            color: #0b132b;
-            margin-bottom: 15px;
-        }
-
-        .contact p {
-            margin-bottom: 30px;
-            color: #666;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
+        .contact { background-color: #0d1b2a; padding: 70px 5%; text-align: center; }
+        .contact h3 { font-size: 2.2rem; color: #ffffff; margin-bottom: 10px; }
+        .contact p { margin-bottom: 30px; color: #94a3b8; }
+        .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
         .contact-form input, .contact-form textarea {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            width: 100%;
+            padding: 14px 18px; background: rgba(11,19,43,0.8); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px; font-size: 0.95rem; color: #fff; width: 100%; transition: border-color 0.3s;
         }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #0b132b;
-            outline: none;
-        }
-
+        .contact-form input:focus, .contact-form textarea:focus { border-color: #ffd166; outline: none; }
         .contact-form button {
-            background-color: #0b132b;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
+            background: #ffd166; color: #0b132b; padding: 14px; border: none; border-radius: 8px;
+            font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s;
         }
-
-        .contact-form button:hover {
-            background-color: #1c2541;
-        }
-
-        .success-message {
-            display: none;
-            background-color: #2e7d32;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-weight: 600;
-        }
+        .contact-form button:hover { background: #ffaa00; }
+        .success-message { display: none; background-color: #10b981; color: white; padding: 15px; border-radius: 8px; font-weight: 600; }
 
         /* Footer */
-        footer {
-            background-color: #050811;
-            color: #aaa;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            border-top: 2px solid #1c2541;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 20px;
-        }
-
-        .social-icons a {
-            color: #aaa;
-            font-size: 1.8rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .social-icons a.fb:hover { color: #1877F2; transform: translateY(-5px) scale(1.2); }
-        .social-icons a.ig:hover { color: #E1306C; transform: translateY(-5px) scale(1.2); }
-        .social-icons a.tk:hover { color: #00f2fe; transform: translateY(-5px) scale(1.2); }
-        .social-icons a.yt:hover { color: #FF0000; transform: translateY(-5px) scale(1.2); }
+        footer { background-color: #050811; color: #64748b; text-align: center; padding: 40px 20px; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
+        .social-icons a { color: #64748b; font-size: 1.5rem; transition: all 0.3s ease; }
+        .social-icons a.fb:hover { color: #1877F2; transform: translateY(-3px); }
+        .social-icons a.ig:hover { color: #E1306C; transform: translateY(-3px); }
+        .social-icons a.tk:hover { color: #00f2fe; transform: translateY(-3px); }
+        .social-icons a.yt:hover { color: #FF0000; transform: translateY(-3px); }
     </style>
 </head>
 <body>
@@ -488,10 +178,10 @@
     <!-- Header Section -->
     <header>
         <div class="logo-container">
-            <img src="LOGO.png" alt="Foreign Education Destination Logo" id="live3dLogo">
+            <img src="LOGO.png" alt="Logo" id="live3dLogo">
             <div class="logo-text">
                 <h1>Foreign Education Destination</h1>
-                <p>Your Pathway to Global Success</p>
+                <p>Global EdTech Consultancy</p>
             </div>
         </div>
         <nav>
@@ -505,294 +195,162 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h2 class="animate__animated animate__fadeInDown">Build Your Global Future!</h2>
-        <p class="animate__animated animate__fadeInUp">We help you secure admissions, visa guidance, and top scholarships at the world's leading universities.</p>
+        <h2 class="animate__animated animate__fadeInDown">Engineer Your Global Future</h2>
+        <p class="animate__animated animate__fadeInUp">Automated admissions tracking, university shortlisting, and high-success visa consultancy for premier international institutions.</p>
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
     </section>
 
-    <!-- Study Destinations Section -->
+    <!-- Digital Stats Bar -->
+    <div class="stats-bar" data-aos="fade-up">
+        <div class="stat-item">
+            <h3>5,000+</h3>
+            <p>Students Placed</p>
+        </div>
+        <div class="stat-item">
+            <h3>99%</h3>
+            <p>Visa Success Rate</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p>Global Universities</p>
+        </div>
+        <div class="stat-item">
+            <h3>10+</h3>
+            <p>Years Experience</p>
+        </div>
+    </div>
+
+    <!-- Study Destinations with Filter -->
     <section class="countries">
         <h3>Study Destinations</h3>
-        <p>We offer expert consultancy and services for top global education hubs:</p>
+        <p>Select a region to explore leading academic opportunities:</p>
+        
+        <!-- Filter Tabs -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Destinations</button>
+            <button class="filter-btn" data-filter="europe">Europe</button>
+            <button class="filter-btn" data-filter="uk">UK & Global</button>
+            <button class="filter-btn" data-filter="asia">Asia & UAE</button>
+        </div>
+
         <div class="countries-grid">
-            
-            <!-- United Kingdom -->
-            <div class="country-card">
+            <div class="country-card" data-category="uk">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="UK Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="UK" class="country-flag-icon">
                     <span class="country-name">United Kingdom</span>
                 </div>
             </div>
-
-            <!-- Europe -->
-            <div class="country-card">
+            <div class="country-card" data-category="europe">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/eu.png" alt="Europe Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/eu.png" alt="Europe" class="country-flag-icon">
                     <span class="country-name">Europe</span>
                 </div>
             </div>
-
-            <!-- Australia -->
-            <div class="country-card">
+            <div class="country-card" data-category="uk">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="country-flag-icon">
                     <span class="country-name">Australia</span>
                 </div>
             </div>
-
-            <!-- Malaysia -->
-            <div class="country-card">
+            <div class="country-card" data-category="asia">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3124584/pexels-photo-3124584.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/my.png" alt="Malaysia Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/my.png" alt="Malaysia" class="country-flag-icon">
                     <span class="country-name">Malaysia</span>
                 </div>
             </div>
-
-            <!-- New Zealand -->
-            <div class="country-card">
+            <div class="country-card" data-category="uk">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3042211/pexels-photo-3042211.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand" class="country-flag-icon">
                     <span class="country-name">New Zealand</span>
                 </div>
             </div>
-
-            <!-- UAE -->
-            <div class="country-card">
+            <div class="country-card" data-category="asia">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/162031/dubai-tower-arabia-united-arab-emirates-162031.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/ae.png" alt="UAE" class="country-flag-icon">
                     <span class="country-name">UAE</span>
                 </div>
             </div>
-
-            <!-- Turkey -->
-            <div class="country-card">
+            <div class="country-card" data-category="europe">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=600');"></div>
                 <div class="country-content">
-                    <img src="https://flagcdn.com/w80/tr.png" alt="Turkey Flag" class="country-flag-icon">
+                    <img src="https://flagcdn.com/w80/tr.png" alt="Turkey" class="country-flag-icon">
                     <span class="country-name">Turkey</span>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services">
-        <h3>Our Services</h3>
+        <h3>Core Digital Services</h3>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
                 <h4>🎓 Admission Guidance</h4>
-                <p>Complete guidance to secure admissions in top universities across global study destinations.</p>
+                <p>Streamlined profile evaluation and direct pipeline integration with global university admissions committees.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                 <h4>📝 Visa Assistance</h4>
-                <p>Expert support for document preparation, file processing, and mock visa interview training.</p>
+                <p>Rigorous document auditing, compliance verification, and simulated digital interview training sessions.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                 <h4>💰 Scholarship Support</h4>
-                <p>Assistance in finding and applying for the best scholarships and financial aid tailored to your academic record.</p>
+                <p>Data-driven matching algorithms to isolate partial and full tuition financial grants tailored to your metrics.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
                 <h4>🏠 Student Accommodation</h4>
-                <p>We help you find safe, comfortable, and affordable student housing close to your campus.</p>
+                <p>Secure verified digital bookings for verified student residences directly adjacent to campus hubs.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                 <h4>🛡️ Travel & Health Insurance</h4>
-                <p>Hassle-free guidance to secure mandatory international student health cover and travel insurance.</p>
+                <p>Instant processing of mandatory international student healthcare covers and multi-tier travel policies.</p>
             </div>
-            <div class="service-card">
-                <h4>✈️ Travel & Arrival Support</h4>
-                <p>From booking affordable flights to arranging airport pick-ups and initial settling-in support.</p>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <h4>✈️ Arrival & Logistics</h4>
+                <p>End-to-end digital travel management, automated flight tracking, and localized welcome desk support.</p>
             </div>
         </div>
     </section>
 
-    <!-- Student Success Stories Section -->
+    <!-- Student Success Stories -->
     <section class="student-section">
         <h3>Student Success Stories</h3>
-        <p>Real feedback from our students who successfully achieved their study abroad goals.</p>
-        
+        <p>Verified feedback loops from our alumni worldwide.</p>
         <div style="overflow: hidden; width: 100%;">
             <div class="success-slider">
-                <!-- 1 -->
                 <div class="student-card">
                     <div class="student-details">
                         <h5>Muhammad Bilal</h5>
                         <span>University of Portsmouth, UK</span>
                     </div>
-                    <p>"Applying for a UK study visa seemed complex at first, but Foreign Education Destination guided me step-by-step from my admission letter to my final visa interview."</p>
-                </div>
-                <!-- 2 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Zainab Fatima</h5>
-                        <span>Study in Europe Program</span>
-                    </div>
-                    <p>"The team helped me choose the right European university matching my profile and budget. Their documentation support was exceptionally professional."</p>
-                </div>
-                <!-- 3 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Ali Raza</h5>
-                        <span>University of Melbourne, Australia</span>
-                    </div>
-                    <p>"Getting an Australian student visa requires careful file preparation. FED handled my entire case seamlessly and I received my visa on time."</p>
-                </div>
-                <!-- 4 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Ayesha Noor</h5>
-                        <span>Monash University, Australia</span>
-                    </div>
-                    <p>"Extremely supportive team! They helped me find a great scholarship option and cleared all my queries regarding pre-departure requirements."</p>
-                </div>
-                <!-- 5 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Ahmed Khan</h5>
-                        <span>University of Malaya, Malaysia</span>
-                    </div>
-                    <p>"Malaysia was my dream destination for higher studies. FED made the EMGS approval and admission process completely hassle-free for me."</p>
-                </div>
-                <!-- 6 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Hira Malik</h5>
-                        <span>Taylor's University, Malaysia</span>
-                    </div>
-                    <p>"From university selection to visa stamping, their counselors were always available to guide me with patience and complete accuracy."</p>
-                </div>
-                <!-- 7 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Usman Tariq</h5>
-                        <span>University of Auckland, New Zealand</span>
-                    </div>
-                    <p>"New Zealand education consultancy can be tricky, but the experts at FED have in-depth knowledge and genuine processes. Highly recommended!"</p>
-                </div>
-                <!-- 8 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Mahnoor Sheikh</h5>
-                        <span>University of Canterbury, New Zealand</span>
-                    </div>
-                    <p>"They assisted me with my funds documentation and student visa file verification. I am now happily settled in Christchurch."</p>
-                </div>
-                <!-- 9 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Hamza Sheikh</h5>
-                        <span>University of Dubai, UAE</span>
-                    </div>
-                    <p>"Studying in Dubai opened great career opportunities for me. FED processed my admission letter and student residence visa within weeks."</p>
-                </div>
-                <!-- 10 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Laiba Tariq</h5>
-                        <span>Heriot-Watt University, UAE</span>
-                    </div>
-                    <p>"Very reliable consultancy! They provided honest guidance and transparent fee structures throughout my application process."</p>
-                </div>
-                <!-- 11 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Danish Ali</h5>
-                        <span>Sabanci University, Turkey</span>
-                    </div>
-                    <p>"Turkey offers amazing European-standard education at affordable costs. FED helped me secure a partial tuition fee waiver easily."</p>
-                </div>
-                <!-- 12 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Sana Ejaz</h5>
-                        <span>Bogazici University, Turkey</span>
-                    </div>
-                    <p>"Their visa interview preparation sessions gave me the confidence I needed. Thank you FED for making my dream a reality!"</p>
-                </div>
-                <!-- 13 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Faizan Qureshi</h5>
-                        <span>University of Manchester, UK</span>
-                    </div>
-                    <p>"Top-tier consultancy service! They handled my dependent visa application along with mine without any confusion."</p>
-                </div>
-                <!-- 14 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Komal Shah</h5>
-                        <span>University of Leeds, UK</span>
-                    </div>
-                    <p>"The best part about FED is their prompt communication. Every query regarding my CAS letter and visa checklist was answered immediately."</p>
-                </div>
-                <!-- 15 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Waqas Ahmed</h5>
-                        <span>University of Sydney, Australia</span>
-                    </div>
-                    <p>"I had a wonderful experience working with their team. Professionalism and dedication are their core strengths."</p>
-                </div>
-                <!-- 16 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Rimsha Batool</h5>
-                        <span>TU Berlin, Germany (Europe)</span>
-                    </div>
-                    <p>"Studying in Germany on a public university track seemed overwhelming, but FED's blocked account and university application guidance made it simple."</p>
-                </div>
-                <!-- 17 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Zohaib Hassan</h5>
-                        <span>University of Warsaw, Poland (Europe)</span>
-                    </div>
-                    <p>"They guided me right from university admission down to finding student accommodation in Poland. Outstanding service!"</p>
-                </div>
-                <!-- 18 -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Amna Farooq</h5>
-                        <span>University of Otago, New Zealand</span>
-                    </div>
-                    <p>"I am extremely grateful to the entire team of Foreign Education Destination for their constant support and expert advice."</p>
-                </div>
-
-                <!-- Duplicate set for seamless infinite looping animation -->
-                <div class="student-card">
-                    <div class="student-details">
-                        <h5>Muhammad Bilal</h5>
-                        <span>University of Portsmouth, UK</span>
-                    </div>
-                    <p>"Applying for a UK study visa seemed complex at first, but Foreign Education Destination guided me step-by-step from my admission letter to my final visa interview."</p>
+                    <p>"The step-by-step digital roadmap from application processing to visa approval made my transition effortless."</p>
                 </div>
                 <div class="student-card">
                     <div class="student-details">
                         <h5>Zainab Fatima</h5>
                         <span>Study in Europe Program</span>
                     </div>
-                    <p>"The team helped me choose the right European university matching my profile and budget. Their documentation support was exceptionally professional."</p>
+                    <p>"Their professional verification tools helped me filter out programs matching my budget instantly."</p>
                 </div>
                 <div class="student-card">
                     <div class="student-details">
                         <h5>Ali Raza</h5>
                         <span>University of Melbourne, Australia</span>
                     </div>
-                    <p>"Getting an Australian student visa requires careful file preparation. FED handled my entire case seamlessly and I received my visa on time."</p>
+                    <p>"Flawless case handling and expert file preparation. Received my visa right on schedule."</p>
                 </div>
+                <!-- Loop Duplicate -->
                 <div class="student-card">
                     <div class="student-details">
-                        <h5>Ayesha Noor</h5>
-                        <span>Monash University, Australia</span>
+                        <h5>Muhammad Bilal</h5>
+                        <span>University of Portsmouth, UK</span>
                     </div>
-                    <p>"Extremely supportive team! They helped me find a great scholarship option and cleared all my queries regarding pre-departure requirements."</p>
+                    <p>"The step-by-step digital roadmap from application processing to visa approval made my transition effortless."</p>
                 </div>
             </div>
         </div>
@@ -800,17 +358,16 @@
 
     <!-- Contact Form Section -->
     <section class="contact" id="contact">
-        <h3>Contact Us</h3>
-        <p>Fill out the form below, and our experts will get in touch with you shortly!</p>
-        
+        <h3>Get in Touch</h3>
+        <p>Submit your student metrics below and our advisory system will route your query instantly.</p>
         <form class="contact-form" id="inquiryForm" action="https://formspree.io/f/xpqvpanq" method="POST">
-            <input type="text" id="userName" name="name" placeholder="Your Name" required>
-            <input type="email" id="userEmail" name="email" placeholder="Your Email" required>
-            <input type="tel" id="userPhone" name="phone" placeholder="Your Phone Number" required>
-            <textarea id="userMessage" name="message" rows="5" placeholder="Which country and course are you interested in?" required></textarea>
-            <button type="submit">Submit Form</button>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" rows="4" placeholder="Target destination and field of study?" required></textarea>
+            <button type="submit">Submit Inquiry</button>
             <div class="success-message" id="successNotification">
-                🎉 Thank you! Your inquiry has been submitted successfully. We will contact you shortly.
+                🎉 Inquiry received securely. Our advisors will contact you shortly!
             </div>
         </form>
     </section>
@@ -826,13 +383,17 @@
         <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/923451450072" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; background-color: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 32px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s ease;">
+    <!-- WhatsApp Floating Action -->
+    <a href="https://wa.me/923451450072" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; background: linear-gradient(135deg, #25d366, #1ebe57); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; box-shadow: 0 5px 20px rgba(37,211,102,0.4); z-index: 1000; transition: transform 0.3s ease;">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Interactive JavaScript & Live 3D Logo Effect -->
+    <!-- AOS Script for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({ duration: 800, once: true });
+
+        // Country card redirect link mapping
         document.querySelectorAll('.country-card').forEach(card => {
             card.addEventListener('click', () => {
                 const countryName = card.querySelector('.country-name').textContent.trim();
@@ -841,7 +402,7 @@
                     "Europe": "europe.html",
                     "Australia": "australia.html",
                     "Malaysia": "malaysia.html",
-                    "New Zealand": "newzealand.html",
+                    "New Zealand": "nz.html",
                     "UAE": "uae.html",
                     "Turkey": "turkey.html"
                 };
@@ -851,16 +412,60 @@
             });
         });
 
-        /* Live 3D Tilt Effect on Logo */
+        // Filter functionality for destination categories
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const countryCards = document.querySelectorAll('.country-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                countryCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Logo 3D Tilt Effect
         const logo = document.getElementById('live3dLogo');
-        logo.addEventListener('mousemove', (e) => {
-            const rect = logo.getBoundingClientRect();
+        const container = logo.parentElement;
+        container.addEventListener('mousemove', (e) => {
+            const rect = container.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
-            logo.style.transform = `rotateY(${x * 0.3}deg) rotateX(${-y * 0.3}deg) scale(1.15)`;
+            logo.style.transform = `rotateY(${x * 0.15}deg) rotateX(${-y * 0.15}deg) scale(1.05)`;
         });
-        logo.addEventListener('mouseleave', () => {
+        container.addEventListener('mouseleave', () => {
             logo.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
+        });
+
+        // AJAX Form Submission
+        const form = document.getElementById('inquiryForm');
+        const successMsg = document.getElementById('successNotification');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'json' }
+            }).then(response => {
+                if (response.ok) {
+                    successMsg.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+                } else {
+                    alert('Submission error encountered.');
+                }
+            }).catch(() => {
+                alert('Submission error encountered.');
+            });
         });
     </script>
 </body>
