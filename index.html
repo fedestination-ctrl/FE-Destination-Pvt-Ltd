@@ -315,7 +315,8 @@
 
         /* Rich Services Cards */
         .services { padding: 90px 5%; text-align: center; background-color: #FFFFFF; }
-        .services h3 { font-size: 2.5rem; margin-bottom: 50px; color: #0F172A; font-weight: 700; }
+        .services h3 { font-size: 2.5rem; margin-bottom: 12px; color: #0F172A; font-weight: 700; }
+        .services p { margin-bottom: 45px; color: #64748B; font-size: 1.05rem; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .service-card {
             background: #F8FAFC;
@@ -333,7 +334,7 @@
         .service-card h4 { color: #0F172A; margin-bottom: 12px; font-size: 1.3rem; font-weight: 700; }
         .service-card p { color: #64748B; font-size: 0.95rem; }
 
-        /* Success Testimonial Ticker (15 Mixed Students) */
+        /* Success Testimonial Ticker */
         .student-section { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); padding: 85px 0; text-align: center; overflow: hidden; border-top: 1px solid #BAE6FD; border-bottom: 1px solid #BAE6FD; }
         .student-section h3 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; color: #0F172A; }
         .student-section p { margin-bottom: 40px; color: #475569; font-size: 1.05rem; }
@@ -364,7 +365,21 @@
             font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 20px rgba(0, 114, 255, 0.3);
         }
         .contact-form button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0, 114, 255, 0.5); }
-        .success-message { display: none; background-color: #10B981; color: white; padding: 16px; border-radius: 12px; font-weight: 600; }
+        .success-message { display: none; background-color: #10B981; color: white; padding: 16px; border-radius: 12px; font-weight: 600; margin-top: 15px; }
+
+        /* Floating WhatsApp Button for Liveliness */
+        .floating-whatsapp {
+            position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white;
+            width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); z-index: 9999; transition: transform 0.3s ease;
+            text-decoration: none; animation: pulse 2s infinite;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); color: white; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
 
         /* Footer */
         footer { background-color: #0F172A; color: #94A3B8; text-align: center; padding: 50px 20px; font-size: 0.9rem; border-top: 1px solid #1E293B; }
@@ -389,15 +404,16 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <h2 class="animate__animated animate__fadeInDown">Build Your <span>Global Future</span> Today</h2>
         <p class="animate__animated animate__fadeInUp">Secure admissions, premium scholarship allocations, and high-success visa consultancy for world-class universities.</p>
         <a href="#contact" class="btn-consult">Get Free Consultation</a>
@@ -405,7 +421,7 @@
 
     <!-- Visual Stats Bar -->
     <section class="stats-section">
-        <div class="stats-grid" data-aos="fade-up">
+        <div class="stats-grid">
             <div class="stat-card">
                 <h3>5,000+</h3>
                 <p>Successful Placements</p>
@@ -477,7 +493,7 @@
         <h3>Study Destinations</h3>
         <p>Explore world-class academic hubs with our expert guidance:</p>
         <div class="countries-grid">
-            <div class="country-card" data-country="United Kingdom">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/gb.png" alt="UK" class="country-flag-icon">
@@ -487,7 +503,7 @@
                     </div>
                 </div>
             </div>
-            <div class="country-card" data-country="Europe">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/eu.png" alt="Europe" class="country-flag-icon">
@@ -497,7 +513,7 @@
                     </div>
                 </div>
             </div>
-            <div class="country-card" data-country="Australia">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="country-flag-icon">
@@ -507,7 +523,7 @@
                     </div>
                 </div>
             </div>
-            <div class="country-card" data-country="Malaysia">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3124584/pexels-photo-3124584.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/my.png" alt="Malaysia" class="country-flag-icon">
@@ -517,7 +533,7 @@
                     </div>
                 </div>
             </div>
-            <div class="country-card" data-country="New Zealand">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/3042211/pexels-photo-3042211.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/nz.png" alt="New Zealand" class="country-flag-icon">
@@ -527,7 +543,7 @@
                     </div>
                 </div>
             </div>
-            <div class="country-card" data-country="UAE">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/162031/dubai-tower-arabia-united-arab-emirates-162031.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/ae.png" alt="UAE" class="country-flag-icon">
@@ -537,7 +553,7 @@
                     </div>
                 </div>
             </div>
-            <div class="country-card" data-country="Turkey">
+            <div class="country-card">
                 <div class="country-bg" style="background-image: url('https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=800');"></div>
                 <div class="country-content">
                     <img src="https://flagcdn.com/w80/tr.png" alt="Turkey" class="country-flag-icon">
@@ -581,17 +597,17 @@
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=tum.de&sz=128" alt=""><span>Technical University of Munich</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uva.nl&sz=128" alt=""><span>University of Amsterdam</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=sorbonne-universite.fr&sz=128" alt=""><span>Sorbonne University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=unibo.it&sz=128" alt=""><span>University of Bologna</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ethz.ch&sz=128" alt=""><span>ETH Zurich</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=KU Leuven&sz=128" alt=""><span>KU Leuven</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=helsinki.fi&sz=128" alt=""><span>University of Helsinki</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ku.dk&sz=128" alt=""><span>University of Copenhagen</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=lunduniversity.lu.se&sz=128" alt=""><span>Lund University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=polytechnique.edu&sz=128" alt=""><span>Institut Polytechnique de Paris</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=tu-berlin.de&sz=128" alt=""><span>TU Berlin</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=unibo.it&sz=128" alt=""><span>University of Bologna</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uzh.ch&sz=128" alt=""><span>University of Zurich</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=kth.se&sz=128" alt=""><span>KTH Royal Institute of Technology</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=truni.sk&sz=128" alt=""><span>Trinity College Dublin</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=lmu.de&sz=128" alt=""><span>LMU Munich</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=epfl.ch&sz=128" alt=""><span>EPFL Switzerland</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=kuleuven.be&sz=128" alt=""><span>KU Leuven</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uu.se&sz=128" alt=""><span>Uppsala University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ub.edu&sz=128" alt=""><span>University of Barcelona</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ucph.dk&sz=128" alt=""><span>University of Copenhagen</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=univie.ac.at&sz=128" alt=""><span>University of Vienna</span></div>
         </div>
     </section>
@@ -599,7 +615,7 @@
     <!-- 15 Universities for Australia -->
     <section class="destination-unis-section">
         <h4>Australia - 15 Top Partner Universities</h4>
-        <p>Top-tier research facilities and excellent post-study work pathways.</p>
+        <p>Top-tier education combined with vibrant lifestyle and career pathways.</p>
         <div class="uni-grid-15">
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=unimelb.edu.au&sz=128" alt=""><span>University of Melbourne</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=sydney.edu.au&sz=128" alt=""><span>University of Sydney</span></div>
@@ -607,45 +623,45 @@
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=unsw.edu.au&sz=128" alt=""><span>UNSW Sydney</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=anu.edu.au&sz=128" alt=""><span>Australian National University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=monash.edu&sz=128" alt=""><span>Monash University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uwa.edu.au&sz=128" alt=""><span>University of Western Australia</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=adelaide.edu.au&sz=128" alt=""><span>University of Adelaide</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uwa.edu.au&sz=128" alt=""><span>University of Western Australia</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uts.edu.au&sz=128" alt=""><span>University of Technology Sydney</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=mq.edu.au&sz=128" alt=""><span>Macquarie University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=rmit.edu.au&sz=128" alt=""><span>RMIT University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=qut.edu.au&sz=128" alt=""><span>Queensland University of Technology</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=curtin.edu.au&sz=128" alt=""><span>Curtin University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=qut.edu.au&sz=128" alt=""><span>Queensland University of Technology</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=newcastle.edu.au&sz=128" alt=""><span>University of Newcastle</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=latrobe.edu.au&sz=128" alt=""><span>La Trobe University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=deakin.edu.au&sz=128" alt=""><span>Deakin University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=griffith.edu.au&sz=128" alt=""><span>Griffith University</span></div>
         </div>
     </section>
 
     <!-- 15 Universities for Malaysia -->
     <section class="destination-unis-section">
         <h4>Malaysia - 15 Top Partner Universities</h4>
-        <p>Globally recognized dual-degree programs at affordable living costs.</p>
+        <p>Globally recognized international branch campuses at affordable costs.</p>
         <div class="uni-grid-15">
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=um.edu.my&sz=128" alt=""><span>University of Malaya (UM)</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=upm.edu.my&sz=128" alt=""><span>Universiti Putra Malaysia</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ukm.my&sz=128" alt=""><span>Universiti Kebangsaan Malaysia</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=um.edu.my&sz=128" alt=""><span>University of Malaya</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=utm.my&sz=128" alt=""><span>Universiti Teknologi Malaysia</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ukm.my&sz=128" alt=""><span>Universiti Kebangsaan Malaysia</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=upm.edu.my&sz=128" alt=""><span>Universiti Putra Malaysia</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=usm.my&sz=128" alt=""><span>Universiti Sains Malaysia</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=taylors.edu.my&sz=128" alt=""><span>Taylor's University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=monash.edu.my&sz=128" alt=""><span>Monash University Malaysia</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=nottingham.edu.my&sz=128" alt=""><span>University of Nottingham Malaysia</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=taylors.edu.my&sz=128" alt=""><span>Taylor's University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ucsiuniversity.edu.my&sz=128" alt=""><span>UCSI University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=mmu.edu.my&sz=128" alt=""><span>Multimedia University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=sunway.edu.my&sz=128" alt=""><span>Sunway University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=mmu.edu.my&sz=128" alt=""><span>Multimedia University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uniten.edu.my&sz=128" alt=""><span>Universiti Tenaga Nasional</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=iium.edu.my&sz=128" alt=""><span>International Islamic University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=apu.edu.my&sz=128" alt=""><span>Asia Pacific University (APU)</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=iium.edu.my&sz=128" alt=""><span>International Islamic University Malaysia</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=mmu.edu.my&sz=128" alt=""><span>Management and Science University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=apu.edu.my&sz=128" alt=""><span>Asia Pacific University (APU)</span></div>
         </div>
     </section>
 
     <!-- 15 Universities for New Zealand -->
     <section class="destination-unis-section">
         <h4>New Zealand - 15 Top Partner Universities</h4>
-        <p>High standard of living, scenic campuses, and great research opportunities.</p>
+        <p>Incredible research infrastructure and safe, student-friendly environments.</p>
         <div class="uni-grid-15">
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=auckland.ac.nz&sz=128" alt=""><span>University of Auckland</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=otago.ac.nz&sz=128" alt=""><span>University of Otago</span></div>
@@ -655,12 +671,12 @@
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=waikato.ac.nz&sz=128" alt=""><span>University of Waikato</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=lincoln.ac.nz&sz=128" alt=""><span>Lincoln University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=aut.ac.nz&sz=128" alt=""><span>Auckland University of Technology</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=op.ac.nz&sz=128" alt=""><span>Otago Polytechnic</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=unitec.ac.nz&sz=128" alt=""><span>Unitec Institute of Technology</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=wintec.ac.nz&sz=128" alt=""><span>Waikato Institute of Technology</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=Ara.ac.nz&sz=128" alt=""><span>Ara Institute of Canterbury</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=wintec.ac.nz&sz=128" alt=""><span>Wintec</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=op.ac.nz&sz=128" alt=""><span>Otago Polytechnic</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ara.ac.nz&sz=128" alt=""><span>Ara Institute of Canterbury</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=nmit.ac.nz&sz=128" alt=""><span>Nelson Marlborough Institute</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=Eastern Institute of Technology&sz=128" alt=""><span>Eastern Institute of Technology</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=eit.ac.nz&sz=128" alt=""><span>Eastern Institute of Technology</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=toiohomai.ac.nz&sz=128" alt=""><span>Toi Ohomai Institute</span></div>
         </div>
     </section>
@@ -668,202 +684,144 @@
     <!-- 15 Universities for UAE -->
     <section class="destination-unis-section">
         <h4>UAE - 15 Top Partner Universities</h4>
-        <p>Study in the heart of modern business, luxury, and global innovation.</p>
+        <p>A fast-growing global business and educational center in Dubai and Abu Dhabi.</p>
         <div class="uni-grid-15">
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ku.ac.ae&sz=128" alt=""><span>Khalifa University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uaeu.ac.ae&sz=128" alt=""><span>United Arab Emirates University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=aus.edu&sz=128" alt=""><span>American University of Sharjah</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=kustar.ac.ae&sz=128" alt=""><span>Khalifa University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=zu.ac.ae&sz=128" alt=""><span>Zayed University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=aud.edu&sz=128" alt=""><span>American University in Dubai</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=buid.ac.ae&sz=128" alt=""><span>British University in Dubai</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=hw.ac.uk&sz=128" alt=""><span>Heriot-Watt University Dubai</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=mdx.ac.uk&sz=128" alt=""><span>Middlesex University Dubai</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=uowdubai.ac.ae&sz=128" alt=""><span>University of Wollongong Dubai</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=manipaldubai.com&sz=128" alt=""><span>Manipal Academy of Higher Education</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=buid.ac.ae&sz=128" alt=""><span>British University in Dubai</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=nyu.edu&sz=128" alt=""><span>NYU Abu Dhabi</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=sorbonne.ae&sz=128" alt=""><span>Sorbonne University Abu Dhabi</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=nyu.edu&sz=128" alt=""><span>New York University Abu Dhabi</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=rit.edu&sz=128" alt=""><span>Rochester Institute of Technology Dubai</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=cud.ac.ae&sz=128" alt=""><span>Canadian University Dubai</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=modul.ac.at&sz=128" alt=""><span>Modul University Dubai</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=rcsi.com&sz=128" alt=""><span>RCSI Medical University Bahrain/Dubai</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=manipaldubai.com&sz=128" alt=""><span>Manipal Academy of Higher Education Dubai</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=skylineuniversity.ac.ae&sz=128" alt=""><span>Skyline University College</span></div>
         </div>
     </section>
 
     <!-- 15 Universities for Turkey -->
     <section class="destination-unis-section">
         <h4>Turkey - 15 Top Partner Universities</h4>
-        <p>Cross-continental cultural experience with rich academic heritage.</p>
+        <p>A bridge between Europe and Asia offering affordable European credit transfers.</p>
         <div class="uni-grid-15">
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=metu.edu.tr&sz=128" alt=""><span>Middle East Technical University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=boun.edu.tr&sz=128" alt=""><span>Boğaziçi University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=itu.edu.tr&sz=128" alt=""><span>Istanbul Technical University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=boun.edu.tr&sz=128" alt=""><span>Bogazici University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ku.edu.tr&sz=128" alt=""><span>Koc University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=sabanciuniv.edu&sz=128" alt=""><span>Sabanci University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ankara.edu.tr&sz=128" alt=""><span>Ankara University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=hacettepe.edu.tr&sz=128" alt=""><span>Hacettepe University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=yildiz.edu.tr&sz=128" alt=""><span>Yildiz Technical University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=sabanciuniv.edu&sz=128" alt=""><span>Sabancı University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ku.edu.tr&sz=128" alt=""><span>Koç University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=bilkent.edu.tr&sz=128" alt=""><span>Bilkent University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ozyegin.edu.tr&sz=128" alt=""><span>Ozyegin University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=yeditepe.edu.tr&sz=128" alt=""><span>Yeditepe University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=bahcesehir.edu.tr&sz=128" alt=""><span>Bahcesehir University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ozyegin.edu.tr&sz=128" alt=""><span>Özyeğin University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=yildiz.edu.tr&sz=128" alt=""><span>Yıldız Technical University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=istanbul.edu.tr&sz=128" alt=""><span>Istanbul University</span></div>
-            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=gazi.edu.tr&sz=128" alt=""><span>Gazi University</span></div>
             <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=ege.edu.tr&sz=128" alt=""><span>Ege University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=gazi.edu.tr&sz=128" alt=""><span>Gazi University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=bahcesehir.edu.tr&sz=128" alt=""><span>Bahçeşehir University</span></div>
+            <div class="uni-card-item"><img src="https://www.google.com/s2/favicons?domain=yeditepe.edu.tr&sz=128" alt=""><span>Yeditepe University</span></div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h3>Our Core Services</h3>
+    <!-- Rich Services Cards -->
+    <section class="services" id="services">
+        <h3>Our Premium Services</h3>
+        <p>Comprehensive assistance throughout your study abroad journey</p>
         <div class="services-grid">
-            <div class="service-card" data-aos="fade-up">
-                <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h4>Admission Guidance</h4>
-                <p>Complete professional support to secure guaranteed admissions across top-ranked global universities.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-university"></i></div>
+                <h4>University Admission</h4>
+                <p>Expert counseling to shortlist and secure admissions in top global institutions matching your profile and career ambitions.</p>
             </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
                 <div class="service-icon"><i class="fas fa-passport"></i></div>
-                <h4>Visa Assistance</h4>
-                <p>Precise file preparation, document checklist reviews, and simulated interactive interview training sessions.</p>
+                <h4>Visa Consultancy</h4>
+                <p>Complete documentation review, mock interview preparation, and end-to-end guidance to maximize your visa success rate.</p>
             </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-icon"><i class="fas fa-award"></i></div>
-                <h4>Scholarship Support</h4>
-                <p>Expert profiling and matching to secure lucrative partial and full tuition fee waivers.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up">
-                <div class="service-icon"><i class="fas fa-home"></i></div>
-                <h4>Student Accommodation</h4>
-                <p>Assistance in finding safe, comfortable, and budget-friendly housing directly close to your campus.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                <h4>Travel & Health Insurance</h4>
-                <p>Hassle-free processing of mandatory international student healthcare covers and multi-tier travel policies.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
-                <h4>Arrival & Logistics</h4>
-                <p>End-to-end flight booking assistance, airport pick-ups, and smooth initial settling-in support.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <h4>Scholarship Assistance</h4>
+                <p>Identify, apply for, and unlock lucrative merit-based and need-based financial awards and tuition bursaries.</p>
             </div>
         </div>
     </section>
 
-    <!-- Student Success Ticker Section (15 Mixed Students) -->
+    <!-- Success Testimonial Ticker -->
     <section class="student-section">
-        <h3>Student Success Stories</h3>
-        <p>Real feedback from students who achieved their dreams with us.</p>
-        <div style="overflow: hidden; width: 100%;">
-            <div class="success-slider">
-                <div class="student-card">
-                    <div class="student-details"><h5>Muhammad Bilal</h5><span>University of Portsmouth, UK</span></div>
-                    <p>"The step-by-step guidance from my initial admission letter to final visa clearance made everything completely stress-free."</p>
+        <h3>Success Stories</h3>
+        <p>Hear from students who transformed their dreams into reality with us</p>
+        <div class="success-slider">
+            <div class="student-card">
+                <div class="student-details">
+                    <h5>Ahmed Khan</h5>
+                    <span>University of Manchester, UK</span>
                 </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Zainab Fatima</h5><span>University of Amsterdam, Europe</span></div>
-                    <p>"They helped me shortlist a European university matching both my career goals and budget perfectly. Highly recommended!"</p>
+                <p>"Foreign Education Destination made my UK admission process completely seamless. Their visa counseling gave me 100% confidence!"</p>
+            </div>
+            <div class="student-card">
+                <div class="student-details">
+                    <h5>Fatima Zahra</h5>
+                    <span>TU Munich, Germany</span>
                 </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Ali Raza</h5><span>University of Melbourne, Australia</span></div>
-                    <p>"Australian student visas require precise documentation. FED handled my entire case professionally and securely."</p>
+                <p>"I secured a tuition waiver in Europe thanks to their scholarship tracking team. Highly professional and supportive staff!"</p>
+            </div>
+            <div class="student-card">
+                <div class="student-details">
+                    <h5>Bilal Ahmed</h5>
+                    <span>University of Melbourne, Australia</span>
                 </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Ayesha Noor</h5><span>Monash University, Australia</span></div>
-                    <p>"Extremely supportive team! They helped me find a great scholarship option and cleared all pre-departure queries."</p>
+                <p>"From choosing the right course to landing in Australia, their experts guided me at every step without any hassle."</p>
+            </div>
+            <div class="student-card">
+                <div class="student-details">
+                    <h5>Zainab Malik</h5>
+                    <span>University of Auckland, NZ</span>
                 </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Hamza Sheikh</h5><span>Taylor's University, Malaysia</span></div>
-                    <p>"Studying in Malaysia was smooth thanks to their fast processing and honest advice. Super grateful!"</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Sana Mir</h5><span>University of Auckland, New Zealand</span></div>
-                    <p>"Getting into New Zealand seemed complicated, but FED's counselors made every document checklist clear and simple."</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Usman Tariq</h5><span>American University of Sharjah, UAE</span></div>
-                    <p>"From university selection to visa approval in Dubai, their team was responsive 24/7."</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Khadija Omer</h5><span>Middle East Technical University, Turkey</span></div>
-                    <p>"Amazing support for my Turkish scholarship application. Highly professional service!"</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Bilal Ahmed</h5><span>University of Oxford, UK</span></div>
-                    <p>"Securing admission at Oxford required intense interview prep. FED experts were exceptional mentors."</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Nimra Khan</h5><span>Technical University of Munich, Germany</span></div>
-                    <p>"They guided me completely through public university options in Germany with zero hidden charges."</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Danish Farooq</h5><span>University of Sydney, Australia</span></div>
-                    <p>"My visa was granted faster than expected. Their documentation team is top-notch."</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Mahnoor Baloch</h5><span>University of Malaya, Malaysia</span></div>
-                    <p>"Friendly staff and extremely cooperative counseling. Best consultancy for foreign admissions!"</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Zohaib Hassan</h5><span>Khalifa University, UAE</span></div>
-                    <p>"They handled my accommodation and airport pickup as well. Complete peace of mind!"</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Hassan Raza</h5><span>University of Otago, New Zealand</span></div>
-                    <p>"Transparent process and great guidance regarding part-time work rules in NZ."</p>
-                </div>
-                <div class="student-card">
-                    <div class="student-details"><h5>Eshaal Malik</h5><span>Koc University, Turkey</span></div>
-                    <p>"My dream of studying abroad came true because of Foreign Education Destination. Thank you!"</p>
-                </div>
-                <!-- Duplicate set for seamless continuous ticker loop -->
-                <div class="student-card">
-                    <div class="student-details"><h5>Muhammad Bilal</h5><span>University of Portsmouth, UK</span></div>
-                    <p>"The step-by-step guidance from my initial admission letter to final visa clearance made everything completely stress-free."</p>
-                </div>
+                <p>"An amazing team! They handled my documentation perfectly and I received my student visa much faster than expected."</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
+    <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h3>Contact Us</h3>
-        <p>Fill out the form below and our expert counselors will contact you shortly!</p>
-        <form class="contact-form" id="inquiryForm" action="https://formspree.io/f/xpqvpanq" method="POST">
-            <input type="text" name="name" placeholder="Your Full Name" required>
-            <input type="email" name="email" placeholder="Your Email Address" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required>
-            <textarea name="message" rows="4" placeholder="Which country and degree program are you interested in?" required></textarea>
-            <button type="submit">Submit Inquiry</button>
-            <div class="success-message" id="successNotification">
-                🎉 Thank you! Your inquiry has been sent successfully. We will call you shortly.
-            </div>
+        <h3>Start Your Application Today</h3>
+        <p>Fill out the form below and our expert counselors will reach out to you shortly.</p>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <textarea rows="4" placeholder="Tell us your study destination and preferred program..." required></textarea>
+            <button type="submit">Submit Consultation Request</button>
+            <div class="success-message" id="successMessage">Thank you! Your request has been submitted successfully.</div>
         </form>
     </section>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Footer -->
     <footer>
         <div class="social-icons">
-            <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer" class="fb"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/fedestination" target="_blank" rel="noopener noreferrer" class="ig"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@fedestination" target="_blank" rel="noopener noreferrer" class="tk"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer" class="yt"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="tk"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
         </div>
         <p>&copy; 2026 Foreign Education Destination. All Rights Reserved.</p>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/923451450072" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; background: linear-gradient(135deg, #25d366, #128c7e); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 34px; box-shadow: 0 6px 20px rgba(37,211,102,0.4); z-index: 1000; transition: transform 0.3s ease;">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- AOS Script & JS Interactions -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JavaScript Scripts -->
     <script>
-        AOS.init({ duration: 800, once: true });
-
-        // University Slider Scroll Logic
+        // Partner Universities Slider Function
         function scrollUni(direction) {
             const track = document.getElementById('uniTrack');
-            const scrollAmount = 250;
+            const scrollAmount = 300;
             if (direction === 'left') {
                 track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             } else {
@@ -871,59 +829,14 @@
             }
         }
 
-        // Country card redirect mapping
-        document.querySelectorAll('.country-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const countryName = card.getAttribute('data-country');
-                const countryPages = {
-                    "United Kingdom": "uk.html",
-                    "Europe": "europe.html",
-                    "Australia": "australia.html",
-                    "Malaysia": "malaysia.html",
-                    "New Zealand": "nz.html",
-                    "UAE": "uae.html",
-                    "Turkey": "turkey.html"
-                };
-                if (countryPages[countryName]) {
-                    window.location.href = countryPages[countryName];
-                }
-            });
-        });
-
-        // Logo 3D Tilt Effect
-        const logo = document.getElementById('live3dLogo');
-        const container = logo.parentElement;
-        container.addEventListener('mousemove', (e) => {
-            const rect = container.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            logo.style.transform = `rotateY(${x * 0.15}deg) rotateX(${-y * 0.15}deg) scale(1.05)`;
-        });
-        container.addEventListener('mouseleave', () => {
-            logo.style.transform = 'rotateY(0deg) rotateX(0deg) scale(1)';
-        });
-
-        // AJAX Form Handler
-        const form = document.getElementById('inquiryForm');
-        const successMsg = document.getElementById('successNotification');
-        form.addEventListener('submit', function(e) {
+        // Contact Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const formData = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'json' }
-            }).then(response => {
-                if (response.ok) {
-                    successMsg.style.display = 'block';
-                    form.reset();
-                    setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
-                } else {
-                    alert('Submission error. Please try again.');
-                }
-            }).catch(() => {
-                alert('Submission error. Please try again.');
-            });
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
         });
     </script>
 </body>
