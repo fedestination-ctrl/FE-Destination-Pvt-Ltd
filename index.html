@@ -1,3002 +1,4602 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Foreign Education Destination | Study Abroad Consultants</title>
-
-  <meta
-    name="description"
-    content="Foreign Education Destination helps students explore international study opportunities with admissions guidance, scholarship support and student visa assistance."
-  >
-
-  <meta name="robots" content="index, follow">
-
-  <meta name="theme-color" content="#087fc1">
-
-  <link rel="canonical" href="https://fedestination.com/">
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
-
-  <!-- Animate.css -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  >
-
-  <!-- AOS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-  >
-
-  <style>
-
-    :root {
-      --primary: #087fc1;
-      --primary-dark: #05649a;
-      --secondary: #eaf7ff;
-      --dark: #102a43;
-      --text: #52606d;
-      --white: #ffffff;
-      --light: #f7fbfe;
-      --border: #e4edf3;
-      --shadow: 0 12px 35px rgba(16, 42, 67, 0.08);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Poppins", sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    button,
-    input,
-    textarea {
-      font-family: inherit;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .navbar {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 255px;
-    }
-
-    .logo {
-      width: 55px;
-      height: 55px;
-      object-fit: contain;
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .logo-text strong {
-      color: var(--primary);
-      font-size: 15px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .logo-text span {
-      color: #607080;
-      font-size: 10px;
-      font-weight: 500;
-      margin-top: 4px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      flex: 1;
-    }
-
-    nav a {
-      position: relative;
-      color: var(--dark);
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.25s ease;
-    }
-
-    nav a:hover {
-      color: var(--primary);
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -7px;
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      transition: 0.25s ease;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* HEADER SOCIAL */
-
-    .header-social {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .header-social a {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #eef8ff;
-      color: var(--primary);
-      font-size: 14px;
-      transition: 0.25s ease;
-    }
-
-    .header-social a:hover {
-      background: var(--primary);
-      color: #fff;
-      transform: translateY(-3px);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
-      transition: 0.25s ease;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 8px 20px rgba(8, 127, 193, 0.2);
-    }
-
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-
-    .header-btn {
-      white-space: nowrap;
-    }
-
-    .menu-toggle {
-      display: none;
-      border: none;
-      background: transparent;
-      color: var(--dark);
-      font-size: 25px;
-      cursor: pointer;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.98) 0%,
-          rgba(255,255,255,0.92) 45%,
-          rgba(234,247,255,0.55) 100%
-        ),
-        url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1600")
-        center/cover;
-    }
-
-    .hero-content {
-      max-width: 720px;
-      padding: 80px 0;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 30px;
-      background: var(--secondary);
-      color: var(--primary);
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      color: var(--dark);
-      font-size: clamp(40px, 6vw, 68px);
-      line-height: 1.1;
-      font-weight: 800;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero p {
-      max-width: 650px;
-      font-size: 17px;
-      color: #52606d;
-      margin-bottom: 30px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn-outline {
-      border: 1px solid var(--primary);
-      color: var(--primary);
-      background: #fff;
-    }
-
-    .btn-outline:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    /* =========================
-       STATS
-    ========================= */
-
-    .stats {
-      margin-top: -45px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .stats-grid {
-      background: #fff;
-      box-shadow: var(--shadow);
-      border-radius: 16px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      overflow: hidden;
-    }
-
-    .stat {
-      padding: 28px 20px;
-      text-align: center;
-      border-right: 1px solid var(--border);
-    }
-
-    .stat:last-child {
-      border-right: none;
-    }
-
-    .stat h3 {
-      color: var(--primary);
-      font-size: 25px;
-      font-weight: 800;
-      margin-bottom: 5px;
-    }
-
-    .stat p {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
-    section {
-      padding: 90px 0;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 45px;
-    }
-
-    .section-heading span {
-      display: inline-block;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-
-    .section-heading h2 {
-      color: var(--dark);
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
-      font-size: 15px;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-image {
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .about-image img {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-    }
-
-    .about-content h2 {
-      color: var(--dark);
-      font-size: 38px;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-
-    .about-content h2 span {
-      color: var(--primary);
-    }
-
-    .about-content p {
-      margin-bottom: 16px;
-    }
-
-    .about-list {
-      margin: 25px 0;
-      display: grid;
-      gap: 12px;
-    }
-
-    .about-list li {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .about-list i {
-      color: var(--primary);
-      margin-top: 5px;
-    }
-
-    /* =========================
-       UNIVERSITIES
-    ========================= */
-
-    .university-section {
-      background: var(--light);
-    }
-
-    .university-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .university-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      min-height: 145px;
-      padding: 25px 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      transition: 0.3s ease;
-    }
-
-    .university-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .university-card img {
-      width: 58px;
-      height: 58px;
-      object-fit: contain;
-      margin-bottom: 12px;
-    }
-
-    .university-card h4 {
-      color: var(--dark);
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    /* =========================
-       JOURNEY
-    ========================= */
-
-    .journey-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .journey-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 28px 22px;
-      border-radius: 15px;
-      position: relative;
-      transition: 0.3s ease;
-    }
-
-    .journey-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .step-number {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--secondary);
-      color: var(--primary);
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .journey-card h3 {
-      color: var(--dark);
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-
-    .journey-card p {
-      font-size: 13px;
-    }
-
-    /* =========================
-       DESTINATIONS
-    ========================= */
-
-    .destinations {
-      background: var(--light);
-    }
-
-    .destination-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .destination-card {
-      min-height: 220px;
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: flex-end;
-      transition: 0.3s ease;
-    }
-
-    .destination-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .destination-overlay {
-      width: 100%;
-      padding: 25px 20px;
-      color: #fff;
-      background: linear-gradient(
-        transparent,
-        rgba(0,0,0,0.85)
-      );
-    }
-
-    .destination-overlay h3 {
-      font-size: 21px;
-      margin-bottom: 4px;
-    }
-
-    .destination-overlay p {
-      font-size: 12px;
-    }
-
-    .uk {
-      background-image:
-        url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .europe {
-      background-image:
-        url("https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .australia {
-      background-image:
-        url("https://images.pexels.com/photos/995765/pexels-photo-995765.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .malaysia {
-      background-image:
-        url("https://images.pexels.com/photos/259266/pexels-photo-259266.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .newzealand {
-      background-image:
-        url("https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .uae {
-      background-image:
-        url("https://images.pexels.com/photos/1470502/pexels-photo-1470502.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .turkey {
-      background-image:
-        url("https://images.pexels.com/photos/161853/turkey-istanbul-cityscape-city-161853.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    .usa {
-      background-image:
-        url("https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?auto=compress&cs=tinysrgb&w=800");
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      padding: 30px 25px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      background: #fff;
-      transition: 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      width: 55px;
-      height: 55px;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      background: var(--secondary);
-      color: var(--primary);
-      font-size: 21px;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      color: var(--dark);
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .service-card p {
-      font-size: 13px;
-    }
-
-    /* =========================
-       WHY US
-    ========================= */
-
-    .why-section {
-      background: var(--light);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .why-card {
-      display: flex;
-      gap: 18px;
-      padding: 25px;
-      background: #fff;
-      border-radius: 15px;
-      border: 1px solid var(--border);
-    }
-
-    .why-card i {
-      width: 48px;
-      height: 48px;
-      flex: 0 0 48px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      background: var(--secondary);
-      color: var(--primary);
-    }
-
-    .why-card h3 {
-      color: var(--dark);
-      font-size: 17px;
-      margin-bottom: 5px;
-    }
-
-    .why-card p {
-      font-size: 13px;
-    }
-
-    /* =========================
-       TESTIMONIALS
-    ========================= */
-
-    .testimonials {
-      overflow: hidden;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .testimonial {
-      padding: 28px;
-      background: var(--light);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-    }
-
-    .stars {
-      color: #f5a623;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
-    }
-
-    .testimonial p {
-      font-size: 13px;
-      margin-bottom: 18px;
-    }
-
-    .student {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .student-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #fff;
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-    }
-
-    .student h4 {
-      color: var(--dark);
-      font-size: 13px;
-    }
-
-    .student span {
-      font-size: 11px;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact-section {
-      background:
-        linear-gradient(
-          135deg,
-          #f3fbff,
-          #ffffff
-        );
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .contact-info h2 {
-      color: var(--dark);
-      font-size: 38px;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .contact-info h2 span {
-      color: var(--primary);
-    }
-
-    .contact-info > p {
-      margin-bottom: 25px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 14px;
-      margin-bottom: 20px;
-    }
-
-    .contact-item i {
-      width: 44px;
-      height: 44px;
-      flex: 0 0 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 10px;
-      background: var(--secondary);
-      color: var(--primary);
-    }
-
-    .contact-item h4 {
-      color: var(--dark);
-      font-size: 14px;
-      margin-bottom: 2px;
-    }
-
-    .contact-item p {
-      font-size: 13px;
-    }
-
-    .contact-form {
-      background: #fff;
-      padding: 35px;
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
-
-    .form-group {
-      margin-bottom: 17px;
-    }
-
-    .form-group label {
-      display: block;
-      color: var(--dark);
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px 13px;
-      outline: none;
-      font-size: 13px;
-      transition: 0.25s ease;
-      background: #fff;
-    }
-
-    .form-group textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(8, 127, 193, 0.08);
-    }
-
-    .form-status {
-      margin-top: 14px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #092b40;
-      color: #c9d7e0;
-      padding: 60px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 35px;
-      padding-bottom: 40px;
-    }
-
-    .footer-brand img {
-      width: 65px;
-      margin-bottom: 15px;
-    }
-
-    .footer-brand h3 {
-      color: #fff;
-      margin-bottom: 12px;
-      font-size: 18px;
-    }
-
-    .footer-brand p {
-      font-size: 13px;
-      max-width: 330px;
-    }
-
-    footer h4 {
-      color: #fff;
-      margin-bottom: 15px;
-      font-size: 15px;
-    }
-
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
-      margin-bottom: 8px;
-    }
-
-    footer li a {
-      font-size: 13px;
-      transition: 0.2s ease;
-    }
-
-    footer li a:hover {
-      color: #fff;
-    }
-
-    .footer-social {
-      display: flex;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .footer-social a {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: rgba(255,255,255,0.1);
-      color: #fff;
-      transition: 0.25s ease;
-    }
-
-    .footer-social a:hover {
-      background: var(--primary);
-      transform: translateY(-3px);
-    }
-
-    .copyright {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 22px;
-      text-align: center;
-      font-size: 12px;
-    }
-
-    /* =========================
-       WHATSAPP
-    ========================= */
-
-    .whatsapp-float {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #25d366;
-      color: #fff;
-      font-size: 27px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-      z-index: 1000;
-      transition: 0.25s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1050px) {
-
-      .navbar {
-        gap: 12px;
-      }
-
-      .logo-container {
-        min-width: 220px;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .header-social {
-        gap: 5px;
-      }
-
-      .header-social a {
-        width: 31px;
-        height: 31px;
-        font-size: 13px;
-      }
-
-      .university-grid,
-      .destination-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .journey-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 850px) {
-
-      .navbar {
-        min-height: 72px;
-      }
-
-      .logo {
-        width: 48px;
-        height: 48px;
-      }
-
-      .logo-container {
-        min-width: auto;
-        flex: 1;
-      }
-
-      .logo-text strong {
-        font-size: 13px;
-      }
-
-      .logo-text span {
-        font-size: 9px;
-      }
-
-      nav {
-        position: absolute;
-        left: 4%;
-        right: 4%;
-        top: 78px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 12px;
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        box-shadow: var(--shadow);
-      }
-
-      nav.active {
-        display: flex;
-      }
-
-      nav a {
-        padding: 12px;
-        font-size: 14px;
-      }
-
-      nav a::after {
-        display: none;
-      }
-
-      .header-social,
-      .header-btn {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .hero {
-        min-height: 580px;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stat:nth-child(2) {
-        border-right: none;
-      }
-
-      .stat:nth-child(-n+2) {
-        border-bottom: 1px solid var(--border);
-      }
-
-      .about-grid,
-      .contact-grid,
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .testimonial-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 650px) {
-
-      section {
-        padding: 65px 0;
-      }
-
-      .hero-content {
-        padding: 60px 0;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .university-grid,
-      .destination-grid,
-      .services-grid,
-      .testimonial-grid,
-      .journey-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .about-image img {
-        height: 320px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .contact-form {
-        padding: 25px;
-      }
-    }
-
-    @media (max-width: 430px) {
-
-      .logo-text strong {
-        white-space: normal;
-        font-size: 12px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .stats-grid,
-      .university-grid,
-      .destination-grid,
-      .services-grid,
-      .testimonial-grid,
-      .journey-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .stat {
-        border-right: none !important;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .stat:last-child {
-        border-bottom: none;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .hero-buttons .btn {
-        width: 100%;
-      }
-    }
-
-  </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FE Destination (Pvt.) Ltd. | Foreign Education Destination</title>
+
+<meta
+name="description"
+content="Foreign Education Destination helps students explore international education opportunities, university admissions, scholarships and student visa guidance."
+>
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#087fc1">
+
+<link rel="canonical" href="https://fedestination.com/">
+
+<!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
+
+<!-- FONT AWESOME -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+
+<!-- AOS -->
+<link
+rel="stylesheet"
+href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+>
+
+
+<style>
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+
+--blue:#0786c9;
+--blue-dark:#05679b;
+--blue-light:#eaf7ff;
+--sky:#38bdf8;
+--navy:#092b45;
+--dark:#102a43;
+--text:#5d6b78;
+--white:#ffffff;
+--light:#f6fbfe;
+--border:#e4edf3;
+
+--shadow:0 15px 45px rgba(9,43,69,.10);
+--shadow-hover:0 22px 55px rgba(9,43,69,.16);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:"DM Sans",sans-serif;
+color:var(--text);
+background:#fff;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+h1,h2,h3,h4,h5{
+font-family:"Poppins",sans-serif;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+font-family:inherit;
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar{
+
+background:var(--navy);
+color:#dcebf4;
+
+font-size:12px;
+
+}
+
+.topbar-inner{
+
+min-height:38px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:20px;
+
+}
+
+.top-left,
+.top-right{
+
+display:flex;
+align-items:center;
+gap:20px;
+
+}
+
+.topbar i{
+color:#5ac8ff;
+margin-right:5px;
+}
+
+.topbar a:hover{
+color:#fff;
+}
+
+
+/* =====================================================
+   MAIN HEADER
+===================================================== */
+
+.main-header{
+
+background:#fff;
+
+position:relative;
+
+z-index:1000;
+
+box-shadow:0 3px 20px rgba(0,0,0,.05);
+
+}
+
+.main-header-inner{
+
+min-height:92px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:30px;
+
+}
+
+
+/* LOGO */
+
+.brand{
+
+display:flex;
+align-items:center;
+
+gap:13px;
+
+flex-shrink:0;
+
+}
+
+.brand-logo{
+
+width:58px;
+height:58px;
+
+object-fit:contain;
+
+}
+
+.brand-text{
+
+display:flex;
+flex-direction:column;
+
+line-height:1.15;
+
+}
+
+.brand-text .company{
+
+font-family:"Poppins",sans-serif;
+
+font-size:15px;
+
+font-weight:800;
+
+color:var(--navy);
+
+letter-spacing:.2px;
+
+}
+
+.brand-text .company span{
+
+color:var(--blue);
+
+}
+
+.brand-text .destination{
+
+font-family:"Poppins",sans-serif;
+
+font-size:12px;
+
+font-weight:600;
+
+color:var(--blue);
+
+margin-top:5px;
+
+letter-spacing:.2px;
+
+}
+
+
+/* HEADER CTA */
+
+.header-cta{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+background:var(--blue);
+
+color:#fff;
+
+padding:12px 20px;
+
+border-radius:8px;
+
+font-size:13px;
+
+font-weight:700;
+
+white-space:nowrap;
+
+transition:.3s;
+
+}
+
+.header-cta:hover{
+
+background:var(--blue-dark);
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 20px rgba(7,134,201,.25);
+
+}
+
+
+/* =====================================================
+   NAVIGATION BAR
+===================================================== */
+
+.navigation{
+
+background:#fff;
+
+border-top:1px solid #f1f5f8;
+
+border-bottom:1px solid var(--border);
+
+}
+
+.nav-inner{
+
+min-height:54px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.nav-menu{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:36px;
+
+list-style:none;
+
+}
+
+.nav-menu a{
+
+font-size:13px;
+
+font-weight:700;
+
+color:var(--dark);
+
+position:relative;
+
+padding:17px 0;
+
+transition:.25s;
+
+}
+
+.nav-menu a:hover{
+
+color:var(--blue);
+
+}
+
+.nav-menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:8px;
+
+width:0;
+
+height:2px;
+
+background:var(--blue);
+
+transition:.3s;
+
+}
+
+.nav-menu a:hover::after{
+
+width:100%;
+
+}
+
+
+/* =====================================================
+   SOCIAL BAR
+===================================================== */
+
+.social-bar{
+
+background:linear-gradient(
+90deg,
+#0574ad,
+#0b92d1,
+#087fc1
+);
+
+color:#fff;
+
+}
+
+.social-inner{
+
+min-height:43px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+}
+
+.social-title{
+
+font-size:11px;
+
+font-weight:600;
+
+opacity:.9;
+
+margin-right:5px;
+
+}
+
+.social-link{
+
+width:28px;
+height:28px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.14);
+
+color:#fff;
+
+font-size:12px;
+
+transition:.25s;
+
+}
+
+.social-link:hover{
+
+background:#fff;
+
+color:var(--blue);
+
+transform:translateY(-2px);
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-toggle{
+
+display:none;
+
+border:0;
+
+background:var(--blue);
+
+color:#fff;
+
+width:42px;
+height:42px;
+
+border-radius:8px;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+position:relative;
+
+min-height:690px;
+
+display:flex;
+
+align-items:center;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(4,39,64,.95) 0%,
+rgba(5,76,111,.82) 42%,
+rgba(5,126,181,.30) 75%,
+rgba(5,126,181,.08) 100%
+),
+
+url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85")
+
+center/cover;
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+right:-180px;
+bottom:-250px;
+
+border-radius:50%;
+
+background:rgba(56,189,248,.22);
+
+filter:blur(5px);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:720px;
+
+padding:90px 0;
+
+color:#fff;
+
+}
+
+.hero-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:9px 15px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.13);
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(10px);
+
+font-size:12px;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+}
+
+.hero-badge i{
+
+color:#62d1ff;
+
+}
+
+.hero h1{
+
+font-size:clamp(42px,6vw,70px);
+
+line-height:1.08;
+
+font-weight:800;
+
+margin-bottom:22px;
+
+letter-spacing:-1.5px;
+
+}
+
+.hero h1 span{
+
+color:#5bd0ff;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+max-width:650px;
+
+color:#eaf7ff;
+
+margin-bottom:30px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:8px;
+
+padding:13px 21px;
+
+border-radius:8px;
+
+font-size:13px;
+
+font-weight:700;
+
+transition:.3s;
+
+cursor:pointer;
+
+border:0;
+
+}
+
+.btn-primary{
+
+background:var(--blue);
+
+color:#fff;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.btn-primary:hover{
+
+background:#fff;
+
+color:var(--blue);
+
+transform:translateY(-3px);
+
+}
+
+.btn-white{
+
+background:#fff;
+
+color:var(--navy);
+
+}
+
+.btn-white:hover{
+
+background:#5bd0ff;
+
+color:#fff;
+
+transform:translateY(-3px);
+
+}
+
+
+/* =====================================================
+   FLOATING HERO CARD
+===================================================== */
+
+.hero-card{
+
+position:absolute;
+
+right:8%;
+
+bottom:75px;
+
+z-index:3;
+
+width:245px;
+
+background:rgba(255,255,255,.95);
+
+border-radius:16px;
+
+padding:20px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+animation:floatCard 4s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%,100%{transform:translateY(0)}
+
+50%{transform:translateY(-10px)}
+
+}
+
+.hero-card-top{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:13px;
+
+}
+
+.hero-card-icon{
+
+width:42px;
+height:42px;
+
+border-radius:10px;
+
+background:var(--blue-light);
+
+color:var(--blue);
+
+display:grid;
+
+place-items:center;
+
+}
+
+.hero-card h4{
+
+font-size:13px;
+
+color:var(--navy);
+
+}
+
+.hero-card p{
+
+font-size:11px;
+
+color:var(--text);
+
+margin:0;
+
+}
+
+.progress{
+
+height:7px;
+
+background:#e7f0f5;
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+.progress span{
+
+display:block;
+
+width:82%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+var(--blue),
+var(--sky)
+);
+
+border-radius:10px;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats{
+
+position:relative;
+
+margin-top:-55px;
+
+z-index:5;
+
+}
+
+.stats-grid{
+
+background:#fff;
+
+border-radius:18px;
+
+box-shadow:var(--shadow);
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+overflow:hidden;
+
+}
+
+.stat{
+
+padding:28px 20px;
+
+text-align:center;
+
+border-right:1px solid var(--border);
+
+}
+
+.stat:last-child{
+
+border-right:none;
+
+}
+
+.stat-icon{
+
+width:42px;
+height:42px;
+
+margin:0 auto 9px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:var(--blue-light);
+
+color:var(--blue);
+
+}
+
+.stat h3{
+
+font-size:25px;
+
+color:var(--navy);
+
+font-weight:800;
+
+}
+
+.stat p{
+
+font-size:11px;
+
+font-weight:600;
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+
+padding:95px 0;
+
+}
+
+.section-heading{
+
+text-align:center;
+
+max-width:730px;
+
+margin:0 auto 50px;
+
+}
+
+.section-heading .eyebrow{
+
+display:inline-block;
+
+font-size:12px;
+
+font-weight:800;
+
+color:var(--blue);
+
+text-transform:uppercase;
+
+letter-spacing:1.5px;
+
+margin-bottom:8px;
+
+}
+
+.section-heading h2{
+
+font-size:clamp(28px,4vw,43px);
+
+line-height:1.2;
+
+color:var(--navy);
+
+margin-bottom:14px;
+
+}
+
+.section-heading p{
+
+font-size:14px;
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about{
+
+background:#fff;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:65px;
+
+align-items:center;
+
+}
+
+.about-image{
+
+position:relative;
+
+}
+
+.about-image-main{
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+}
+
+.about-image-main img{
+
+width:100%;
+
+height:470px;
+
+object-fit:cover;
+
+}
+
+.about-small-card{
+
+position:absolute;
+
+right:-25px;
+
+bottom:30px;
+
+background:#fff;
+
+padding:18px;
+
+border-radius:14px;
+
+box-shadow:var(--shadow);
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.about-small-icon{
+
+width:45px;
+height:45px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:var(--blue);
+
+color:#fff;
+
+}
+
+.about-small-card strong{
+
+display:block;
+
+color:var(--navy);
+
+font-size:14px;
+
+}
+
+.about-small-card span{
+
+font-size:11px;
+
+}
+
+.about-content .eyebrow{
+
+color:var(--blue);
+
+font-size:12px;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+}
+
+.about-content h2{
+
+font-size:40px;
+
+line-height:1.2;
+
+color:var(--navy);
+
+margin:8px 0 18px;
+
+}
+
+.about-content h2 span{
+
+color:var(--blue);
+
+}
+
+.about-content p{
+
+font-size:14px;
+
+margin-bottom:15px;
+
+}
+
+.check-list{
+
+list-style:none;
+
+margin:24px 0;
+
+display:grid;
+
+gap:11px;
+
+}
+
+.check-list li{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:10px;
+
+font-size:13px;
+
+font-weight:600;
+
+color:var(--dark);
+
+}
+
+.check-list i{
+
+color:var(--blue);
+
+margin-top:4px;
+
+}
+
+
+/* =====================================================
+   DESTINATIONS
+===================================================== */
+
+.destinations{
+
+background:var(--light);
+
+}
+
+.destination-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.destination{
+
+height:270px;
+
+border-radius:17px;
+
+overflow:hidden;
+
+position:relative;
+
+background-size:cover;
+
+background-position:center;
+
+transition:.35s;
+
+}
+
+.destination:hover{
+
+transform:translateY(-8px);
+
+box-shadow:var(--shadow-hover);
+
+}
+
+.destination::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+transparent 25%,
+rgba(4,35,57,.88)
+);
+
+}
+
+.destination-content{
+
+position:absolute;
+
+z-index:2;
+
+left:20px;
+
+right:20px;
+
+bottom:20px;
+
+color:#fff;
+
+}
+
+.destination-content .flag{
+
+font-size:22px;
+
+margin-bottom:7px;
+
+}
+
+.destination-content h3{
+
+font-size:20px;
+
+margin-bottom:2px;
+
+}
+
+.destination-content p{
+
+font-size:11px;
+
+opacity:.9;
+
+}
+
+.destination-arrow{
+
+position:absolute;
+
+right:18px;
+
+bottom:20px;
+
+z-index:3;
+
+width:34px;
+height:34px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:#fff;
+
+color:var(--blue);
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+}
+
+.service{
+
+background:#fff;
+
+border:1px solid var(--border);
+
+border-radius:17px;
+
+padding:30px 25px;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.3s;
+
+}
+
+.service::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:linear-gradient(
+90deg,
+var(--blue),
+var(--sky)
+);
+
+transform:scaleX(0);
+
+transform-origin:left;
+
+transition:.3s;
+
+}
+
+.service:hover{
+
+transform:translateY(-7px);
+
+box-shadow:var(--shadow);
+
+}
+
+.service:hover::before{
+
+transform:scaleX(1);
+
+}
+
+.service-icon{
+
+width:56px;
+height:56px;
+
+border-radius:13px;
+
+background:var(--blue-light);
+
+color:var(--blue);
+
+display:grid;
+
+place-items:center;
+
+font-size:21px;
+
+margin-bottom:18px;
+
+}
+
+.service h3{
+
+color:var(--navy);
+
+font-size:18px;
+
+margin-bottom:8px;
+
+}
+
+.service p{
+
+font-size:13px;
+
+}
+
+
+/* =====================================================
+   JOURNEY
+===================================================== */
+
+.journey{
+
+background:linear-gradient(
+135deg,
+#062d48,
+#087fc1
+);
+
+color:#fff;
+
+}
+
+.journey .section-heading h2{
+
+color:#fff;
+
+}
+
+.journey .section-heading p{
+
+color:#dceff9;
+
+}
+
+.journey .eyebrow{
+
+color:#62d1ff;
+
+}
+
+.journey-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+.journey-card{
+
+padding:25px;
+
+border:1px solid rgba(255,255,255,.15);
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border-radius:15px;
+
+transition:.3s;
+
+}
+
+.journey-card:hover{
+
+background:rgba(255,255,255,.14);
+
+transform:translateY(-5px);
+
+}
+
+.step{
+
+width:43px;
+height:43px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:#fff;
+
+color:var(--blue);
+
+font-weight:800;
+
+margin-bottom:15px;
+
+}
+
+.journey-card h3{
+
+font-size:16px;
+
+margin-bottom:7px;
+
+}
+
+.journey-card p{
+
+font-size:12px;
+
+color:#dceff9;
+
+}
+
+
+/* =====================================================
+   UNIVERSITIES
+===================================================== */
+
+.universities{
+
+background:var(--light);
+
+}
+
+.university-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:17px;
+
+}
+
+.university{
+
+background:#fff;
+
+border:1px solid var(--border);
+
+border-radius:13px;
+
+padding:23px 15px;
+
+min-height:135px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.university:hover{
+
+transform:translateY(-5px);
+
+box-shadow:var(--shadow);
+
+}
+
+.university img{
+
+width:53px;
+height:53px;
+
+object-fit:contain;
+
+margin-bottom:10px;
+
+}
+
+.university h4{
+
+font-size:12px;
+
+color:var(--navy);
+
+}
+
+
+/* =====================================================
+   STUDENT STORIES
+===================================================== */
+
+.stories-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+}
+
+.story{
+
+background:#fff;
+
+border-radius:17px;
+
+border:1px solid var(--border);
+
+overflow:hidden;
+
+box-shadow:0 5px 20px rgba(0,0,0,.03);
+
+transition:.3s;
+
+}
+
+.story:hover{
+
+transform:translateY(-6px);
+
+box-shadow:var(--shadow);
+
+}
+
+.story-image{
+
+height:220px;
+
+overflow:hidden;
+
+}
+
+.story-image img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+transition:.5s;
+
+}
+
+.story:hover img{
+
+transform:scale(1.06);
+
+}
+
+.story-content{
+
+padding:23px;
+
+}
+
+.story-stars{
+
+color:#f5a623;
+
+font-size:12px;
+
+margin-bottom:8px;
+
+}
+
+.story-content p{
+
+font-size:13px;
+
+margin-bottom:18px;
+
+}
+
+.story-person{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.story-avatar{
+
+width:40px;
+height:40px;
+
+border-radius:50%;
+
+background:var(--blue-light);
+
+color:var(--blue);
+
+display:grid;
+
+place-items:center;
+
+font-weight:800;
+
+}
+
+.story-person strong{
+
+display:block;
+
+font-size:12px;
+
+color:var(--navy);
+
+}
+
+.story-person span{
+
+font-size:10px;
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+
+padding:70px 0;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(5,52,81,.95),
+rgba(8,127,193,.88)
+),
+
+url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80")
+
+center/cover;
+
+color:#fff;
+
+}
+
+.cta-box{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:30px;
+
+}
+
+.cta h2{
+
+font-size:35px;
+
+line-height:1.2;
+
+margin-bottom:8px;
+
+}
+
+.cta p{
+
+font-size:14px;
+
+color:#e3f4fb;
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact{
+
+background:var(--light);
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:.85fr 1.15fr;
+
+gap:55px;
+
+align-items:start;
+
+}
+
+.contact-info h2{
+
+font-size:39px;
+
+line-height:1.2;
+
+color:var(--navy);
+
+margin-bottom:15px;
+
+}
+
+.contact-info h2 span{
+
+color:var(--blue);
+
+}
+
+.contact-info > p{
+
+font-size:14px;
+
+margin-bottom:27px;
+
+}
+
+.contact-item{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:13px;
+
+margin-bottom:20px;
+
+}
+
+.contact-item-icon{
+
+width:43px;
+height:43px;
+
+flex:0 0 43px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:10px;
+
+background:#fff;
+
+color:var(--blue);
+
+box-shadow:0 5px 18px rgba(0,0,0,.05);
+
+}
+
+.contact-item h4{
+
+font-size:13px;
+
+color:var(--navy);
+
+}
+
+.contact-item p{
+
+font-size:12px;
+
+}
+
+.contact-form{
+
+background:#fff;
+
+padding:32px;
+
+border-radius:18px;
+
+box-shadow:var(--shadow);
+
+}
+
+.form-row{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+}
+
+.form-group{
+
+margin-bottom:17px;
+
+}
+
+.form-group label{
+
+display:block;
+
+font-size:12px;
+
+font-weight:700;
+
+color:var(--navy);
+
+margin-bottom:6px;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+width:100%;
+
+padding:12px 13px;
+
+border:1px solid var(--border);
+
+border-radius:8px;
+
+outline:none;
+
+font-size:13px;
+
+background:#fff;
+
+transition:.25s;
+
+}
+
+.form-group textarea{
+
+min-height:130px;
+
+resize:vertical;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+border-color:var(--blue);
+
+box-shadow:0 0 0 3px rgba(7,134,201,.08);
+
+}
+
+.form-status{
+
+margin-top:13px;
+
+font-size:12px;
+
+font-weight:700;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+background:#061f33;
+
+color:#b9cbd6;
+
+padding:60px 0 25px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:1.5fr 1fr 1fr 1fr;
+
+gap:35px;
+
+padding-bottom:40px;
+
+}
+
+.footer-logo{
+
+width:60px;
+
+margin-bottom:14px;
+
+}
+
+.footer-brand h3{
+
+color:#fff;
+
+font-size:17px;
+
+margin-bottom:9px;
+
+}
+
+.footer-brand p{
+
+font-size:12px;
+
+max-width:320px;
+
+}
+
+footer h4{
+
+color:#fff;
+
+font-size:14px;
+
+margin-bottom:15px;
+
+}
+
+footer ul{
+
+list-style:none;
+
+}
+
+footer li{
+
+margin-bottom:8px;
+
+}
+
+footer li a{
+
+font-size:12px;
+
+transition:.2s;
+
+}
+
+footer li a:hover{
+
+color:#fff;
+
+}
+
+.footer-social{
+
+display:flex;
+
+gap:7px;
+
+margin-top:17px;
+
+}
+
+.footer-social a{
+
+width:33px;
+height:33px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.09);
+
+color:#fff;
+
+font-size:12px;
+
+transition:.25s;
+
+}
+
+.footer-social a:hover{
+
+background:var(--blue);
+
+transform:translateY(-3px);
+
+}
+
+.copyright{
+
+border-top:1px solid rgba(255,255,255,.09);
+
+padding-top:20px;
+
+text-align:center;
+
+font-size:11px;
+
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp{
+
+position:fixed;
+
+right:22px;
+
+bottom:22px;
+
+width:57px;
+height:57px;
+
+display:grid;
+
+place-items:center;
+
+border-radius:50%;
+
+background:#25d366;
+
+color:#fff;
+
+font-size:27px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+z-index:2000;
+
+transition:.3s;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.08);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+.nav-menu{
+
+gap:22px;
+
+}
+
+.hero-card{
+
+right:3%;
+
+}
+
+.destination-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.university-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.journey-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/* TABLET */
+
+@media(max-width:850px){
+
+.topbar{
+
+display:none;
+
+}
+
+.main-header-inner{
+
+min-height:75px;
+
+}
+
+.header-cta{
+
+display:none;
+
+}
+
+.mobile-toggle{
+
+display:block;
+
+}
+
+.brand-logo{
+
+width:50px;
+height:50px;
+
+}
+
+.brand-text .company{
+
+font-size:13px;
+
+}
+
+.brand-text .destination{
+
+font-size:10px;
+
+}
+
+.navigation{
+
+position:relative;
+
+}
+
+.nav-inner{
+
+justify-content:flex-end;
+
+}
+
+.nav-menu{
+
+display:none;
+
+position:absolute;
+
+left:4%;
+right:4%;
+
+top:58px;
+
+background:#fff;
+
+border-radius:12px;
+
+box-shadow:var(--shadow);
+
+border:1px solid var(--border);
+
+padding:10px;
+
+flex-direction:column;
+
+align-items:stretch;
+
+gap:0;
+
+z-index:100;
+
+}
+
+.nav-menu.active{
+
+display:flex;
+
+}
+
+.nav-menu a{
+
+padding:11px 14px;
+
+}
+
+.nav-menu a::after{
+
+display:none;
+
+}
+
+.social-title{
+
+display:none;
+
+}
+
+.hero{
+
+min-height:610px;
+
+}
+
+.hero-card{
+
+display:none;
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stat:nth-child(2){
+
+border-right:none;
+
+}
+
+.stat:nth-child(-n+2){
+
+border-bottom:1px solid var(--border);
+
+}
+
+.about-grid,
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-small-card{
+
+right:15px;
+
+}
+
+.services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stories-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.cta-box{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+section{
+
+padding:70px 0;
+
+}
+
+.brand-logo{
+
+width:45px;
+height:45px;
+
+}
+
+.brand-text .company{
+
+font-size:11px;
+
+}
+
+.brand-text .destination{
+
+font-size:9px;
+
+}
+
+.social-inner{
+
+min-height:40px;
+
+}
+
+.social-link{
+
+width:26px;
+height:26px;
+
+}
+
+.hero-content{
+
+padding:70px 0;
+
+}
+
+.hero h1{
+
+font-size:39px;
+
+}
+
+.hero p{
+
+font-size:14px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:stretch;
+
+}
+
+.hero-buttons .btn{
+
+width:100%;
+
+}
+
+.stats{
+
+margin-top:-35px;
+
+}
+
+.destination-grid,
+.university-grid,
+.services-grid,
+.stories-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.journey-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-image-main img{
+
+height:350px;
+
+}
+
+.about-small-card{
+
+bottom:15px;
+
+}
+
+.about-content h2,
+.contact-info h2{
+
+font-size:31px;
+
+}
+
+.form-row{
+
+grid-template-columns:1fr;
+
+gap:0;
+
+}
+
+.contact-form{
+
+padding:24px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.cta h2{
+
+font-size:28px;
+
+}
+
+}
+
+
+/* VERY SMALL */
+
+@media(max-width:390px){
+
+.brand-text .company{
+
+font-size:10px;
+
+}
+
+.brand-text .destination{
+
+font-size:8px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.stats-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stat{
+
+border-right:none !important;
+
+border-bottom:1px solid var(--border);
+
+}
+
+.stat:last-child{
+
+border-bottom:none;
+
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
 
-  <header>
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
 
-    <div class="container navbar">
+<div class="topbar">
 
-      <a href="index.html" class="logo-container" aria-label="Foreign Education Destination Home">
+<div class="container topbar-inner">
 
-        <img
-          src="LOGO.png"
-          alt="Foreign Education Destination Logo"
-          class="logo"
-        >
+<div class="top-left">
 
-        <div class="logo-text">
-          <strong>Foreign Education Destination</strong>
-          <span>FE Destination (Pvt.) Ltd.</span>
-        </div>
+<span>
+<i class="fa-solid fa-phone"></i>
++92 345 1450072
+</span>
 
-      </a>
+<span>
+<i class="fa-solid fa-envelope"></i>
+info@fedestination.com
+</span>
 
-      <nav id="mainNav">
+</div>
 
-        <a href="index.html">Home</a>
+<div class="top-right">
 
-        <a href="about.html">About</a>
+<span>
+<i class="fa-solid fa-clock"></i>
+Mon - Sat: 10:00 AM - 7:00 PM
+</span>
 
-        <a href="#destinations">Destinations</a>
+<a href="#contact">
+Book Consultation
+<i class="fa-solid fa-arrow-right"></i>
+</a>
 
-        <a href="#universities">Universities</a>
+</div>
 
-        <a href="#services">Services</a>
+</div>
 
-        <a href="#contact">Contact</a>
+</div>
 
-      </nav>
 
-      <!-- HEADER SOCIAL MEDIA -->
+<!-- =====================================================
+     MAIN HEADER
+===================================================== -->
 
-      <div class="header-social">
+<header class="main-header">
 
-        <a
-          href="https://www.facebook.com/fedestination"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Foreign Education Destination Facebook"
-          title="Facebook"
-        >
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
+<div class="container main-header-inner">
 
-        <a
-          href="https://www.instagram.com/fedestination"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Foreign Education Destination Instagram"
-          title="Instagram"
-        >
-          <i class="fa-brands fa-instagram"></i>
-        </a>
 
-        <a
-          href="https://www.tiktok.com/@fedestination"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Foreign Education Destination TikTok"
-          title="TikTok"
-        >
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
+<a href="index.html" class="brand">
 
-        <a
-          href="https://www.youtube.com/@fedestination"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Foreign Education Destination YouTube"
-          title="YouTube"
-        >
-          <i class="fa-brands fa-youtube"></i>
-        </a>
+<img
+src="LOGO.png"
+alt="FE Destination Logo"
+class="brand-logo"
+>
 
-      </div>
+<div class="brand-text">
 
-      <a href="#contact" class="btn btn-primary header-btn">
-        Free Profile Discussion
-      </a>
+<div class="company">
+FE Destination <span>(Pvt.) Ltd.</span>
+</div>
 
-      <button
-        type="button"
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <i class="fa-solid fa-bars"></i>
-      </button>
+<div class="destination">
+Foreign Education Destination
+</div>
 
-    </div>
+</div>
 
-  </header>
+</a>
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
+<a href="#contact" class="header-cta">
 
-  <section class="hero">
+<i class="fa-solid fa-calendar-check"></i>
 
-    <div class="container">
+Free Profile Discussion
 
-      <div
-        class="hero-content"
-        data-aos="fade-up"
-      >
+</a>
 
-        <div class="hero-badge">
-          <i class="fa-solid fa-globe"></i>
-          Your Global Education Journey Starts Here
-        </div>
 
-        <h1>
-          Build Your
-          <span>Global Future</span>
-          Today
-        </h1>
+<button
+class="mobile-toggle"
+id="mobileToggle"
+aria-label="Open Menu"
+>
 
-        <p>
-          Explore international study opportunities with personalized
-          admissions guidance, scholarship support and student visa
-          assistance from Foreign Education Destination.
-        </p>
+<i class="fa-solid fa-bars"></i>
 
-        <div class="hero-buttons">
+</button>
 
-          <a href="#contact" class="btn btn-primary">
-            Start Your Journey
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
 
-          <a href="#destinations" class="btn btn-outline">
-            Explore Destinations
-          </a>
+</div>
 
-        </div>
+</header>
 
-      </div>
 
-    </div>
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-  </section>
+<div class="navigation">
 
+<div class="container nav-inner">
 
-  <!-- =========================
-       STATS
-  ========================== -->
+<ul class="nav-menu" id="navMenu">
 
-  <section class="stats">
+<li>
+<a href="index.html">Home</a>
+</li>
 
-    <div class="container">
+<li>
+<a href="about.html">About Us</a>
+</li>
 
-      <div class="stats-grid">
+<li>
+<a href="#destinations">Destinations</a>
+</li>
 
-        <div class="stat">
-          <h3>8+</h3>
-          <p>Global Study Destinations</p>
-        </div>
+<li>
+<a href="#universities">Universities</a>
+</li>
 
-        <div class="stat">
-          <h3>7+ Years</h3>
-          <p>International Recruitment Experience</p>
-        </div>
+<li>
+<a href="#services">Services</a>
+</li>
 
-        <div class="stat">
-          <h3>50+</h3>
-          <p>Universities & Study Options</p>
-        </div>
+<li>
+<a href="#journey">How It Works</a>
+</li>
 
-        <div class="stat">
-          <h3>360°</h3>
-          <p>Application Support</p>
-        </div>
+<li>
+<a href="#contact">Contact</a>
+</li>
 
-      </div>
+</ul>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
+<!-- =====================================================
+     SOCIAL BAR
+===================================================== -->
 
-  <section id="about">
+<div class="social-bar">
 
-    <div class="container">
+<div class="container social-inner">
 
-      <div class="about-grid">
+<span class="social-title">
+Follow Foreign Education Destination
+</span>
 
-        <div
-          class="about-image"
-          data-aos="fade-right"
-        >
+<a
+href="https://www.facebook.com/fedestination"
+target="_blank"
+rel="noopener noreferrer"
+class="social-link"
+aria-label="Facebook"
+>
+<i class="fa-brands fa-facebook-f"></i>
+</a>
 
-          <img
-            src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Students discussing international education"
-            loading="lazy"
-          >
+<a
+href="https://www.instagram.com/fedestination"
+target="_blank"
+rel="noopener noreferrer"
+class="social-link"
+aria-label="Instagram"
+>
+<i class="fa-brands fa-instagram"></i>
+</a>
 
-        </div>
+<a
+href="https://www.tiktok.com/@fedestination"
+target="_blank"
+rel="noopener noreferrer"
+class="social-link"
+aria-label="TikTok"
+>
+<i class="fa-brands fa-tiktok"></i>
+</a>
 
-        <div
-          class="about-content"
-          data-aos="fade-left"
-        >
+<a
+href="https://www.youtube.com/@fedestination"
+target="_blank"
+rel="noopener noreferrer"
+class="social-link"
+aria-label="YouTube"
+>
+<i class="fa-brands fa-youtube"></i>
+</a>
 
-          <span class="section-heading" style="display:block;text-align:left;margin:0 0 15px;">
-            ABOUT US
-          </span>
+</div>
 
-          <h2>
-            Your Partner for
-            <span>Global Education</span>
-          </h2>
+</div>
 
-          <p>
-            Foreign Education Destination is an international education
-            consultancy focused on helping students explore suitable
-            study opportunities abroad.
-          </p>
 
-          <p>
-            From choosing a university and preparing an application to
-            student visa guidance, our team supports students throughout
-            their international education journey.
-          </p>
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-          <ul class="about-list">
+<section class="hero">
 
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              Personalized university and course guidance
-            </li>
+<div class="container">
 
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              Admission application support
-            </li>
+<div class="hero-content" data-aos="fade-up">
 
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              Scholarship information and guidance
-            </li>
+<div class="hero-badge">
 
-            <li>
-              <i class="fa-solid fa-circle-check"></i>
-              Student visa application assistance
-            </li>
+<i class="fa-solid fa-globe"></i>
 
-          </ul>
+Your Global Education Journey Starts Here
 
-          <a href="about.html" class="btn btn-primary">
-            Learn More
-          </a>
+</div>
 
-        </div>
 
-      </div>
+<h1>
 
-    </div>
+Your Future.
 
-  </section>
+<br>
 
+Your <span>Destination.</span>
 
-  <!-- =========================
-       UNIVERSITIES
-  ========================== -->
+</h1>
 
-  <section
-    id="universities"
-    class="university-section"
-  >
 
-    <div class="container">
+<p>
 
-      <div class="section-heading">
+Explore international study opportunities with personalized
+admissions guidance, university selection, scholarship support
+and student visa assistance.
 
-        <span>Universities & Study Options</span>
+</p>
 
-        <h2>
-          Explore Your University Options
-        </h2>
 
-        <p>
-          Discover study opportunities across a range of international
-          universities and institutions.
-        </p>
+<div class="hero-buttons">
 
-      </div>
+<a href="#contact" class="btn btn-primary">
 
+Start Your Journey
 
-      <div class="university-grid">
+<i class="fa-solid fa-arrow-right"></i>
 
-        <div class="university-card" data-aos="fade-up">
+</a>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=depaul.edu&sz=128"
-            alt="DePaul University"
-            loading="lazy"
-          >
 
-          <h4>DePaul University</h4>
+<a href="#destinations" class="btn btn-white">
 
-        </div>
+Explore Destinations
 
+<i class="fa-solid fa-globe"></i>
 
-        <div class="university-card" data-aos="fade-up">
+</a>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=suffolk.edu&sz=128"
-            alt="Suffolk University"
-            loading="lazy"
-          >
+</div>
 
-          <h4>Suffolk University</h4>
+</div>
 
-        </div>
 
+<!-- HERO FLOATING CARD -->
 
-        <div class="university-card" data-aos="fade-up">
+<div class="hero-card">
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=colostate.edu&sz=128"
-            alt="Colorado State University"
-            loading="lazy"
-          >
+<div class="hero-card-top">
 
-          <h4>Colorado State University</h4>
+<div class="hero-card-icon">
 
-        </div>
+<i class="fa-solid fa-graduation-cap"></i>
 
+</div>
 
-        <div class="university-card" data-aos="fade-up">
+<div>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=asu.edu&sz=128"
-            alt="Arizona State University"
-            loading="lazy"
-          >
+<h4>Plan Your Study Journey</h4>
 
-          <h4>Arizona State University</h4>
+<p>Personalized guidance</p>
 
-        </div>
+</div>
 
+</div>
 
-        <div class="university-card" data-aos="fade-up">
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=queensu.ca&sz=128"
-            alt="Queen's University"
-            loading="lazy"
-          >
+<p style="font-size:11px;margin-bottom:7px;">
+Application Support
+</p>
 
-          <h4>Queen's University</h4>
+<div class="progress">
+<span></span>
+</div>
 
-        </div>
+<p style="font-size:10px;margin-top:6px;">
+From profile assessment to pre-departure
+</p>
 
+</div>
 
-        <div class="university-card" data-aos="fade-up">
+</div>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=jmu.edu&sz=128"
-            alt="James Madison University"
-            loading="lazy"
-          >
+</section>
 
-          <h4>James Madison University</h4>
 
-        </div>
+<!-- =====================================================
+     STATS
+===================================================== -->
 
+<div class="stats">
 
-        <div class="university-card" data-aos="fade-up">
+<div class="container">
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=liu.edu&sz=128"
-            alt="Long Island University"
-            loading="lazy"
-          >
+<div class="stats-grid">
 
-          <h4>Long Island University</h4>
+<div class="stat">
 
-        </div>
+<div class="stat-icon">
+<i class="fa-solid fa-earth-americas"></i>
+</div>
 
+<h3>8+</h3>
 
-        <div class="university-card" data-aos="fade-up">
+<p>Study Destinations</p>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=mercer.edu&sz=128"
-            alt="Mercer University"
-            loading="lazy"
-          >
+</div>
 
-          <h4>Mercer University</h4>
 
-        </div>
+<div class="stat">
 
+<div class="stat-icon">
+<i class="fa-solid fa-calendar-days"></i>
+</div>
 
-        <div class="university-card" data-aos="fade-up">
+<h3>7+ Years</h3>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=macewan.ca&sz=128"
-            alt="MacEwan University"
-            loading="lazy"
-          >
+<p>Recruitment Experience</p>
 
-          <h4>MacEwan University</h4>
+</div>
 
-        </div>
 
+<div class="stat">
 
-        <div class="university-card" data-aos="fade-up">
+<div class="stat-icon">
+<i class="fa-solid fa-building-columns"></i>
+</div>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=ku.edu&sz=128"
-            alt="University of Kansas"
-            loading="lazy"
-          >
+<h3>50+</h3>
 
-          <h4>University of Kansas</h4>
+<p>University Options</p>
 
-        </div>
+</div>
 
 
-        <div class="university-card" data-aos="fade-up">
+<div class="stat">
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=uwindsor.ca&sz=128"
-            alt="University of Windsor"
-            loading="lazy"
-          >
+<div class="stat-icon">
+<i class="fa-solid fa-headset"></i>
+</div>
 
-          <h4>University of Windsor</h4>
+<h3>360°</h3>
 
-        </div>
+<p>Application Support</p>
 
+</div>
 
-        <div class="university-card" data-aos="fade-up">
+</div>
 
-          <img
-            src="https://www.google.com/s2/favicons?domain=essex.ac.uk&sz=128"
-            alt="University of Essex"
-            loading="lazy"
-          >
+</div>
 
-          <h4>University of Essex</h4>
+</div>
 
-        </div>
 
-      </div>
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
-    </div>
+<section class="about">
 
-  </section>
+<div class="container">
 
+<div class="about-grid">
 
-  <!-- =========================
-       JOURNEY
-  ========================== -->
 
-  <section>
+<div class="about-image" data-aos="fade-right">
 
-    <div class="container">
+<div class="about-image-main">
 
-      <div class="section-heading">
+<img
+src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85"
+alt="Students together"
+loading="lazy"
+>
 
-        <span>How It Works</span>
+</div>
 
-        <h2>
-          Study Abroad Journey Step by Step
-        </h2>
 
-        <p>
-          We guide students through the major stages of their
-          international education journey.
-        </p>
+<div class="about-small-card">
 
-      </div>
+<div class="about-small-icon">
 
+<i class="fa-solid fa-globe"></i>
 
-      <div class="journey-grid">
+</div>
 
-        <div class="journey-card" data-aos="fade-up">
+<div>
 
-          <div class="step-number">01</div>
+<strong>Global Opportunities</strong>
 
-          <h3>Profile Assessment</h3>
+<span>Explore. Apply. Achieve.</span>
 
-          <p>
-            We review your academic background, interests and future goals.
-          </p>
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <div class="journey-card" data-aos="fade-up">
 
-          <div class="step-number">02</div>
+<div class="about-content" data-aos="fade-left">
 
-          <h3>Course Selection</h3>
+<span class="eyebrow">
+ABOUT FOREIGN EDUCATION DESTINATION
+</span>
 
-          <p>
-            Explore suitable courses and international study destinations.
-          </p>
+<h2>
 
-        </div>
+Your Partner for
 
+<span>Global Education</span>
 
-        <div class="journey-card" data-aos="fade-up">
+</h2>
 
-          <div class="step-number">03</div>
 
-          <h3>University Selection</h3>
+<p>
 
-          <p>
-            Shortlist institutions according to your academic profile.
-          </p>
+Foreign Education Destination helps students explore
+international education opportunities according to their
+academic background, career goals and preferred destination.
 
-        </div>
+</p>
 
 
-        <div class="journey-card" data-aos="fade-up">
+<p>
 
-          <div class="step-number">04</div>
+Our team provides practical guidance throughout the major
+stages of the study-abroad process.
 
-          <h3>Application Preparation</h3>
+</p>
 
-          <p>
-            Prepare the required documents and application materials.
-          </p>
 
-        </div>
+<ul class="check-list">
 
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Personalized profile assessment
+</li>
 
-        <div class="journey-card" data-aos="fade-up">
+<li>
+<i class="fa-solid fa-circle-check"></i>
+University and course selection
+</li>
 
-          <div class="step-number">05</div>
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Admission application guidance
+</li>
 
-          <h3>Admission Process</h3>
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Scholarship information
+</li>
 
-          <p>
-            Submit applications and follow up during the admission process.
-          </p>
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Student visa guidance
+</li>
 
-        </div>
+</ul>
 
 
-        <div class="journey-card" data-aos="fade-up">
+<a href="about.html" class="btn btn-primary">
 
-          <div class="step-number">06</div>
+Discover More
 
-          <h3>Visa Guidance</h3>
+<i class="fa-solid fa-arrow-right"></i>
 
-          <p>
-            Receive guidance for your student visa application.
-          </p>
+</a>
 
-        </div>
+</div>
 
+</div>
 
-        <div class="journey-card" data-aos="fade-up">
+</div>
 
-          <div class="step-number">07</div>
+</section>
 
-          <h3>Pre-Departure</h3>
 
-          <p>
-            Get support with your final preparations before travelling.
-          </p>
+<!-- =====================================================
+     DESTINATIONS
+===================================================== -->
 
-        </div>
+<section class="destinations" id="destinations">
 
+<div class="container">
 
-        <div class="journey-card" data-aos="fade-up">
 
-          <div class="step-number">
-            <i class="fa-solid fa-plane"></i>
-          </div>
+<div class="section-heading">
 
-          <h3>Start Your Journey</h3>
+<span class="eyebrow">
+WHERE CAN YOU STUDY?
+</span>
 
-          <p>
-            Begin your international education experience.
-          </p>
+<h2>
+Explore Your Study Destination
+</h2>
 
-        </div>
+<p>
+Choose from a range of international destinations and
+explore opportunities that match your goals.
+</p>
 
-      </div>
+</div>
 
-    </div>
 
-  </section>
+<div class="destination-grid">
 
 
-  <!-- =========================
-       DESTINATIONS
-  ========================== -->
+<a href="uk.html" class="destination">
 
-  <section
-    id="destinations"
-    class="destinations"
-  >
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-    <div class="container">
+<div class="destination-content">
 
-      <div class="section-heading">
+<div class="flag">🇬🇧</div>
 
-        <span>Study Destinations</span>
+<h3>United Kingdom</h3>
 
-        <h2>
-          Choose Your Global Destination
-        </h2>
+<p>Explore UK universities and programs</p>
 
-        <p>
-          Explore international study opportunities across popular
-          destinations.
-        </p>
+</div>
 
-      </div>
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
+</a>
 
-      <div class="destination-grid">
 
+<a href="europe.html" class="destination">
 
-        <a
-          href="uk.html"
-          class="destination-card uk"
-        >
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-          <div class="destination-overlay">
+<div class="destination-content">
 
-            <h3>United Kingdom</h3>
+<div class="flag">🇪🇺</div>
 
-            <p>Study in the UK</p>
+<h3>Europe</h3>
 
-          </div>
+<p>Discover European study opportunities</p>
 
-        </a>
+</div>
 
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
-        <a
-          href="europe.html"
-          class="destination-card europe"
-        >
+</a>
 
-          <div class="destination-overlay">
 
-            <h3>Europe</h3>
+<a href="australia.html" class="destination">
 
-            <p>Explore European study options</p>
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1506973035872-a4f4f7d0d4b0?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-          </div>
+<div class="destination-content">
 
-        </a>
+<div class="flag">🇦🇺</div>
 
+<h3>Australia</h3>
 
-        <a
-          href="australia.html"
-          class="destination-card australia"
-        >
+<p>Study in Australia</p>
 
-          <div class="destination-overlay">
+</div>
 
-            <h3>Australia</h3>
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
-            <p>Study in Australia</p>
+</a>
 
-          </div>
 
-        </a>
+<a href="malaysia.html" class="destination">
 
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-        <a
-          href="malaysia.html"
-          class="destination-card malaysia"
-        >
+<div class="destination-content">
 
-          <div class="destination-overlay">
+<div class="flag">🇲🇾</div>
 
-            <h3>Malaysia</h3>
+<h3>Malaysia</h3>
 
-            <p>Study in Malaysia</p>
+<p>Explore Malaysian universities</p>
 
-          </div>
+</div>
 
-        </a>
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
+</a>
 
-        <a
-          href="nz.html"
-          class="destination-card newzealand"
-        >
 
-          <div class="destination-overlay">
+<a href="nz.html" class="destination">
 
-            <h3>New Zealand</h3>
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-            <p>Study in New Zealand</p>
+<div class="destination-content">
 
-          </div>
+<div class="flag">🇳🇿</div>
 
-        </a>
+<h3>New Zealand</h3>
 
+<p>Explore study options</p>
 
-        <a
-          href="uae.html"
-          class="destination-card uae"
-        >
+</div>
 
-          <div class="destination-overlay">
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
-            <h3>UAE</h3>
+</a>
 
-            <p>Study in the UAE</p>
 
-          </div>
+<a href="turkey.html" class="destination">
 
-        </a>
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
+<div class="destination-content">
 
-        <a
-          href="turkey.html"
-          class="destination-card turkey"
-        >
+<div class="flag">🇹🇷</div>
 
-          <div class="destination-overlay">
+<h3>Turkey</h3>
 
-            <h3>Turkey</h3>
+<p>Explore Turkish universities</p>
 
-            <p>Study in Turkey</p>
+</div>
 
-          </div>
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
-        </a>
+</a>
 
 
-        <a
-          href="usa.html"
-          class="destination-card usa"
-        >
+<a href="uae.html" class="destination">
 
-          <div class="destination-overlay">
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-            <h3>USA</h3>
+<div class="destination-content">
 
-            <p>Study in the United States</p>
+<div class="flag">🇦🇪</div>
 
-          </div>
+<h3>UAE</h3>
 
-        </a>
+<p>Explore study options in UAE</p>
 
-      </div>
+</div>
 
-    </div>
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
-  </section>
+</a>
 
 
-  <!-- =========================
-       SERVICES
-  ========================== -->
+<a href="usa.html" class="destination">
 
-  <section id="services">
+<div
+style="
+position:absolute;
+inset:0;
+background-image:url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=900&q=80');
+background-size:cover;
+background-position:center;
+"
+></div>
 
-    <div class="container">
+<div class="destination-content">
 
-      <div class="section-heading">
+<div class="flag">🇺🇸</div>
 
-        <span>Our Services</span>
+<h3>USA</h3>
 
-        <h2>
-          Support Throughout Your Journey
-        </h2>
+<p>Explore US universities</p>
 
-        <p>
-          Our services are designed to make the international education
-          process easier and more organized.
-        </p>
+</div>
 
-      </div>
+<div class="destination-arrow">
+<i class="fa-solid fa-arrow-right"></i>
+</div>
 
+</a>
 
-      <div class="services-grid">
 
+</div>
 
-        <div class="service-card" data-aos="fade-up">
+</div>
 
-          <div class="service-icon">
-            <i class="fa-solid fa-graduation-cap"></i>
-          </div>
+</section>
 
-          <h3>Admission Guidance</h3>
 
-          <p>
-            Guidance on course selection, university options and
-            application requirements.
-          </p>
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-        </div>
+<section id="services">
 
+<div class="container">
 
-        <div class="service-card" data-aos="fade-up">
+<div class="section-heading">
 
-          <div class="service-icon">
-            <i class="fa-solid fa-passport"></i>
-          </div>
+<span class="eyebrow">
+WHAT WE DO
+</span>
 
-          <h3>Visa Assistance</h3>
+<h2>
+Complete Study Abroad Support
+</h2>
 
-          <p>
-            Support and guidance throughout the student visa application
-            process.
-          </p>
+<p>
+From your first consultation to your journey abroad,
+we help you understand the process step by step.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-card" data-aos="fade-up">
+<div class="services-grid">
 
-          <div class="service-icon">
-            <i class="fa-solid fa-award"></i>
-          </div>
 
-          <h3>Scholarship Support</h3>
+<div class="service" data-aos="fade-up">
 
-          <p>
-            Information about available scholarships and funding
-            opportunities.
-          </p>
+<div class="service-icon">
+<i class="fa-solid fa-user-graduate"></i>
+</div>
 
-        </div>
+<h3>Profile Assessment</h3>
 
+<p>
+Review your academic background and identify suitable
+study opportunities.
+</p>
 
-        <div class="service-card" data-aos="fade-up">
+</div>
 
-          <div class="service-icon">
-            <i class="fa-solid fa-house"></i>
-          </div>
 
-          <h3>Student Accommodation</h3>
+<div class="service" data-aos="fade-up">
 
-          <p>
-            Guidance regarding accommodation options and student living.
-          </p>
+<div class="service-icon">
+<i class="fa-solid fa-building-columns"></i>
+</div>
 
-        </div>
+<h3>University Selection</h3>
 
+<p>
+Explore universities and courses according to your
+academic and career goals.
+</p>
 
-        <div class="service-card" data-aos="fade-up">
+</div>
 
-          <div class="service-icon">
-            <i class="fa-solid fa-shield-heart"></i>
-          </div>
 
-          <h3>Insurance Guidance</h3>
+<div class="service" data-aos="fade-up">
 
-          <p>
-            Guidance regarding travel and health insurance requirements.
-          </p>
+<div class="service-icon">
+<i class="fa-solid fa-file-circle-check"></i>
+</div>
 
-        </div>
+<h3>Admission Guidance</h3>
 
+<p>
+Support with application documents and admission
+requirements.
+</p>
 
-        <div class="service-card" data-aos="fade-up">
+</div>
 
-          <div class="service-icon">
-            <i class="fa-solid fa-plane-departure"></i>
-          </div>
 
-          <h3>Pre-Departure Support</h3>
+<div class="service" data-aos="fade-up">
 
-          <p>
-            Practical guidance to help students prepare for their journey.
-          </p>
+<div class="service-icon">
+<i class="fa-solid fa-award"></i>
+</div>
 
-        </div>
+<h3>Scholarship Support</h3>
 
-      </div>
+<p>
+Explore available scholarship and funding opportunities.
+</p>
 
-    </div>
+</div>
 
-  </section>
 
+<div class="service" data-aos="fade-up">
 
-  <!-- =========================
-       WHY US
-  ========================== -->
+<div class="service-icon">
+<i class="fa-solid fa-passport"></i>
+</div>
 
-  <section class="why-section">
+<h3>Student Visa Guidance</h3>
 
-    <div class="container">
+<p>
+Guidance through the major stages of the student visa
+application process.
+</p>
 
-      <div class="section-heading">
+</div>
 
-        <span>Why Choose Us</span>
 
-        <h2>
-          A Student-Focused Approach
-        </h2>
+<div class="service" data-aos="fade-up">
 
-        <p>
-          We focus on clear communication, personalized guidance and
-          organized application support.
-        </p>
+<div class="service-icon">
+<i class="fa-solid fa-plane-departure"></i>
+</div>
 
-      </div>
+<h3>Pre-Departure Support</h3>
 
+<p>
+Practical guidance to help you prepare for your journey
+and arrival.
+</p>
 
-      <div class="why-grid">
+</div>
 
 
-        <div class="why-card">
+</div>
 
-          <i class="fa-solid fa-user-check"></i>
+</div>
 
-          <div>
+</section>
 
-            <h3>Personalized Guidance</h3>
 
-            <p>
-              Advice based on your academic profile, interests and goals.
-            </p>
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
 
-          </div>
+<section class="journey" id="journey">
 
-        </div>
+<div class="container">
 
 
-        <div class="why-card">
+<div class="section-heading">
 
-          <i class="fa-solid fa-globe"></i>
+<span class="eyebrow">
+YOUR JOURNEY
+</span>
 
-          <div>
+<h2>
+Study Abroad. Simplified.
+</h2>
 
-            <h3>International Options</h3>
+<p>
+A clear process helps you understand what comes next.
+</p>
 
-            <p>
-              Explore study opportunities across multiple destinations.
-            </p>
+</div>
 
-          </div>
 
-        </div>
+<div class="journey-grid">
 
 
-        <div class="why-card">
+<div class="journey-card">
 
-          <i class="fa-solid fa-comments"></i>
+<div class="step">01</div>
 
-          <div>
+<h3>Profile Assessment</h3>
 
-            <h3>Clear Communication</h3>
+<p>
+Understand your academic profile and goals.
+</p>
 
-            <p>
-              We keep students informed throughout their application journey.
-            </p>
+</div>
 
-          </div>
 
-        </div>
+<div class="journey-card">
 
+<div class="step">02</div>
 
-        <div class="why-card">
+<h3>Choose Destination</h3>
 
-          <i class="fa-solid fa-headset"></i>
+<p>
+Explore countries and study environments.
+</p>
 
-          <div>
+</div>
 
-            <h3>Application Support</h3>
 
-            <p>
-              Support from initial consultation through the major
-              application stages.
-            </p>
+<div class="journey-card">
 
-          </div>
+<div class="step">03</div>
 
-        </div>
+<h3>Select University</h3>
 
-      </div>
+<p>
+Shortlist suitable universities and programs.
+</p>
 
-    </div>
+</div>
 
-  </section>
 
+<div class="journey-card">
 
-  <!-- =========================
-       TESTIMONIALS
-  ========================== -->
+<div class="step">04</div>
 
-  <section class="testimonials">
+<h3>Prepare Application</h3>
 
-    <div class="container">
+<p>
+Organize your documents and application.
+</p>
 
-      <div class="section-heading">
+</div>
 
-        <span>Student Experiences</span>
 
-        <h2>
-          What Our Students Say
-        </h2>
+<div class="journey-card">
 
-      </div>
+<div class="step">05</div>
 
+<h3>Admission</h3>
 
-      <div class="testimonial-grid">
+<p>
+Submit applications and follow the process.
+</p>
 
+</div>
 
-        <div class="testimonial">
 
-          <div class="stars">
-            ★★★★★
-          </div>
+<div class="journey-card">
 
-          <p>
-            "The team guided me throughout my application and helped me
-            understand the process clearly."
-          </p>
+<div class="step">06</div>
 
-          <div class="student">
+<h3>Visa Guidance</h3>
 
-            <div class="student-avatar">
-              S
-            </div>
+<p>
+Prepare for the student visa process.
+</p>
 
-            <div>
+</div>
 
-              <h4>Student</h4>
 
-              <span>International Applicant</span>
+<div class="journey-card">
 
-            </div>
+<div class="step">07</div>
 
-          </div>
+<h3>Pre-Departure</h3>
 
-        </div>
+<p>
+Prepare for your international journey.
+</p>
 
+</div>
 
-        <div class="testimonial">
 
-          <div class="stars">
-            ★★★★★
-          </div>
+<div class="journey-card">
 
-          <p>
-            "I received useful guidance about universities, documents
-            and the next steps of my application."
-          </p>
+<div class="step">
+<i class="fa-solid fa-plane"></i>
+</div>
 
-          <div class="student">
+<h3>Start Your Journey</h3>
 
-            <div class="student-avatar">
-              A
-            </div>
+<p>
+Begin your international education experience.
+</p>
 
-            <div>
+</div>
 
-              <h4>Student</h4>
 
-              <span>International Applicant</span>
+</div>
 
-            </div>
+</div>
 
-          </div>
+</section>
 
-        </div>
 
+<!-- =====================================================
+     UNIVERSITIES
+===================================================== -->
 
-        <div class="testimonial">
+<section class="universities" id="universities">
 
-          <div class="stars">
-            ★★★★★
-          </div>
+<div class="container">
 
-          <p>
-            "The process was explained to me step by step, which made
-            my study-abroad planning much easier."
-          </p>
 
-          <div class="student">
+<div class="section-heading">
 
-            <div class="student-avatar">
-              M
-            </div>
+<span class="eyebrow">
+UNIVERSITIES
+</span>
 
-            <div>
+<h2>
+Explore University Options
+</h2>
 
-              <h4>Student</h4>
+<p>
+Discover universities and institutions across different
+international study destinations.
+</p>
 
-              <span>International Applicant</span>
+</div>
 
-            </div>
 
-          </div>
+<div class="university-grid">
 
-        </div>
 
-      </div>
+<div class="university">
 
-    </div>
+<img
+src="https://www.google.com/s2/favicons?domain=depaul.edu&sz=128"
+alt="DePaul University"
+loading="lazy"
+>
 
-  </section>
+<h4>DePaul University</h4>
 
+</div>
 
-  <!-- =========================
-       CONTACT
-  ========================== -->
 
-  <section
-    id="contact"
-    class="contact-section"
-  >
+<div class="university">
 
-    <div class="container">
+<img
+src="https://www.google.com/s2/favicons?domain=suffolk.edu&sz=128"
+alt="Suffolk University"
+loading="lazy"
+>
 
-      <div class="contact-grid">
+<h4>Suffolk University</h4>
 
+</div>
 
-        <div
-          class="contact-info"
-          data-aos="fade-right"
-        >
 
-          <h2>
-            Let's Plan Your
-            <span>Study Abroad Journey</span>
-          </h2>
+<div class="university">
 
-          <p>
-            Share your academic profile and study goals with us.
-            Our team can guide you regarding suitable international
-            study options.
-          </p>
+<img
+src="https://www.google.com/s2/favicons?domain=colostate.edu&sz=128"
+alt="Colorado State University"
+loading="lazy"
+>
 
+<h4>Colorado State University</h4>
 
-          <div class="contact-item">
+</div>
 
-            <i class="fa-solid fa-envelope"></i>
 
-            <div>
+<div class="university">
 
-              <h4>Email</h4>
+<img
+src="https://www.google.com/s2/favicons?domain=asu.edu&sz=128"
+alt="Arizona State University"
+loading="lazy"
+>
 
-              <p>
-                info@fedestination.com
-              </p>
+<h4>Arizona State University</h4>
 
-            </div>
+</div>
 
-          </div>
 
+<div class="university">
 
-          <div class="contact-item">
+<img
+src="https://www.google.com/s2/favicons?domain=jmu.edu&sz=128"
+alt="James Madison University"
+loading="lazy"
+>
 
-            <i class="fa-brands fa-whatsapp"></i>
+<h4>James Madison University</h4>
 
-            <div>
+</div>
 
-              <h4>WhatsApp</h4>
 
-              <p>
-                +92 345 1450072
-              </p>
+<div class="university">
 
-            </div>
+<img
+src="https://www.google.com/s2/favicons?domain=liu.edu&sz=128"
+alt="Long Island University"
+loading="lazy"
+>
 
-          </div>
+<h4>Long Island University</h4>
 
+</div>
 
-          <div class="contact-item">
 
-            <i class="fa-solid fa-globe"></i>
+<div class="university">
 
-            <div>
+<img
+src="https://www.google.com/s2/favicons?domain=mercer.edu&sz=128"
+alt="Mercer University"
+loading="lazy"
+>
 
-              <h4>Website</h4>
+<h4>Mercer University</h4>
 
-              <p>
-                fedestination.com
-              </p>
+</div>
 
-            </div>
 
-          </div>
+<div class="university">
 
+<img
+src="https://www.google.com/s2/favicons?domain=macewan.ca&sz=128"
+alt="MacEwan University"
+loading="lazy"
+>
 
-          <div class="contact-item">
+<h4>MacEwan University</h4>
 
-            <i class="fa-solid fa-location-dot"></i>
+</div>
 
-            <div>
 
-              <h4>Office</h4>
+<div class="university">
 
-              <p>
-                Lahore, Pakistan
-              </p>
+<img
+src="https://www.google.com/s2/favicons?domain=ku.edu&sz=128"
+alt="University of Kansas"
+loading="lazy"
+>
 
-            </div>
+<h4>University of Kansas</h4>
 
-          </div>
+</div>
 
-        </div>
 
+<div class="university">
 
-        <form
-          class="contact-form"
-          id="inquiryForm"
-          action="https://formspree.io/f/xpqvpanq"
-          method="POST"
-          data-aos="fade-left"
-        >
+<img
+src="https://www.google.com/s2/favicons?domain=uwindsor.ca&sz=128"
+alt="University of Windsor"
+loading="lazy"
+>
 
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Student Inquiry - Foreign Education Destination"
-          >
+<h4>University of Windsor</h4>
 
+</div>
 
-          <div class="form-row">
 
-            <div class="form-group">
+<div class="university">
 
-              <label for="name">
-                Full Name
-              </label>
+<img
+src="https://www.google.com/s2/favicons?domain=essex.ac.uk&sz=128"
+alt="University of Essex"
+loading="lazy"
+>
 
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-              >
+<h4>University of Essex</h4>
 
-            </div>
+</div>
 
 
-            <div class="form-group">
+<div class="university">
 
-              <label for="email">
-                Email Address
-              </label>
+<img
+src="https://www.google.com/s2/favicons?domain=tcd.ie&sz=128"
+alt="Trinity College Dublin"
+loading="lazy"
+>
 
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-              >
+<h4>Trinity College Dublin</h4>
 
-            </div>
+</div>
 
-          </div>
 
+</div>
 
-          <div class="form-row">
+</div>
 
-            <div class="form-group">
+</section>
 
-              <label for="phone">
-                WhatsApp / Phone
-              </label>
 
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Enter your number"
-                required
-              >
+<!-- =====================================================
+     STUDENT STORIES
+===================================================== -->
 
-            </div>
+<section>
 
+<div class="container">
 
-            <div class="form-group">
 
-              <label for="destination">
-                Preferred Destination
-              </label>
+<div class="section-heading">
 
-              <select
-                id="destination"
-                name="destination"
-                required
-              >
+<span class="eyebrow">
+STUDENT EXPERIENCES
+</span>
 
-                <option value="">
-                  Select destination
-                </option>
+<h2>
+Life Beyond The Classroom
+</h2>
 
-                <option>UK</option>
-                <option>USA</option>
-                <option>Canada</option>
-                <option>Australia</option>
-                <option>New Zealand</option>
-                <option>Germany</option>
-                <option>France</option>
-                <option>Italy</option>
-                <option>Sweden</option>
-                <option>Hungary</option>
-                <option>Netherlands</option>
-                <option>Ireland</option>
-                <option>Turkey</option>
-                <option>Malaysia</option>
-                <option>UAE</option>
+<p>
+International education is not only about a degree —
+it is about new experiences, people and opportunities.
+</p>
 
-              </select>
+</div>
 
-            </div>
 
-          </div>
+<div class="stories-grid">
 
 
-          <div class="form-group">
+<div class="story">
 
-            <label for="message">
-              Your Message
-            </label>
+<div class="story-image">
 
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Tell us about your education and study plans..."
-              required
-            ></textarea>
+<img
+src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80"
+alt="International students"
+loading="lazy"
+>
 
-          </div>
+</div>
 
+<div class="story-content">
 
-          <button
-            type="submit"
-            class="btn btn-primary"
-            id="submitBtn"
-          >
+<div class="story-stars">
+★★★★★
+</div>
 
-            <span id="submitText">
-              Send Inquiry
-            </span>
+<p>
+“Good guidance can make the study-abroad process much
+easier to understand.”
+</p>
 
-            <i class="fa-solid fa-paper-plane"></i>
+<div class="story-person">
 
-          </button>
+<div class="story-avatar">
+S
+</div>
 
+<div>
 
-          <div
-            class="form-status"
-            id="formStatus"
-            aria-live="polite"
-          ></div>
+<strong>Student Experience</strong>
 
-        </form>
+<span>International Applicant</span>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
+</div>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
 
-  <footer>
+<div class="story">
 
-    <div class="container">
+<div class="story-image">
 
-      <div class="footer-grid">
+<img
+src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=900&q=80"
+alt="Students on campus"
+loading="lazy"
+>
 
+</div>
 
-        <div class="footer-brand">
+<div class="story-content">
 
-          <img
-            src="LOGO.png"
-            alt="Foreign Education Destination Logo"
-            loading="lazy"
-          >
+<div class="story-stars">
+★★★★★
+</div>
 
-          <h3>
-            Foreign Education Destination
-          </h3>
+<p>
+“Exploring different destinations helped me understand
+which study environment suited my goals.”
+</p>
 
-          <p>
-            Your partner for international education guidance,
-            university admissions and student visa assistance.
-          </p>
+<div class="story-person">
 
+<div class="story-avatar">
+A
+</div>
 
-          <div class="footer-social">
+<div>
 
-            <a
-              href="https://www.facebook.com/fedestination"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
+<strong>Student Experience</strong>
 
-            <a
-              href="https://www.instagram.com/fedestination"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
+<span>International Applicant</span>
 
-            <a
-              href="https://www.tiktok.com/@fedestination"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok"
-            >
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
+</div>
 
-            <a
-              href="https://www.youtube.com/@fedestination"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <i class="fa-brands fa-youtube"></i>
-            </a>
+</div>
 
-          </div>
+</div>
 
-        </div>
+</div>
 
 
-        <div>
+<div class="story">
 
-          <h4>
-            Quick Links
-          </h4>
+<div class="story-image">
 
-          <ul>
+<img
+src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80"
+alt="Students discussing education"
+loading="lazy"
+>
 
-            <li>
-              <a href="index.html">
-                Home
-              </a>
-            </li>
+</div>
 
-            <li>
-              <a href="about.html">
-                About Us
-              </a>
-            </li>
+<div class="story-content">
 
-            <li>
-              <a href="#services">
-                Services
-              </a>
-            </li>
+<div class="story-stars">
+★★★★★
+</div>
 
-            <li>
-              <a href="#contact">
-                Contact
-              </a>
-            </li>
+<p>
+“Having a clear application roadmap helped me stay
+organized throughout the process.”
+</p>
 
-          </ul>
+<div class="story-person">
 
-        </div>
+<div class="story-avatar">
+M
+</div>
 
+<div>
 
-        <div>
+<strong>Student Experience</strong>
 
-          <h4>
-            Destinations
-          </h4>
+<span>International Applicant</span>
 
-          <ul>
+</div>
 
-            <li>
-              <a href="uk.html">
-                United Kingdom
-              </a>
-            </li>
+</div>
 
-            <li>
-              <a href="europe.html">
-                Europe
-              </a>
-            </li>
+</div>
 
-            <li>
-              <a href="australia.html">
-                Australia
-              </a>
-            </li>
+</div>
 
-            <li>
-              <a href="malaysia.html">
-                Malaysia
-              </a>
-            </li>
 
-            <li>
-              <a href="turkey.html">
-                Turkey
-              </a>
-            </li>
+</div>
 
-          </ul>
+</div>
 
-        </div>
+</section>
 
 
-        <div>
+<!-- =====================================================
+     CTA
+===================================================== -->
 
-          <h4>
-            Contact
-          </h4>
+<section class="cta">
 
-          <ul>
+<div class="container">
 
-            <li>
-              <a href="mailto:info@fedestination.com">
-                info@fedestination.com
-              </a>
-            </li>
+<div class="cta-box">
 
-            <li>
-              <a href="https://wa.me/923451450072">
-                +92 345 1450072
-              </a>
-            </li>
+<div>
 
-            <li>
-              Lahore, Pakistan
-            </li>
+<h2>
+Ready to Explore Your Options?
+</h2>
 
-          </ul>
+<p>
+Let's discuss your academic profile and international
+study plans.
+</p>
 
-        </div>
+</div>
 
-      </div>
 
+<a href="#contact" class="btn btn-white">
 
-      <div class="copyright">
+Book a Consultation
 
-        © <span id="year"></span>
-        FE Destination (Pvt.) Ltd. — Foreign Education Destination.
-        All Rights Reserved.
+<i class="fa-solid fa-arrow-right"></i>
 
-      </div>
+</a>
 
-    </div>
+</div>
 
-  </footer>
+</div>
 
+</section>
 
-  <!-- =========================
-       WHATSAPP FLOATING BUTTON
-  ========================== -->
 
-  <a
-    href="https://wa.me/923451450072"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contact Foreign Education Destination on WhatsApp"
-    title="WhatsApp"
-  >
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-    <i class="fa-brands fa-whatsapp"></i>
+<section class="contact" id="contact">
 
-  </a>
+<div class="container">
 
+<div class="contact-grid">
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<div class="contact-info">
 
-  <script>
+<h2>
 
-    /* =========================
-       AOS
-    ========================== */
+Let's Plan Your
 
-    if (typeof AOS !== "undefined") {
-      AOS.init({
-        duration: 700,
-        once: true,
-        offset: 80
-      });
-    }
+<span>Global Future</span>
 
+</h2>
 
-    /* =========================
-       MOBILE MENU
-    ========================== */
+<p>
+Share your academic profile and study goals with us.
+Our team can guide you through suitable international
+study options.
+</p>
 
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
 
-    if (menuToggle && mainNav) {
+<div class="contact-item">
 
-      menuToggle.addEventListener("click", function () {
+<div class="contact-item-icon">
+<i class="fa-solid fa-envelope"></i>
+</div>
 
-        const isOpen = mainNav.classList.toggle("active");
+<div>
 
-        menuToggle.setAttribute(
-          "aria-expanded",
-          isOpen ? "true" : "false"
-        );
+<h4>Email</h4>
 
-        menuToggle.innerHTML = isOpen
-          ? '<i class="fa-solid fa-xmark"></i>'
-          : '<i class="fa-solid fa-bars"></i>';
+<p>info@fedestination.com</p>
 
-      });
+</div>
 
+</div>
 
-      document.querySelectorAll("#mainNav a").forEach(function (link) {
 
-        link.addEventListener("click", function () {
+<div class="contact-item">
 
-          mainNav.classList.remove("active");
+<div class="contact-item-icon">
+<i class="fa-brands fa-whatsapp"></i>
+</div>
 
-          menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
+<div>
 
-          menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
+<h4>WhatsApp</h4>
 
-        });
+<p>+92 345 1450072</p>
 
-      });
+</div>
 
-    }
+</div>
 
 
-    /* =========================
-       FORM SUBMISSION
-    ========================== */
+<div class="contact-item">
 
-    const inquiryForm = document.getElementById("inquiryForm");
-    const formStatus = document.getElementById("formStatus");
-    const submitBtn = document.getElementById("submitBtn");
-    const submitText = document.getElementById("submitText");
+<div class="contact-item-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
 
+<div>
 
-    if (inquiryForm) {
+<h4>Website</h4>
 
-      inquiryForm.addEventListener("submit", async function (event) {
+<p>fedestination.com</p>
 
-        event.preventDefault();
+</div>
 
-        submitBtn.disabled = true;
+</div>
 
-        submitText.textContent = "Sending...";
 
-        formStatus.textContent = "";
+<div class="contact-item">
 
+<div class="contact-item-icon">
+<i class="fa-solid fa-location-dot"></i>
+</div>
 
-        try {
+<div>
 
-          const response = await fetch(
-            inquiryForm.action,
-            {
-              method: "POST",
-              body: new FormData(inquiryForm),
-              headers: {
-                "Accept": "application/json"
-              }
-            }
-          );
+<h4>Location</h4>
 
+<p>Lahore, Pakistan</p>
 
-          if (response.ok) {
+</div>
 
-            formStatus.textContent =
-              "Thank you! Your inquiry has been submitted successfully.";
+</div>
 
-            formStatus.style.color = "#168a45";
 
-            inquiryForm.reset();
+</div>
 
-          } else {
 
-            throw new Error("Form submission failed.");
+<form
+class="contact-form"
+id="inquiryForm"
+action="https://formspree.io/f/xpqvpanq"
+method="POST"
+>
 
-          }
 
-        } catch (error) {
+<input
+type="hidden"
+name="_subject"
+value="New Student Inquiry - FE Destination (Pvt.) Ltd."
+>
 
-          formStatus.textContent =
-            "Something went wrong. Please try again or contact us on WhatsApp.";
 
-          formStatus.style.color = "#c62828";
+<div class="form-row">
 
-        } finally {
 
-          submitBtn.disabled = false;
+<div class="form-group">
 
-          submitText.textContent = "Send Inquiry";
+<label>
+Full Name
+</label>
 
-        }
+<input
+type="text"
+name="name"
+placeholder="Enter your name"
+required
+>
 
-      });
+</div>
 
-    }
 
+<div class="form-group">
 
-    /* =========================
-       CURRENT YEAR
-    ========================== */
+<label>
+Email
+</label>
 
-    const yearElement = document.getElementById("year");
+<input
+type="email"
+name="email"
+placeholder="Enter your email"
+required
+>
 
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
+</div>
 
-  </script>
 
+</div>
 
-  <!-- =========================
-       ORGANIZATION SCHEMA
-  ========================== -->
 
-  <script type="application/ld+json">
+<div class="form-row">
 
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FE Destination (Pvt.) Ltd.",
-    "alternateName": "Foreign Education Destination",
-    "url": "https://fedestination.com/",
-    "logo": "https://fedestination.com/LOGO.png",
-    "sameAs": [
-      "https://www.facebook.com/fedestination",
-      "https://www.instagram.com/fedestination",
-      "https://www.tiktok.com/@fedestination",
-      "https://www.youtube.com/@fedestination"
-    ]
-  }
 
-  </script>
+<div class="form-group">
+
+<label>
+WhatsApp / Phone
+</label>
+
+<input
+type="tel"
+name="phone"
+placeholder="Enter your number"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Preferred Destination
+</label>
+
+<select
+name="destination"
+required
+>
+
+<option value="">
+Select Destination
+</option>
+
+<option>United Kingdom</option>
+<option>USA</option>
+<option>Canada</option>
+<option>Australia</option>
+<option>New Zealand</option>
+<option>Germany</option>
+<option>France</option>
+<option>Italy</option>
+<option>Sweden</option>
+<option>Hungary</option>
+<option>Netherlands</option>
+<option>Ireland</option>
+<option>Turkey</option>
+<option>Malaysia</option>
+<option>UAE</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Your Message
+</label>
+
+<textarea
+name="message"
+placeholder="Tell us about your education and study plans..."
+required
+></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+id="submitBtn"
+>
+
+<span id="submitText">
+Send Inquiry
+</span>
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+
+<div
+class="form-status"
+id="formStatus"
+></div>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<img
+src="LOGO.png"
+alt="FE Destination"
+class="footer-logo"
+>
+
+<h3>
+FE Destination (Pvt.) Ltd.
+</h3>
+
+<p>
+Foreign Education Destination helps students explore
+international education opportunities through personalized
+admissions and student visa guidance.
+</p>
+
+
+<div class="footer-social">
+
+<a
+href="https://www.facebook.com/fedestination"
+target="_blank"
+rel="noopener noreferrer"
+>
+<i class="fa-brands fa-facebook-f"></i>
+</a>
+
+<a
+href="https://www.instagram.com/fedestination"
+target="_blank"
+rel="noopener noreferrer"
+>
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a
+href="https://www.tiktok.com/@fedestination"
+target="_blank"
+rel="noopener noreferrer"
+>
+<i class="fa-brands fa-tiktok"></i>
+</a>
+
+<a
+href="https://www.youtube.com/@fedestination"
+target="_blank"
+rel="noopener noreferrer"
+>
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>
+Quick Links
+</h4>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#universities">Universities</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>
+Destinations
+</h4>
+
+<ul>
+
+<li><a href="uk.html">United Kingdom</a></li>
+
+<li><a href="europe.html">Europe</a></li>
+
+<li><a href="australia.html">Australia</a></li>
+
+<li><a href="malaysia.html">Malaysia</a></li>
+
+<li><a href="turkey.html">Turkey</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>
+Contact
+</h4>
+
+<ul>
+
+<li>
+<a href="mailto:info@fedestination.com">
+info@fedestination.com
+</a>
+</li>
+
+<li>
+<a href="https://wa.me/923451450072">
++92 345 1450072
+</a>
+</li>
+
+<li>
+Lahore, Pakistan
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+FE Destination (Pvt.) Ltd. — Foreign Education Destination.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+href="https://wa.me/923451450072"
+target="_blank"
+rel="noopener noreferrer"
+class="whatsapp"
+aria-label="WhatsApp"
+>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<!-- AOS -->
+
+<script
+src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+
+
+<script>
+
+/* =====================================================
+   AOS
+===================================================== */
+
+if(typeof AOS !== "undefined"){
+
+AOS.init({
+
+duration:800,
+
+once:true,
+
+offset:80
+
+});
+
+}
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+const mobileToggle =
+document.getElementById("mobileToggle");
+
+const navMenu =
+document.getElementById("navMenu");
+
+
+mobileToggle.addEventListener("click",function(){
+
+navMenu.classList.toggle("active");
+
+const open =
+navMenu.classList.contains("active");
+
+
+mobileToggle.innerHTML = open
+
+? '<i class="fa-solid fa-xmark"></i>'
+
+: '<i class="fa-solid fa-bars"></i>';
+
+});
+
+
+document.querySelectorAll(".nav-menu a")
+.forEach(function(link){
+
+link.addEventListener("click",function(){
+
+navMenu.classList.remove("active");
+
+mobileToggle.innerHTML =
+'<i class="fa-solid fa-bars"></i>';
+
+});
+
+});
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+const form =
+document.getElementById("inquiryForm");
+
+const status =
+document.getElementById("formStatus");
+
+const submitBtn =
+document.getElementById("submitBtn");
+
+const submitText =
+document.getElementById("submitText");
+
+
+form.addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+submitBtn.disabled=true;
+
+submitText.textContent="Sending...";
+
+status.textContent="";
+
+
+try{
+
+const response=await fetch(
+
+form.action,
+
+{
+
+method:"POST",
+
+body:new FormData(form),
+
+headers:{
+"Accept":"application/json"
+}
+
+}
+
+);
+
+
+if(response.ok){
+
+status.textContent=
+"Thank you! Your inquiry has been submitted successfully.";
+
+status.style.color="#168a45";
+
+form.reset();
+
+}
+
+else{
+
+throw new Error();
+
+}
+
+}
+
+catch(error){
+
+status.textContent=
+"Something went wrong. Please try again or contact us on WhatsApp.";
+
+status.style.color="#c62828";
+
+}
+
+finally{
+
+submitBtn.disabled=false;
+
+submitText.textContent="Send Inquiry";
+
+}
+
+});
+
+
+/* =====================================================
+   YEAR
+===================================================== */
+
+document.getElementById("year")
+.textContent=new Date().getFullYear();
+
+
+</script>
+
+
+<!-- =====================================================
+     ORGANIZATION SCHEMA
+===================================================== -->
+
+<script type="application/ld+json">
+
+{
+
+"@context":"https://schema.org",
+
+"@type":"Organization",
+
+"name":"FE Destination (Pvt.) Ltd.",
+
+"alternateName":"Foreign Education Destination",
+
+"url":"https://fedestination.com/",
+
+"logo":"https://fedestination.com/LOGO.png",
+
+"sameAs":[
+
+"https://www.facebook.com/fedestination",
+
+"https://www.instagram.com/fedestination",
+
+"https://www.tiktok.com/@fedestination",
+
+"https://www.youtube.com/@fedestination"
+
+]
+
+}
+
+</script>
 
 
 </body>
