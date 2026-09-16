@@ -57,7 +57,51 @@
     /* =====================================
        RESET
     ====================================== */
+/* =====================================
+   HEADER SOCIAL LINKS
+===================================== */
 
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #eef8ff;
+  color: var(--primary);
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.header-social a:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1050px) {
+  .header-social {
+    gap: 5px;
+  }
+
+  .header-social a {
+    width: 31px;
+    height: 31px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 850px) {
+  .header-social {
+    display: none;
+  }
+}
     * {
       margin: 0;
       padding: 0;
