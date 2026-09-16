@@ -1,1 +1,3021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Universities | Foreign Education Destination</title>
+
+  <meta name="description" content="Explore universities and study options across the UK, Europe, Australia, Malaysia, New Zealand, UAE and Turkey with Foreign Education Destination.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --navy:#082b49;
+      --navy2:#0d3b66;
+      --blue:#168fd6;
+      --sky:#38bdf8;
+      --light:#f5faff;
+      --white:#ffffff;
+      --text:#334155;
+      --muted:#718096;
+      --border:#e4edf4;
+      --shadow:0 14px 40px rgba(8,43,73,.10);
+      --shadow-hover:0 22px 50px rgba(8,43,73,.15);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Plus Jakarta Sans",sans-serif;
+      color:var(--text);
+      background:#fff;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    button,
+    input{
+      font-family:inherit;
+    }
+
+    .container{
+      width:min(1180px,92%);
+      margin:auto;
+    }
+
+    /* ================= TOP BAR ================= */
+
+    .topbar{
+      background:var(--navy);
+      color:#dcecf8;
+      font-size:11px;
+      font-weight:600;
+    }
+
+    .topbar-inner{
+      min-height:36px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .topbar-left,
+    .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .topbar span{
+      display:flex;
+      align-items:center;
+      gap:7px;
+    }
+
+    .topbar i{
+      color:var(--sky);
+    }
+
+    /* ================= HEADER ================= */
+
+    .main-header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:1px solid var(--border);
+    }
+
+    .main-header-inner{
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      position:relative;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
+    }
+
+    .brand-logo{
+      width:62px;
+      height:62px;
+      object-fit:contain;
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
+
+    .brand-text .destination{
+      font-family:"Poppins",sans-serif;
+      font-size:20px;
+      font-weight:800;
+      color:var(--navy);
+      letter-spacing:-.3px;
+      white-space:nowrap;
+    }
+
+    .brand-text .tagline{
+      font-size:11px;
+      font-weight:700;
+      color:var(--blue);
+      margin-top:5px;
+      letter-spacing:.5px;
+    }
+
+    /* ================= NAV ================= */
+
+    .nav-menu{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:4px;
+    }
+
+    .nav-menu a{
+      position:relative;
+      padding:10px 13px;
+      font-size:12px;
+      font-weight:700;
+      color:#536476;
+      transition:.3s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active{
+      color:var(--blue);
+    }
+
+    .nav-menu a::after{
+      content:"";
+      position:absolute;
+      left:13px;
+      right:13px;
+      bottom:3px;
+      height:2px;
+      background:var(--blue);
+      transform:scaleX(0);
+      transition:.3s;
+      border-radius:20px;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after{
+      transform:scaleX(1);
+    }
+
+    .mobile-toggle{
+      display:none;
+      width:42px;
+      height:42px;
+      border:none;
+      border-radius:11px;
+      background:#eef8ff;
+      color:var(--navy);
+      cursor:pointer;
+      font-size:18px;
+    }
+
+    /* ================= SOCIAL BAR ================= */
+
+    .social-bar{
+      background:linear-gradient(90deg,var(--navy),#0d4774);
+      color:#fff;
+    }
+
+    .social-inner{
+      min-height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:10px;
+    }
+
+    .social-title{
+      font-size:10px;
+      font-weight:700;
+      opacity:.85;
+      margin-right:5px;
+    }
+
+    .social-link{
+      width:27px;
+      height:27px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      background:rgba(255,255,255,.10);
+      font-size:12px;
+      transition:.3s;
+    }
+
+    .social-link:hover{
+      background:var(--sky);
+      transform:translateY(-2px);
+    }
+
+    /* ================= HERO ================= */
+
+    .page-hero{
+      min-height:390px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+
+      background:
+        linear-gradient(90deg,
+        rgba(8,43,73,.96),
+        rgba(8,43,73,.82),
+        rgba(8,43,73,.40)),
+        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    .page-hero::before{
+      content:"";
+      position:absolute;
+      width:430px;
+      height:430px;
+      right:-190px;
+      top:-180px;
+      border-radius:50%;
+      border:75px solid rgba(56,189,248,.10);
+    }
+
+    .hero-content{
+      max-width:760px;
+      position:relative;
+      z-index:2;
+      color:#fff;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 13px;
+      border-radius:30px;
+      background:rgba(56,189,248,.13);
+      border:1px solid rgba(255,255,255,.18);
+      color:#c8efff;
+      font-size:10px;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    .hero-badge i{
+      color:var(--sky);
+    }
+
+    .hero-content h1{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(38px,5vw,55px);
+      line-height:1.1;
+      font-weight:800;
+      letter-spacing:-1.5px;
+      margin-bottom:15px;
+    }
+
+    .hero-content h1 span{
+      color:var(--sky);
+    }
+
+    .hero-content p{
+      max-width:680px;
+      color:#d5e6f1;
+      font-size:13px;
+      line-height:1.9;
+    }
+
+    /* ================= DIRECTORY ================= */
+
+    .directory-section{
+      padding:80px 0;
+      background:#fff;
+    }
+
+    .section-heading{
+      text-align:center;
+      max-width:750px;
+      margin:0 auto 35px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:7px 12px;
+      border-radius:30px;
+      background:#eaf8ff;
+      color:var(--blue);
+      font-size:10px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.7px;
+      margin-bottom:12px;
+    }
+
+    .section-heading h2{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:32px;
+      line-height:1.3;
+      margin-bottom:10px;
+    }
+
+    .section-heading p{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.8;
+    }
+
+    /* ================= SEARCH ================= */
+
+    .search-area{
+      display:flex;
+      justify-content:center;
+      margin-bottom:25px;
+    }
+
+    .search-box{
+      width:min(620px,100%);
+      position:relative;
+    }
+
+    .search-box i{
+      position:absolute;
+      left:17px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--blue);
+      font-size:14px;
+    }
+
+    .search-box input{
+      width:100%;
+      height:52px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      outline:none;
+      padding:0 18px 0 46px;
+      color:var(--navy);
+      font-size:12px;
+      background:#fff;
+      box-shadow:0 8px 25px rgba(8,43,73,.045);
+      transition:.3s;
+    }
+
+    .search-box input:focus{
+      border-color:#8ed5f5;
+      box-shadow:0 0 0 4px rgba(56,189,248,.10);
+    }
+
+    /* ================= FILTERS ================= */
+
+    .filters{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:9px;
+      margin-bottom:40px;
+    }
+
+    .filter-btn{
+      border:1px solid var(--border);
+      background:#fff;
+      color:#627386;
+      padding:10px 15px;
+      border-radius:30px;
+      font-size:10px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .filter-btn:hover{
+      border-color:#9eddf7;
+      color:var(--blue);
+      background:#f2fbff;
+    }
+
+    .filter-btn.active{
+      background:var(--navy);
+      border-color:var(--navy);
+      color:#fff;
+      box-shadow:0 8px 18px rgba(8,43,73,.15);
+    }
+
+    /* ================= UNIVERSITY GRID ================= */
+
+    .university-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .university-card{
+      position:relative;
+      background:#fff;
+      border:1px solid #e8f0f5;
+      border-radius:18px;
+      padding:26px 18px 22px;
+      text-align:center;
+      overflow:hidden;
+      transition:all .35s ease;
+      box-shadow:0 8px 25px rgba(8,43,73,.045);
+    }
+
+    .university-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:4px;
+      background:var(--uni-color,#168fd6);
+    }
+
+    .university-card::after{
+      content:"";
+      position:absolute;
+      width:100px;
+      height:100px;
+      right:-45px;
+      bottom:-45px;
+      background:var(--uni-color,#168fd6);
+      opacity:.055;
+      border-radius:50%;
+      transition:.35s;
+    }
+
+    .university-card:hover{
+      transform:translateY(-8px);
+      border-color:transparent;
+      box-shadow:0 18px 45px rgba(8,43,73,.12);
+    }
+
+    .university-card:hover::after{
+      transform:scale(2.2);
+    }
+
+    .university-logo{
+      width:70px;
+      height:70px;
+      margin:0 auto 17px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--uni-bg,#eef8ff);
+      color:var(--uni-color,#168fd6);
+      position:relative;
+      z-index:2;
+      transition:.35s;
+    }
+
+    .university-logo img{
+      width:48px;
+      height:48px;
+      object-fit:contain;
+    }
+
+    .university-card:hover .university-logo{
+      transform:scale(1.07) rotate(-2deg);
+    }
+
+    .university-card h3{
+      font-family:"Poppins",sans-serif;
+      font-size:14px;
+      line-height:1.45;
+      color:var(--uni-color,#082b49);
+      font-weight:700;
+      margin:0;
+      position:relative;
+      z-index:2;
+    }
+
+    .university-location{
+      display:block;
+      margin-top:7px;
+      font-size:10px;
+      color:#82909c;
+      font-weight:600;
+      position:relative;
+      z-index:2;
+    }
+
+    .university-tag{
+      display:inline-block;
+      margin-top:12px;
+      padding:5px 9px;
+      border-radius:20px;
+      background:#f2f8fc;
+      color:#647789;
+      font-size:8px;
+      font-weight:800;
+      position:relative;
+      z-index:2;
+    }
+
+    .university-link{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-top:13px;
+      color:var(--blue);
+      font-size:9px;
+      font-weight:800;
+      position:relative;
+      z-index:2;
+      transition:.3s;
+    }
+
+    .university-link:hover{
+      gap:9px;
+    }
+
+    .no-results{
+      display:none;
+      text-align:center;
+      padding:50px 20px;
+      color:var(--muted);
+      grid-column:1/-1;
+    }
+
+    .no-results i{
+      font-size:35px;
+      color:#b7dff1;
+      margin-bottom:12px;
+    }
+
+    .no-results h3{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:18px;
+      margin-bottom:5px;
+    }
+
+    .no-results p{
+      font-size:11px;
+    }
+
+    /* ================= DESTINATION CTA ================= */
+
+    .destination-section{
+      padding:75px 0;
+      background:var(--light);
+    }
+
+    .destination-box{
+      background:
+        linear-gradient(110deg,rgba(8,43,73,.97),rgba(13,72,113,.94)),
+        url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      border-radius:25px;
+      padding:45px;
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:35px;
+      box-shadow:var(--shadow-hover);
+    }
+
+    .destination-box::after{
+      content:"";
+      position:absolute;
+      width:330px;
+      height:330px;
+      border-radius:50%;
+      border:65px solid rgba(56,189,248,.08);
+      right:-160px;
+      top:-160px;
+    }
+
+    .destination-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .destination-content h2{
+      font-family:"Poppins",sans-serif;
+      color:#fff;
+      font-size:28px;
+      margin-bottom:9px;
+    }
+
+    .destination-content h2 span{
+      color:var(--sky);
+    }
+
+    .destination-content p{
+      color:#c9dce9;
+      font-size:11px;
+      line-height:1.8;
+      max-width:700px;
+    }
+
+    .destination-btn{
+      position:relative;
+      z-index:2;
+      flex-shrink:0;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 19px;
+      border-radius:10px;
+      font-size:11px;
+      font-weight:800;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:var(--blue);
+      color:#fff;
+      box-shadow:0 10px 25px rgba(22,143,214,.28);
+    }
+
+    .btn-primary:hover{
+      background:#0f7fc1;
+      transform:translateY(-2px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#061f36;
+      color:#c9d7e2;
+      padding:50px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:35px;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      margin-bottom:15px;
+    }
+
+    .footer-logo{
+      width:53px;
+      height:53px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:10px;
+      padding:4px;
+    }
+
+    .footer-brand h3{
+      font-family:"Poppins",sans-serif;
+      color:#fff;
+      font-size:16px;
+    }
+
+    .footer-about{
+      font-size:10px;
+      line-height:1.8;
+      color:#9fb4c5;
+      max-width:390px;
+    }
+
+    .footer-heading{
+      color:#fff;
+      font-family:"Poppins",sans-serif;
+      font-size:13px;
+      margin-bottom:15px;
+    }
+
+    .footer-links{
+      list-style:none;
+      display:grid;
+      gap:9px;
+    }
+
+    .footer-links a{
+      font-size:10px;
+      color:#9fb4c5;
+      transition:.3s;
+    }
+
+    .footer-links a:hover{
+      color:var(--sky);
+      padding-left:3px;
+    }
+
+    .footer-socials{
+      display:flex;
+      gap:8px;
+      margin-top:17px;
+    }
+
+    .footer-socials a{
+      width:31px;
+      height:31px;
+      border-radius:9px;
+      background:rgba(255,255,255,.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      color:#fff;
+      transition:.3s;
+    }
+
+    .footer-socials a:hover{
+      background:var(--blue);
+      transform:translateY(-2px);
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:19px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .footer-bottom p{
+      font-size:9px;
+      color:#849cad;
+    }
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp-float{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:54px;
+      height:54px;
+      background:#25d366;
+      color:#fff;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:25px;
+      box-shadow:0 10px 30px rgba(37,211,102,.3);
+      z-index:999;
+      transition:.3s;
+    }
+
+    .whatsapp-float:hover{
+      transform:scale(1.08) translateY(-3px);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:1100px){
+
+      .nav-menu a{
+        padding:10px 9px;
+        font-size:11px;
+      }
+
+      .brand-text .destination{
+        font-size:18px;
+      }
+
+      .university-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+    }
+
+    @media(max-width:850px){
+
+      .topbar{
+        display:none;
+      }
+
+      .main-header-inner{
+        min-height:76px;
+      }
+
+      .brand-logo{
+        width:52px;
+        height:52px;
+      }
+
+      .brand-text .destination{
+        font-size:15px;
+      }
+
+      .brand-text .tagline{
+        font-size:10px;
+      }
+
+      .mobile-toggle{
+        display:block;
+      }
+
+      .nav-menu{
+        display:none;
+        position:absolute;
+        left:4%;
+        right:4%;
+        top:76px;
+        background:#fff;
+        border-radius:12px;
+        box-shadow:var(--shadow);
+        border:1px solid var(--border);
+        padding:8px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        z-index:999;
+      }
+
+      .nav-menu.active{
+        display:flex;
+      }
+
+      .nav-menu a{
+        display:block;
+        padding:12px 14px;
+      }
+
+      .nav-menu a::after{
+        display:none;
+      }
+
+      .social-inner{
+        justify-content:center;
+      }
+
+      .social-title{
+        display:none;
+      }
+
+      .page-hero{
+        min-height:400px;
+      }
+
+      .university-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .destination-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      .directory-section{
+        padding:60px 0;
+      }
+
+      .brand-logo{
+        width:46px;
+        height:46px;
+      }
+
+      .brand-text .destination{
+        font-size:14px;
+        white-space:normal;
+      }
+
+      .brand-text .tagline{
+        font-size:9px;
+      }
+
+      .hero-content h1{
+        font-size:37px;
+      }
+
+      .hero-content p{
+        font-size:12px;
+      }
+
+      .section-heading h2{
+        font-size:27px;
+      }
+
+      .university-grid{
+        grid-template-columns:1fr;
+      }
+
+      .university-card{
+        padding:28px 20px;
+      }
+
+      .filters{
+        justify-content:flex-start;
+      }
+
+      .filter-btn{
+        font-size:9px;
+        padding:9px 12px;
+      }
+
+      .destination-box{
+        padding:30px 24px;
+      }
+
+      .destination-content h2{
+        font-size:24px;
+      }
+
+      .destination-btn{
+        width:100%;
+      }
+
+      .destination-btn .btn{
+        width:100%;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+      }
+
+    }
+
+    @media(max-width:390px){
+
+      .brand-text .destination{
+        font-size:13px;
+      }
+
+      .brand-text .tagline{
+        font-size:8px;
+      }
+
+      .hero-content h1{
+        font-size:33px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ================= TOP BAR ================= -->
+
+  <div class="topbar">
+
+    <div class="container topbar-inner">
+
+      <div class="topbar-left">
+
+        <span>
+          <i class="fa-solid fa-award"></i>
+          7+ Years of International Recruitment Experience
+        </span>
+
+      </div>
+
+      <div class="topbar-right">
+
+        <span>
+          <i class="fa-solid fa-location-dot"></i>
+          Lahore, Pakistan
+        </span>
+
+        <span>
+          <i class="fa-solid fa-envelope"></i>
+          info@fedestination.com
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="main-header">
+
+    <div class="container main-header-inner">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="LOGO.png"
+          alt="Foreign Education Destination Logo"
+          class="brand-logo"
+        >
+
+        <div class="brand-text">
+
+          <div class="destination">
+            Foreign Education Destination
+          </div>
+
+          <div class="tagline">
+            Your Gateway to Global Education
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <nav>
+
+        <ul class="nav-menu" id="navMenu">
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#destinations">
+              Destinations
+            </a>
+          </li>
+
+          <li>
+            <a href="universities.html" class="active">
+              Universities
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#journey">
+              How It Works
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <button
+        class="mobile-toggle"
+        id="mobileToggle"
+        aria-label="Open Menu"
+      >
+
+        <i class="fa-solid fa-bars"></i>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= SOCIAL BAR ================= -->
+
+  <div class="social-bar">
+
+    <div class="container social-inner">
+
+      <span class="social-title">
+        Follow Foreign Education Destination
+      </span>
+
+      <a
+        href="https://www.facebook.com/fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a
+        href="https://www.instagram.com/fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+      <a
+        href="https://www.youtube.com/@fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <div
+        class="hero-content"
+        data-aos="fade-up"
+      >
+
+        <div class="hero-badge">
+
+          <i class="fa-solid fa-building-columns"></i>
+
+          University Directory
+
+        </div>
+
+
+        <h1>
+
+          Explore
+          <span>Universities</span>
+          Worldwide
+
+        </h1>
+
+
+        <p>
+
+          Discover university options across leading study destinations.
+          Explore institutions by destination, search by university name and
+          visit official university websites for more information.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= UNIVERSITY DIRECTORY ================= -->
+
+  <section class="directory-section" id="universities">
+
+    <div class="container">
+
+      <div
+        class="section-heading"
+        data-aos="fade-up"
+      >
+
+        <div class="eyebrow">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+          Find Your University
+
+        </div>
+
+
+        <h2>
+          Universities by Destination
+        </h2>
+
+
+        <p>
+
+          Select a destination to explore featured university options.
+          University availability, entry requirements and intakes can vary
+          by programme and student profile.
+
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <div
+        class="search-area"
+        data-aos="fade-up"
+      >
+
+        <div class="search-box">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            id="universitySearch"
+            placeholder="Search university name..."
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- FILTERS -->
+
+      <div
+        class="filters"
+        data-aos="fade-up"
+      >
+
+        <button
+          class="filter-btn active"
+          data-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="uk"
+        >
+          🇬🇧 UK
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="europe"
+        >
+          🇪🇺 Europe
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="australia"
+        >
+          🇦🇺 Australia
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="malaysia"
+        >
+          🇲🇾 Malaysia
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="newzealand"
+        >
+          🇳🇿 New Zealand
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="uae"
+        >
+          🇦🇪 UAE
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="turkey"
+        >
+          🇹🇷 Turkey
+        </button>
+
+      </div>
+
+
+      <!-- UNIVERSITY GRID -->
+
+      <div class="university-grid" id="universityGrid">
+
+
+        <!-- ================= UK ================= -->
+
+        <div
+          class="university-card"
+          data-country="uk"
+          data-aos="fade-up"
+          style="--uni-color:#17365d;--uni-bg:#eef4fb;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=ox.ac.uk&sz=128"
+              alt="University of Oxford"
+            >
+
+          </div>
+
+          <h3>
+            University of Oxford
+          </h3>
+
+          <span class="university-location">
+            Oxford, UK
+          </span>
+
+          <span class="university-tag">
+            UK
+          </span>
+
+          <a
+            href="https://www.ox.ac.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="uk"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#68246c;--uni-bg:#faf0fb;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=cam.ac.uk&sz=128"
+              alt="University of Cambridge"
+            >
+
+          </div>
+
+          <h3>
+            University of Cambridge
+          </h3>
+
+          <span class="university-location">
+            Cambridge, UK
+          </span>
+
+          <span class="university-tag">
+            UK
+          </span>
+
+          <a
+            href="https://www.cam.ac.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="uk"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#4d1c5d;--uni-bg:#f8effa;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=imperial.ac.uk&sz=128"
+              alt="Imperial College London"
+            >
+
+          </div>
+
+          <h3>
+            Imperial College London
+          </h3>
+
+          <span class="university-location">
+            London, UK
+          </span>
+
+          <span class="university-tag">
+            UK
+          </span>
+
+          <a
+            href="https://www.imperial.ac.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="uk"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#7b1e3b;--uni-bg:#fff1f4;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=ucl.ac.uk&sz=128"
+              alt="University College London"
+            >
+
+          </div>
+
+          <h3>
+            University College London
+          </h3>
+
+          <span class="university-location">
+            London, UK
+          </span>
+
+          <span class="university-tag">
+            UK
+          </span>
+
+          <a
+            href="https://www.ucl.ac.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- ================= EUROPE ================= -->
+
+        <div
+          class="university-card"
+          data-country="europe"
+          data-aos="fade-up"
+          style="--uni-color:#243b6b;--uni-bg:#eef3fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=tum.de&sz=128"
+              alt="Technical University of Munich"
+            >
+
+          </div>
+
+          <h3>
+            Technical University of Munich
+          </h3>
+
+          <span class="university-location">
+            Munich, Germany
+          </span>
+
+          <span class="university-tag">
+            Europe
+          </span>
+
+          <a
+            href="https://www.tum.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="europe"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#143f68;--uni-bg:#eef6fb;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=rwth-aachen.de&sz=128"
+              alt="RWTH Aachen University"
+            >
+
+          </div>
+
+          <h3>
+            RWTH Aachen University
+          </h3>
+
+          <span class="university-location">
+            Aachen, Germany
+          </span>
+
+          <span class="university-tag">
+            Europe
+          </span>
+
+          <a
+            href="https://www.rwth-aachen.de/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="europe"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#7c2330;--uni-bg:#fff1f3;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=unibo.it&sz=128"
+              alt="University of Bologna"
+            >
+
+          </div>
+
+          <h3>
+            University of Bologna
+          </h3>
+
+          <span class="university-location">
+            Bologna, Italy
+          </span>
+
+          <span class="university-tag">
+            Europe
+          </span>
+
+          <a
+            href="https://www.unibo.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="europe"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#b3172f;--uni-bg:#fff0f2;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=unimi.it&sz=128"
+              alt="University of Milan"
+            >
+
+          </div>
+
+          <h3>
+            University of Milan
+          </h3>
+
+          <span class="university-location">
+            Milan, Italy
+          </span>
+
+          <span class="university-tag">
+            Europe
+          </span>
+
+          <a
+            href="https://www.unimi.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- ================= AUSTRALIA ================= -->
+
+        <div
+          class="university-card"
+          data-country="australia"
+          data-aos="fade-up"
+          style="--uni-color:#7a1d2c;--uni-bg:#fff0f2;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=sydney.edu.au&sz=128"
+              alt="University of Sydney"
+            >
+
+          </div>
+
+          <h3>
+            University of Sydney
+          </h3>
+
+          <span class="university-location">
+            Sydney, Australia
+          </span>
+
+          <span class="university-tag">
+            Australia
+          </span>
+
+          <a
+            href="https://www.sydney.edu.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="australia"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#263f78;--uni-bg:#eef3ff;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=unimelb.edu.au&sz=128"
+              alt="University of Melbourne"
+            >
+
+          </div>
+
+          <h3>
+            University of Melbourne
+          </h3>
+
+          <span class="university-location">
+            Melbourne, Australia
+          </span>
+
+          <span class="university-tag">
+            Australia
+          </span>
+
+          <a
+            href="https://www.unimelb.edu.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="australia"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#4a226f;--uni-bg:#f7f0fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=unsw.edu.au&sz=128"
+              alt="UNSW Sydney"
+            >
+
+          </div>
+
+          <h3>
+            UNSW Sydney
+          </h3>
+
+          <span class="university-location">
+            Sydney, Australia
+          </span>
+
+          <span class="university-tag">
+            Australia
+          </span>
+
+          <a
+            href="https://www.unsw.edu.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="australia"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#126b5b;--uni-bg:#eefaf7;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=uq.edu.au&sz=128"
+              alt="University of Queensland"
+            >
+
+          </div>
+
+          <h3>
+            University of Queensland
+          </h3>
+
+          <span class="university-location">
+            Brisbane, Australia
+          </span>
+
+          <span class="university-tag">
+            Australia
+          </span>
+
+          <a
+            href="https://www.uq.edu.au/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- ================= MALAYSIA ================= -->
+
+        <div
+          class="university-card"
+          data-country="malaysia"
+          data-aos="fade-up"
+          style="--uni-color:#b51d34;--uni-bg:#fff0f2;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=um.edu.my&sz=128"
+              alt="Universiti Malaya"
+            >
+
+          </div>
+
+          <h3>
+            Universiti Malaya
+          </h3>
+
+          <span class="university-location">
+            Kuala Lumpur, Malaysia
+          </span>
+
+          <span class="university-tag">
+            Malaysia
+          </span>
+
+          <a
+            href="https://www.um.edu.my/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="malaysia"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#124b78;--uni-bg:#edf6fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=upm.edu.my&sz=128"
+              alt="Universiti Putra Malaysia"
+            >
+
+          </div>
+
+          <h3>
+            Universiti Putra Malaysia
+          </h3>
+
+          <span class="university-location">
+            Serdang, Malaysia
+          </span>
+
+          <span class="university-tag">
+            Malaysia
+          </span>
+
+          <a
+            href="https://www.upm.edu.my/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="malaysia"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#7a1e31;--uni-bg:#fff1f3;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=ukm.edu.my&sz=128"
+              alt="Universiti Kebangsaan Malaysia"
+            >
+
+          </div>
+
+          <h3>
+            Universiti Kebangsaan Malaysia
+          </h3>
+
+          <span class="university-location">
+            Bangi, Malaysia
+          </span>
+
+          <span class="university-tag">
+            Malaysia
+          </span>
+
+          <a
+            href="https://www.ukm.edu.my/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="malaysia"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#175d6c;--uni-bg:#eef9fb;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=monash.edu.my&sz=128"
+              alt="Monash University Malaysia"
+            >
+
+          </div>
+
+          <h3>
+            Monash University Malaysia
+          </h3>
+
+          <span class="university-location">
+            Subang Jaya, Malaysia
+          </span>
+
+          <span class="university-tag">
+            Malaysia
+          </span>
+
+          <a
+            href="https://www.monash.edu.my/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- ================= NEW ZEALAND ================= -->
+
+        <div
+          class="university-card"
+          data-country="newzealand"
+          data-aos="fade-up"
+          style="--uni-color:#263e70;--uni-bg:#eef3fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=auckland.ac.nz&sz=128"
+              alt="University of Auckland"
+            >
+
+          </div>
+
+          <h3>
+            University of Auckland
+          </h3>
+
+          <span class="university-location">
+            Auckland, New Zealand
+          </span>
+
+          <span class="university-tag">
+            New Zealand
+          </span>
+
+          <a
+            href="https://www.auckland.ac.nz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="newzealand"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#5b233b;--uni-bg:#faf0f5;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=otago.ac.nz&sz=128"
+              alt="University of Otago"
+            >
+
+          </div>
+
+          <h3>
+            University of Otago
+          </h3>
+
+          <span class="university-location">
+            Dunedin, New Zealand
+          </span>
+
+          <span class="university-tag">
+            New Zealand
+          </span>
+
+          <a
+            href="https://www.otago.ac.nz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="newzealand"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#174b70;--uni-bg:#edf7fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=waikato.ac.nz&sz=128"
+              alt="University of Waikato"
+            >
+
+          </div>
+
+          <h3>
+            University of Waikato
+          </h3>
+
+          <span class="university-location">
+            Hamilton, New Zealand
+          </span>
+
+          <span class="university-tag">
+            New Zealand
+          </span>
+
+          <a
+            href="https://www.waikato.ac.nz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="newzealand"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#315b76;--uni-bg:#eef7fb;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=canterbury.ac.nz&sz=128"
+              alt="University of Canterbury"
+            >
+
+          </div>
+
+          <h3>
+            University of Canterbury
+          </h3>
+
+          <span class="university-location">
+            Christchurch, New Zealand
+          </span>
+
+          <span class="university-tag">
+            New Zealand
+          </span>
+
+          <a
+            href="https://www.canterbury.ac.nz/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- ================= UAE ================= -->
+
+        <div
+          class="university-card"
+          data-country="uae"
+          data-aos="fade-up"
+          style="--uni-color:#b21e35;--uni-bg:#fff0f2;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=aus.edu&sz=128"
+              alt="American University of Sharjah"
+            >
+
+          </div>
+
+          <h3>
+            American University of Sharjah
+          </h3>
+
+          <span class="university-location">
+            Sharjah, UAE
+          </span>
+
+          <span class="university-tag">
+            UAE
+          </span>
+
+          <a
+            href="https://www.aus.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="uae"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#0c4774;--uni-bg:#edf7fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=ku.ac.ae&sz=128"
+              alt="Khalifa University"
+            >
+
+          </div>
+
+          <h3>
+            Khalifa University
+          </h3>
+
+          <span class="university-location">
+            Abu Dhabi, UAE
+          </span>
+
+          <span class="university-tag">
+            UAE
+          </span>
+
+          <a
+            href="https://www.ku.ac.ae/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="uae"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#5e2d72;--uni-bg:#f7f0fa;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=nyuad.nyu.edu&sz=128"
+              alt="NYU Abu Dhabi"
+            >
+
+          </div>
+
+          <h3>
+            NYU Abu Dhabi
+          </h3>
+
+          <span class="university-location">
+            Abu Dhabi, UAE
+          </span>
+
+          <span class="university-tag">
+            UAE
+          </span>
+
+          <a
+            href="https://nyuad.nyu.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="uae"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#1e4e6d;--uni-bg:#eef7fb;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=ud.ac.ae&sz=128"
+              alt="University of Dubai"
+            >
+
+          </div>
+
+          <h3>
+            University of Dubai
+          </h3>
+
+          <span class="university-location">
+            Dubai, UAE
+          </span>
+
+          <span class="university-tag">
+            UAE
+          </span>
+
+          <a
+            href="https://www.ud.ac.ae/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <!-- ================= TURKEY ================= -->
+
+        <div
+          class="university-card"
+          data-country="turkey"
+          data-aos="fade-up"
+          style="--uni-color:#a51e32;--uni-bg:#fff0f2;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=metu.edu.tr&sz=128"
+              alt="Middle East Technical University"
+            >
+
+          </div>
+
+          <h3>
+            Middle East Technical University
+          </h3>
+
+          <span class="university-location">
+            Ankara, Turkey
+          </span>
+
+          <span class="university-tag">
+            Turkey
+          </span>
+
+          <a
+            href="https://www.metu.edu.tr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="turkey"
+          data-aos="fade-up"
+          data-aos-delay="80"
+          style="--uni-color:#7c1d31;--uni-bg:#fff0f3;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=bilkent.edu.tr&sz=128"
+              alt="Bilkent University"
+            >
+
+          </div>
+
+          <h3>
+            Bilkent University
+          </h3>
+
+          <span class="university-location">
+            Ankara, Turkey
+          </span>
+
+          <span class="university-tag">
+            Turkey
+          </span>
+
+          <a
+            href="https://www.bilkent.edu.tr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="turkey"
+          data-aos="fade-up"
+          data-aos-delay="160"
+          style="--uni-color:#174e72;--uni-bg:#eef7fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=ku.edu.tr&sz=128"
+              alt="Koç University"
+            >
+
+          </div>
+
+          <h3>
+            Koç University
+          </h3>
+
+          <span class="university-location">
+            Istanbul, Turkey
+          </span>
+
+          <span class="university-tag">
+            Turkey
+          </span>
+
+          <a
+            href="https://www.ku.edu.tr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div
+          class="university-card"
+          data-country="turkey"
+          data-aos="fade-up"
+          data-aos-delay="240"
+          style="--uni-color:#263d72;--uni-bg:#eef3fc;"
+        >
+
+          <div class="university-logo">
+
+            <img
+              src="https://www.google.com/s2/favicons?domain=sabanciuniv.edu&sz=128"
+              alt="Sabancı University"
+            >
+
+          </div>
+
+          <h3>
+            Sabancı University
+          </h3>
+
+          <span class="university-location">
+            Istanbul, Turkey
+          </span>
+
+          <span class="university-tag">
+            Turkey
+          </span>
+
+          <a
+            href="https://www.sabanciuniv.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="university-link"
+          >
+            Official Website
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+
+        <div class="no-results" id="noResults">
+
+          <i class="fa-solid fa-building-columns"></i>
+
+          <h3>
+            No University Found
+          </h3>
+
+          <p>
+            Try another university name or select a different destination.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= DESTINATION CTA ================= -->
+
+  <section class="destination-section">
+
+    <div class="container">
+
+      <div
+        class="destination-box"
+        data-aos="zoom-in"
+      >
+
+        <div class="destination-content">
+
+          <h2>
+            Not Sure Which
+            <span>Destination</span>
+            Fits You?
+          </h2>
+
+          <p>
+
+            Explore our destination guides for information about entry
+            requirements, study options, application processes and student
+            visa guidance.
+
+          </p>
+
+        </div>
+
+
+        <div class="destination-btn">
+
+          <a
+            href="index.html#destinations"
+            class="btn btn-primary"
+          >
+
+            <i class="fa-solid fa-earth-americas"></i>
+
+            Explore Destinations
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <div class="footer-brand">
+
+            <img
+              src="LOGO.png"
+              alt="FE Destination Logo"
+              class="footer-logo"
+            >
+
+            <h3>
+              Foreign Education Destination
+            </h3>
+
+          </div>
+
+
+          <p class="footer-about">
+
+            Foreign Education Destination helps students explore
+            international education opportunities with guidance for
+            university selection, applications, scholarships and student
+            visa processes.
+
+          </p>
+
+
+          <div class="footer-socials">
+
+            <a
+              href="https://www.facebook.com/fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Quick Links
+          </h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="index.html">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="about.html">
+                About Us
+              </a>
+            </li>
+
+            <li>
+              <a href="universities.html">
+                Universities
+              </a>
+            </li>
+
+            <li>
+              <a href="services.html">
+                Services
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html#destinations">
+                Destinations
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html#contact">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Study Destinations
+          </h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="uk.html">
+                United Kingdom
+              </a>
+            </li>
+
+            <li>
+              <a href="europe.html">
+                Europe
+              </a>
+            </li>
+
+            <li>
+              <a href="australia.html">
+                Australia
+              </a>
+            </li>
+
+            <li>
+              <a href="malaysia.html">
+                Malaysia
+              </a>
+            </li>
+
+            <li>
+              <a href="newzealand.html">
+                New Zealand
+              </a>
+            </li>
+
+            <li>
+              <a href="uae.html">
+                UAE
+              </a>
+            </li>
+
+            <li>
+              <a href="turkey.html">
+                Turkey
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span>
+          FE Destination Pvt. Ltd. All Rights Reserved.
+        </p>
+
+        <p>
+          Foreign Education Destination · Lahore, Pakistan
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= WHATSAPP ================= -->
+
+  <a
+    href="https://wa.me/923451450072?text=Hello%20Foreign%20Education%20Destination%2C%20I%20want%20study%20abroad%20guidance."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+  >
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+
+  <!-- ================= AOS ================= -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration:800,
+      once:true,
+      offset:70
+    });
+
+
+    /* ================= MOBILE MENU ================= */
+
+    const mobileToggle =
+      document.getElementById("mobileToggle");
+
+    const navMenu =
+      document.getElementById("navMenu");
+
+
+    mobileToggle.addEventListener("click", function(){
+
+      navMenu.classList.toggle("active");
+
+      const icon =
+        mobileToggle.querySelector("i");
+
+
+      if(navMenu.classList.contains("active")){
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+      }else{
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      }
+
+    });
+
+
+    document.querySelectorAll(".nav-menu a")
+      .forEach(function(link){
+
+        link.addEventListener("click", function(){
+
+          navMenu.classList.remove("active");
+
+          const icon =
+            mobileToggle.querySelector("i");
+
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+
+        });
+
+      });
+
+
+    /* ================= UNIVERSITY FILTER ================= */
+
+    const filterButtons =
+      document.querySelectorAll(".filter-btn");
+
+    const universityCards =
+      document.querySelectorAll(".university-card");
+
+    const searchInput =
+      document.getElementById("universitySearch");
+
+    const noResults =
+      document.getElementById("noResults");
+
+
+    let currentFilter = "all";
+
+
+    function filterUniversities(){
+
+      const searchTerm =
+        searchInput.value
+          .toLowerCase()
+          .trim();
+
+
+      let visibleCount = 0;
+
+
+      universityCards.forEach(function(card){
+
+        const country =
+          card.getAttribute("data-country");
+
+        const universityName =
+          card.querySelector("h3")
+            .textContent
+            .toLowerCase();
+
+
+        const matchesCountry =
+          currentFilter === "all" ||
+          country === currentFilter;
+
+
+        const matchesSearch =
+          universityName.includes(searchTerm);
+
+
+        if(matchesCountry && matchesSearch){
+
+          card.style.display = "block";
+          visibleCount++;
+
+        }else{
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      if(visibleCount === 0){
+
+        noResults.style.display = "block";
+
+      }else{
+
+        noResults.style.display = "none";
+
+      }
+
+    }
+
+
+    filterButtons.forEach(function(button){
+
+      button.addEventListener("click", function(){
+
+        filterButtons.forEach(function(btn){
+          btn.classList.remove("active");
+        });
+
+
+        button.classList.add("active");
+
+
+        currentFilter =
+          button.getAttribute("data-filter");
+
+
+        filterUniversities();
+
+      });
+
+    });
+
+
+    searchInput.addEventListener(
+      "input",
+      filterUniversities
+    );
+
+
+    /* ================= CURRENT YEAR ================= */
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
