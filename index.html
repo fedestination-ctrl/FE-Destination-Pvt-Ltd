@@ -40,7 +40,6 @@ rel="stylesheet"
 href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 >
 
-
 <style>
 
 /* =====================================================
@@ -82,6 +81,7 @@ scroll-behavior:smooth;
 
 body{
 font-family:"DM Sans",sans-serif;
+font-size:15px;
 color:var(--text);
 background:#fff;
 line-height:1.7;
@@ -188,7 +188,9 @@ gap:30px;
 }
 
 
-/* LOGO */
+/* =====================================================
+   LOGO
+===================================================== */
 
 .brand{
 
@@ -243,7 +245,7 @@ color:var(--blue);
 
 font-family:"Poppins",sans-serif;
 
-font-size:12px;
+font-size:11px;
 
 font-weight:600;
 
@@ -252,45 +254,6 @@ color:var(--blue);
 margin-top:5px;
 
 letter-spacing:.2px;
-
-}
-
-
-/* HEADER CTA */
-
-.header-cta{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:8px;
-
-background:var(--blue);
-
-color:#fff;
-
-padding:12px 20px;
-
-border-radius:8px;
-
-font-size:13px;
-
-font-weight:700;
-
-white-space:nowrap;
-
-transition:.3s;
-
-}
-
-.header-cta:hover{
-
-background:var(--blue-dark);
-
-transform:translateY(-2px);
-
-box-shadow:0 8px 20px rgba(7,134,201,.25);
 
 }
 
@@ -329,7 +292,7 @@ align-items:center;
 
 justify-content:center;
 
-gap:36px;
+gap:34px;
 
 list-style:none;
 
@@ -585,15 +548,15 @@ color:#62d1ff;
 
 .hero h1{
 
-font-size:clamp(42px,6vw,70px);
+font-size:clamp(38px,5vw,58px);
 
-line-height:1.08;
+line-height:1.1;
 
 font-weight:800;
 
-margin-bottom:22px;
+margin-bottom:20px;
 
-letter-spacing:-1.5px;
+letter-spacing:-1px;
 
 }
 
@@ -605,13 +568,13 @@ color:#5bd0ff;
 
 .hero p{
 
-font-size:17px;
+font-size:15px;
 
-max-width:650px;
+max-width:620px;
 
 color:#eaf7ff;
 
-margin-bottom:30px;
+margin-bottom:28px;
 
 }
 
@@ -871,7 +834,7 @@ color:var(--blue);
 
 .stat h3{
 
-font-size:25px;
+font-size:24px;
 
 color:var(--navy);
 
@@ -894,7 +857,7 @@ font-weight:600;
 
 section{
 
-padding:95px 0;
+padding:90px 0;
 
 }
 
@@ -912,7 +875,7 @@ margin:0 auto 50px;
 
 display:inline-block;
 
-font-size:12px;
+font-size:11px;
 
 font-weight:800;
 
@@ -928,19 +891,19 @@ margin-bottom:8px;
 
 .section-heading h2{
 
-font-size:clamp(28px,4vw,43px);
+font-size:clamp(27px,3.5vw,38px);
 
 line-height:1.2;
 
 color:var(--navy);
 
-margin-bottom:14px;
+margin-bottom:12px;
 
 }
 
 .section-heading p{
 
-font-size:14px;
+font-size:13px;
 
 }
 
@@ -1040,7 +1003,7 @@ display:block;
 
 color:var(--navy);
 
-font-size:14px;
+font-size:13px;
 
 }
 
@@ -1054,7 +1017,7 @@ font-size:11px;
 
 color:var(--blue);
 
-font-size:12px;
+font-size:11px;
 
 font-weight:800;
 
@@ -1064,7 +1027,7 @@ letter-spacing:1px;
 
 .about-content h2{
 
-font-size:40px;
+font-size:36px;
 
 line-height:1.2;
 
@@ -1082,7 +1045,7 @@ color:var(--blue);
 
 .about-content p{
 
-font-size:14px;
+font-size:13px;
 
 margin-bottom:15px;
 
@@ -1212,7 +1175,7 @@ margin-bottom:7px;
 
 .destination-content h3{
 
-font-size:20px;
+font-size:19px;
 
 margin-bottom:2px;
 
@@ -1349,7 +1312,7 @@ margin-bottom:18px;
 
 color:var(--navy);
 
-font-size:18px;
+font-size:17px;
 
 margin-bottom:8px;
 
@@ -1357,7 +1320,7 @@ margin-bottom:8px;
 
 .service p{
 
-font-size:13px;
+font-size:12.5px;
 
 }
 
@@ -1453,7 +1416,7 @@ margin-bottom:15px;
 
 .journey-card h3{
 
-font-size:16px;
+font-size:15px;
 
 margin-bottom:7px;
 
@@ -1713,7 +1676,7 @@ gap:30px;
 
 .cta h2{
 
-font-size:35px;
+font-size:32px;
 
 line-height:1.2;
 
@@ -1723,7 +1686,7 @@ margin-bottom:8px;
 
 .cta p{
 
-font-size:14px;
+font-size:13px;
 
 color:#e3f4fb;
 
@@ -1754,7 +1717,7 @@ align-items:start;
 
 .contact-info h2{
 
-font-size:39px;
+font-size:36px;
 
 line-height:1.2;
 
@@ -1772,7 +1735,7 @@ color:var(--blue);
 
 .contact-info > p{
 
-font-size:14px;
+font-size:13px;
 
 margin-bottom:27px;
 
@@ -2139,7 +2102,9 @@ grid-template-columns:repeat(2,1fr);
 }
 
 
-/* TABLET */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media(max-width:850px){
 
@@ -2152,12 +2117,6 @@ display:none;
 .main-header-inner{
 
 min-height:75px;
-
-}
-
-.header-cta{
-
-display:none;
 
 }
 
@@ -2325,7 +2284,9 @@ grid-template-columns:repeat(2,1fr);
 }
 
 
-/* MOBILE */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:600px){
 
@@ -2375,7 +2336,7 @@ padding:70px 0;
 
 .hero h1{
 
-font-size:39px;
+font-size:35px;
 
 }
 
@@ -2435,7 +2396,7 @@ bottom:15px;
 .about-content h2,
 .contact-info h2{
 
-font-size:31px;
+font-size:29px;
 
 }
 
@@ -2468,7 +2429,9 @@ font-size:28px;
 }
 
 
-/* VERY SMALL */
+/* =====================================================
+   VERY SMALL
+===================================================== */
 
 @media(max-width:390px){
 
@@ -2486,7 +2449,7 @@ font-size:8px;
 
 .hero h1{
 
-font-size:34px;
+font-size:33px;
 
 }
 
@@ -2569,7 +2532,6 @@ Book Consultation
 
 <div class="container main-header-inner">
 
-
 <a href="index.html" class="brand">
 
 <img
@@ -2593,15 +2555,6 @@ Foreign Education Destination
 </a>
 
 
-<a href="#contact" class="header-cta">
-
-<i class="fa-solid fa-calendar-check"></i>
-
-Free Profile Discussion
-
-</a>
-
-
 <button
 class="mobile-toggle"
 id="mobileToggle"
@@ -2611,7 +2564,6 @@ aria-label="Open Menu"
 <i class="fa-solid fa-bars"></i>
 
 </button>
-
 
 </div>
 
@@ -4066,16 +4018,13 @@ action="https://formspree.io/f/xpqvpanq"
 method="POST"
 >
 
-
 <input
 type="hidden"
 name="_subject"
 value="New Student Inquiry - FE Destination (Pvt.) Ltd."
 >
 
-
 <div class="form-row">
-
 
 <div class="form-group">
 
@@ -4108,12 +4057,10 @@ required
 
 </div>
 
-
 </div>
 
 
 <div class="form-row">
-
 
 <div class="form-group">
 
@@ -4557,7 +4504,6 @@ submitText.textContent="Send Inquiry";
 
 document.getElementById("year")
 .textContent=new Date().getFullYear();
-
 
 </script>
 
