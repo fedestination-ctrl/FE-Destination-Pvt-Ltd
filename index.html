@@ -3,10 +3,9 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FE Destination (Pvt.) Ltd. | Foreign Education Destination</title>
+<title>Foreign Education Destination | Study Abroad Consultancy</title>
 
 <meta
 name="description"
@@ -14,7 +13,6 @@ content="Foreign Education Destination helps students explore international educ
 >
 
 <meta name="robots" content="index, follow">
-
 <meta name="theme-color" content="#087fc1">
 
 <link rel="canonical" href="https://fedestination.com/">
@@ -42,12 +40,7 @@ href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 
 <style>
 
-/* =====================================================
-   ROOT
-===================================================== */
-
 :root{
-
 --blue:#0786c9;
 --blue-dark:#05679b;
 --blue-light:#eaf7ff;
@@ -58,16 +51,9 @@ href="https://unpkg.com/aos@2.3.1/dist/aos.css"
 --white:#ffffff;
 --light:#f6fbfe;
 --border:#e4edf3;
-
 --shadow:0 15px 45px rgba(9,43,69,.10);
 --shadow-hover:0 22px 55px rgba(9,43,69,.16);
-
 }
-
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
 margin:0;
@@ -81,7 +67,6 @@ scroll-behavior:smooth;
 
 body{
 font-family:"DM Sans",sans-serif;
-font-size:15px;
 color:var(--text);
 background:#fff;
 line-height:1.7;
@@ -115,38 +100,29 @@ margin:auto;
 }
 
 
-/* =====================================================
+/* =========================================
    TOP BAR
-===================================================== */
+========================================= */
 
 .topbar{
-
 background:var(--navy);
 color:#dcebf4;
-
 font-size:12px;
-
 }
 
 .topbar-inner{
-
 min-height:38px;
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 gap:20px;
-
 }
 
 .top-left,
 .top-right{
-
 display:flex;
 align-items:center;
 gap:20px;
-
 }
 
 .topbar i{
@@ -159,313 +135,186 @@ color:#fff;
 }
 
 
-/* =====================================================
+/* =========================================
    MAIN HEADER
-===================================================== */
+========================================= */
 
 .main-header{
-
 background:#fff;
-
 position:relative;
-
 z-index:1000;
-
 box-shadow:0 3px 20px rgba(0,0,0,.05);
-
 }
 
 .main-header-inner{
-
-min-height:92px;
-
+min-height:88px;
 display:flex;
 align-items:center;
-justify-content:space-between;
-
-gap:30px;
-
+gap:35px;
 }
 
 
-/* =====================================================
-   LOGO
-===================================================== */
+/* LOGO */
 
 .brand{
-
 display:flex;
 align-items:center;
-
-gap:13px;
-
+gap:12px;
 flex-shrink:0;
-
 }
 
 .brand-logo{
-
-width:58px;
-height:58px;
-
+width:62px;
+height:62px;
 object-fit:contain;
-
 }
 
 .brand-text{
-
 display:flex;
 flex-direction:column;
-
 line-height:1.15;
-
-}
-
-.brand-text .company{
-
-font-family:"Poppins",sans-serif;
-
-font-size:15px;
-
-font-weight:800;
-
-color:var(--navy);
-
-letter-spacing:.2px;
-
-}
-
-.brand-text .company span{
-
-color:var(--blue);
-
 }
 
 .brand-text .destination{
-
 font-family:"Poppins",sans-serif;
-
-font-size:11px;
-
-font-weight:600;
-
+font-size:15px;
+font-weight:700;
 color:var(--blue);
-
-margin-top:5px;
-
-letter-spacing:.2px;
-
+letter-spacing:.1px;
 }
 
 
-/* =====================================================
-   NAVIGATION BAR
-===================================================== */
+/* =========================================
+   NAVIGATION SAME LEVEL AS LOGO
+========================================= */
 
 .navigation{
-
 background:#fff;
-
 border-top:1px solid #f1f5f8;
-
 border-bottom:1px solid var(--border);
-
 }
 
 .nav-inner{
-
-min-height:54px;
-
+min-height:0;
 display:flex;
-
 align-items:center;
-
-justify-content:center;
-
+justify-content:flex-end;
 }
 
-.nav-menu{
 
+/* IMPORTANT:
+   Navigation is visually attached to header.
+*/
+
+.main-header-inner .nav-menu{
 display:flex;
-
 align-items:center;
-
-justify-content:center;
-
-gap:34px;
-
+justify-content:flex-end;
+gap:27px;
 list-style:none;
-
+margin-left:auto;
 }
 
-.nav-menu a{
-
+.main-header-inner .nav-menu a{
 font-size:13px;
-
 font-weight:700;
-
 color:var(--dark);
-
 position:relative;
-
-padding:17px 0;
-
+padding:10px 0;
 transition:.25s;
-
 }
 
-.nav-menu a:hover{
-
+.main-header-inner .nav-menu a:hover{
 color:var(--blue);
-
 }
 
-.nav-menu a::after{
-
+.main-header-inner .nav-menu a::after{
 content:"";
-
 position:absolute;
-
 left:0;
-
-bottom:8px;
-
+bottom:2px;
 width:0;
-
 height:2px;
-
 background:var(--blue);
-
 transition:.3s;
-
 }
 
-.nav-menu a:hover::after{
-
+.main-header-inner .nav-menu a:hover::after{
 width:100%;
-
 }
 
 
-/* =====================================================
+/* =========================================
    SOCIAL BAR
-===================================================== */
+========================================= */
 
 .social-bar{
-
-background:linear-gradient(
-90deg,
-#0574ad,
-#0b92d1,
-#087fc1
-);
-
+background:linear-gradient(90deg,#0574ad,#0b92d1,#087fc1);
 color:#fff;
-
 }
 
 .social-inner{
-
-min-height:43px;
-
+min-height:42px;
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 gap:12px;
-
 }
 
 .social-title{
-
 font-size:11px;
-
 font-weight:600;
-
 opacity:.9;
-
 margin-right:5px;
-
 }
 
 .social-link{
-
 width:28px;
 height:28px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:rgba(255,255,255,.14);
-
 color:#fff;
-
 font-size:12px;
-
 transition:.25s;
-
 }
 
 .social-link:hover{
-
 background:#fff;
-
 color:var(--blue);
-
 transform:translateY(-2px);
-
 }
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+/* MOBILE BUTTON */
 
 .mobile-toggle{
-
 display:none;
-
 border:0;
-
 background:var(--blue);
-
 color:#fff;
-
 width:42px;
 height:42px;
-
 border-radius:8px;
-
 font-size:18px;
-
 cursor:pointer;
-
+margin-left:auto;
 }
 
 
-/* =====================================================
+/* =========================================
    HERO
-===================================================== */
+========================================= */
 
 .hero{
-
 position:relative;
-
 min-height:690px;
-
 display:flex;
-
 align-items:center;
-
 overflow:hidden;
 
 background:
-
 linear-gradient(
 90deg,
 rgba(4,39,64,.95) 0%,
@@ -473,2019 +322,1259 @@ rgba(5,76,111,.82) 42%,
 rgba(5,126,181,.30) 75%,
 rgba(5,126,181,.08) 100%
 ),
-
 url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85")
-
 center/cover;
-
 }
 
 .hero::after{
-
 content:"";
-
 position:absolute;
-
 width:500px;
 height:500px;
-
 right:-180px;
 bottom:-250px;
-
 border-radius:50%;
-
 background:rgba(56,189,248,.22);
-
 filter:blur(5px);
-
 }
 
 .hero-content{
-
 position:relative;
-
 z-index:2;
-
 max-width:720px;
-
 padding:90px 0;
-
 color:#fff;
-
 }
 
 .hero-badge{
-
 display:inline-flex;
-
 align-items:center;
-
 gap:8px;
-
 padding:9px 15px;
-
 border-radius:30px;
-
 background:rgba(255,255,255,.13);
-
 border:1px solid rgba(255,255,255,.2);
-
 backdrop-filter:blur(10px);
-
 font-size:12px;
-
 font-weight:700;
-
 margin-bottom:22px;
-
 }
 
 .hero-badge i{
-
 color:#62d1ff;
-
 }
 
 .hero h1{
-
 font-size:clamp(38px,5vw,58px);
-
-line-height:1.1;
-
+line-height:1.08;
 font-weight:800;
-
 margin-bottom:20px;
-
 letter-spacing:-1px;
-
 }
 
 .hero h1 span{
-
 color:#5bd0ff;
-
 }
 
 .hero p{
-
-font-size:15px;
-
-max-width:620px;
-
+font-size:16px;
+max-width:650px;
 color:#eaf7ff;
-
-margin-bottom:28px;
-
+margin-bottom:30px;
 }
 
 .hero-buttons{
-
 display:flex;
-
 gap:12px;
-
 flex-wrap:wrap;
-
 }
 
 .btn{
-
 display:inline-flex;
-
 align-items:center;
-
 justify-content:center;
-
 gap:8px;
-
 padding:13px 21px;
-
 border-radius:8px;
-
 font-size:13px;
-
 font-weight:700;
-
 transition:.3s;
-
 cursor:pointer;
-
 border:0;
-
 }
 
 .btn-primary{
-
 background:var(--blue);
-
 color:#fff;
-
 box-shadow:0 10px 25px rgba(0,0,0,.15);
-
 }
 
 .btn-primary:hover{
-
 background:#fff;
-
 color:var(--blue);
-
 transform:translateY(-3px);
-
 }
 
 .btn-white{
-
 background:#fff;
-
 color:var(--navy);
-
 }
 
 .btn-white:hover{
-
 background:#5bd0ff;
-
 color:#fff;
-
 transform:translateY(-3px);
-
 }
 
 
-/* =====================================================
-   FLOATING HERO CARD
-===================================================== */
+/* HERO CARD */
 
 .hero-card{
-
 position:absolute;
-
 right:8%;
-
 bottom:75px;
-
 z-index:3;
-
 width:245px;
-
 background:rgba(255,255,255,.95);
-
 border-radius:16px;
-
 padding:20px;
-
 box-shadow:0 20px 50px rgba(0,0,0,.2);
-
 animation:floatCard 4s ease-in-out infinite;
-
 }
 
 @keyframes floatCard{
-
-0%,100%{transform:translateY(0)}
-
-50%{transform:translateY(-10px)}
-
+0%,100%{
+transform:translateY(0)
+}
+50%{
+transform:translateY(-10px)
+}
 }
 
 .hero-card-top{
-
 display:flex;
-
 align-items:center;
-
 gap:10px;
-
 margin-bottom:13px;
-
 }
 
 .hero-card-icon{
-
 width:42px;
 height:42px;
-
 border-radius:10px;
-
 background:var(--blue-light);
-
 color:var(--blue);
-
 display:grid;
-
 place-items:center;
-
 }
 
 .hero-card h4{
-
 font-size:13px;
-
 color:var(--navy);
-
 }
 
 .hero-card p{
-
 font-size:11px;
-
 color:var(--text);
-
 margin:0;
-
 }
 
 .progress{
-
 height:7px;
-
 background:#e7f0f5;
-
 border-radius:10px;
-
 overflow:hidden;
-
 }
 
 .progress span{
-
 display:block;
-
 width:82%;
-
 height:100%;
-
-background:linear-gradient(
-90deg,
-var(--blue),
-var(--sky)
-);
-
+background:linear-gradient(90deg,var(--blue),var(--sky));
 border-radius:10px;
-
 }
 
 
-/* =====================================================
+/* =========================================
    STATS
-===================================================== */
+========================================= */
 
 .stats{
-
 position:relative;
-
 margin-top:-55px;
-
 z-index:5;
-
 }
 
 .stats-grid{
-
 background:#fff;
-
 border-radius:18px;
-
 box-shadow:var(--shadow);
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 overflow:hidden;
-
 }
 
 .stat{
-
 padding:28px 20px;
-
 text-align:center;
-
 border-right:1px solid var(--border);
-
 }
 
 .stat:last-child{
-
 border-right:none;
-
 }
 
 .stat-icon{
-
 width:42px;
 height:42px;
-
 margin:0 auto 9px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:var(--blue-light);
-
 color:var(--blue);
-
 }
 
 .stat h3{
-
-font-size:24px;
-
+font-size:25px;
 color:var(--navy);
-
 font-weight:800;
-
 }
 
 .stat p{
-
 font-size:11px;
-
 font-weight:600;
-
 }
 
 
-/* =====================================================
-   SECTIONS
-===================================================== */
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
 
 section{
-
-padding:90px 0;
-
+padding:95px 0;
 }
 
 .section-heading{
-
 text-align:center;
-
 max-width:730px;
-
 margin:0 auto 50px;
-
 }
 
 .section-heading .eyebrow{
-
 display:inline-block;
-
-font-size:11px;
-
+font-size:12px;
 font-weight:800;
-
 color:var(--blue);
-
 text-transform:uppercase;
-
 letter-spacing:1.5px;
-
 margin-bottom:8px;
-
 }
 
 .section-heading h2{
-
 font-size:clamp(27px,3.5vw,38px);
-
 line-height:1.2;
-
 color:var(--navy);
-
-margin-bottom:12px;
-
+margin-bottom:14px;
 }
 
 .section-heading p{
-
-font-size:13px;
-
+font-size:14px;
 }
 
 
-/* =====================================================
+/* =========================================
    ABOUT
-===================================================== */
+========================================= */
 
 .about{
-
 background:#fff;
-
 }
 
 .about-grid{
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:65px;
-
 align-items:center;
-
 }
 
 .about-image{
-
 position:relative;
-
 }
 
 .about-image-main{
-
 border-radius:20px;
-
 overflow:hidden;
-
 box-shadow:var(--shadow);
-
 }
 
 .about-image-main img{
-
 width:100%;
-
 height:470px;
-
 object-fit:cover;
-
 }
 
 .about-small-card{
-
 position:absolute;
-
 right:-25px;
-
 bottom:30px;
-
 background:#fff;
-
 padding:18px;
-
 border-radius:14px;
-
 box-shadow:var(--shadow);
-
 display:flex;
-
 align-items:center;
-
 gap:12px;
-
 }
 
 .about-small-icon{
-
 width:45px;
 height:45px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:var(--blue);
-
 color:#fff;
-
 }
 
 .about-small-card strong{
-
 display:block;
-
 color:var(--navy);
-
-font-size:13px;
-
+font-size:14px;
 }
 
 .about-small-card span{
-
 font-size:11px;
-
 }
 
 .about-content .eyebrow{
-
 color:var(--blue);
-
-font-size:11px;
-
+font-size:12px;
 font-weight:800;
-
 letter-spacing:1px;
-
 }
 
 .about-content h2{
-
 font-size:36px;
-
 line-height:1.2;
-
 color:var(--navy);
-
 margin:8px 0 18px;
-
 }
 
 .about-content h2 span{
-
 color:var(--blue);
-
 }
 
 .about-content p{
-
-font-size:13px;
-
+font-size:14px;
 margin-bottom:15px;
-
 }
 
 .check-list{
-
 list-style:none;
-
 margin:24px 0;
-
 display:grid;
-
 gap:11px;
-
 }
 
 .check-list li{
-
 display:flex;
-
 align-items:flex-start;
-
 gap:10px;
-
 font-size:13px;
-
 font-weight:600;
-
 color:var(--dark);
-
 }
 
 .check-list i{
-
 color:var(--blue);
-
 margin-top:4px;
-
 }
 
 
-/* =====================================================
+/* =========================================
    DESTINATIONS
-===================================================== */
+========================================= */
 
 .destinations{
-
 background:var(--light);
-
 }
 
 .destination-grid{
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:20px;
-
 }
 
 .destination{
-
 height:270px;
-
 border-radius:17px;
-
 overflow:hidden;
-
 position:relative;
-
 background-size:cover;
-
 background-position:center;
-
 transition:.35s;
-
 }
 
 .destination:hover{
-
 transform:translateY(-8px);
-
 box-shadow:var(--shadow-hover);
-
 }
 
 .destination::after{
-
 content:"";
-
 position:absolute;
-
 inset:0;
-
-background:linear-gradient(
-transparent 25%,
-rgba(4,35,57,.88)
-);
-
+background:linear-gradient(transparent 25%,rgba(4,35,57,.88));
 }
 
 .destination-content{
-
 position:absolute;
-
 z-index:2;
-
 left:20px;
-
 right:20px;
-
 bottom:20px;
-
 color:#fff;
-
 }
 
 .destination-content .flag{
-
 font-size:22px;
-
 margin-bottom:7px;
-
 }
 
 .destination-content h3{
-
-font-size:19px;
-
+font-size:20px;
 margin-bottom:2px;
-
 }
 
 .destination-content p{
-
 font-size:11px;
-
 opacity:.9;
-
 }
 
 .destination-arrow{
-
 position:absolute;
-
 right:18px;
-
 bottom:20px;
-
 z-index:3;
-
 width:34px;
 height:34px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:#fff;
-
 color:var(--blue);
-
 }
 
 
-/* =====================================================
+/* =========================================
    SERVICES
-===================================================== */
+========================================= */
 
 .services-grid{
-
 display:grid;
-
 grid-template-columns:repeat(3,1fr);
-
 gap:22px;
-
 }
 
 .service{
-
 background:#fff;
-
 border:1px solid var(--border);
-
 border-radius:17px;
-
 padding:30px 25px;
-
 position:relative;
-
 overflow:hidden;
-
 transition:.3s;
-
 }
 
 .service::before{
-
 content:"";
-
 position:absolute;
-
 top:0;
 left:0;
-
 width:100%;
 height:3px;
-
-background:linear-gradient(
-90deg,
-var(--blue),
-var(--sky)
-);
-
+background:linear-gradient(90deg,var(--blue),var(--sky));
 transform:scaleX(0);
-
 transform-origin:left;
-
 transition:.3s;
-
 }
 
 .service:hover{
-
 transform:translateY(-7px);
-
 box-shadow:var(--shadow);
-
 }
 
 .service:hover::before{
-
 transform:scaleX(1);
-
 }
 
 .service-icon{
-
 width:56px;
 height:56px;
-
 border-radius:13px;
-
 background:var(--blue-light);
-
 color:var(--blue);
-
 display:grid;
-
 place-items:center;
-
 font-size:21px;
-
 margin-bottom:18px;
-
 }
 
 .service h3{
-
 color:var(--navy);
-
-font-size:17px;
-
+font-size:18px;
 margin-bottom:8px;
-
 }
 
 .service p{
-
-font-size:12.5px;
-
+font-size:13px;
 }
 
 
-/* =====================================================
+/* =========================================
    JOURNEY
-===================================================== */
+========================================= */
 
 .journey{
-
-background:linear-gradient(
-135deg,
-#062d48,
-#087fc1
-);
-
+background:linear-gradient(135deg,#062d48,#087fc1);
 color:#fff;
-
 }
 
 .journey .section-heading h2{
-
 color:#fff;
-
 }
 
 .journey .section-heading p{
-
 color:#dceff9;
-
 }
 
 .journey .eyebrow{
-
 color:#62d1ff;
-
 }
 
 .journey-grid{
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:18px;
-
 }
 
 .journey-card{
-
 padding:25px;
-
 border:1px solid rgba(255,255,255,.15);
-
 background:rgba(255,255,255,.08);
-
 backdrop-filter:blur(10px);
-
 border-radius:15px;
-
 transition:.3s;
-
 }
 
 .journey-card:hover{
-
 background:rgba(255,255,255,.14);
-
 transform:translateY(-5px);
-
 }
 
 .step{
-
 width:43px;
 height:43px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:#fff;
-
 color:var(--blue);
-
 font-weight:800;
-
 margin-bottom:15px;
-
 }
 
 .journey-card h3{
-
-font-size:15px;
-
+font-size:16px;
 margin-bottom:7px;
-
 }
 
 .journey-card p{
-
 font-size:12px;
-
 color:#dceff9;
-
 }
 
 
-/* =====================================================
+/* =========================================
    UNIVERSITIES
-===================================================== */
+========================================= */
 
 .universities{
-
 background:var(--light);
-
 }
 
 .university-grid{
-
 display:grid;
-
 grid-template-columns:repeat(4,1fr);
-
 gap:17px;
-
 }
 
 .university{
-
 background:#fff;
-
 border:1px solid var(--border);
-
 border-radius:13px;
-
 padding:23px 15px;
-
 min-height:135px;
-
 display:flex;
-
 flex-direction:column;
-
 align-items:center;
-
 justify-content:center;
-
 text-align:center;
-
 transition:.3s;
-
 }
 
 .university:hover{
-
 transform:translateY(-5px);
-
 box-shadow:var(--shadow);
-
 }
 
 .university img{
-
 width:53px;
 height:53px;
-
 object-fit:contain;
-
 margin-bottom:10px;
-
 }
 
 .university h4{
-
 font-size:12px;
-
 color:var(--navy);
-
 }
 
 
-/* =====================================================
+/* =========================================
    STUDENT STORIES
-===================================================== */
+========================================= */
 
 .stories-grid{
-
 display:grid;
-
 grid-template-columns:repeat(3,1fr);
-
 gap:22px;
-
 }
 
 .story{
-
 background:#fff;
-
 border-radius:17px;
-
 border:1px solid var(--border);
-
 overflow:hidden;
-
 box-shadow:0 5px 20px rgba(0,0,0,.03);
-
 transition:.3s;
-
 }
 
 .story:hover{
-
 transform:translateY(-6px);
-
 box-shadow:var(--shadow);
-
 }
 
 .story-image{
-
 height:220px;
-
 overflow:hidden;
-
 }
 
 .story-image img{
-
 width:100%;
 height:100%;
-
 object-fit:cover;
-
 transition:.5s;
-
 }
 
 .story:hover img{
-
 transform:scale(1.06);
-
 }
 
 .story-content{
-
 padding:23px;
-
 }
 
 .story-stars{
-
 color:#f5a623;
-
 font-size:12px;
-
 margin-bottom:8px;
-
 }
 
 .story-content p{
-
 font-size:13px;
-
 margin-bottom:18px;
-
 }
 
 .story-person{
-
 display:flex;
-
 align-items:center;
-
 gap:10px;
-
 }
 
 .story-avatar{
-
 width:40px;
 height:40px;
-
 border-radius:50%;
-
 background:var(--blue-light);
-
 color:var(--blue);
-
 display:grid;
-
 place-items:center;
-
 font-weight:800;
-
 }
 
 .story-person strong{
-
 display:block;
-
 font-size:12px;
-
 color:var(--navy);
-
 }
 
 .story-person span{
-
 font-size:10px;
-
 }
 
 
-/* =====================================================
+/* =========================================
    CTA
-===================================================== */
+========================================= */
 
 .cta{
-
 padding:70px 0;
-
 background:
-
-linear-gradient(
-90deg,
-rgba(5,52,81,.95),
-rgba(8,127,193,.88)
-),
-
+linear-gradient(90deg,rgba(5,52,81,.95),rgba(8,127,193,.88)),
 url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=80")
-
 center/cover;
-
 color:#fff;
-
 }
 
 .cta-box{
-
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
 gap:30px;
-
 }
 
 .cta h2{
-
 font-size:32px;
-
 line-height:1.2;
-
 margin-bottom:8px;
-
 }
 
 .cta p{
-
-font-size:13px;
-
+font-size:14px;
 color:#e3f4fb;
-
 }
 
 
-/* =====================================================
+/* =========================================
    CONTACT
-===================================================== */
+========================================= */
 
 .contact{
-
 background:var(--light);
-
 }
 
 .contact-grid{
-
 display:grid;
-
 grid-template-columns:.85fr 1.15fr;
-
 gap:55px;
-
 align-items:start;
-
 }
 
 .contact-info h2{
-
-font-size:36px;
-
+font-size:35px;
 line-height:1.2;
-
 color:var(--navy);
-
 margin-bottom:15px;
-
 }
 
 .contact-info h2 span{
-
 color:var(--blue);
-
 }
 
 .contact-info > p{
-
-font-size:13px;
-
+font-size:14px;
 margin-bottom:27px;
-
 }
 
 .contact-item{
-
 display:flex;
-
 align-items:flex-start;
-
 gap:13px;
-
 margin-bottom:20px;
-
 }
 
 .contact-item-icon{
-
 width:43px;
 height:43px;
-
 flex:0 0 43px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:10px;
-
 background:#fff;
-
 color:var(--blue);
-
 box-shadow:0 5px 18px rgba(0,0,0,.05);
-
 }
 
 .contact-item h4{
-
 font-size:13px;
-
 color:var(--navy);
-
 }
 
 .contact-item p{
-
 font-size:12px;
-
 }
 
 .contact-form{
-
 background:#fff;
-
 padding:32px;
-
 border-radius:18px;
-
 box-shadow:var(--shadow);
-
 }
 
 .form-row{
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:15px;
-
 }
 
 .form-group{
-
 margin-bottom:17px;
-
 }
 
 .form-group label{
-
 display:block;
-
 font-size:12px;
-
 font-weight:700;
-
 color:var(--navy);
-
 margin-bottom:6px;
-
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea{
-
 width:100%;
-
 padding:12px 13px;
-
 border:1px solid var(--border);
-
 border-radius:8px;
-
 outline:none;
-
 font-size:13px;
-
 background:#fff;
-
 transition:.25s;
-
 }
 
 .form-group textarea{
-
 min-height:130px;
-
 resize:vertical;
-
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus{
-
 border-color:var(--blue);
-
 box-shadow:0 0 0 3px rgba(7,134,201,.08);
-
 }
 
 .form-status{
-
 margin-top:13px;
-
 font-size:12px;
-
 font-weight:700;
-
 }
 
 
-/* =====================================================
+/* =========================================
    FOOTER
-===================================================== */
+========================================= */
 
 footer{
-
 background:#061f33;
-
 color:#b9cbd6;
-
 padding:60px 0 25px;
-
 }
 
 .footer-grid{
-
 display:grid;
-
 grid-template-columns:1.5fr 1fr 1fr 1fr;
-
 gap:35px;
-
 padding-bottom:40px;
-
 }
 
 .footer-logo{
-
 width:60px;
-
 margin-bottom:14px;
-
 }
 
 .footer-brand h3{
-
 color:#fff;
-
 font-size:17px;
-
 margin-bottom:9px;
-
 }
 
 .footer-brand p{
-
 font-size:12px;
-
 max-width:320px;
-
 }
 
 footer h4{
-
 color:#fff;
-
 font-size:14px;
-
 margin-bottom:15px;
-
 }
 
 footer ul{
-
 list-style:none;
-
 }
 
 footer li{
-
 margin-bottom:8px;
-
 }
 
 footer li a{
-
 font-size:12px;
-
 transition:.2s;
-
 }
 
 footer li a:hover{
-
 color:#fff;
-
 }
 
 .footer-social{
-
 display:flex;
-
 gap:7px;
-
 margin-top:17px;
-
 }
 
 .footer-social a{
-
 width:33px;
 height:33px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:rgba(255,255,255,.09);
-
 color:#fff;
-
 font-size:12px;
-
 transition:.25s;
-
 }
 
 .footer-social a:hover{
-
 background:var(--blue);
-
 transform:translateY(-3px);
-
 }
 
 .copyright{
-
 border-top:1px solid rgba(255,255,255,.09);
-
 padding-top:20px;
-
 text-align:center;
-
 font-size:11px;
-
 }
 
 
-/* =====================================================
+/* =========================================
    WHATSAPP
-===================================================== */
+========================================= */
 
 .whatsapp{
-
 position:fixed;
-
 right:22px;
-
 bottom:22px;
-
 width:57px;
 height:57px;
-
 display:grid;
-
 place-items:center;
-
 border-radius:50%;
-
 background:#25d366;
-
 color:#fff;
-
 font-size:27px;
-
 box-shadow:0 10px 30px rgba(0,0,0,.2);
-
 z-index:2000;
-
 transition:.3s;
-
 }
 
 .whatsapp:hover{
-
 transform:scale(1.08);
-
 }
 
 
-/* =====================================================
+/* =========================================
    RESPONSIVE
-===================================================== */
+========================================= */
 
 @media(max-width:1100px){
 
-.nav-menu{
-
-gap:22px;
-
+.main-header-inner{
+gap:20px;
 }
 
-.hero-card{
-
-right:3%;
-
+.main-header-inner .nav-menu{
+gap:18px;
 }
 
 .destination-grid{
-
 grid-template-columns:repeat(3,1fr);
-
 }
 
 .university-grid{
-
 grid-template-columns:repeat(3,1fr);
-
 }
 
 .journey-grid{
-
 grid-template-columns:repeat(2,1fr);
+}
 
+.hero-card{
+right:3%;
 }
 
 }
 
 
-/* =====================================================
+/* =========================================
    TABLET
-===================================================== */
+========================================= */
 
 @media(max-width:850px){
 
 .topbar{
-
 display:none;
-
 }
 
 .main-header-inner{
-
 min-height:75px;
-
-}
-
-.mobile-toggle{
-
-display:block;
-
 }
 
 .brand-logo{
-
-width:50px;
-height:50px;
-
-}
-
-.brand-text .company{
-
-font-size:13px;
-
+width:52px;
+height:52px;
 }
 
 .brand-text .destination{
-
-font-size:10px;
-
+font-size:13px;
 }
 
+.mobile-toggle{
+display:block;
+}
+
+
+/* Hide desktop navigation */
+
 .navigation{
-
-position:relative;
-
+border-top:1px solid #f1f5f8;
 }
 
 .nav-inner{
-
 justify-content:flex-end;
-
 }
 
 .nav-menu{
-
-display:none;
-
+display:none !important;
 position:absolute;
-
 left:4%;
 right:4%;
-
-top:58px;
-
+top:75px;
 background:#fff;
-
 border-radius:12px;
-
 box-shadow:var(--shadow);
-
 border:1px solid var(--border);
-
 padding:10px;
-
 flex-direction:column;
-
 align-items:stretch;
-
 gap:0;
-
 z-index:100;
-
 }
 
 .nav-menu.active{
-
-display:flex;
-
+display:flex !important;
 }
 
 .nav-menu a{
-
 padding:11px 14px;
-
 }
 
 .nav-menu a::after{
-
 display:none;
-
 }
 
 .social-title{
-
 display:none;
-
 }
 
 .hero{
-
 min-height:610px;
-
 }
 
 .hero-card{
-
 display:none;
-
 }
 
 .stats-grid{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
 .stat:nth-child(2){
-
 border-right:none;
-
 }
 
 .stat:nth-child(-n+2){
-
 border-bottom:1px solid var(--border);
-
 }
 
 .about-grid,
 .contact-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .about-small-card{
-
 right:15px;
-
 }
 
 .services-grid{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
 .stories-grid{
-
 grid-template-columns:1fr 1fr;
-
 }
 
 .cta-box{
-
 flex-direction:column;
-
 align-items:flex-start;
-
 }
 
 .footer-grid{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
 }
 
 
-/* =====================================================
+/* =========================================
    MOBILE
-===================================================== */
+========================================= */
 
 @media(max-width:600px){
 
 section{
-
 padding:70px 0;
-
 }
 
 .brand-logo{
-
-width:45px;
-height:45px;
-
-}
-
-.brand-text .company{
-
-font-size:11px;
-
+width:46px;
+height:46px;
 }
 
 .brand-text .destination{
-
-font-size:9px;
-
+font-size:11px;
 }
 
 .social-inner{
-
 min-height:40px;
-
 }
 
 .social-link{
-
 width:26px;
 height:26px;
-
 }
 
 .hero-content{
-
 padding:70px 0;
-
 }
 
 .hero h1{
-
-font-size:35px;
-
+font-size:36px;
 }
 
 .hero p{
-
 font-size:14px;
-
 }
 
 .hero-buttons{
-
 flex-direction:column;
-
 align-items:stretch;
-
 }
 
 .hero-buttons .btn{
-
 width:100%;
-
 }
 
 .stats{
-
 margin-top:-35px;
-
 }
 
 .destination-grid,
 .university-grid,
 .services-grid,
 .stories-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .journey-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .about-image-main img{
-
 height:350px;
-
 }
 
 .about-small-card{
-
 bottom:15px;
-
 }
 
 .about-content h2,
 .contact-info h2{
-
-font-size:29px;
-
+font-size:30px;
 }
 
 .form-row{
-
 grid-template-columns:1fr;
-
 gap:0;
-
 }
 
 .contact-form{
-
 padding:24px;
-
 }
 
 .footer-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .cta h2{
-
-font-size:28px;
-
+font-size:27px;
 }
 
 }
 
 
-/* =====================================================
-   VERY SMALL
-===================================================== */
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media(max-width:390px){
 
-.brand-text .company{
-
-font-size:10px;
-
-}
-
 .brand-text .destination{
-
-font-size:8px;
-
+font-size:10px;
 }
 
 .hero h1{
-
-font-size:33px;
-
+font-size:32px;
 }
 
 .stats-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .stat{
-
 border-right:none !important;
-
 border-bottom:1px solid var(--border);
-
 }
 
 .stat:last-child{
-
 border-bottom:none;
-
 }
 
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================
      TOP BAR
-===================================================== -->
+========================================= -->
 
 <div class="topbar">
 
@@ -2524,27 +1613,27 @@ Book Consultation
 </div>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      MAIN HEADER
-===================================================== -->
+     ONLY LOGO + FOREIGN EDUCATION DESTINATION
+     NAVIGATION IS SAME LEVEL
+========================================= -->
 
 <header class="main-header">
 
 <div class="container main-header-inner">
 
+
 <a href="index.html" class="brand">
 
 <img
 src="LOGO.png"
-alt="FE Destination Logo"
+alt="Foreign Education Destination Logo"
 class="brand-logo"
 >
 
 <div class="brand-text">
-
-<div class="company">
-FE Destination <span>(Pvt.) Ltd.</span>
-</div>
 
 <div class="destination">
 Foreign Education Destination
@@ -2555,28 +1644,7 @@ Foreign Education Destination
 </a>
 
 
-<button
-class="mobile-toggle"
-id="mobileToggle"
-aria-label="Open Menu"
->
-
-<i class="fa-solid fa-bars"></i>
-
-</button>
-
-</div>
-
-</header>
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<div class="navigation">
-
-<div class="container nav-inner">
+<!-- DESKTOP NAVIGATION -->
 
 <ul class="nav-menu" id="navMenu">
 
@@ -2610,14 +1678,29 @@ aria-label="Open Menu"
 
 </ul>
 
-</div>
+
+<!-- MOBILE MENU -->
+
+<button
+class="mobile-toggle"
+id="mobileToggle"
+aria-label="Open Menu"
+>
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
 
 </div>
 
+</header>
 
-<!-- =====================================================
-     SOCIAL BAR
-===================================================== -->
+
+
+<!-- =========================================
+     SOCIAL MEDIA BAR
+========================================= -->
 
 <div class="social-bar">
 
@@ -2672,9 +1755,10 @@ aria-label="YouTube"
 </div>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      HERO
-===================================================== -->
+========================================= -->
 
 <section class="hero">
 
@@ -2692,42 +1776,33 @@ Your Global Education Journey Starts Here
 
 
 <h1>
-
-Your Future.
-
-<br>
-
+Your Future.<br>
 Your <span>Destination.</span>
-
 </h1>
 
 
 <p>
-
-Explore international study opportunities with personalized
-admissions guidance, university selection, scholarship support
-and student visa assistance.
-
+Explore international study opportunities with personalized admissions guidance, university selection, scholarship support and student visa assistance.
 </p>
 
 
 <div class="hero-buttons">
 
-<a href="#contact" class="btn btn-primary">
-
+<a
+href="#contact"
+class="btn btn-primary"
+>
 Start Your Journey
-
 <i class="fa-solid fa-arrow-right"></i>
-
 </a>
 
 
-<a href="#destinations" class="btn btn-white">
-
+<a
+href="#destinations"
+class="btn btn-white"
+>
 Explore Destinations
-
 <i class="fa-solid fa-globe"></i>
-
 </a>
 
 </div>
@@ -2735,7 +1810,6 @@ Explore Destinations
 </div>
 
 
-<!-- HERO FLOATING CARD -->
 
 <div class="hero-card">
 
@@ -2749,9 +1823,13 @@ Explore Destinations
 
 <div>
 
-<h4>Plan Your Study Journey</h4>
+<h4>
+Plan Your Study Journey
+</h4>
 
-<p>Personalized guidance</p>
+<p>
+Personalized guidance
+</p>
 
 </div>
 
@@ -2777,15 +1855,17 @@ From profile assessment to pre-departure
 </section>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      STATS
-===================================================== -->
+========================================= -->
 
 <div class="stats">
 
 <div class="container">
 
 <div class="stats-grid">
+
 
 <div class="stat">
 
@@ -2795,9 +1875,12 @@ From profile assessment to pre-departure
 
 <h3>8+</h3>
 
-<p>Study Destinations</p>
+<p>
+Study Destinations
+</p>
 
 </div>
+
 
 
 <div class="stat">
@@ -2808,9 +1891,12 @@ From profile assessment to pre-departure
 
 <h3>7+ Years</h3>
 
-<p>Recruitment Experience</p>
+<p>
+Recruitment Experience
+</p>
 
 </div>
+
 
 
 <div class="stat">
@@ -2821,9 +1907,12 @@ From profile assessment to pre-departure
 
 <h3>50+</h3>
 
-<p>University Options</p>
+<p>
+University Options
+</p>
 
 </div>
+
 
 
 <div class="stat">
@@ -2834,7 +1923,12 @@ From profile assessment to pre-departure
 
 <h3>360°</h3>
 
-<p>Application Support</p>
+<p>
+Application Support
+</p>
+
+</div>
+
 
 </div>
 
@@ -2842,12 +1936,11 @@ From profile assessment to pre-departure
 
 </div>
 
-</div>
 
 
-<!-- =====================================================
+<!-- =========================================
      ABOUT
-===================================================== -->
+========================================= -->
 
 <section class="about">
 
@@ -2872,22 +1965,25 @@ loading="lazy"
 <div class="about-small-card">
 
 <div class="about-small-icon">
-
 <i class="fa-solid fa-globe"></i>
-
 </div>
 
 <div>
 
-<strong>Global Opportunities</strong>
+<strong>
+Global Opportunities
+</strong>
 
-<span>Explore. Apply. Achieve.</span>
+<span>
+Explore. Apply. Achieve.
+</span>
 
 </div>
 
 </div>
 
 </div>
+
 
 
 <div class="about-content" data-aos="fade-left">
@@ -2897,28 +1993,16 @@ ABOUT FOREIGN EDUCATION DESTINATION
 </span>
 
 <h2>
-
 Your Partner for
-
 <span>Global Education</span>
-
 </h2>
 
-
 <p>
-
-Foreign Education Destination helps students explore
-international education opportunities according to their
-academic background, career goals and preferred destination.
-
+Foreign Education Destination helps students explore international education opportunities according to their academic background, career goals and preferred destination.
 </p>
 
-
 <p>
-
-Our team provides practical guidance throughout the major
-stages of the study-abroad process.
-
+Our team provides practical guidance throughout the major stages of the study-abroad process.
 </p>
 
 
@@ -2952,12 +2036,12 @@ Student visa guidance
 </ul>
 
 
-<a href="about.html" class="btn btn-primary">
-
+<a
+href="about.html"
+class="btn btn-primary"
+>
 Discover More
-
 <i class="fa-solid fa-arrow-right"></i>
-
 </a>
 
 </div>
@@ -2969,11 +2053,15 @@ Discover More
 </section>
 
 
-<!-- =====================================================
-     DESTINATIONS
-===================================================== -->
 
-<section class="destinations" id="destinations">
+<!-- =========================================
+     DESTINATIONS
+========================================= -->
+
+<section
+class="destinations"
+id="destinations"
+>
 
 <div class="container">
 
@@ -2989,11 +2077,11 @@ Explore Your Study Destination
 </h2>
 
 <p>
-Choose from a range of international destinations and
-explore opportunities that match your goals.
+Choose from a range of international destinations and explore opportunities that match your goals.
 </p>
 
 </div>
+
 
 
 <div class="destination-grid">
@@ -3013,11 +2101,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇬🇧</div>
+<div class="flag">
+🇬🇧
+</div>
 
-<h3>United Kingdom</h3>
+<h3>
+United Kingdom
+</h3>
 
-<p>Explore UK universities and programs</p>
+<p>
+Explore UK universities and programs
+</p>
 
 </div>
 
@@ -3026,6 +2120,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="europe.html" class="destination">
@@ -3042,11 +2137,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇪🇺</div>
+<div class="flag">
+🇪🇺
+</div>
 
-<h3>Europe</h3>
+<h3>
+Europe
+</h3>
 
-<p>Discover European study opportunities</p>
+<p>
+Discover European study opportunities
+</p>
 
 </div>
 
@@ -3055,6 +2156,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="australia.html" class="destination">
@@ -3071,11 +2173,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇦🇺</div>
+<div class="flag">
+🇦🇺
+</div>
 
-<h3>Australia</h3>
+<h3>
+Australia
+</h3>
 
-<p>Study in Australia</p>
+<p>
+Study in Australia
+</p>
 
 </div>
 
@@ -3084,6 +2192,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="malaysia.html" class="destination">
@@ -3100,11 +2209,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇲🇾</div>
+<div class="flag">
+🇲🇾
+</div>
 
-<h3>Malaysia</h3>
+<h3>
+Malaysia
+</h3>
 
-<p>Explore Malaysian universities</p>
+<p>
+Explore Malaysian universities
+</p>
 
 </div>
 
@@ -3113,6 +2228,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="nz.html" class="destination">
@@ -3129,11 +2245,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇳🇿</div>
+<div class="flag">
+🇳🇿
+</div>
 
-<h3>New Zealand</h3>
+<h3>
+New Zealand
+</h3>
 
-<p>Explore study options</p>
+<p>
+Explore study options
+</p>
 
 </div>
 
@@ -3142,6 +2264,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="turkey.html" class="destination">
@@ -3158,11 +2281,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇹🇷</div>
+<div class="flag">
+🇹🇷
+</div>
 
-<h3>Turkey</h3>
+<h3>
+Turkey
+</h3>
 
-<p>Explore Turkish universities</p>
+<p>
+Explore Turkish universities
+</p>
 
 </div>
 
@@ -3171,6 +2300,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="uae.html" class="destination">
@@ -3187,11 +2317,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇦🇪</div>
+<div class="flag">
+🇦🇪
+</div>
 
-<h3>UAE</h3>
+<h3>
+UAE
+</h3>
 
-<p>Explore study options in UAE</p>
+<p>
+Explore study options in UAE
+</p>
 
 </div>
 
@@ -3200,6 +2336,7 @@ background-position:center;
 </div>
 
 </a>
+
 
 
 <a href="usa.html" class="destination">
@@ -3216,11 +2353,17 @@ background-position:center;
 
 <div class="destination-content">
 
-<div class="flag">🇺🇸</div>
+<div class="flag">
+🇺🇸
+</div>
 
-<h3>USA</h3>
+<h3>
+USA
+</h3>
 
-<p>Explore US universities</p>
+<p>
+Explore US universities
+</p>
 
 </div>
 
@@ -3238,9 +2381,10 @@ background-position:center;
 </section>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      SERVICES
-===================================================== -->
+========================================= -->
 
 <section id="services">
 
@@ -3257,11 +2401,11 @@ Complete Study Abroad Support
 </h2>
 
 <p>
-From your first consultation to your journey abroad,
-we help you understand the process step by step.
+From your first consultation to your journey abroad, we help you understand the process step by step.
 </p>
 
 </div>
+
 
 
 <div class="services-grid">
@@ -3273,14 +2417,16 @@ we help you understand the process step by step.
 <i class="fa-solid fa-user-graduate"></i>
 </div>
 
-<h3>Profile Assessment</h3>
+<h3>
+Profile Assessment
+</h3>
 
 <p>
-Review your academic background and identify suitable
-study opportunities.
+Review your academic background and identify suitable study opportunities.
 </p>
 
 </div>
+
 
 
 <div class="service" data-aos="fade-up">
@@ -3289,14 +2435,16 @@ study opportunities.
 <i class="fa-solid fa-building-columns"></i>
 </div>
 
-<h3>University Selection</h3>
+<h3>
+University Selection
+</h3>
 
 <p>
-Explore universities and courses according to your
-academic and career goals.
+Explore universities and courses according to your academic and career goals.
 </p>
 
 </div>
+
 
 
 <div class="service" data-aos="fade-up">
@@ -3305,14 +2453,16 @@ academic and career goals.
 <i class="fa-solid fa-file-circle-check"></i>
 </div>
 
-<h3>Admission Guidance</h3>
+<h3>
+Admission Guidance
+</h3>
 
 <p>
-Support with application documents and admission
-requirements.
+Support with application documents and admission requirements.
 </p>
 
 </div>
+
 
 
 <div class="service" data-aos="fade-up">
@@ -3321,7 +2471,9 @@ requirements.
 <i class="fa-solid fa-award"></i>
 </div>
 
-<h3>Scholarship Support</h3>
+<h3>
+Scholarship Support
+</h3>
 
 <p>
 Explore available scholarship and funding opportunities.
@@ -3330,20 +2482,23 @@ Explore available scholarship and funding opportunities.
 </div>
 
 
+
 <div class="service" data-aos="fade-up">
 
 <div class="service-icon">
 <i class="fa-solid fa-passport"></i>
 </div>
 
-<h3>Student Visa Guidance</h3>
+<h3>
+Student Visa Guidance
+</h3>
 
 <p>
-Guidance through the major stages of the student visa
-application process.
+Guidance through the major stages of the student visa application process.
 </p>
 
 </div>
+
 
 
 <div class="service" data-aos="fade-up">
@@ -3352,11 +2507,12 @@ application process.
 <i class="fa-solid fa-plane-departure"></i>
 </div>
 
-<h3>Pre-Departure Support</h3>
+<h3>
+Pre-Departure Support
+</h3>
 
 <p>
-Practical guidance to help you prepare for your journey
-and arrival.
+Practical guidance to help you prepare for your journey and arrival.
 </p>
 
 </div>
@@ -3369,11 +2525,15 @@ and arrival.
 </section>
 
 
-<!-- =====================================================
-     JOURNEY
-===================================================== -->
 
-<section class="journey" id="journey">
+<!-- =========================================
+     JOURNEY
+========================================= -->
+
+<section
+class="journey"
+id="journey"
+>
 
 <div class="container">
 
@@ -3395,14 +2555,19 @@ A clear process helps you understand what comes next.
 </div>
 
 
+
 <div class="journey-grid">
 
 
 <div class="journey-card">
 
-<div class="step">01</div>
+<div class="step">
+01
+</div>
 
-<h3>Profile Assessment</h3>
+<h3>
+Profile Assessment
+</h3>
 
 <p>
 Understand your academic profile and goals.
@@ -3411,11 +2576,16 @@ Understand your academic profile and goals.
 </div>
 
 
+
 <div class="journey-card">
 
-<div class="step">02</div>
+<div class="step">
+02
+</div>
 
-<h3>Choose Destination</h3>
+<h3>
+Choose Destination
+</h3>
 
 <p>
 Explore countries and study environments.
@@ -3424,11 +2594,16 @@ Explore countries and study environments.
 </div>
 
 
+
 <div class="journey-card">
 
-<div class="step">03</div>
+<div class="step">
+03
+</div>
 
-<h3>Select University</h3>
+<h3>
+Select University
+</h3>
 
 <p>
 Shortlist suitable universities and programs.
@@ -3437,11 +2612,16 @@ Shortlist suitable universities and programs.
 </div>
 
 
+
 <div class="journey-card">
 
-<div class="step">04</div>
+<div class="step">
+04
+</div>
 
-<h3>Prepare Application</h3>
+<h3>
+Prepare Application
+</h3>
 
 <p>
 Organize your documents and application.
@@ -3450,11 +2630,16 @@ Organize your documents and application.
 </div>
 
 
+
 <div class="journey-card">
 
-<div class="step">05</div>
+<div class="step">
+05
+</div>
 
-<h3>Admission</h3>
+<h3>
+Admission
+</h3>
 
 <p>
 Submit applications and follow the process.
@@ -3463,11 +2648,16 @@ Submit applications and follow the process.
 </div>
 
 
+
 <div class="journey-card">
 
-<div class="step">06</div>
+<div class="step">
+06
+</div>
 
-<h3>Visa Guidance</h3>
+<h3>
+Visa Guidance
+</h3>
 
 <p>
 Prepare for the student visa process.
@@ -3476,11 +2666,16 @@ Prepare for the student visa process.
 </div>
 
 
+
 <div class="journey-card">
 
-<div class="step">07</div>
+<div class="step">
+07
+</div>
 
-<h3>Pre-Departure</h3>
+<h3>
+Pre-Departure
+</h3>
 
 <p>
 Prepare for your international journey.
@@ -3489,13 +2684,16 @@ Prepare for your international journey.
 </div>
 
 
+
 <div class="journey-card">
 
 <div class="step">
 <i class="fa-solid fa-plane"></i>
 </div>
 
-<h3>Start Your Journey</h3>
+<h3>
+Start Your Journey
+</h3>
 
 <p>
 Begin your international education experience.
@@ -3511,11 +2709,15 @@ Begin your international education experience.
 </section>
 
 
-<!-- =====================================================
-     UNIVERSITIES
-===================================================== -->
 
-<section class="universities" id="universities">
+<!-- =========================================
+     UNIVERSITIES
+========================================= -->
+
+<section
+class="universities"
+id="universities"
+>
 
 <div class="container">
 
@@ -3531,11 +2733,11 @@ Explore University Options
 </h2>
 
 <p>
-Discover universities and institutions across different
-international study destinations.
+Discover universities and institutions across different international study destinations.
 </p>
 
 </div>
+
 
 
 <div class="university-grid">
@@ -3549,9 +2751,12 @@ alt="DePaul University"
 loading="lazy"
 >
 
-<h4>DePaul University</h4>
+<h4>
+DePaul University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3562,9 +2767,12 @@ alt="Suffolk University"
 loading="lazy"
 >
 
-<h4>Suffolk University</h4>
+<h4>
+Suffolk University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3575,9 +2783,12 @@ alt="Colorado State University"
 loading="lazy"
 >
 
-<h4>Colorado State University</h4>
+<h4>
+Colorado State University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3588,9 +2799,12 @@ alt="Arizona State University"
 loading="lazy"
 >
 
-<h4>Arizona State University</h4>
+<h4>
+Arizona State University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3601,9 +2815,12 @@ alt="James Madison University"
 loading="lazy"
 >
 
-<h4>James Madison University</h4>
+<h4>
+James Madison University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3614,9 +2831,12 @@ alt="Long Island University"
 loading="lazy"
 >
 
-<h4>Long Island University</h4>
+<h4>
+Long Island University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3627,9 +2847,12 @@ alt="Mercer University"
 loading="lazy"
 >
 
-<h4>Mercer University</h4>
+<h4>
+Mercer University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3640,9 +2863,12 @@ alt="MacEwan University"
 loading="lazy"
 >
 
-<h4>MacEwan University</h4>
+<h4>
+MacEwan University
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3653,9 +2879,12 @@ alt="University of Kansas"
 loading="lazy"
 >
 
-<h4>University of Kansas</h4>
+<h4>
+University of Kansas
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3666,9 +2895,12 @@ alt="University of Windsor"
 loading="lazy"
 >
 
-<h4>University of Windsor</h4>
+<h4>
+University of Windsor
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3679,9 +2911,12 @@ alt="University of Essex"
 loading="lazy"
 >
 
-<h4>University of Essex</h4>
+<h4>
+University of Essex
+</h4>
 
 </div>
+
 
 
 <div class="university">
@@ -3692,7 +2927,9 @@ alt="Trinity College Dublin"
 loading="lazy"
 >
 
-<h4>Trinity College Dublin</h4>
+<h4>
+Trinity College Dublin
+</h4>
 
 </div>
 
@@ -3704,9 +2941,10 @@ loading="lazy"
 </section>
 
 
-<!-- =====================================================
-     STUDENT STORIES
-===================================================== -->
+
+<!-- =========================================
+     STUDENT EXPERIENCES
+========================================= -->
 
 <section>
 
@@ -3724,11 +2962,11 @@ Life Beyond The Classroom
 </h2>
 
 <p>
-International education is not only about a degree —
-it is about new experiences, people and opportunities.
+International education is not only about a degree — it is about new experiences, people and opportunities.
 </p>
 
 </div>
+
 
 
 <div class="stories-grid">
@@ -3753,8 +2991,7 @@ loading="lazy"
 </div>
 
 <p>
-“Good guidance can make the study-abroad process much
-easier to understand.”
+“Good guidance can make the study-abroad process much easier to understand.”
 </p>
 
 <div class="story-person">
@@ -3765,9 +3002,15 @@ S
 
 <div>
 
-<strong>Student Experience</strong>
+<strong>
+Student Experience
+</strong>
 
-<span>International Applicant</span>
+<span>
+International Applicant
+</span>
+
+</div>
 
 </div>
 
@@ -3775,7 +3018,6 @@ S
 
 </div>
 
-</div>
 
 
 <div class="story">
@@ -3797,8 +3039,7 @@ loading="lazy"
 </div>
 
 <p>
-“Exploring different destinations helped me understand
-which study environment suited my goals.”
+“Exploring different destinations helped me understand which study environment suited my goals.”
 </p>
 
 <div class="story-person">
@@ -3809,9 +3050,15 @@ A
 
 <div>
 
-<strong>Student Experience</strong>
+<strong>
+Student Experience
+</strong>
 
-<span>International Applicant</span>
+<span>
+International Applicant
+</span>
+
+</div>
 
 </div>
 
@@ -3819,7 +3066,6 @@ A
 
 </div>
 
-</div>
 
 
 <div class="story">
@@ -3841,8 +3087,7 @@ loading="lazy"
 </div>
 
 <p>
-“Having a clear application roadmap helped me stay
-organized throughout the process.”
+“Having a clear application roadmap helped me stay organized throughout the process.”
 </p>
 
 <div class="story-person">
@@ -3853,9 +3098,13 @@ M
 
 <div>
 
-<strong>Student Experience</strong>
+<strong>
+Student Experience
+</strong>
 
-<span>International Applicant</span>
+<span>
+International Applicant
+</span>
 
 </div>
 
@@ -3873,9 +3122,10 @@ M
 </section>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      CTA
-===================================================== -->
+========================================= -->
 
 <section class="cta">
 
@@ -3890,19 +3140,18 @@ Ready to Explore Your Options?
 </h2>
 
 <p>
-Let's discuss your academic profile and international
-study plans.
+Let's discuss your academic profile and international study plans.
 </p>
 
 </div>
 
 
-<a href="#contact" class="btn btn-white">
-
+<a
+href="#contact"
+class="btn btn-white"
+>
 Book a Consultation
-
 <i class="fa-solid fa-arrow-right"></i>
-
 </a>
 
 </div>
@@ -3912,11 +3161,15 @@ Book a Consultation
 </section>
 
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
 
-<section class="contact" id="contact">
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section
+class="contact"
+id="contact"
+>
 
 <div class="container">
 
@@ -3926,17 +3179,12 @@ Book a Consultation
 <div class="contact-info">
 
 <h2>
-
 Let's Plan Your
-
 <span>Global Future</span>
-
 </h2>
 
 <p>
-Share your academic profile and study goals with us.
-Our team can guide you through suitable international
-study options.
+Share your academic profile and study goals with us. Our team can guide you through suitable international study options.
 </p>
 
 
@@ -3948,13 +3196,18 @@ study options.
 
 <div>
 
-<h4>Email</h4>
+<h4>
+Email
+</h4>
 
-<p>info@fedestination.com</p>
+<p>
+info@fedestination.com
+</p>
 
 </div>
 
 </div>
+
 
 
 <div class="contact-item">
@@ -3965,13 +3218,18 @@ study options.
 
 <div>
 
-<h4>WhatsApp</h4>
+<h4>
+WhatsApp
+</h4>
 
-<p>+92 345 1450072</p>
+<p>
++92 345 1450072
+</p>
 
 </div>
 
 </div>
+
 
 
 <div class="contact-item">
@@ -3982,13 +3240,18 @@ study options.
 
 <div>
 
-<h4>Website</h4>
+<h4>
+Website
+</h4>
 
-<p>fedestination.com</p>
+<p>
+fedestination.com
+</p>
 
 </div>
 
 </div>
+
 
 
 <div class="contact-item">
@@ -3999,9 +3262,13 @@ study options.
 
 <div>
 
-<h4>Location</h4>
+<h4>
+Location
+</h4>
 
-<p>Lahore, Pakistan</p>
+<p>
+Lahore, Pakistan
+</p>
 
 </div>
 
@@ -4009,6 +3276,7 @@ study options.
 
 
 </div>
+
 
 
 <form
@@ -4021,8 +3289,9 @@ method="POST"
 <input
 type="hidden"
 name="_subject"
-value="New Student Inquiry - FE Destination (Pvt.) Ltd."
+value="New Student Inquiry - Foreign Education Destination"
 >
+
 
 <div class="form-row">
 
@@ -4058,6 +3327,7 @@ required
 </div>
 
 </div>
+
 
 
 <div class="form-row">
@@ -4116,6 +3386,7 @@ Select Destination
 </div>
 
 
+
 <div class="form-group">
 
 <label>
@@ -4151,7 +3422,6 @@ class="form-status"
 id="formStatus"
 ></div>
 
-
 </form>
 
 
@@ -4162,9 +3432,10 @@ id="formStatus"
 </section>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      FOOTER
-===================================================== -->
+========================================= -->
 
 <footer>
 
@@ -4177,18 +3448,16 @@ id="formStatus"
 
 <img
 src="LOGO.png"
-alt="FE Destination"
+alt="Foreign Education Destination"
 class="footer-logo"
 >
 
 <h3>
-FE Destination (Pvt.) Ltd.
+Foreign Education Destination
 </h3>
 
 <p>
-Foreign Education Destination helps students explore
-international education opportunities through personalized
-admissions and student visa guidance.
+Foreign Education Destination helps students explore international education opportunities through personalized admissions and student visa guidance.
 </p>
 
 
@@ -4202,6 +3471,7 @@ rel="noopener noreferrer"
 <i class="fa-brands fa-facebook-f"></i>
 </a>
 
+
 <a
 href="https://www.instagram.com/fedestination"
 target="_blank"
@@ -4210,6 +3480,7 @@ rel="noopener noreferrer"
 <i class="fa-brands fa-instagram"></i>
 </a>
 
+
 <a
 href="https://www.tiktok.com/@fedestination"
 target="_blank"
@@ -4217,6 +3488,7 @@ rel="noopener noreferrer"
 >
 <i class="fa-brands fa-tiktok"></i>
 </a>
+
 
 <a
 href="https://www.youtube.com/@fedestination"
@@ -4231,6 +3503,7 @@ rel="noopener noreferrer"
 </div>
 
 
+
 <div>
 
 <h4>
@@ -4239,19 +3512,40 @@ Quick Links
 
 <ul>
 
-<li><a href="index.html">Home</a></li>
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
 
-<li><a href="about.html">About Us</a></li>
+<li>
+<a href="about.html">
+About Us
+</a>
+</li>
 
-<li><a href="#services">Services</a></li>
+<li>
+<a href="#services">
+Services
+</a>
+</li>
 
-<li><a href="#universities">Universities</a></li>
+<li>
+<a href="#universities">
+Universities
+</a>
+</li>
 
-<li><a href="#contact">Contact</a></li>
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
 
 </ul>
 
 </div>
+
 
 
 <div>
@@ -4262,19 +3556,40 @@ Destinations
 
 <ul>
 
-<li><a href="uk.html">United Kingdom</a></li>
+<li>
+<a href="uk.html">
+United Kingdom
+</a>
+</li>
 
-<li><a href="europe.html">Europe</a></li>
+<li>
+<a href="europe.html">
+Europe
+</a>
+</li>
 
-<li><a href="australia.html">Australia</a></li>
+<li>
+<a href="australia.html">
+Australia
+</a>
+</li>
 
-<li><a href="malaysia.html">Malaysia</a></li>
+<li>
+<a href="malaysia.html">
+Malaysia
+</a>
+</li>
 
-<li><a href="turkey.html">Turkey</a></li>
+<li>
+<a href="turkey.html">
+Turkey
+</a>
+</li>
 
 </ul>
 
 </div>
+
 
 
 <div>
@@ -4312,7 +3627,9 @@ Lahore, Pakistan
 <div class="copyright">
 
 © <span id="year"></span>
-FE Destination (Pvt.) Ltd. — Foreign Education Destination.
+
+Foreign Education Destination.
+
 All Rights Reserved.
 
 </div>
@@ -4322,9 +3639,10 @@ All Rights Reserved.
 </footer>
 
 
-<!-- =====================================================
+
+<!-- =========================================
      WHATSAPP
-===================================================== -->
+========================================= -->
 
 <a
 href="https://wa.me/923451450072"
@@ -4339,37 +3657,26 @@ aria-label="WhatsApp"
 </a>
 
 
+
 <!-- AOS -->
 
-<script
-src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 <script>
 
-/* =====================================================
-   AOS
-===================================================== */
-
 if(typeof AOS !== "undefined"){
 
 AOS.init({
-
 duration:800,
-
 once:true,
-
 offset:80
-
 });
 
 }
 
 
-/* =====================================================
-   MOBILE NAVIGATION
-===================================================== */
+/* MOBILE MENU */
 
 const mobileToggle =
 document.getElementById("mobileToggle");
@@ -4378,13 +3685,14 @@ const navMenu =
 document.getElementById("navMenu");
 
 
-mobileToggle.addEventListener("click",function(){
+mobileToggle.addEventListener(
+"click",
+function(){
 
 navMenu.classList.toggle("active");
 
 const open =
 navMenu.classList.contains("active");
-
 
 mobileToggle.innerHTML = open
 
@@ -4395,10 +3703,13 @@ mobileToggle.innerHTML = open
 });
 
 
-document.querySelectorAll(".nav-menu a")
+document
+.querySelectorAll(".nav-menu a")
 .forEach(function(link){
 
-link.addEventListener("click",function(){
+link.addEventListener(
+"click",
+function(){
 
 navMenu.classList.remove("active");
 
@@ -4410,9 +3721,8 @@ mobileToggle.innerHTML =
 });
 
 
-/* =====================================================
-   FORM
-===================================================== */
+
+/* CONTACT FORM */
 
 const form =
 document.getElementById("inquiryForm");
@@ -4427,44 +3737,41 @@ const submitText =
 document.getElementById("submitText");
 
 
-form.addEventListener("submit",async function(e){
+form.addEventListener(
+"submit",
+async function(e){
 
 e.preventDefault();
 
-submitBtn.disabled=true;
+submitBtn.disabled = true;
 
-submitText.textContent="Sending...";
+submitText.textContent = "Sending...";
 
-status.textContent="";
+status.textContent = "";
 
 
 try{
 
-const response=await fetch(
-
+const response =
+await fetch(
 form.action,
-
 {
-
 method:"POST",
-
 body:new FormData(form),
-
 headers:{
 "Accept":"application/json"
 }
-
 }
-
 );
 
 
 if(response.ok){
 
-status.textContent=
+status.textContent =
 "Thank you! Your inquiry has been submitted successfully.";
 
-status.style.color="#168a45";
+status.style.color =
+"#168a45";
 
 form.reset();
 
@@ -4480,66 +3787,52 @@ throw new Error();
 
 catch(error){
 
-status.textContent=
+status.textContent =
 "Something went wrong. Please try again or contact us on WhatsApp.";
 
-status.style.color="#c62828";
+status.style.color =
+"#c62828";
 
 }
 
 finally{
 
-submitBtn.disabled=false;
+submitBtn.disabled = false;
 
-submitText.textContent="Send Inquiry";
+submitText.textContent =
+"Send Inquiry";
 
 }
 
 });
 
 
-/* =====================================================
-   YEAR
-===================================================== */
 
-document.getElementById("year")
-.textContent=new Date().getFullYear();
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
 </script>
 
 
-<!-- =====================================================
-     ORGANIZATION SCHEMA
-===================================================== -->
+
+<!-- ORGANIZATION SCHEMA -->
 
 <script type="application/ld+json">
 
 {
-
 "@context":"https://schema.org",
-
 "@type":"Organization",
-
-"name":"FE Destination (Pvt.) Ltd.",
-
-"alternateName":"Foreign Education Destination",
-
+"name":"Foreign Education Destination",
 "url":"https://fedestination.com/",
-
 "logo":"https://fedestination.com/LOGO.png",
-
 "sameAs":[
-
 "https://www.facebook.com/fedestination",
-
 "https://www.instagram.com/fedestination",
-
 "https://www.tiktok.com/@fedestination",
-
 "https://www.youtube.com/@fedestination"
-
 ]
-
 }
 
 </script>
