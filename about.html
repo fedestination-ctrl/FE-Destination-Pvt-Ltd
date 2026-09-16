@@ -1,255 +1,2503 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Foreign Education Destination</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            overflow-x: hidden;
-        }
+  <title>About Us | Foreign Education Destination</title>
 
-        h1, h2, h3, .header-text h1 {
-            font-family: 'Playfair Display', serif;
-        }
+  <meta name="description" content="Learn about Foreign Education Destination, our mission, vision and commitment to helping students achieve their international education goals.">
 
-        /* Navigation Header */
-        .header {
-            background-color: #0b2545;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-        .logo-area {
-            color: #ffffff;
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+  <style>
 
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
+    :root{
+      --navy:#082b49;
+      --navy2:#0d3b66;
+      --blue:#168fd6;
+      --sky:#38bdf8;
+      --light:#f5faff;
+      --white:#ffffff;
+      --text:#334155;
+      --muted:#718096;
+      --border:#e4edf4;
+      --shadow:0 14px 40px rgba(8,43,73,.10);
+      --shadow-hover:0 22px 50px rgba(8,43,73,.15);
+    }
 
-        /* Container */
-        .container { 
-            max-width: 1200px; 
-            margin: auto; 
-            padding: 60px 20px; 
-        }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-        .header-text { 
-            text-align: center; 
-            margin-bottom: 40px; 
-        }
+    html{
+      scroll-behavior:smooth;
+    }
 
-        .header-text p.tagline-top { 
-            color: #0284c7; 
-            font-weight: 700; 
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
+    body{
+      font-family:"Plus Jakarta Sans",sans-serif;
+      background:#fff;
+      color:var(--text);
+      overflow-x:hidden;
+    }
 
-        .header-text h1 { 
-            color: #0b2545; 
-            font-size: 2.8rem; 
-            margin-bottom: 15px;
-        }
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-        .header-text p.sub-desc {
-            font-size: 1.15rem;
-            color: #475569;
-        }
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-        .intro-text {
-            font-size: 1.05rem;
-            color: #475569;
-            line-height: 1.8;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 50px auto;
-        }
-        
-        /* Features Section */
-        .features { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-            gap: 25px; 
-            margin-bottom: 60px; 
-        }
+    .container{
+      width:min(1180px,92%);
+      margin:auto;
+    }
 
-        .feature-box { 
-            background: #ffffff;
-            padding: 30px 20px; 
-            border: 1px solid #e2e8f0; 
-            border-radius: 16px; 
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(11, 37, 69, 0.02);
-        }
+    /* ================= TOP BAR ================= */
 
-        .feature-box:hover { 
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(11, 37, 69, 0.08); 
-            border-color: #cbd5e1;
-        }
+    .topbar{
+      background:var(--navy);
+      color:#dcecf8;
+      font-size:11px;
+      font-weight:600;
+    }
 
-        .feature-box i { 
-            font-size: 2.2rem; 
-            color: #0b2545; 
-            margin-bottom: 15px; 
-        }
+    .topbar-inner{
+      min-height:36px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
 
-        .feature-box h3 {
-            color: #0b2545;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
+    .topbar-left,
+    .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
 
-        .feature-box p {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
+    .topbar span{
+      display:flex;
+      align-items:center;
+      gap:7px;
+    }
 
-        /* Mission/Vision */
-        .mission-vision { 
-            display: flex; 
-            gap: 30px; 
-            margin-bottom: 60px; 
-        }
+    .topbar i{
+      color:var(--sky);
+    }
 
-        .mv-box { 
-            flex: 1; 
-            padding: 35px; 
-            background: #ffffff; 
-            border-left: 4px solid #0b2545;
-            border-radius: 0 16px 16px 0; 
-            box-shadow: 0 4px 15px rgba(11, 37, 69, 0.04);
-        }
+    /* ================= HEADER ================= */
 
-        .mv-box h3 {
-            color: #0b2545;
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-        }
+    .main-header{
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      border-bottom:1px solid var(--border);
+    }
 
-        .mv-box p {
-            color: #475569;
-            line-height: 1.7;
-        }
+    .main-header-inner{
+      min-height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      position:relative;
+    }
 
-        /* Image Gallery */
-        .gallery-title {
-            text-align: center;
-            font-size: 2rem;
-            color: #0b2545;
-            margin-bottom: 25px;
-        }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
+      text-decoration:none;
+    }
 
-        .gallery { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 20px; 
-        }
+    .brand-logo{
+      width:62px;
+      height:62px;
+      object-fit:contain;
+    }
 
-        .gallery img { 
-            width: 100%; 
-            height: 250px; 
-            object-fit: cover; 
-            border-radius: 12px; 
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
 
-        .gallery img:hover {
-            transform: scale(1.03);
-        }
-        
-        @media (max-width: 768px) { 
-            .gallery { grid-template-columns: 1fr; } 
-            .mission-vision { flex-direction: column; }
-            .header-text h1 { font-size: 2.2rem; }
-        }
-    </style>
+    .brand-text .destination{
+      font-family:"Poppins",sans-serif;
+      font-size:20px;
+      font-weight:800;
+      color:var(--navy);
+      letter-spacing:-.3px;
+      white-space:nowrap;
+    }
+
+    .brand-text .tagline{
+      font-size:11px;
+      font-weight:700;
+      color:var(--blue);
+      margin-top:5px;
+      letter-spacing:.5px;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    .nav-wrap{
+      display:flex;
+      align-items:center;
+    }
+
+    .nav-menu{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:4px;
+    }
+
+    .nav-menu a{
+      position:relative;
+      padding:10px 13px;
+      font-size:12px;
+      font-weight:700;
+      color:#536476;
+      transition:.3s;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active{
+      color:var(--blue);
+    }
+
+    .nav-menu a::after{
+      content:"";
+      position:absolute;
+      left:13px;
+      right:13px;
+      bottom:3px;
+      height:2px;
+      background:var(--blue);
+      transform:scaleX(0);
+      transform-origin:center;
+      transition:.3s;
+      border-radius:20px;
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after{
+      transform:scaleX(1);
+    }
+
+    .mobile-toggle{
+      display:none;
+      border:none;
+      background:#eef8ff;
+      color:var(--navy);
+      width:42px;
+      height:42px;
+      border-radius:11px;
+      cursor:pointer;
+      font-size:18px;
+    }
+
+    /* ================= SOCIAL BAR ================= */
+
+    .social-bar{
+      background:linear-gradient(90deg,var(--navy),#0d4774);
+      color:#fff;
+    }
+
+    .social-inner{
+      min-height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:10px;
+    }
+
+    .social-title{
+      font-size:10px;
+      font-weight:700;
+      opacity:.85;
+      margin-right:5px;
+    }
+
+    .social-link{
+      width:27px;
+      height:27px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:8px;
+      color:#fff;
+      background:rgba(255,255,255,.10);
+      font-size:12px;
+      transition:.3s;
+    }
+
+    .social-link:hover{
+      background:var(--sky);
+      transform:translateY(-2px);
+    }
+
+    /* ================= PAGE HERO ================= */
+
+    .about-hero{
+      min-height:430px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      background:
+        linear-gradient(90deg,rgba(8,43,73,.95) 0%,rgba(8,43,73,.82) 48%,rgba(8,43,73,.35) 100%),
+        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    }
+
+    .about-hero::after{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      right:-130px;
+      top:-130px;
+      border-radius:50%;
+      border:70px solid rgba(56,189,248,.12);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:700px;
+      color:#fff;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 13px;
+      border-radius:30px;
+      background:rgba(56,189,248,.14);
+      border:1px solid rgba(255,255,255,.18);
+      color:#bcecff;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:17px;
+    }
+
+    .hero-badge i{
+      color:var(--sky);
+    }
+
+    .hero-content h1{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(38px,5vw,58px);
+      line-height:1.08;
+      font-weight:800;
+      letter-spacing:-1.5px;
+      margin-bottom:17px;
+    }
+
+    .hero-content h1 span{
+      color:var(--sky);
+    }
+
+    .hero-content p{
+      font-size:14px;
+      line-height:1.9;
+      color:#d9e8f3;
+      max-width:650px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:25px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:12px 19px;
+      border-radius:10px;
+      font-size:11px;
+      font-weight:800;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:var(--blue);
+      color:#fff;
+      box-shadow:0 10px 25px rgba(22,143,214,.28);
+    }
+
+    .btn-primary:hover{
+      background:#0f7fc1;
+      transform:translateY(-2px);
+    }
+
+    .btn-outline{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.35);
+      background:rgba(255,255,255,.06);
+    }
+
+    .btn-outline:hover{
+      background:#fff;
+      color:var(--navy);
+    }
+
+    /* ================= SECTION ================= */
+
+    section{
+      padding:80px 0;
+    }
+
+    .section-heading{
+      text-align:center;
+      max-width:720px;
+      margin:0 auto 45px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      color:var(--blue);
+      background:#eaf8ff;
+      border-radius:30px;
+      padding:7px 12px;
+      font-size:10px;
+      font-weight:800;
+      margin-bottom:12px;
+      text-transform:uppercase;
+      letter-spacing:.7px;
+    }
+
+    .eyebrow i{
+      font-size:9px;
+    }
+
+    .section-heading h2{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:32px;
+      line-height:1.25;
+      font-weight:800;
+      margin-bottom:11px;
+    }
+
+    .section-heading p{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.8;
+    }
+
+    /* ================= INTRO ================= */
+
+    .intro-section{
+      background:#fff;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:55px;
+      align-items:center;
+    }
+
+    .intro-image{
+      position:relative;
+    }
+
+    .intro-image img{
+      width:100%;
+      height:470px;
+      object-fit:cover;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .experience-card{
+      position:absolute;
+      right:-25px;
+      bottom:25px;
+      background:#fff;
+      padding:19px 22px;
+      border-radius:17px;
+      box-shadow:var(--shadow-hover);
+      display:flex;
+      align-items:center;
+      gap:13px;
+      border:1px solid var(--border);
+    }
+
+    .experience-icon{
+      width:48px;
+      height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#eaf8ff;
+      color:var(--blue);
+      border-radius:13px;
+      font-size:20px;
+    }
+
+    .experience-card strong{
+      display:block;
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:18px;
+      line-height:1;
+    }
+
+    .experience-card span{
+      display:block;
+      font-size:9px;
+      color:var(--muted);
+      font-weight:700;
+      margin-top:5px;
+    }
+
+    .intro-content .eyebrow{
+      margin-bottom:15px;
+    }
+
+    .intro-content h2{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:32px;
+      line-height:1.3;
+      margin-bottom:17px;
+    }
+
+    .intro-content h2 span{
+      color:var(--blue);
+    }
+
+    .intro-content p{
+      font-size:12px;
+      color:var(--muted);
+      line-height:1.9;
+      margin-bottom:14px;
+    }
+
+    .check-list{
+      list-style:none;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin-top:23px;
+    }
+
+    .check-list li{
+      display:flex;
+      align-items:flex-start;
+      gap:9px;
+      font-size:11px;
+      color:#526273;
+      font-weight:700;
+    }
+
+    .check-list i{
+      color:var(--blue);
+      margin-top:2px;
+    }
+
+    /* ================= STATS ================= */
+
+    .stats-section{
+      padding:0 0 80px;
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .stat-box{
+      padding:30px 20px;
+      text-align:center;
+      border-right:1px solid var(--border);
+      position:relative;
+    }
+
+    .stat-box:last-child{
+      border-right:none;
+    }
+
+    .stat-icon{
+      width:48px;
+      height:48px;
+      margin:0 auto 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#eef9ff;
+      color:var(--blue);
+      border-radius:14px;
+      font-size:18px;
+    }
+
+    .stat-box h3{
+      font-family:"Poppins",sans-serif;
+      font-size:24px;
+      color:var(--navy);
+      font-weight:800;
+    }
+
+    .stat-box p{
+      font-size:10px;
+      color:var(--muted);
+      font-weight:700;
+      margin-top:4px;
+    }
+
+    /* ================= MISSION VISION ================= */
+
+    .mission-section{
+      background:var(--light);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .mission-section::before{
+      content:"";
+      position:absolute;
+      width:400px;
+      height:400px;
+      border-radius:50%;
+      border:70px solid rgba(56,189,248,.06);
+      left:-200px;
+      top:100px;
+    }
+
+    .mission-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+      position:relative;
+      z-index:2;
+    }
+
+    .mission-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:21px;
+      padding:32px;
+      position:relative;
+      overflow:hidden;
+      transition:.35s;
+      box-shadow:0 8px 25px rgba(8,43,73,.045);
+    }
+
+    .mission-card::before{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      right:-55px;
+      top:-55px;
+      background:var(--blue);
+      opacity:.07;
+      transition:.4s;
+    }
+
+    .mission-card:hover{
+      transform:translateY(-7px);
+      box-shadow:var(--shadow-hover);
+      border-color:transparent;
+    }
+
+    .mission-card:hover::before{
+      transform:scale(2);
+    }
+
+    .mission-icon{
+      width:58px;
+      height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:16px;
+      background:#eaf8ff;
+      color:var(--blue);
+      font-size:22px;
+      margin-bottom:19px;
+      position:relative;
+      z-index:2;
+    }
+
+    .mission-card h3{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:19px;
+      margin-bottom:10px;
+      position:relative;
+      z-index:2;
+    }
+
+    .mission-card p{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.8;
+      position:relative;
+      z-index:2;
+    }
+
+    /* ================= VALUES ================= */
+
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .value-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:19px;
+      padding:27px 24px;
+      transition:.35s;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(8,43,73,.04);
+    }
+
+    .value-card:hover{
+      transform:translateY(-7px);
+      box-shadow:var(--shadow-hover);
+      border-color:transparent;
+    }
+
+    .value-number{
+      position:absolute;
+      right:18px;
+      top:12px;
+      font-family:"Poppins",sans-serif;
+      font-size:45px;
+      line-height:1;
+      color:#edf6fb;
+      font-weight:800;
+    }
+
+    .value-icon{
+      width:53px;
+      height:53px;
+      border-radius:15px;
+      background:#eef9ff;
+      color:var(--blue);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:19px;
+      margin-bottom:18px;
+      position:relative;
+      z-index:2;
+    }
+
+    .value-card h3{
+      font-family:"Poppins",sans-serif;
+      font-size:16px;
+      color:var(--navy);
+      margin-bottom:8px;
+      position:relative;
+      z-index:2;
+    }
+
+    .value-card p{
+      font-size:11px;
+      line-height:1.75;
+      color:var(--muted);
+      position:relative;
+      z-index:2;
+    }
+
+    /* ================= DESTINATIONS ================= */
+
+    .destination-strip{
+      background:
+        linear-gradient(100deg,rgba(8,43,73,.97),rgba(13,59,102,.94)),
+        url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .destination-strip::after{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      border:80px solid rgba(56,189,248,.08);
+      right:-200px;
+      top:-200px;
+    }
+
+    .destination-content{
+      position:relative;
+      z-index:2;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+    }
+
+    .destination-content h2{
+      font-family:"Poppins",sans-serif;
+      font-size:30px;
+      line-height:1.3;
+      margin-bottom:10px;
+    }
+
+    .destination-content h2 span{
+      color:var(--sky);
+    }
+
+    .destination-content p{
+      font-size:12px;
+      color:#c9dce9;
+      line-height:1.8;
+      max-width:680px;
+    }
+
+    .destination-button{
+      flex-shrink:0;
+    }
+
+    /* ================= CTA ================= */
+
+    .cta-section{
+      padding:70px 0;
+      background:#fff;
+    }
+
+    .cta-box{
+      border-radius:25px;
+      padding:45px;
+      background:
+        linear-gradient(120deg,rgba(8,43,73,.98),rgba(13,72,113,.94));
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      box-shadow:var(--shadow-hover);
+    }
+
+    .cta-box::before{
+      content:"";
+      position:absolute;
+      width:270px;
+      height:270px;
+      right:-100px;
+      top:-130px;
+      border-radius:50%;
+      border:50px solid rgba(56,189,248,.1);
+    }
+
+    .cta-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .cta-content h2{
+      font-family:"Poppins",sans-serif;
+      color:#fff;
+      font-size:27px;
+      margin-bottom:9px;
+    }
+
+    .cta-content p{
+      color:#c8dce9;
+      font-size:11px;
+      line-height:1.7;
+    }
+
+    .cta-actions{
+      display:flex;
+      gap:10px;
+      position:relative;
+      z-index:2;
+      flex-shrink:0;
+    }
+
+    .cta-actions .btn-outline{
+      border-color:rgba(255,255,255,.25);
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-section{
+      background:var(--light);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:45px;
+      align-items:center;
+    }
+
+    .contact-content h2{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:31px;
+      line-height:1.3;
+      margin-bottom:12px;
+    }
+
+    .contact-content p{
+      font-size:12px;
+      line-height:1.8;
+      color:var(--muted);
+      margin-bottom:25px;
+    }
+
+    .contact-items{
+      display:grid;
+      gap:13px;
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      background:#fff;
+      padding:14px;
+      border:1px solid var(--border);
+      border-radius:13px;
+    }
+
+    .contact-item-icon{
+      width:43px;
+      height:43px;
+      border-radius:11px;
+      background:#eaf8ff;
+      color:var(--blue);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+    }
+
+    .contact-item small{
+      display:block;
+      font-size:9px;
+      color:#8b98a5;
+      font-weight:700;
+      margin-bottom:3px;
+    }
+
+    .contact-item strong{
+      display:block;
+      font-size:11px;
+      color:var(--navy);
+    }
+
+    .contact-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact-card h3{
+      font-family:"Poppins",sans-serif;
+      color:var(--navy);
+      font-size:19px;
+      margin-bottom:7px;
+    }
+
+    .contact-card > p{
+      font-size:11px;
+      color:var(--muted);
+      line-height:1.7;
+      margin-bottom:20px;
+    }
+
+    .contact-buttons{
+      display:grid;
+      gap:11px;
+    }
+
+    .contact-btn{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      padding:13px 15px;
+      border-radius:11px;
+      border:1px solid var(--border);
+      font-size:11px;
+      font-weight:800;
+      color:var(--navy);
+      transition:.3s;
+    }
+
+    .contact-btn i{
+      color:var(--blue);
+      width:18px;
+      text-align:center;
+    }
+
+    .contact-btn:hover{
+      background:#f0faff;
+      border-color:#bfe7fa;
+      transform:translateX(3px);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#061f36;
+      color:#c9d7e2;
+      padding:50px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:35px;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      margin-bottom:15px;
+    }
+
+    .footer-logo{
+      width:53px;
+      height:53px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:10px;
+      padding:4px;
+    }
+
+    .footer-brand h3{
+      font-family:"Poppins",sans-serif;
+      color:#fff;
+      font-size:16px;
+    }
+
+    .footer-about{
+      font-size:10px;
+      line-height:1.8;
+      color:#9fb4c5;
+      max-width:380px;
+    }
+
+    .footer-heading{
+      color:#fff;
+      font-family:"Poppins",sans-serif;
+      font-size:13px;
+      margin-bottom:15px;
+    }
+
+    .footer-links{
+      list-style:none;
+      display:grid;
+      gap:9px;
+    }
+
+    .footer-links a{
+      font-size:10px;
+      color:#9fb4c5;
+      transition:.3s;
+    }
+
+    .footer-links a:hover{
+      color:var(--sky);
+      padding-left:3px;
+    }
+
+    .footer-socials{
+      display:flex;
+      gap:8px;
+      margin-top:17px;
+    }
+
+    .footer-socials a{
+      width:31px;
+      height:31px;
+      border-radius:9px;
+      background:rgba(255,255,255,.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      color:#fff;
+      transition:.3s;
+    }
+
+    .footer-socials a:hover{
+      background:var(--blue);
+      transform:translateY(-2px);
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:19px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .footer-bottom p{
+      font-size:9px;
+      color:#849cad;
+    }
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp-float{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      width:54px;
+      height:54px;
+      background:#25d366;
+      color:#fff;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:25px;
+      box-shadow:0 10px 30px rgba(37,211,102,.3);
+      z-index:999;
+      transition:.3s;
+    }
+
+    .whatsapp-float:hover{
+      transform:scale(1.08) translateY(-3px);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:1100px){
+
+      .nav-menu a{
+        padding:10px 9px;
+        font-size:11px;
+      }
+
+      .brand-text .destination{
+        font-size:18px;
+      }
+
+      .intro-grid{
+        gap:35px;
+      }
+
+    }
+
+    @media(max-width:850px){
+
+      .topbar{
+        display:none;
+      }
+
+      .main-header-inner{
+        min-height:76px;
+      }
+
+      .brand-logo{
+        width:52px;
+        height:52px;
+      }
+
+      .brand-text .destination{
+        font-size:15px;
+      }
+
+      .brand-text .tagline{
+        font-size:10px;
+      }
+
+      .mobile-toggle{
+        display:block;
+      }
+
+      .nav-menu{
+        display:none;
+        position:absolute;
+        left:4%;
+        right:4%;
+        top:76px;
+        background:#fff;
+        border-radius:12px;
+        box-shadow:var(--shadow);
+        border:1px solid var(--border);
+        padding:8px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        z-index:999;
+      }
+
+      .nav-menu.active{
+        display:flex;
+      }
+
+      .nav-menu a{
+        display:block;
+        padding:12px 14px;
+      }
+
+      .nav-menu a::after{
+        display:none;
+      }
+
+      .social-inner{
+        justify-content:center;
+      }
+
+      .social-title{
+        display:none;
+      }
+
+      .about-hero{
+        min-height:400px;
+      }
+
+      .intro-grid{
+        grid-template-columns:1fr;
+      }
+
+      .intro-image img{
+        height:400px;
+      }
+
+      .experience-card{
+        right:20px;
+      }
+
+      .stats-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .stat-box:nth-child(2){
+        border-right:none;
+      }
+
+      .stat-box:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+      }
+
+      .mission-grid{
+        grid-template-columns:1fr;
+      }
+
+      .values-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .destination-content{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:600px){
+
+      section{
+        padding:60px 0;
+      }
+
+      .brand-logo{
+        width:46px;
+        height:46px;
+      }
+
+      .brand-text .destination{
+        font-size:14px;
+        white-space:normal;
+      }
+
+      .brand-text .tagline{
+        font-size:9px;
+      }
+
+      .about-hero{
+        min-height:440px;
+      }
+
+      .hero-content h1{
+        font-size:38px;
+      }
+
+      .hero-content p{
+        font-size:12px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+        max-width:230px;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .section-heading h2{
+        font-size:27px;
+      }
+
+      .intro-content h2{
+        font-size:27px;
+      }
+
+      .intro-image img{
+        height:330px;
+      }
+
+      .experience-card{
+        right:12px;
+        bottom:15px;
+        padding:14px;
+      }
+
+      .experience-icon{
+        width:40px;
+        height:40px;
+        font-size:16px;
+      }
+
+      .experience-card strong{
+        font-size:15px;
+      }
+
+      .check-list{
+        grid-template-columns:1fr;
+      }
+
+      .values-grid{
+        grid-template-columns:1fr;
+      }
+
+      .stats-grid{
+        grid-template-columns:1fr;
+      }
+
+      .stat-box{
+        border-right:none !important;
+        border-bottom:1px solid var(--border);
+      }
+
+      .stat-box:last-child{
+        border-bottom:none;
+      }
+
+      .destination-content h2{
+        font-size:26px;
+      }
+
+      .cta-box{
+        padding:30px 24px;
+      }
+
+      .cta-content h2{
+        font-size:23px;
+      }
+
+      .cta-actions{
+        flex-direction:column;
+        width:100%;
+      }
+
+      .cta-actions .btn{
+        width:100%;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+      }
+
+    }
+
+    @media(max-width:390px){
+
+      .brand-text .destination{
+        font-size:13px;
+      }
+
+      .brand-text .tagline{
+        font-size:8px;
+      }
+
+      .hero-content h1{
+        font-size:34px;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <!-- Navigation Header -->
-    <header class="header">
-        <div class="logo-area">Foreign Education Destination</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" style="color: #38bdf8;">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ================= TOP BAR ================= -->
 
-<div class="container">
-    <div class="header-text">
-        <p class="tagline-top">About Us</p>
-        <h1>Your Global Education Partner for a Better Tomorrow</h1>
-        <p class="sub-desc"><strong>10+ Years of Experience. Thousands of Dreams Fulfilled.</strong></p>
+  <div class="topbar">
+    <div class="container topbar-inner">
+
+      <div class="topbar-left">
+        <span>
+          <i class="fa-solid fa-award"></i>
+          7+ Years of International Recruitment Experience
+        </span>
+      </div>
+
+      <div class="topbar-right">
+        <span>
+          <i class="fa-solid fa-location-dot"></i>
+          Lahore, Pakistan
+        </span>
+
+        <span>
+          <i class="fa-solid fa-envelope"></i>
+          info@fedestination.com
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="main-header">
+
+    <div class="container main-header-inner">
+
+      <a href="index.html" class="brand">
+
+        <img
+          src="LOGO.png"
+          alt="Foreign Education Destination Logo"
+          class="brand-logo"
+        >
+
+        <div class="brand-text">
+
+          <div class="destination">
+            Foreign Education Destination
+          </div>
+
+          <div class="tagline">
+            Your Gateway to Global Education
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <nav class="nav-wrap">
+
+        <ul class="nav-menu" id="navMenu">
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html" class="active">
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#destinations">
+              Destinations
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#universities">
+              Universities
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#journey">
+              How It Works
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#contact">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+      <button
+        class="mobile-toggle"
+        id="mobileToggle"
+        aria-label="Open Menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
     </div>
 
-    <p class="intro-text">Foreign Education Destination has been a trusted name in the field of international education for over a decade. We believe that every student has unique potential, and we take the time to understand their goals to offer personalized guidance.</p>
+  </header>
 
-    <div class="features">
-        <div class="feature-box"><i class="fas fa-award"></i><h3>10+ Years</h3><p>Proven expertise in counseling.</p></div>
-        <div class="feature-box"><i class="fas fa-globe"></i><h3>Global Network</h3><p>Partnerships with top universities.</p></div>
-        <div class="feature-box"><i class="fas fa-user-tie"></i><h3>Personalized</h3><p>One-on-one guidance.</p></div>
-        <div class="feature-box"><i class="fas fa-check-circle"></i><h3>End-to-End</h3><p>Full application support.</p></div>
-        <div class="feature-box"><i class="fas fa-chart-line"></i><h3>High Success</h3><p>Thousands of approvals.</p></div>
+
+  <!-- ================= SOCIAL BAR ================= -->
+
+  <div class="social-bar">
+
+    <div class="container social-inner">
+
+      <span class="social-title">
+        Follow Foreign Education Destination
+      </span>
+
+      <a
+        href="https://www.facebook.com/fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        aria-label="Facebook"
+      >
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a
+        href="https://www.instagram.com/fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        aria-label="Instagram"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        aria-label="TikTok"
+      >
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+
+      <a
+        href="https://www.youtube.com/@fedestination"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-link"
+        aria-label="YouTube"
+      >
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
     </div>
 
-    <div class="mission-vision">
-        <div class="mv-box"><h3>Our Mission</h3><p>To empower students through quality guidance and global opportunities, and to be the most trusted name in international education.</p></div>
-        <div class="mv-box"><h3>Our Vision</h3><p>To be recognized globally for shaping futures through excellence, integrity, and student success.</p></div>
+  </div>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="about-hero">
+
+    <div class="container">
+
+      <div
+        class="hero-content"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
+
+        <div class="hero-badge">
+          <i class="fa-solid fa-building-columns"></i>
+          About Foreign Education Destination
+        </div>
+
+        <h1>
+          Helping Students Turn
+          <span>Global Dreams</span>
+          Into Reality
+        </h1>
+
+        <p>
+          Foreign Education Destination is an international education
+          consultancy dedicated to helping students explore global study
+          opportunities and make informed decisions about their academic future.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="index.html#destinations" class="btn btn-primary">
+            <i class="fa-solid fa-earth-americas"></i>
+            Explore Destinations
+          </a>
+
+          <a href="services.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-right"></i>
+            Our Services
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <h2 class="gallery-title">Glimpse of Our Journey</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" alt="Consultation">
-        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800" alt="Graduation">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800" alt="Students">
-        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800" alt="Classroom">
-        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800" alt="Application">
+  </section>
+
+
+  <!-- ================= INTRO ================= -->
+
+  <section class="intro-section">
+
+    <div class="container">
+
+      <div class="intro-grid">
+
+        <div
+          class="intro-image"
+          data-aos="fade-right"
+          data-aos-duration="900"
+        >
+
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85"
+            alt="Students studying together"
+          >
+
+          <div class="experience-card">
+
+            <div class="experience-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+
+            <div>
+              <strong>7+</strong>
+              <span>Years Experience</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="intro-content"
+          data-aos="fade-left"
+          data-aos-duration="900"
+        >
+
+          <div class="eyebrow">
+            <i class="fa-solid fa-circle"></i>
+            Who We Are
+          </div>
+
+          <h2>
+            Your Trusted Partner for
+            <span>International Education</span>
+          </h2>
+
+          <p>
+            Foreign Education Destination (FED) is an education consultancy
+            based in Lahore, Pakistan, supporting students who want to pursue
+            higher education internationally.
+          </p>
+
+          <p>
+            With more than seven years of international recruitment experience,
+            our focus is on providing practical guidance throughout the
+            study-abroad journey — from choosing the right destination and
+            university to preparing applications and navigating the student
+            visa process.
+          </p>
+
+          <p>
+            We work with students to understand their academic background,
+            goals, budget and preferred destination before helping them explore
+            suitable study options.
+          </p>
+
+          <ul class="check-list">
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Profile-based guidance
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              University & course selection
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Application assistance
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Student visa guidance
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Scholarship guidance
+            </li>
+
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+              Pre-departure support
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
     </div>
 
-</div>
+  </section>
+
+
+  <!-- ================= STATS ================= -->
+
+  <section class="stats-section">
+
+    <div class="container">
+
+      <div class="stats-grid">
+
+        <div class="stat-box" data-aos="fade-up">
+
+          <div class="stat-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+
+          <h3>7+</h3>
+          <p>Years of Experience</p>
+
+        </div>
+
+
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="stat-icon">
+            <i class="fa-solid fa-earth-americas"></i>
+          </div>
+
+          <h3>Global</h3>
+          <p>Study Destinations</p>
+
+        </div>
+
+
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="stat-icon">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+
+          <h3>Multiple</h3>
+          <p>University Options</p>
+
+        </div>
+
+
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="stat-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+
+          <h3>End-to-End</h3>
+          <p>Student Support</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MISSION & VISION ================= -->
+
+  <section class="mission-section">
+
+    <div class="container">
+
+      <div class="section-heading" data-aos="fade-up">
+
+        <div class="eyebrow">
+          <i class="fa-solid fa-compass"></i>
+          Our Direction
+        </div>
+
+        <h2>
+          What Drives Foreign Education Destination
+        </h2>
+
+        <p>
+          Our work is centered around helping students understand their
+          international education options and move forward with greater
+          clarity and confidence.
+        </p>
+
+      </div>
+
+
+      <div class="mission-grid">
+
+        <div
+          class="mission-card"
+          data-aos="fade-right"
+        >
+
+          <div class="mission-icon">
+            <i class="fa-solid fa-bullseye"></i>
+          </div>
+
+          <h3>Our Mission</h3>
+
+          <p>
+            To provide students with clear, personalized and responsible
+            guidance for international education. We aim to simplify the
+            process of exploring universities, preparing applications and
+            understanding student visa requirements.
+          </p>
+
+        </div>
+
+
+        <div
+          class="mission-card"
+          data-aos="fade-left"
+        >
+
+          <div class="mission-icon">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+
+          <h3>Our Vision</h3>
+
+          <p>
+            To become a trusted education consultancy known for professional
+            service, transparent communication and student-focused guidance,
+            connecting ambitious students with opportunities around the world.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= VALUES ================= -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-heading" data-aos="fade-up">
+
+        <div class="eyebrow">
+          <i class="fa-solid fa-star"></i>
+          Our Values
+        </div>
+
+        <h2>
+          The Way We Work
+        </h2>
+
+        <p>
+          Every student's journey is different. Our approach is built around
+          understanding individual goals and providing practical support at
+          every stage.
+        </p>
+
+      </div>
+
+
+      <div class="values-grid">
+
+        <div class="value-card" data-aos="fade-up">
+
+          <span class="value-number">01</span>
+
+          <div class="value-icon">
+            <i class="fa-solid fa-user-check"></i>
+          </div>
+
+          <h3>Student-Centered</h3>
+
+          <p>
+            We focus on the student's academic background, goals, budget and
+            preferred study destination when discussing available options.
+          </p>
+
+        </div>
+
+
+        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+
+          <span class="value-number">02</span>
+
+          <div class="value-icon">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+
+          <h3>Clear Communication</h3>
+
+          <p>
+            We aim to explain processes, requirements and next steps in a
+            straightforward and understandable way.
+          </p>
+
+        </div>
+
+
+        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+
+          <span class="value-number">03</span>
+
+          <div class="value-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <h3>Responsible Guidance</h3>
+
+          <p>
+            We provide guidance based on available information and encourage
+            students to understand the requirements before making decisions.
+          </p>
+
+        </div>
+
+
+        <div class="value-card" data-aos="fade-up">
+
+          <span class="value-number">04</span>
+
+          <div class="value-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+
+          <h3>Global Opportunities</h3>
+
+          <p>
+            Students can explore study opportunities across multiple
+            international destinations and education systems.
+          </p>
+
+        </div>
+
+
+        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+
+          <span class="value-number">05</span>
+
+          <div class="value-icon">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+
+          <h3>Organized Process</h3>
+
+          <p>
+            From initial consultation to application and visa guidance, we
+            help students understand the sequence of important steps.
+          </p>
+
+        </div>
+
+
+        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+
+          <span class="value-number">06</span>
+
+          <div class="value-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+
+          <h3>Long-Term Support</h3>
+
+          <p>
+            Our relationship with students goes beyond a single application,
+            with guidance designed to support their wider international
+            education journey.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= DESTINATION CTA ================= -->
+
+  <section class="destination-strip">
+
+    <div class="container">
+
+      <div
+        class="destination-content"
+        data-aos="fade-up"
+      >
+
+        <div>
+
+          <h2>
+            Explore Your
+            <span>Global Study Options</span>
+          </h2>
+
+          <p>
+            From the UK and Europe to Australia, Malaysia, New Zealand, UAE
+            and Turkey, explore destinations that can match your academic
+            goals and future plans.
+          </p>
+
+        </div>
+
+        <div class="destination-button">
+
+          <a href="index.html#destinations" class="btn btn-primary">
+            <i class="fa-solid fa-earth-americas"></i>
+            Explore Destinations
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CTA ================= -->
+
+  <section class="cta-section">
+
+    <div class="container">
+
+      <div
+        class="cta-box"
+        data-aos="zoom-in"
+      >
+
+        <div class="cta-content">
+
+          <h2>
+            Ready to Start Your Study Abroad Journey?
+          </h2>
+
+          <p>
+            Speak with our team and explore suitable international education
+            options for your profile.
+          </p>
+
+        </div>
+
+
+        <div class="cta-actions">
+
+          <a
+            href="https://wa.me/923451450072?text=Hello%20Foreign%20Education%20Destination%2C%20I%20want%20study%20abroad%20guidance."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp Us
+          </a>
+
+          <a
+            href="mailto:info@fedestination.com"
+            class="btn btn-outline"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            Email Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section class="contact-section">
+
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <div
+          class="contact-content"
+          data-aos="fade-right"
+        >
+
+          <div class="eyebrow">
+            <i class="fa-solid fa-headset"></i>
+            Let's Connect
+          </div>
+
+          <h2>
+            Have Questions About Studying Abroad?
+          </h2>
+
+          <p>
+            Our team is available to help you understand your study abroad
+            options and the next steps for your application.
+          </p>
+
+
+          <div class="contact-items">
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div>
+                <small>Office</small>
+                <strong>Lahore, Pakistan</strong>
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+
+              <div>
+                <small>Phone / WhatsApp</small>
+                <strong>+92 345 1450072</strong>
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div>
+                <small>Email</small>
+                <strong>info@fedestination.com</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="contact-card"
+          data-aos="fade-left"
+        >
+
+          <h3>
+            Start a Conversation
+          </h3>
+
+          <p>
+            Choose your preferred way to contact Foreign Education Destination.
+          </p>
+
+          <div class="contact-buttons">
+
+            <a
+              href="https://wa.me/923451450072?text=Hello%20Foreign%20Education%20Destination%2C%20I%20would%20like%20to%20discuss%20study%20abroad%20options."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              Chat with us on WhatsApp
+            </a>
+
+            <a
+              href="mailto:info@fedestination.com"
+              class="contact-btn"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              Send us an Email
+            </a>
+
+            <a
+              href="tel:+923451450072"
+              class="contact-btn"
+            >
+              <i class="fa-solid fa-phone"></i>
+              Call +92 345 1450072
+            </a>
+
+            <a
+              href="https://fedestination.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn"
+            >
+              <i class="fa-solid fa-globe"></i>
+              Visit fedestination.com
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+
+            <img
+              src="LOGO.png"
+              alt="FE Destination Logo"
+              class="footer-logo"
+            >
+
+            <h3>
+              Foreign Education Destination
+            </h3>
+
+          </div>
+
+          <p class="footer-about">
+            Foreign Education Destination helps students explore international
+            education opportunities with professional guidance for university
+            selection, applications, scholarships and student visa processes.
+          </p>
+
+          <div class="footer-socials">
+
+            <a
+              href="https://www.facebook.com/fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a
+              href="https://www.tiktok.com/@fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@fedestination"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Quick Links
+          </h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+              <a href="services.html">Services</a>
+            </li>
+
+            <li>
+              <a href="index.html#destinations">
+                Destinations
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html#universities">
+                Universities
+              </a>
+            </li>
+
+            <li>
+              <a href="index.html#contact">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4 class="footer-heading">
+            Study Destinations
+          </h4>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="uk.html">United Kingdom</a>
+            </li>
+
+            <li>
+              <a href="europe.html">Europe</a>
+            </li>
+
+            <li>
+              <a href="australia.html">Australia</a>
+            </li>
+
+            <li>
+              <a href="malaysia.html">Malaysia</a>
+            </li>
+
+            <li>
+              <a href="newzealand.html">New Zealand</a>
+            </li>
+
+            <li>
+              <a href="uae.html">UAE</a>
+            </li>
+
+            <li>
+              <a href="turkey.html">Turkey</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="currentYear"></span> FE Destination Pvt. Ltd. All Rights Reserved.
+        </p>
+
+        <p>
+          Foreign Education Destination · Lahore, Pakistan
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= WHATSAPP ================= -->
+
+  <a
+    href="https://wa.me/923451450072?text=Hello%20Foreign%20Education%20Destination%2C%20I%20want%20study%20abroad%20guidance."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+  <!-- ================= AOS ================= -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration:800,
+      once:true,
+      offset:80
+    });
+
+
+    /* MOBILE MENU */
+
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    mobileToggle.addEventListener("click", function(){
+
+      navMenu.classList.toggle("active");
+
+      const icon = mobileToggle.querySelector("i");
+
+      if(navMenu.classList.contains("active")){
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+      }else{
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      }
+
+    });
+
+
+    /* CLOSE MOBILE MENU AFTER CLICK */
+
+    document.querySelectorAll(".nav-menu a").forEach(function(link){
+
+      link.addEventListener("click", function(){
+
+        navMenu.classList.remove("active");
+
+        const icon = mobileToggle.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      });
+
+    });
+
+
+    /* CURRENT YEAR */
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
 </html>
