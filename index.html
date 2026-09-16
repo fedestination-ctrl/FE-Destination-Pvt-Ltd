@@ -54,7 +54,26 @@
         nav ul { list-style: none; display: flex; gap: 30px; align-items: center; }
         nav ul li a { color: #475569; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s ease; }
         nav ul li a:hover { color: #0072FF; }
+/* Social Icons Standalone Alignment */
+.header-social-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
 
+.header-social-links a {
+  color: #0084ff; /* Icons Color */
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.header-social-links a:hover {
+  color: #0056b3;
+  transform: translateY(-2px);
+}
         /* Hero Banner */
         .hero {
             background: linear-gradient(135deg, rgba(240, 249, 255, 0.9), rgba(224, 242, 254, 0.95)), url('https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1920');
