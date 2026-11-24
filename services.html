@@ -1,376 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - FE Destination Pvt Ltd</title>
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
 
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-            overflow-x: hidden;
-        }
+    <title>Our Services | FE Destination Pvt Ltd</title>
 
-        h1, h2, h3, .card-title {
-            font-family: 'Playfair Display', serif;
-        }
+    <meta name="description"
+        content="Explore the complete range of study abroad services offered by FE Destination Pvt Ltd — from university selection and admissions to student visa guidance and scholarships.">
 
-        /* Navigation Header */
-        .header {
-            background-color: #0b2545;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        .logo-area {
-            color: #ffffff;
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
-
-        /* Hero Header Section */
-        .services-hero {
-            background: linear-gradient(135deg, #0b2545 0%, #134074 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 80px 20px;
-            margin-bottom: 50px;
-        }
-
-        .services-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .services-hero p {
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto;
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-
-        /* Services Grid Layout */
-        .services-container {
-            max-width: 1250px;
-            margin: 0 auto;
-            padding: 0 20px 80px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(11, 37, 69, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e2e8f0;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 35px rgba(11, 37, 69, 0.12);
-        }
-
-        .card-img-wrapper {
-            position: relative;
-            height: 220px;
-            overflow: hidden;
-        }
-
-        .card-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .service-card:hover .card-img-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .card-tag {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(11, 37, 69, 0.85);
-            color: #ffffff;
-            padding: 5px 12px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 20px;
-            backdrop-filter: blur(4px);
-        }
-
-        .card-body {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            color: #0b2545;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .card-desc {
-            font-size: 0.95rem;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .card-features {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 15px;
-        }
-
-        .card-features li {
-            font-size: 0.9rem;
-            color: #334155;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card-features li i {
-            color: #0284c7;
-            font-size: 0.85rem;
-        }
-
-        /* Bottom CTA Section */
-        .cta-section {
-            background: linear-gradient(rgba(11, 37, 69, 0.9), rgba(11, 37, 69, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            text-align: center;
-            padding: 90px 20px;
-            color: #ffffff;
-            margin-top: 40px;
-        }
-
-        .cta-subtitle {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            margin-bottom: 25px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .cta-btn {
-            background-color: #38bdf8;
-            color: #0f172a;
-            padding: 14px 32px;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.25);
-        }
-
-        .cta-btn:hover {
-            background-color: #0ea5e9;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .services-hero h1 {
-                font-size: 2.3rem;
-            }
-            .services-container {
-                grid-template-columns: 1fr;
-                padding: 0 15px 50px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-    <!-- Navigation Header -->
-    <header class="header">
-        <div class="logo-area">Foreign Education Destination</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" style="color: #38bdf8;">Services</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- ===================================================== TOP CONTACT BAR ===================================================== -->
 
-    <!-- Hero Section -->
-    <section class="services-hero">
-        <h1>Tailored Pathways for Your Global Future</h1>
-        <p>We bridge the gap between your academic ambitions and world-class international universities through expert, end-to-end guidance.</p>
-    </section>
-
-    <!-- Services Grid Container -->
-    <div class="services-container">
-
-        <!-- Card 1 -->
-        <div class="service-card">
-            <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Study Abroad">
-                <span class="card-tag">Advising</span>
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-left">
+                <a href="tel:+923451450072">
+                    <i class="fa-solid fa-phone"></i>
+                    +92 345 1450072
+                </a>
+                <a href="mailto:info@fedestination.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    info@fedestination.com
+                </a>
             </div>
-            <div class="card-body">
-                <h3 class="card-title">Study Abroad Consulting</h3>
-                <p class="card-desc">Personalized roadmap sessions to help you evaluate international study options, matching your profile with top global institutions.</p>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-circle-check"></i> Profile & Career Evaluation</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Destination & Country Insights</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Strategic Roadmap Planning</li>
-                </ul>
+            <div class="topbar-right">
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore, Pakistan
+                </span>
+                <span>
+                    <i class="fa-solid fa-globe"></i>
+                    Global Education Consultancy
+                </span>
             </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="service-card">
-            <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" alt="Test Prep">
-                <span class="card-tag">Training</span>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Language & Test Prep</h3>
-                <p class="card-desc">Master standardized language and entrance exams with targeted coaching designed to secure high scores required by top universities.</p>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-circle-check"></i> IELTS & PTE Academic Prep</li>
-                    <li><i class="fa-solid fa-circle-check"></i> German Language (A1 Level)</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Mock Tests & Expert Feedback</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="service-card">
-            <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="University Selection">
-                <span class="card-tag">Placement</span>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">University & Course Selection</h3>
-                <p class="card-desc">Navigate thousands of programs effortlessly. We help you choose the right degree aligned with your financial capacity and career goals.</p>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-circle-check"></i> Comprehensive Course Matching</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Tuition & Living Cost Analysis</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Direct University Partnerships</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="service-card">
-            <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Admission Support">
-                <span class="card-tag">Applications</span>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Admission & Application Support</h3>
-                <p class="card-desc">Craft powerful applications that stand out. From compelling Statements of Purpose (SOP) to immaculate document portfolios.</p>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-circle-check"></i> SOP & Essay Editing</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Recommendation Letter Guidance</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Timely Application Submission</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="service-card">
-            <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Visa Assistance">
-                <span class="card-tag">Immigration</span>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Student Visa Services</h3>
-                <p class="card-desc">Eliminate visa uncertainties with meticulous file preparation, financial documentation reviews, and comprehensive interview practice.</p>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-circle-check"></i> Complete Visa File Check</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Mock Interview Sessions</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Compliance & Embassy Guidelines</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="service-card">
-            <div class="card-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Scholarship Support">
-                <span class="card-tag">Funding</span>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Scholarships & Financial Aid</h3>
-                <p class="card-desc">Unlock financial opportunities. We identify eligible partial or fully-funded scholarships and assist you in crafting winning grant applications.</p>
-                <ul class="card-features">
-                    <li><i class="fa-solid fa-circle-check"></i> Global Scholarship Matching</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Financial Document Proofing</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Bursary & Grant Advising</li>
-                </ul>
-            </div>
-        </div>
-
     </div>
 
-    <!-- Bottom CTA Section -->
-    <section class="cta-section">
-        <div class="cta-subtitle">Begin Your Global Journey</div>
-        <h2 class="cta-title">Ready to Study Abroad? Book a Consultation</h2>
-        <a href="tel:+923451450072" class="cta-btn" onclick="window.location.href='mailto:info@fedestination.com';">Connect With Our Experts</a>
+
+    <!-- ===================================================== HEADER ===================================================== -->
+
+    <header class="main-header">
+        <div class="container main-header-inner">
+
+            <a href="index.html" class="brand">
+                <img src="LOGO.png" alt="FE Destination Pvt Ltd Logo" class="brand-logo">
+                <div class="brand-text">
+                    <div class="destination">FE Destination Pvt Ltd</div>
+                    <div class="tagline">Your Gateway to Global Education</div>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#destinations">Destinations</a></li>
+                <li><a href="universities.html">Universities</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="index.html#journey">How It Works</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ===================================================== SOCIAL BAR ===================================================== -->
+
+    <div class="social-bar">
+        <div class="container social-inner">
+            <span class="social-title">Follow FE Destination Pvt Ltd</span>
+            <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ===================================================== SERVICES HERO ===================================================== -->
+
+    <section class="services-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Tailored Pathways for Your Global Future</h1>
+            <p data-aos="fade-up" data-aos-delay="100">
+                We bridge the gap between your academic ambitions and world-class
+                international universities through expert, end-to-end guidance.
+            </p>
+        </div>
     </section>
 
+
+    <!-- ===================================================== SERVICES GRID ===================================================== -->
+
+    <div class="container">
+        <div class="services-cards-grid">
+
+            <!-- Card 1 -->
+            <div class="services-page-card" data-aos="fade-up">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+                        alt="Study Abroad Consulting">
+                    <span class="card-tag">Advising</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Study Abroad Consulting</h3>
+                    <p class="card-desc">
+                        Personalized roadmap sessions to help you evaluate international
+                        study options, matching your profile with top global institutions.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Profile & Career Evaluation</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Destination & Country Insights</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Strategic Roadmap Planning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="services-page-card" data-aos="fade-up" data-aos-delay="80">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
+                        alt="Language and Test Prep">
+                    <span class="card-tag">Training</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Language &amp; Test Prep</h3>
+                    <p class="card-desc">
+                        Master standardized language and entrance exams with targeted
+                        coaching designed to secure high scores required by top universities.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> IELTS &amp; PTE Academic Prep</li>
+                        <li><i class="fa-solid fa-circle-check"></i> German Language (A1 Level)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mock Tests &amp; Expert Feedback</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="services-page-card" data-aos="fade-up" data-aos-delay="160">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                        alt="University and Course Selection">
+                    <span class="card-tag">Placement</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">University &amp; Course Selection</h3>
+                    <p class="card-desc">
+                        Navigate thousands of programs effortlessly. We help you choose
+                        the right degree aligned with your financial capacity and career goals.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Comprehensive Course Matching</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Tuition &amp; Living Cost Analysis</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Direct University Partnerships</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="services-page-card" data-aos="fade-up" data-aos-delay="240">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                        alt="Admission and Application Support">
+                    <span class="card-tag">Applications</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Admission &amp; Application Support</h3>
+                    <p class="card-desc">
+                        Craft powerful applications that stand out. From compelling
+                        Statements of Purpose (SOP) to immaculate document portfolios.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> SOP &amp; Essay Editing</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Recommendation Letter Guidance</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Timely Application Submission</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="services-page-card" data-aos="fade-up" data-aos-delay="320">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+                        alt="Student Visa Services">
+                    <span class="card-tag">Immigration</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Student Visa Services</h3>
+                    <p class="card-desc">
+                        Eliminate visa uncertainties with meticulous file preparation,
+                        financial documentation reviews, and comprehensive interview practice.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Complete Visa File Check</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Mock Interview Sessions</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Compliance &amp; Embassy Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="services-page-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80"
+                        alt="Scholarships and Financial Aid">
+                    <span class="card-tag">Funding</span>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Scholarships &amp; Financial Aid</h3>
+                    <p class="card-desc">
+                        Unlock financial opportunities. We identify eligible partial or
+                        fully-funded scholarships and assist you in crafting winning grant applications.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class="fa-solid fa-circle-check"></i> Global Scholarship Matching</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Financial Document Proofing</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Bursary &amp; Grant Advising</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ===================================================== CTA ===================================================== -->
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-box">
+
+                <div class="section-label">Begin Your Global Journey</div>
+
+                <h2>Ready to Study Abroad? Book a Consultation</h2>
+
+                <p>
+                    Talk to FE Destination Pvt Ltd and explore suitable universities,
+                    programs and destinations for your academic journey.
+                </p>
+
+                <div class="hero-buttons" style="justify-content:center;">
+                    <a href="https://wa.me/923451450072" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="mailto:info@fedestination.com" class="btn btn-light">
+                        <i class="fa-solid fa-envelope"></i>
+                        Email Us
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================================================== FOOTER ===================================================== -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="LOGO.png" alt="FE Destination Pvt Ltd">
+                        <strong>FE Destination Pvt Ltd</strong>
+                    </div>
+                    <p>
+                        Your Gateway to Global Education. We help students
+                        explore international education opportunities,
+                        university admissions, scholarships and student
+                        visa guidance.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/fedestination" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/fedestination" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@fedestination" target="_blank" aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@fedestination" target="_blank" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="footer-title">Quick Links</div>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="universities.html">Universities</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-title">Destinations</div>
+                    <ul class="footer-links">
+                        <li><a href="uk.html">United Kingdom</a></li>
+                        <li><a href="europe.html">Europe</a></li>
+                        <li><a href="australia.html">Australia</a></li>
+                        <li><a href="malaysia.html">Malaysia</a></li>
+                        <li><a href="newzealand.html">New Zealand</a></li>
+                        <li><a href="turkey.html">Turkey</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-title">Contact</div>
+                    <ul class="footer-links">
+                        <li><a href="tel:+923451450072">+92 345 1450072</a></li>
+                        <li><a href="mailto:info@fedestination.com">info@fedestination.com</a></li>
+                        <li><a href="https://fedestination.com/">fedestination.com</a></li>
+                        <li>Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 FE Destination Pvt Ltd. All Rights Reserved.</p>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a>
+                    &nbsp; | &nbsp;
+                    <a href="terms.html">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ===================================================== WHATSAPP ===================================================== -->
+
+    <a href="https://wa.me/923451450072" target="_blank" class="whatsapp" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+
+    <!-- ===================================================== JS ===================================================== -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 70
+        });
+
+        /* Mobile Menu */
+        const mobileToggle = document.getElementById("mobileToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+                const icon = mobileToggle.querySelector("i");
+                if (navMenu.classList.contains("active")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.add("fa-xmark");
+                } else {
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                }
+            });
+
+            document.querySelectorAll(".nav-menu a").forEach(function (link) {
+                link.addEventListener("click", function () {
+                    navMenu.classList.remove("active");
+                    const icon = mobileToggle.querySelector("i");
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+                });
+            });
+        }
+    </script>
+
 </body>
+
 </html>

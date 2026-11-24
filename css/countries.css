@@ -1,0 +1,196 @@
+/* =========================================================
+   COUNTRY / DESTINATION PAGES
+   (Australia, Europe, Malaysia, UK, New Zealand, UAE, Turkey)
+========================================================= */
+
+/* Optional: USA page hero image */
+.country-hero-img-contain {
+    object-fit: contain;
+    background: var(--sky);
+}
+.country-page {
+    background: var(--bg);
+    min-height: 100vh;
+    padding: 50px 0 80px;
+}
+
+.country-container {
+    width: min(1000px, 92%);
+    margin: auto;
+}
+
+/* ---------- BACK BUTTON ---------- */
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    padding: 10px 20px;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(8, 43, 73, .12);
+}
+
+.btn-back:hover {
+    background: var(--blue);
+    transform: translateY(-2px);
+}
+
+.btn-back i {
+    font-size: 12px;
+}
+
+/* ---------- PAGE TITLE ---------- */
+
+.country-page h1 {
+    font-family: "Poppins", sans-serif;
+    color: var(--navy);
+    font-size: 38px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -.5px;
+}
+
+/* ---------- HERO IMAGE ---------- */
+
+.country-hero-img-container {
+    width: 100%;
+    height: 380px;
+    background: var(--sky);
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    box-shadow: var(--shadow);
+}
+
+.country-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- DETAILS GRID ---------- */
+
+.country-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.country-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(8, 43, 73, .06);
+    border: 1px solid var(--border);
+    transition: .3s;
+}
+
+.country-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.country-card h3 {
+    font-family: "Poppins", sans-serif;
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--sky);
+    display: inline-block;
+}
+
+.country-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.country-card ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.country-card ul li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: var(--blue);
+    font-size: 11px;
+}
+
+.country-card p {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.country-card p:last-child {
+    margin-bottom: 0;
+}
+
+.country-card p strong {
+    color: var(--navy);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 850px) {
+    .country-page {
+        padding: 35px 0 60px;
+    }
+
+    .country-page h1 {
+        font-size: 30px;
+    }
+
+    .country-hero-img-container {
+        height: 280px;
+    }
+
+    .country-details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .country-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .country-page h1 {
+        font-size: 24px;
+    }
+
+    .country-hero-img-container {
+        height: 220px;
+    }
+
+    .btn-back {
+        font-size: 12px;
+        padding: 9px 16px;
+    }
+
+    .country-card h3 {
+        font-size: 16px;
+    }
+}
