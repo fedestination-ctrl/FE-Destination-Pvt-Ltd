@@ -1,3671 +1,1963 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FE Destination Pvt Ltd | Study Abroad Consultants</title>
+    <title>FE Destination Pvt Ltd | Study Abroad Consultants</title>
 
-<meta name="description" content="FE Destination Pvt Ltd helps students explore international universities, admissions, scholarships and student visa guidance for global study destinations.">
+    <meta name="description"
+        content="FE Destination Pvt Ltd helps students explore international universities, admissions, scholarships and student visa guidance for global study destinations.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<style>
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-:root{
-    --navy:#082b49;
-    --navy2:#0d3b63;
-    --blue:#1597df;
-    --blue2:#38bdf8;
-    --sky:#eaf7ff;
-    --white:#ffffff;
-    --text:#243746;
-    --muted:#6b7c8c;
-    --border:#e6eef4;
-    --bg:#f7fbfe;
-    --shadow:0 15px 45px rgba(8,43,73,.09);
-    --radius:20px;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:"Inter",sans-serif;
-    color:var(--text);
-    background:#fff;
-    line-height:1.6;
-    overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button,
-input,
-textarea{
-    font-family:inherit;
-}
-
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-section{
-    padding:90px 0;
-}
-
-.section-label{
-    color:var(--blue);
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:10px;
-}
-
-.section-title{
-    font-family:"Poppins",sans-serif;
-    color:var(--navy);
-    font-size:38px;
-    line-height:1.2;
-    font-weight:800;
-    margin-bottom:15px;
-}
-
-.section-text{
-    color:var(--muted);
-    max-width:700px;
-    font-size:15px;
-}
-
-.text-center{
-    text-align:center;
-}
-
-.text-center .section-text{
-    margin-left:auto;
-    margin-right:auto;
-}
-
-/* =========================================================
-   TOP BAR
-========================================================= */
-
-.topbar{
-    background:var(--navy);
-    color:#d9edf9;
-    font-size:12px;
-    padding:8px 0;
-}
-
-.topbar-inner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.topbar-left,
-.topbar-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.topbar a:hover{
-    color:var(--blue2);
-}
-
-.topbar i{
-    color:var(--blue2);
-    margin-right:5px;
-}
-
-/* =========================================================
-   MAIN HEADER
-========================================================= */
-
-.main-header{
-    background:#fff;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid var(--border);
-    box-shadow:0 4px 20px rgba(8,43,73,.04);
-}
-
-.main-header-inner{
-    min-height:84px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-shrink:0;
-}
-
-.brand-logo{
-    width:62px;
-    height:62px;
-    object-fit:contain;
-}
-
-.brand-text{
-    display:flex;
-    flex-direction:column;
-    line-height:1.15;
-}
-
-.brand-text .destination{
-    font-family:"Poppins",sans-serif;
-    font-size:20px;
-    font-weight:800;
-    color:var(--navy);
-    letter-spacing:-.3px;
-    white-space:nowrap;
-}
-
-.brand-text .tagline{
-    font-size:11px;
-    font-weight:700;
-    color:var(--blue);
-    margin-top:5px;
-    letter-spacing:.5px;
-}
-
-.nav-menu{
-    list-style:none;
-    display:flex;
-    align-items:center;
-    gap:24px;
-}
-
-.nav-menu a{
-    position:relative;
-    font-size:13px;
-    font-weight:700;
-    color:#425667;
-    padding:30px 0;
-    transition:.25s;
-}
-
-.nav-menu a:hover,
-.nav-menu a.active{
-    color:var(--blue);
-}
-
-.nav-menu a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:20px;
-    height:2px;
-    background:var(--blue);
-    transform:scaleX(0);
-    transform-origin:center;
-    transition:.25s;
-}
-
-.nav-menu a:hover::after,
-.nav-menu a.active::after{
-    transform:scaleX(1);
-}
-
-.mobile-toggle{
-    display:none;
-    border:0;
-    background:var(--sky);
-    color:var(--navy);
-    width:44px;
-    height:44px;
-    border-radius:12px;
-    font-size:18px;
-    cursor:pointer;
-}
-
-/* =========================================================
-   SOCIAL BAR
-========================================================= */
-
-.social-bar{
-    background:linear-gradient(90deg,#082b49,#0d4d79);
-    color:#fff;
-}
-
-.social-inner{
-    min-height:46px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-}
-
-.social-title{
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:.5px;
-    margin-right:8px;
-    color:#d9f2ff;
-}
-
-.social-link{
-    width:30px;
-    height:30px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    color:#fff;
-    background:rgba(255,255,255,.10);
-    transition:.25s;
-}
-
-.social-link:hover{
-    background:var(--blue2);
-    transform:translateY(-2px);
-}
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-    min-height:650px;
-    position:relative;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-    background:
-        linear-gradient(90deg,
-        rgba(5,30,52,.94) 0%,
-        rgba(8,43,73,.78) 48%,
-        rgba(8,43,73,.25) 100%),
-        url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1900&q=85")
-        center/cover no-repeat;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    background:rgba(56,189,248,.15);
-    right:-200px;
-    top:-180px;
-    filter:blur(2px);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:730px;
-    color:#fff;
-}
-
-.hero-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background:rgba(56,189,248,.14);
-    border:1px solid rgba(255,255,255,.20);
-    color:#dff7ff;
-    border-radius:50px;
-    padding:8px 15px;
-    font-size:11px;
-    font-weight:800;
-    margin-bottom:20px;
-    backdrop-filter:blur(8px);
-}
-
-.hero h1{
-    font-family:"Poppins",sans-serif;
-    font-size:56px;
-    line-height:1.08;
-    font-weight:800;
-    letter-spacing:-1.5px;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    color:var(--blue2);
-}
-
-.hero p{
-    color:#e4edf3;
-    font-size:16px;
-    line-height:1.8;
-    max-width:650px;
-    margin-bottom:30px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:9px;
-    padding:13px 22px;
-    border-radius:10px;
-    font-size:13px;
-    font-weight:800;
-    transition:.3s;
-}
-
-.btn-primary{
-    background:var(--blue);
-    color:#fff;
-    box-shadow:0 10px 25px rgba(21,151,223,.28);
-}
-
-.btn-primary:hover{
-    background:#0d86ca;
-    transform:translateY(-3px);
-}
-
-.btn-light{
-    background:#fff;
-    color:var(--navy);
-}
-
-.btn-light:hover{
-    background:#eaf7ff;
-    transform:translateY(-3px);
-}
-
-/* =========================================================
-   STATS
-========================================================= */
-
-.stats{
-    margin-top:-50px;
-    position:relative;
-    z-index:5;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:#fff;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-    border:1px solid var(--border);
-    overflow:hidden;
-}
-
-.stat{
-    padding:28px 20px;
-    text-align:center;
-    border-right:1px solid var(--border);
-}
-
-.stat:last-child{
-    border-right:0;
-}
-
-.stat strong{
-    display:block;
-    color:var(--navy);
-    font-family:"Poppins",sans-serif;
-    font-size:28px;
-    font-weight:800;
-}
-
-.stat span{
-    color:var(--muted);
-    font-size:12px;
-    font-weight:600;
-}
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about-section{
-    background:#fff;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:65px;
-    align-items:center;
-}
-
-.about-image{
-    position:relative;
-}
-
-.about-image img{
-    width:100%;
-    height:480px;
-    object-fit:cover;
-    border-radius:25px;
-    box-shadow:var(--shadow);
-}
-
-.about-badge{
-    position:absolute;
-    bottom:25px;
-    right:-20px;
-    background:#fff;
-    border-radius:17px;
-    padding:20px 24px;
-    box-shadow:var(--shadow);
-    border:1px solid var(--border);
-}
-
-.about-badge strong{
-    display:block;
-    color:var(--blue);
-    font-size:25px;
-    font-family:"Poppins",sans-serif;
-}
-
-.about-badge span{
-    color:var(--muted);
-    font-size:11px;
-    font-weight:700;
-}
-
-.about-content p{
-    color:var(--muted);
-    font-size:14px;
-    line-height:1.8;
-    margin-bottom:18px;
-}
-
-.about-points{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin:25px 0;
-}
-
-.about-point{
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:14px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-size:12px;
-    font-weight:700;
-    color:var(--navy);
-}
-
-.about-point i{
-    color:var(--blue);
-}
-
-/* =========================================================
-   DESTINATIONS
-========================================================= */
-
-.destinations-section{
-    background:var(--bg);
-}
-
-.destination-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    margin-top:40px;
-}
-
-.destination-card{
-    position:relative;
-    min-height:240px;
-    overflow:hidden;
-    border-radius:20px;
-    background:#fff;
-    box-shadow:0 8px 25px rgba(8,43,73,.06);
-    transition:.35s;
-}
-
-.destination-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 45px rgba(8,43,73,.14);
-}
-
-.destination-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.destination-card:hover img{
-    transform:scale(1.08);
-}
-
-.destination-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-    padding:22px;
-    color:#fff;
-    background:linear-gradient(
-        transparent 30%,
-        rgba(5,25,43,.90) 100%
-    );
-}
-
-.destination-overlay h3{
-    font-family:"Poppins",sans-serif;
-    font-size:21px;
-    margin-bottom:4px;
-}
-
-.destination-overlay p{
-    font-size:11px;
-    color:#dceaf2;
-}
-
-.destination-arrow{
-    position:absolute;
-    top:18px;
-    right:18px;
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    background:rgba(255,255,255,.9);
-    color:var(--navy);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-```
-        <!-- USA -->
-
-        <a
-            href="usa.html"
-            class="destination-card"
-        >
-
-            <img
-                src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=85"
-                alt="Study in USA"
-            >
-
-            <div class="destination-overlay">
-
-                <div class="destination-arrow">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-
-                <h3>
-                    United States
-                </h3>
-
-                <p>
-                    Study in the USA
-                </p>
-
-            </div>
-
-        </a>
-```
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.services-section{
-    background:#fff;
-}
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-    margin-top:40px;
-}
-
-.service-card{
-    position:relative;
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:19px;
-    padding:30px 27px;
-    overflow:hidden;
-    transition:all .35s ease;
-    box-shadow:0 8px 25px rgba(8,43,73,.045);
-}
-
-.service-card::before{
-    content:"";
-    position:absolute;
-    width:130px;
-    height:130px;
-    top:-70px;
-    right:-60px;
-    background:var(--service-color,#168fd6);
-    opacity:.07;
-    border-radius:50%;
-    transition:.4s;
-}
-
-.service-card::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:0;
-    height:3px;
-    background:var(--service-color,#168fd6);
-    transition:.4s;
-}
-
-.service-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 45px rgba(8,43,73,.12);
-    border-color:transparent;
-}
-
-.service-card:hover::before{
-    transform:scale(2);
-}
-
-.service-card:hover::after{
-    width:100%;
-}
-
-.service-icon{
-    width:58px;
-    height:58px;
-    border-radius:16px;
-    background:var(--service-bg,#eaf8ff);
-    color:var(--service-color,#168fd6);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:22px;
-    margin-bottom:20px;
-    position:relative;
-    z-index:2;
-    transition:.35s;
-}
-
-.service-card:hover .service-icon{
-    transform:translateY(-3px) scale(1.06);
-}
-
-.service-card h3{
-    font-family:"Poppins",sans-serif;
-    font-size:17px;
-    line-height:1.4;
-    color:var(--navy);
-    margin-bottom:9px;
-    position:relative;
-    z-index:2;
-}
-
-.service-card p{
-    font-size:12px;
-    line-height:1.75;
-    color:#718096;
-    margin:0;
-    position:relative;
-    z-index:2;
-}
-
-/* =========================================================
-   JOURNEY
-========================================================= */
-
-.journey-section{
-    background:linear-gradient(135deg,#082b49,#0d4e79);
-    color:#fff;
-}
-
-.journey-section .section-label{
-    color:var(--blue2);
-}
-
-.journey-section .section-title{
-    color:#fff;
-}
-
-.journey-section .section-text{
-    color:#cfe1ed;
-}
-
-.journey-grid{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    gap:12px;
-    margin-top:50px;
-}
-
-.journey-step{
-    text-align:center;
-    position:relative;
-}
-
-.journey-number{
-    width:54px;
-    height:54px;
-    margin:0 auto 15px;
-    border-radius:50%;
-    background:rgba(56,189,248,.14);
-    border:1px solid rgba(56,189,248,.4);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:var(--blue2);
-    font-family:"Poppins",sans-serif;
-    font-size:17px;
-    font-weight:800;
-}
-
-.journey-step i{
-    display:block;
-    font-size:21px;
-    margin-bottom:9px;
-    color:#fff;
-}
-
-.journey-step h4{
-    font-size:12px;
-    line-height:1.4;
-}
-
-.journey-step p{
-    color:#b8cedd;
-    font-size:9px;
-    margin-top:5px;
-}
-
-/* =========================================================
-   UNIVERSITIES
-========================================================= */
-
-.universities-section{
-    background:var(--bg);
-}
-
-.university-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    margin-top:40px;
-}
-
-.university-card{
-    position:relative;
-    background:#fff;
-    border:1px solid #e8f0f5;
-    border-radius:18px;
-    padding:26px 18px 22px;
-    text-align:center;
-    overflow:hidden;
-    transition:all .35s ease;
-    box-shadow:0 8px 25px rgba(8,43,73,.045);
-}
-
-.university-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:4px;
-    background:var(--uni-color,#168fd6);
-}
-
-.university-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 45px rgba(8,43,73,.12);
-}
-
-.university-logo{
-    width:70px;
-    height:70px;
-    margin:0 auto 17px;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#eef8ff;
-    color:var(--blue);
-    font-size:27px;
-    overflow:hidden;
-}
-
-.university-logo img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
-}
-
-.university-card h3{
-    font-family:"Poppins",sans-serif;
-    font-size:14px;
-    line-height:1.45;
-    color:var(--navy);
-    font-weight:700;
-}
-
-.university-location{
-    display:block;
-    margin-top:7px;
-    font-size:10px;
-    color:#82909c;
-    font-weight:600;
-}
-
-.university-link{
-    display:inline-flex;
-    margin-top:12px;
-    font-size:10px;
-    font-weight:800;
-    color:var(--blue);
-    gap:5px;
-}
-
-/* =========================================================
-   SUCCESS TICKER
-========================================================= */
-
-.success-section{
-    background:#fff;
-    overflow:hidden;
-}
-
-.success-ticker{
-    margin-top:35px;
-    display:flex;
-    gap:18px;
-    width:max-content;
-    animation:scrollTicker 35s linear infinite;
-}
-
-.success-wrap{
-    overflow:hidden;
-}
-
-.success-card{
-    width:300px;
-    background:var(--bg);
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:22px;
-}
-
-.success-stars{
-    color:#f6b73c;
-    font-size:12px;
-    margin-bottom:10px;
-}
-
-.success-card p{
-    font-size:12px;
-    color:var(--muted);
-    line-height:1.7;
-    margin-bottom:15px;
-}
-
-.success-card strong{
-    color:var(--navy);
-    font-size:12px;
-}
-
-.success-card span{
-    display:block;
-    color:#8b9aa6;
-    font-size:10px;
-}
-
-@keyframes scrollTicker{
-    from{
-        transform:translateX(0);
-    }
-    to{
-        transform:translateX(-50%);
-    }
-}
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.cta{
-    padding:80px 0;
-    background:
-        linear-gradient(135deg,rgba(8,43,73,.95),rgba(13,102,153,.90)),
-        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-}
-
-.cta-box{
-    text-align:center;
-    color:#fff;
-}
-
-.cta-box .section-label{
-    color:var(--blue2);
-}
-
-.cta-box h2{
-    font-family:"Poppins",sans-serif;
-    font-size:40px;
-    line-height:1.2;
-    margin-bottom:15px;
-}
-
-.cta-box p{
-    max-width:650px;
-    margin:0 auto 25px;
-    color:#d7e8f2;
-    font-size:14px;
-}
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact-section{
-    background:var(--bg);
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:30px;
-    margin-top:40px;
-}
-
-.contact-info,
-.contact-form{
-    background:#fff;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 8px 25px rgba(8,43,73,.04);
-}
-
-.contact-info h3,
-.contact-form h3{
-    font-family:"Poppins",sans-serif;
-    color:var(--navy);
-    margin-bottom:20px;
-}
-
-.contact-item{
-    display:flex;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid var(--border);
-}
-
-.contact-item:last-child{
-    border-bottom:0;
-}
-
-.contact-icon{
-    width:42px;
-    height:42px;
-    flex-shrink:0;
-    border-radius:12px;
-    background:var(--sky);
-    color:var(--blue);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.contact-item strong{
-    display:block;
-    font-size:12px;
-    color:var(--navy);
-}
-
-.contact-item span,
-.contact-item a{
-    font-size:12px;
-    color:var(--muted);
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.form-group{
-    margin-bottom:15px;
-}
-
-.form-group.full{
-    grid-column:1/-1;
-}
-
-.form-group label{
-    display:block;
-    font-size:11px;
-    font-weight:700;
-    color:var(--navy);
-    margin-bottom:7px;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select{
-    width:100%;
-    border:1px solid #dce7ee;
-    border-radius:10px;
-    padding:12px 13px;
-    outline:0;
-    font-size:12px;
-    color:var(--text);
-    transition:.25s;
-}
-
-.form-group textarea{
-    min-height:120px;
-    resize:vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus{
-    border-color:var(--blue);
-    box-shadow:0 0 0 3px rgba(21,151,223,.08);
-}
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-    background:#061f35;
-    color:#fff;
-    padding:55px 0 0;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:40px;
-    padding-bottom:40px;
-}
-
-.footer-brand{
-    max-width:330px;
-}
-
-.footer-brand .footer-logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:15px;
-}
-
-.footer-logo img{
-    width:50px;
-    height:50px;
-    object-fit:contain;
-}
-
-.footer-logo strong{
-    font-family:"Poppins",sans-serif;
-    font-size:17px;
-}
-
-.footer-brand p{
-    color:#9db4c5;
-    font-size:11px;
-    line-height:1.8;
-}
-
-.footer-title{
-    font-size:13px;
-    font-weight:800;
-    margin-bottom:17px;
-}
-
-.footer-links{
-    list-style:none;
-}
-
-.footer-links li{
-    margin-bottom:10px;
-}
-
-.footer-links a{
-    color:#9db4c5;
-    font-size:11px;
-    transition:.25s;
-}
-
-.footer-links a:hover{
-    color:var(--blue2);
-}
-
-.footer-social{
-    display:flex;
-    gap:8px;
-    margin-top:18px;
-}
-
-.footer-social a{
-    width:31px;
-    height:31px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,.08);
-    font-size:12px;
-}
-
-.footer-social a:hover{
-    background:var(--blue);
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.08);
-    padding:18px 0;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    align-items:center;
-}
-
-.footer-bottom p,
-.footer-bottom a{
-    color:#7f9aab;
-    font-size:10px;
-}
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-.whatsapp{
-    position:fixed;
-    right:22px;
-    bottom:22px;
-    width:54px;
-    height:54px;
-    background:#25d366;
-    color:#fff;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:25px;
-    box-shadow:0 10px 30px rgba(37,211,102,.35);
-    z-index:999;
-    transition:.3s;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:1050px){
-
-    .nav-menu{
-        gap:15px;
-    }
-
-    .nav-menu a{
-        font-size:12px;
-    }
-
-    .destination-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .university-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .journey-grid{
-        grid-template-columns:repeat(4,1fr);
-        row-gap:35px;
-    }
-}
-
-@media(max-width:850px){
-
-    .topbar{
-        display:none;
-    }
-
-    .main-header-inner{
-        min-height:76px;
-    }
-
-    .brand-logo{
-        width:52px;
-        height:52px;
-    }
-
-    .brand-text .destination{
-        font-size:15px;
-    }
-
-    .brand-text .tagline{
-        font-size:10px;
-    }
-
-    .mobile-toggle{
-        display:block;
-    }
-
-    .nav-menu{
-        display:none;
-        position:absolute;
-        left:4%;
-        right:4%;
-        top:76px;
-        background:#fff;
-        border-radius:12px;
-        box-shadow:var(--shadow);
-        border:1px solid var(--border);
-        padding:8px;
-        flex-direction:column;
-        align-items:stretch;
-        gap:0;
-    }
-
-    .nav-menu.active{
-        display:flex;
-    }
-
-    .nav-menu a{
-        display:block;
-        padding:12px 14px;
-    }
-
-    .nav-menu a::after{
-        display:none;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-image img{
-        height:400px;
-    }
-
-    .services-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:650px){
-
-    section{
-        padding:65px 0;
-    }
-
-    .social-inner{
-        min-height:42px;
-    }
-
-    .social-title{
-        display:none;
-    }
-
-    .hero{
-        min-height:600px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero p{
-        font-size:14px;
-    }
-
-    .stats{
-        margin-top:-25px;
-    }
-
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .stat{
-        border-bottom:1px solid var(--border);
-    }
-
-    .stat:nth-child(2){
-        border-right:0;
-    }
-
-    .stat strong{
-        font-size:23px;
-    }
-
-    .section-title{
-        font-size:29px;
-    }
-
-    .destination-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .destination-card,
-    .destination-card img{
-        min-height:210px;
-        height:210px;
-    }
-
-    .services-grid{
-        grid-template-columns:1fr;
-    }
-
-    .university-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .journey-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .about-points{
-        grid-template-columns:1fr;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .form-group.full{
-        grid-column:auto;
-    }
-
-    .cta-box h2{
-        font-size:30px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-        text-align:center;
-    }
-}
-
-@media(max-width:390px){
-
-    .brand-logo{
-        width:46px;
-        height:46px;
-    }
-
-    .brand-text .destination{
-        font-size:13px;
-        white-space:normal;
-    }
-
-    .brand-text .tagline{
-        font-size:8px;
-    }
-
-    .hero h1{
-        font-size:33px;
-    }
-
-    .destination-grid,
-    .university-grid{
-        grid-template-columns:1fr;
-    }
-
-    .journey-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-</style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- =====================================================
-     TOP CONTACT BAR
-===================================================== -->
+    <!-- ===================================================== TOP CONTACT BAR ===================================================== -->
 
-<div class="topbar">
+    <div class="topbar">
 
-    <div class="container topbar-inner">
+        <div class="container topbar-inner">
 
-        <div class="topbar-left">
+            <div class="topbar-left">
 
-            <a href="tel:+923451450072">
-                <i class="fa-solid fa-phone"></i>
-                +92 345 1450072
+                <a href="tel:+923451450072">
+                    <i class="fa-solid fa-phone"></i>
+                    +92 345 1450072
+                </a>
+
+                <a href="mailto:info@fedestination.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    info@fedestination.com
+                </a>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore, Pakistan
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-globe"></i>
+                    Global Education Consultancy
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== HEADER ===================================================== -->
+
+    <header class="main-header">
+
+        <div class="container main-header-inner">
+
+            <a href="index.html" class="brand">
+
+                <img src="LOGO.png" alt="FE Destination Pvt Ltd Logo" class="brand-logo">
+
+                <div class="brand-text">
+
+                    <div class="destination">
+                        FE Destination Pvt Ltd
+                    </div>
+
+                    <div class="tagline">
+                        Your Gateway to Global Education
+                    </div>
+
+                </div>
+
             </a>
 
-            <a href="mailto:info@fedestination.com">
-                <i class="fa-solid fa-envelope"></i>
-                info@fedestination.com
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="#home" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#destinations">
+                        Destinations
+                    </a>
+                </li>
+
+                <li>
+                    <a href="universities.html">
+                        Universities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#journey">
+                        How It Works
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ===================================================== SOCIAL BAR ===================================================== -->
+
+    <div class="social-bar">
+
+        <div class="container social-inner">
+
+            <span class="social-title">
+                Follow FE Destination Pvt Ltd
+            </span>
+
+            <a href="https://www.facebook.com/fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@fedestination" target="_blank" rel="noopener noreferrer"
+                class="social-link" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
             </a>
 
         </div>
 
-        <div class="topbar-right">
+    </div>
 
-            <span>
-                <i class="fa-solid fa-location-dot"></i>
-                Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore, Pakistan
-            </span>
 
-            <span>
-                <i class="fa-solid fa-globe"></i>
-                Global Education Consultancy
-            </span>
+    <!-- ===================================================== HERO ===================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    YOUR GLOBAL EDUCATION PARTNER
+                </div>
+
+                <h1>
+                    Turn Your
+                    <span>Global Education</span>
+                    Dream Into Reality
+                </h1>
+
+                <p>
+                    Explore international study opportunities with
+                    personalized university selection, admission guidance,
+                    scholarship support and student visa assistance.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#destinations" class="btn btn-primary">
+                        Explore Destinations
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#contact" class="btn btn-light">
+                        Talk to Our Experts
+                        <i class="fa-solid fa-comments"></i>
+                    </a>
+                    <form action="https://formspree.io/f/xpqvpanq" method="POST">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== STATS ===================================================== -->
+
+    <div class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat">
+                    <strong>7+</strong>
+                    <span>Years International Recruitment Experience</span>
+                </div>
+
+                <div class="stat">
+                    <strong>15+</strong>
+                    <span>Study Destinations</span>
+                </div>
+
+                <div class="stat">
+                    <strong>100+</strong>
+                    <span>University Options</span>
+                </div>
+
+                <div class="stat">
+                    <strong>1:1</strong>
+                    <span>Personalized Guidance</span>
+                </div>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
 
+    <!-- ===================================================== ABOUT ===================================================== -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+    <section class="about-section" id="about">
 
-<header class="main-header">
+        <div class="container about-grid">
 
-    <div class="container main-header-inner">
+            <div class="about-image">
 
-        <a href="index.html" class="brand">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=85"
+                    alt="International students">
 
-            <img
-                src="LOGO.png"
-                alt="FE Destination Pvt Ltd Logo"
-                class="brand-logo"
-            >
-
-            <div class="brand-text">
-
-                <div class="destination">
-                    FE Destination Pvt Ltd
-                </div>
-
-                <div class="tagline">
-                    Your Gateway to Global Education
+                <div class="about-badge">
+                    <strong>7+ Years</strong>
+                    <span>International Recruitment Experience</span>
                 </div>
 
             </div>
 
-        </a>
+
+            <div class="about-content">
+
+                <div class="section-label">
+                    About FE Destination Pvt Ltd
+                </div>
+
+                <h2 class="section-title">
+                    Your Journey to the Right University Starts Here
+                </h2>
+
+                <p>
+                    FE Destination Pvt Ltd is an international
+                    education consultancy helping students explore
+                    suitable study opportunities across leading global
+                    destinations.
+                </p>
+
+                <p>
+                    Our team assists students throughout the process —
+                    from profile evaluation and university selection to
+                    admission applications, scholarship guidance and
+                    student visa preparation.
+                </p>
 
 
-        <ul class="nav-menu" id="navMenu">
+                <div class="about-points">
 
-            <li>
-                <a href="#home" class="active">
-                    Home
-                </a>
-            </li>
+                    <div class="about-point">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Profile Evaluation
+                    </div>
 
-            <li>
-                <a href="about.html">
-                    About Us
-                </a>
-            </li>
+                    <div class="about-point">
+                        <i class="fa-solid fa-circle-check"></i>
+                        University Selection
+                    </div>
 
-            <li>
-                <a href="#destinations">
-                    Destinations
-                </a>
-            </li>
+                    <div class="about-point">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Admission Support
+                    </div>
 
-            <li>
-                <a href="universities.html">
-                    Universities
-                </a>
-            </li>
+                    <div class="about-point">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Visa Guidance
+                    </div>
 
-            <li>
-                <a href="services.html">
-                    Services
-                </a>
-            </li>
-
-            <li>
-                <a href="#journey">
-                    How It Works
-                </a>
-            </li>
-
-            <li>
-                <a href="#contact">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
+                </div>
 
 
-        <button
-            class="mobile-toggle"
-            id="mobileToggle"
-            aria-label="Open Menu"
-        >
-            <i class="fa-solid fa-bars"></i>
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- =====================================================
-     SOCIAL BAR
-===================================================== -->
-
-<div class="social-bar">
-
-    <div class="container social-inner">
-
-        <span class="social-title">
-            Follow FE Destination Pvt Ltd
-        </span>
-
-        <a
-            href="https://www.facebook.com/fedestination"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Facebook"
-        >
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
-
-        <a
-            href="https://www.instagram.com/fedestination"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Instagram"
-        >
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a
-            href="https://www.tiktok.com/@fedestination"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="TikTok"
-        >
-            <i class="fa-brands fa-tiktok"></i>
-        </a>
-
-        <a
-            href="https://www.youtube.com/@fedestination"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="YouTube"
-        >
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero" id="home">
-
-    <div class="container">
-
-        <div class="hero-content">
-
-            <div class="hero-badge">
-                <i class="fa-solid fa-earth-americas"></i>
-                YOUR GLOBAL EDUCATION PARTNER
-            </div>
-
-            <h1>
-                Turn Your
-                <span>Global Education</span>
-                Dream Into Reality
-            </h1>
-
-            <p>
-                Explore international study opportunities with
-                personalized university selection, admission guidance,
-                scholarship support and student visa assistance.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#destinations"
-                    class="btn btn-primary"
-                >
-                    Explore Destinations
+                <a href="about.html" class="btn btn-primary">
+                    Learn More About Us
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-                <a
-                    href="#contact"
-                    class="btn btn-light"
-                >
-                    Talk to Our Experts
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== DESTINATIONS ===================================================== -->
+
+    <section class="destinations-section" id="destinations">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <div class="section-label">
+                    Explore Study Destinations
+                </div>
+
+                <h2 class="section-title">
+                    Choose Your Global Destination
+                </h2>
+
+                <p class="section-text">
+                    Explore admission requirements, study options,
+                    leading universities and important information
+                    for each destination.
+                </p>
+
+            </div>
+
+
+            <div class="destination-grid">
+
+
+                <!-- UK -->
+
+                <a href="uk.html" class="destination-card">
+
+                    <img src="https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Study in UK">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            United Kingdom
+                        </h3>
+
+                        <p>
+                            Study in the UK
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- EUROPE -->
+
+                <a href="europe.html" class="destination-card">
+
+                    <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Study in Europe">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            Europe
+                        </h3>
+
+                        <p>
+                            Explore European Study Options
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- AUSTRALIA -->
+
+                <a href="australia.html" class="destination-card">
+
+                    <img src="https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Study in Australia">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            Australia
+                        </h3>
+
+                        <p>
+                            Study in Australia
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- MALAYSIA -->
+
+                <a href="malaysia.html" class="destination-card">
+
+                    <img src="https://images.pexels.com/photos/3787839/pexels-photo-3787839.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Study in Malaysia">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            Malaysia
+                        </h3>
+
+                        <p>
+                            Study in Malaysia
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- NEW ZEALAND -->
+
+                <a href="newzealand.html" class="destination-card">
+
+                    <img src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Study in New Zealand">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            New Zealand
+                        </h3>
+
+                        <p>
+                            Study in New Zealand
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- UAE -->
+
+                <a href="uae.html" class="destination-card">
+
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85"
+                        alt="Study in UAE">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            UAE
+                        </h3>
+
+                        <p>
+                            Study in Dubai & Abu Dhabi
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- TURKEY -->
+
+                <a href="turkey.html" class="destination-card">
+
+                    <img src="https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=900"
+                        alt="Study in Turkey">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+
+                        <h3>
+                            Turkey
+                        </h3>
+
+                        <p>
+                            Study in Turkey
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- MORE EUROPE -->
+
+                <a href="universities.html" class="destination-card">
+
+                    <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=85"
+                        alt="International education">
+
+                    <div class="destination-overlay">
+
+                        <div class="destination-arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        <h3>
+                            More Destinations
+                        </h3>
+
+                        <p>
+                            Explore More University Options
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== SERVICES ===================================================== -->
+
+    <section class="services-section" id="services">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <div class="section-label">
+                    What We Do
+                </div>
+
+                <h2 class="section-title">
+                    Complete Study Abroad Support
+                </h2>
+
+                <p class="section-text">
+                    From choosing a destination to preparing for your
+                    student visa, our team supports you through every
+                    important stage.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+
+                <div class="service-card" style="--service-color:#168fd6;--service-bg:#eaf8ff;">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+
+                    <h3>
+                        Study Abroad Consulting
+                    </h3>
+
+                    <p>
+                        Personalized profile assessment and guidance
+                        according to your academic background, budget
+                        and future goals.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" style="--service-color:#7c5cff;--service-bg:#f0edff;">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+
+                    <h3>
+                        University & Course Selection
+                    </h3>
+
+                    <p>
+                        Find suitable universities and programs based
+                        on your academic profile and career plans.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" style="--service-color:#00a98f;--service-bg:#e8fbf7;">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <h3>
+                        Admission Support
+                    </h3>
+
+                    <p>
+                        Application preparation, document review,
+                        SOP guidance and admission submission support.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" style="--service-color:#ed7b22;--service-bg:#fff3e8;">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-passport"></i>
+                    </div>
+
+                    <h3>
+                        Student Visa Guidance
+                    </h3>
+
+                    <p>
+                        Guidance for visa documentation, financial
+                        preparation, interview practice and application
+                        requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" style="--service-color:#d64c8c;--service-bg:#fff0f7;">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <h3>
+                        Scholarship Guidance
+                    </h3>
+
+                    <p>
+                        Explore scholarship and financial-aid opportunities
+                        relevant to your academic profile.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card" style="--service-color:#3867d6;--service-bg:#edf2ff;">
+
+                    <div class="service-icon">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+
+                    <h3>
+                        Pre-Departure Guidance
+                    </h3>
+
+                    <p>
+                        Practical guidance to help students prepare
+                        for their international education journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-center" style="margin-top:35px;">
+
+                <a href="services.html" class="btn btn-primary">
+                    View All Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== JOURNEY ===================================================== -->
+
+    <section class="journey-section" id="journey">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <div class="section-label">
+                    Your Journey
+                </div>
+
+                <h2 class="section-title">
+                    From Dream to Departure
+                </h2>
+
+                <p class="section-text">
+                    A simple step-by-step process designed to make
+                    your study abroad journey easier to understand.
+                </p>
+
+            </div>
+
+
+            <div class="journey-grid">
+
+
+                <div class="journey-step">
+
+                    <div class="journey-number">
+                        01
+                    </div>
+
                     <i class="fa-solid fa-comments"></i>
-                </a>
-<form action="https://formspree.io/f/xpqvpanq" method="POST">
-            </div>
 
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     STATS
-===================================================== -->
-
-<div class="stats">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat">
-                <strong>7+</strong>
-                <span>Years International Recruitment Experience</span>
-            </div>
-
-            <div class="stat">
-                <strong>15+</strong>
-                <span>Study Destinations</span>
-            </div>
-
-            <div class="stat">
-                <strong>100+</strong>
-                <span>University Options</span>
-            </div>
-
-            <div class="stat">
-                <strong>1:1</strong>
-                <span>Personalized Guidance</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section class="about-section" id="about">
-
-    <div class="container about-grid">
-
-        <div class="about-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=85"
-                alt="International students"
-            >
-
-            <div class="about-badge">
-                <strong>7+ Years</strong>
-                <span>International Recruitment Experience</span>
-            </div>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <div class="section-label">
-                About FE Destination Pvt Ltd
-            </div>
-
-            <h2 class="section-title">
-                Your Journey to the Right University Starts Here
-            </h2>
-
-            <p>
-                FE Destination Pvt Ltd is an international
-                education consultancy helping students explore
-                suitable study opportunities across leading global
-                destinations.
-            </p>
-
-            <p>
-                Our team assists students throughout the process —
-                from profile evaluation and university selection to
-                admission applications, scholarship guidance and
-                student visa preparation.
-            </p>
-
-
-            <div class="about-points">
-
-                <div class="about-point">
-                    <i class="fa-solid fa-circle-check"></i>
-                    Profile Evaluation
-                </div>
-
-                <div class="about-point">
-                    <i class="fa-solid fa-circle-check"></i>
-                    University Selection
-                </div>
-
-                <div class="about-point">
-                    <i class="fa-solid fa-circle-check"></i>
-                    Admission Support
-                </div>
-
-                <div class="about-point">
-                    <i class="fa-solid fa-circle-check"></i>
-                    Visa Guidance
-                </div>
-
-            </div>
-
-
-            <a
-                href="about.html"
-                class="btn btn-primary"
-            >
-                Learn More About Us
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     DESTINATIONS
-===================================================== -->
-
-<section class="destinations-section" id="destinations">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <div class="section-label">
-                Explore Study Destinations
-            </div>
-
-            <h2 class="section-title">
-                Choose Your Global Destination
-            </h2>
-
-            <p class="section-text">
-                Explore admission requirements, study options,
-                leading universities and important information
-                for each destination.
-            </p>
-
-        </div>
-
-
-        <div class="destination-grid">
-
-
-            <!-- UK -->
-
-            <a
-                href="uk.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=900"
-                    alt="Study in UK"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
-
-                    <h3>
-                        United Kingdom
-                    </h3>
+                    <h4>
+                        Consultation
+                    </h4>
 
                     <p>
-                        Study in the UK
+                        Discuss your goals
                     </p>
 
                 </div>
 
-            </a>
 
+                <div class="journey-step">
 
-            <!-- EUROPE -->
-
-            <a
-                href="europe.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=900"
-                    alt="Study in Europe"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <div class="journey-number">
+                        02
                     </div>
 
-                    <h3>
-                        Europe
-                    </h3>
+                    <i class="fa-solid fa-user-check"></i>
+
+                    <h4>
+                        Profile Assessment
+                    </h4>
 
                     <p>
-                        Explore European Study Options
+                        Evaluate your profile
                     </p>
 
                 </div>
 
-            </a>
 
+                <div class="journey-step">
 
-            <!-- AUSTRALIA -->
-
-            <a
-                href="australia.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=900"
-                    alt="Study in Australia"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <div class="journey-number">
+                        03
                     </div>
 
-                    <h3>
-                        Australia
-                    </h3>
+                    <i class="fa-solid fa-globe"></i>
+
+                    <h4>
+                        Destination
+                    </h4>
 
                     <p>
-                        Study in Australia
+                        Choose your destination
                     </p>
 
                 </div>
 
-            </a>
 
+                <div class="journey-step">
 
-            <!-- MALAYSIA -->
-
-            <a
-                href="malaysia.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.pexels.com/photos/3787839/pexels-photo-3787839.jpeg?auto=compress&cs=tinysrgb&w=900"
-                    alt="Study in Malaysia"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <div class="journey-number">
+                        04
                     </div>
 
-                    <h3>
-                        Malaysia
-                    </h3>
-
-                    <p>
-                        Study in Malaysia
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- NEW ZEALAND -->
-
-            <a
-                href="newzealand.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg?auto=compress&cs=tinysrgb&w=900"
-                    alt="Study in New Zealand"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
-
-                    <h3>
-                        New Zealand
-                    </h3>
-
-                    <p>
-                        Study in New Zealand
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- UAE -->
-
-            <a
-                href="uae.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85"
-                    alt="Study in UAE"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
-
-                    <h3>
-                        UAE
-                    </h3>
-
-                    <p>
-                        Study in Dubai & Abu Dhabi
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- TURKEY -->
-
-            <a
-                href="turkey.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.pexels.com/photos/1549326/pexels-photo-1549326.jpeg?auto=compress&cs=tinysrgb&w=900"
-                    alt="Study in Turkey"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
-
-                    <h3>
-                        Turkey
-                    </h3>
-
-                    <p>
-                        Study in Turkey
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- MORE EUROPE -->
-
-            <a
-                href="universities.html"
-                class="destination-card"
-            >
-
-                <img
-                    src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=85"
-                    alt="International education"
-                >
-
-                <div class="destination-overlay">
-
-                    <div class="destination-arrow">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <h3>
-                        More Destinations
-                    </h3>
-
-                    <p>
-                        Explore More University Options
-                    </p>
-
-                </div>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     SERVICES
-===================================================== -->
-
-<section class="services-section" id="services">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <div class="section-label">
-                What We Do
-            </div>
-
-            <h2 class="section-title">
-                Complete Study Abroad Support
-            </h2>
-
-            <p class="section-text">
-                From choosing a destination to preparing for your
-                student visa, our team supports you through every
-                important stage.
-            </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-
-            <div
-                class="service-card"
-                style="--service-color:#168fd6;--service-bg:#eaf8ff;"
-            >
-
-                <div class="service-icon">
-                    <i class="fa-solid fa-user-graduate"></i>
-                </div>
-
-                <h3>
-                    Study Abroad Consulting
-                </h3>
-
-                <p>
-                    Personalized profile assessment and guidance
-                    according to your academic background, budget
-                    and future goals.
-                </p>
-
-            </div>
-
-
-            <div
-                class="service-card"
-                style="--service-color:#7c5cff;--service-bg:#f0edff;"
-            >
-
-                <div class="service-icon">
                     <i class="fa-solid fa-building-columns"></i>
+
+                    <h4>
+                        University
+                    </h4>
+
+                    <p>
+                        Select your program
+                    </p>
+
                 </div>
 
-                <h3>
-                    University & Course Selection
-                </h3>
 
-                <p>
-                    Find suitable universities and programs based
-                    on your academic profile and career plans.
-                </p>
+                <div class="journey-step">
 
-            </div>
+                    <div class="journey-number">
+                        05
+                    </div>
 
+                    <i class="fa-solid fa-file-signature"></i>
 
-            <div
-                class="service-card"
-                style="--service-color:#00a98f;--service-bg:#e8fbf7;"
-            >
+                    <h4>
+                        Application
+                    </h4>
 
-                <div class="service-icon">
-                    <i class="fa-solid fa-file-circle-check"></i>
+                    <p>
+                        Submit documents
+                    </p>
+
                 </div>
 
-                <h3>
-                    Admission Support
-                </h3>
 
-                <p>
-                    Application preparation, document review,
-                    SOP guidance and admission submission support.
-                </p>
+                <div class="journey-step">
 
-            </div>
+                    <div class="journey-number">
+                        06
+                    </div>
 
-
-            <div
-                class="service-card"
-                style="--service-color:#ed7b22;--service-bg:#fff3e8;"
-            >
-
-                <div class="service-icon">
                     <i class="fa-solid fa-passport"></i>
+
+                    <h4>
+                        Visa Guidance
+                    </h4>
+
+                    <p>
+                        Prepare your visa
+                    </p>
+
                 </div>
 
-                <h3>
-                    Student Visa Guidance
-                </h3>
 
-                <p>
-                    Guidance for visa documentation, financial
-                    preparation, interview practice and application
-                    requirements.
-                </p>
+                <div class="journey-step">
 
-            </div>
+                    <div class="journey-number">
+                        07
+                    </div>
 
-
-            <div
-                class="service-card"
-                style="--service-color:#d64c8c;--service-bg:#fff0f7;"
-            >
-
-                <div class="service-icon">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-
-                <h3>
-                    Scholarship Guidance
-                </h3>
-
-                <p>
-                    Explore scholarship and financial-aid opportunities
-                    relevant to your academic profile.
-                </p>
-
-            </div>
-
-
-            <div
-                class="service-card"
-                style="--service-color:#3867d6;--service-bg:#edf2ff;"
-            >
-
-                <div class="service-icon">
                     <i class="fa-solid fa-plane-departure"></i>
+
+                    <h4>
+                        Departure
+                    </h4>
+
+                    <p>
+                        Begin your journey
+                    </p>
+
                 </div>
-
-                <h3>
-                    Pre-Departure Guidance
-                </h3>
-
-                <p>
-                    Practical guidance to help students prepare
-                    for their international education journey.
-                </p>
 
             </div>
 
         </div>
 
-
-        <div class="text-center" style="margin-top:35px;">
-
-            <a
-                href="services.html"
-                class="btn btn-primary"
-            >
-                View All Services
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =====================================================
-     JOURNEY
-===================================================== -->
+    <!-- ===================================================== UNIVERSITIES ===================================================== -->
 
-<section class="journey-section" id="journey">
+    <section class="universities-section" id="universities">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="text-center">
+            <div class="text-center">
 
-            <div class="section-label">
-                Your Journey
-            </div>
-
-            <h2 class="section-title">
-                From Dream to Departure
-            </h2>
-
-            <p class="section-text">
-                A simple step-by-step process designed to make
-                your study abroad journey easier to understand.
-            </p>
-
-        </div>
-
-
-        <div class="journey-grid">
-
-
-            <div class="journey-step">
-
-                <div class="journey-number">
-                    01
+                <div class="section-label">
+                    University Options
                 </div>
 
-                <i class="fa-solid fa-comments"></i>
+                <h2 class="section-title">
+                    Explore Global Universities
+                </h2>
 
-                <h4>
-                    Consultation
-                </h4>
-
-                <p>
-                    Discuss your goals
+                <p class="section-text">
+                    Explore university options across different study
+                    destinations and find programs that match your goals.
                 </p>
 
             </div>
 
 
-            <div class="journey-step">
+            <div class="university-grid">
 
-                <div class="journey-number">
-                    02
-                </div>
 
-                <i class="fa-solid fa-user-check"></i>
+                <!-- DEPAUL -->
 
-                <h4>
-                    Profile Assessment
-                </h4>
+                <div class="university-card" style="--uni-color:#1473a8;">
 
-                <p>
-                    Evaluate your profile
-                </p>
+                    <div class="university-logo">
 
-            </div>
+                        <img src="https://www.google.com/s2/favicons?domain=depaul.edu&sz=128" alt="DePaul University">
 
-
-            <div class="journey-step">
-
-                <div class="journey-number">
-                    03
-                </div>
-
-                <i class="fa-solid fa-globe"></i>
-
-                <h4>
-                    Destination
-                </h4>
-
-                <p>
-                    Choose your destination
-                </p>
-
-            </div>
-
-
-            <div class="journey-step">
-
-                <div class="journey-number">
-                    04
-                </div>
-
-                <i class="fa-solid fa-building-columns"></i>
-
-                <h4>
-                    University
-                </h4>
-
-                <p>
-                    Select your program
-                </p>
-
-            </div>
-
-
-            <div class="journey-step">
-
-                <div class="journey-number">
-                    05
-                </div>
-
-                <i class="fa-solid fa-file-signature"></i>
-
-                <h4>
-                    Application
-                </h4>
-
-                <p>
-                    Submit documents
-                </p>
-
-            </div>
-
-
-            <div class="journey-step">
-
-                <div class="journey-number">
-                    06
-                </div>
-
-                <i class="fa-solid fa-passport"></i>
-
-                <h4>
-                    Visa Guidance
-                </h4>
-
-                <p>
-                    Prepare your visa
-                </p>
-
-            </div>
-
-
-            <div class="journey-step">
-
-                <div class="journey-number">
-                    07
-                </div>
-
-                <i class="fa-solid fa-plane-departure"></i>
-
-                <h4>
-                    Departure
-                </h4>
-
-                <p>
-                    Begin your journey
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     UNIVERSITIES
-===================================================== -->
-
-<section class="universities-section" id="universities">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <div class="section-label">
-                University Options
-            </div>
-
-            <h2 class="section-title">
-                Explore Global Universities
-            </h2>
-
-            <p class="section-text">
-                Explore university options across different study
-                destinations and find programs that match your goals.
-            </p>
-
-        </div>
-
-
-        <div class="university-grid">
-
-
-            <!-- DEPAUL -->
-
-            <div class="university-card"
-                 style="--uni-color:#1473a8;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=depaul.edu&sz=128"
-                        alt="DePaul University"
-                    >
-
-                </div>
-
-                <h3>
-                    DePaul University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.depaul.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- SUFFOLK -->
-
-            <div class="university-card"
-                 style="--uni-color:#163c72;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=suffolk.edu&sz=128"
-                        alt="Suffolk University"
-                    >
-
-                </div>
-
-                <h3>
-                    Suffolk University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.suffolk.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- COLORADO STATE -->
-
-            <div class="university-card"
-                 style="--uni-color:#1d5e36;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=colostate.edu&sz=128"
-                        alt="Colorado State University"
-                    >
-
-                </div>
-
-                <h3>
-                    Colorado State University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.colostate.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- ASU -->
-
-            <div class="university-card"
-                 style="--uni-color:#9b1c31;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=asu.edu&sz=128"
-                        alt="Arizona State University"
-                    >
-
-                </div>
-
-                <h3>
-                    Arizona State University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.asu.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- JAMES MADISON -->
-
-            <div class="university-card"
-                 style="--uni-color:#582c83;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=jmu.edu&sz=128"
-                        alt="James Madison University"
-                    >
-
-                </div>
-
-                <h3>
-                    James Madison University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.jmu.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- LONG ISLAND -->
-
-            <div class="university-card"
-                 style="--uni-color:#005596;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=liu.edu&sz=128"
-                        alt="Long Island University"
-                    >
-
-                </div>
-
-                <h3>
-                    Long Island University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.liu.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- MERCER -->
-
-            <div class="university-card"
-                 style="--uni-color:#a51c30;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=mercer.edu&sz=128"
-                        alt="Mercer University"
-                    >
-
-                </div>
-
-                <h3>
-                    Mercer University
-                </h3>
-
-                <span class="university-location">
-                    USA
-                </span>
-
-                <a
-                    href="https://www.mercer.edu/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-
-            <!-- MAC Ewan -->
-
-            <div class="university-card"
-                 style="--uni-color:#c62828;">
-
-                <div class="university-logo">
-
-                    <img
-                        src="https://www.google.com/s2/favicons?domain=macewan.ca&sz=128"
-                        alt="MacEwan University"
-                    >
-
-                </div>
-
-                <h3>
-                    MacEwan University
-                </h3>
-
-                <span class="university-location">
-                    Canada
-                </span>
-
-                <a
-                    href="https://www.macewan.ca/"
-                    target="_blank"
-                    class="university-link"
-                >
-                    Official Website
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="text-center" style="margin-top:35px;">
-
-            <a
-                href="universities.html"
-                class="btn btn-primary"
-            >
-                View University Directory
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     SUCCESS STORIES
-===================================================== -->
-
-<section class="success-section">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <div class="section-label">
-                Student Experience
-            </div>
-
-            <h2 class="section-title">
-                Our Students' Journey
-            </h2>
-
-            <p class="section-text">
-                Every student has a different goal. Our role is to
-                help them understand their options and navigate the
-                process step by step.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="success-wrap">
-
-        <div class="success-ticker">
-
-
-            <div class="success-card">
-
-                <div class="success-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "The team guided me through university selection
-                    and helped me understand the complete admission
-                    process."
-                </p>
-
-                <strong>
-                    International Student
-                </strong>
-
-                <span>
-                    Study Abroad Journey
-                </span>
-
-            </div>
-
-
-            <div class="success-card">
-
-                <div class="success-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "The application process became much easier after
-                    getting proper guidance about documents and
-                    deadlines."
-                </p>
-
-                <strong>
-                    Student
-                </strong>
-
-                <span>
-                    University Admission
-                </span>
-
-            </div>
-
-
-            <div class="success-card">
-
-                <div class="success-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "I received clear information about my destination
-                    and the requirements before making my decision."
-                </p>
-
-                <strong>
-                    Student
-                </strong>
-
-                <span>
-                    Study Abroad Consultation
-                </span>
-
-            </div>
-
-
-            <!-- Duplicate cards for ticker -->
-
-            <div class="success-card">
-
-                <div class="success-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "The team guided me through university selection
-                    and helped me understand the complete admission
-                    process."
-                </p>
-
-                <strong>
-                    International Student
-                </strong>
-
-                <span>
-                    Study Abroad Journey
-                </span>
-
-            </div>
-
-
-            <div class="success-card">
-
-                <div class="success-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "The application process became much easier after
-                    getting proper guidance about documents and
-                    deadlines."
-                </p>
-
-                <strong>
-                    Student
-                </strong>
-
-                <span>
-                    University Admission
-                </span>
-
-            </div>
-
-
-            <div class="success-card">
-
-                <div class="success-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "I received clear information about my destination
-                    and the requirements before making my decision."
-                </p>
-
-                <strong>
-                    Student
-                </strong>
-
-                <span>
-                    Study Abroad Consultation
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <div class="cta-box">
-
-            <div class="section-label">
-                Start Your Journey
-            </div>
-
-            <h2>
-                Ready to Explore Your Study Abroad Options?
-            </h2>
-
-            <p>
-                Talk to FE Destination Pvt Ltd and explore
-                suitable universities, programs and destinations
-                for your academic journey.
-            </p>
-
-            <div class="hero-buttons"
-                 style="justify-content:center;">
-
-                <a
-                    href="https://wa.me/923451450072"
-                    target="_blank"
-                    class="btn btn-primary"
-                >
-                    <i class="fa-brands fa-whatsapp"></i>
-                    WhatsApp Us
-                </a>
-
-                <a
-                    href="mailto:info@fedestination.com"
-                    class="btn btn-light"
-                >
-                    <i class="fa-solid fa-envelope"></i>
-                    Email Us
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section class="contact-section" id="contact">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <div class="section-label">
-                Contact Us
-            </div>
-
-            <h2 class="section-title">
-                Let's Discuss Your Future
-            </h2>
-
-            <p class="section-text">
-                Send us your details and our team can guide you
-                regarding your study abroad options.
-            </p>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-
-            <div class="contact-info">
-
-                <h3>
-                    FE Destination Pvt Ltd
-                </h3>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-phone"></i>
                     </div>
 
-                    <div>
-                        <strong>
-                            Phone / WhatsApp
-                        </strong>
+                    <h3>
+                        DePaul University
+                    </h3>
 
-                        <a href="tel:+923451450072">
-                            +92 345 1450072
-                        </a>
-                    </div>
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.depaul.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
 
                 </div>
 
 
-                <div class="contact-item">
+                <!-- SUFFOLK -->
 
-                    <div class="contact-icon">
+                <div class="university-card" style="--uni-color:#163c72;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=suffolk.edu&sz=128"
+                            alt="Suffolk University">
+
+                    </div>
+
+                    <h3>
+                        Suffolk University
+                    </h3>
+
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.suffolk.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- COLORADO STATE -->
+
+                <div class="university-card" style="--uni-color:#1d5e36;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=colostate.edu&sz=128"
+                            alt="Colorado State University">
+
+                    </div>
+
+                    <h3>
+                        Colorado State University
+                    </h3>
+
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.colostate.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- ASU -->
+
+                <div class="university-card" style="--uni-color:#9b1c31;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=asu.edu&sz=128"
+                            alt="Arizona State University">
+
+                    </div>
+
+                    <h3>
+                        Arizona State University
+                    </h3>
+
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.asu.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- JAMES MADISON -->
+
+                <div class="university-card" style="--uni-color:#582c83;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=jmu.edu&sz=128"
+                            alt="James Madison University">
+
+                    </div>
+
+                    <h3>
+                        James Madison University
+                    </h3>
+
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.jmu.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- LONG ISLAND -->
+
+                <div class="university-card" style="--uni-color:#005596;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=liu.edu&sz=128"
+                            alt="Long Island University">
+
+                    </div>
+
+                    <h3>
+                        Long Island University
+                    </h3>
+
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.liu.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- MERCER -->
+
+                <div class="university-card" style="--uni-color:#a51c30;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=mercer.edu&sz=128" alt="Mercer University">
+
+                    </div>
+
+                    <h3>
+                        Mercer University
+                    </h3>
+
+                    <span class="university-location">
+                        USA
+                    </span>
+
+                    <a href="https://www.mercer.edu/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- MAC Ewan -->
+
+                <div class="university-card" style="--uni-color:#c62828;">
+
+                    <div class="university-logo">
+
+                        <img src="https://www.google.com/s2/favicons?domain=macewan.ca&sz=128" alt="MacEwan University">
+
+                    </div>
+
+                    <h3>
+                        MacEwan University
+                    </h3>
+
+                    <span class="university-location">
+                        Canada
+                    </span>
+
+                    <a href="https://www.macewan.ca/" target="_blank" class="university-link">
+                        Official Website
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-center" style="margin-top:35px;">
+
+                <a href="universities.html" class="btn btn-primary">
+                    View University Directory
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== SUCCESS STORIES ===================================================== -->
+
+    <section class="success-section">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <div class="section-label">
+                    Student Experience
+                </div>
+
+                <h2 class="section-title">
+                    Our Students' Journey
+                </h2>
+
+                <p class="section-text">
+                    Every student has a different goal. Our role is to
+                    help them understand their options and navigate the
+                    process step by step.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="success-wrap">
+
+            <div class="success-ticker">
+
+
+                <div class="success-card">
+
+                    <div class="success-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The team guided me through university selection
+                        and helped me understand the complete admission
+                        process."
+                    </p>
+
+                    <strong>
+                        International Student
+                    </strong>
+
+                    <span>
+                        Study Abroad Journey
+                    </span>
+
+                </div>
+
+
+                <div class="success-card">
+
+                    <div class="success-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The application process became much easier after
+                        getting proper guidance about documents and
+                        deadlines."
+                    </p>
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        University Admission
+                    </span>
+
+                </div>
+
+
+                <div class="success-card">
+
+                    <div class="success-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "I received clear information about my destination
+                        and the requirements before making my decision."
+                    </p>
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        Study Abroad Consultation
+                    </span>
+
+                </div>
+
+
+                <!-- Duplicate cards for ticker -->
+
+                <div class="success-card">
+
+                    <div class="success-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The team guided me through university selection
+                        and helped me understand the complete admission
+                        process."
+                    </p>
+
+                    <strong>
+                        International Student
+                    </strong>
+
+                    <span>
+                        Study Abroad Journey
+                    </span>
+
+                </div>
+
+
+                <div class="success-card">
+
+                    <div class="success-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The application process became much easier after
+                        getting proper guidance about documents and
+                        deadlines."
+                    </p>
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        University Admission
+                    </span>
+
+                </div>
+
+
+                <div class="success-card">
+
+                    <div class="success-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "I received clear information about my destination
+                        and the requirements before making my decision."
+                    </p>
+
+                    <strong>
+                        Student
+                    </strong>
+
+                    <span>
+                        Study Abroad Consultation
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== CTA ===================================================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div class="section-label">
+                    Start Your Journey
+                </div>
+
+                <h2>
+                    Ready to Explore Your Study Abroad Options?
+                </h2>
+
+                <p>
+                    Talk to FE Destination Pvt Ltd and explore
+                    suitable universities, programs and destinations
+                    for your academic journey.
+                </p>
+
+                <div class="hero-buttons" style="justify-content:center;">
+
+                    <a href="https://wa.me/923451450072" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+
+                    <a href="mailto:info@fedestination.com" class="btn btn-light">
                         <i class="fa-solid fa-envelope"></i>
-                    </div>
-
-                    <div>
-                        <strong>
-                            Email
-                        </strong>
-
-                        <a href="mailto:info@fedestination.com">
-                            info@fedestination.com
-                        </a>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-
-                    <div>
-                        <strong>
-                            Office
-                        </strong>
-
-                        <span>
-                            Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore
-                        </span>
-                    </div>
-
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-
-                    <div>
-                        <strong>
-                            Website
-                        </strong>
-
-                        <a
-                            href="https://fedestination.com/"
-                            target="_blank"
-                        >
-                            fedestination.com
-                        </a>
-                    </div>
+                        Email Us
+                    </a>
 
                 </div>
 
             </div>
 
+        </div>
 
-            <div class="contact-form">
+    </section>
 
-                <h3>
-                    Send an Inquiry
-                </h3>
 
-                <!--
+    <!-- ===================================================== CONTACT ===================================================== -->
+
+    <section class="contact-section" id="contact">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <div class="section-label">
+                    Contact Us
+                </div>
+
+                <h2 class="section-title">
+                    Let's Discuss Your Future
+                </h2>
+
+                <p class="section-text">
+                    Send us your details and our team can guide you
+                    regarding your study abroad options.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info">
+
+                    <h3>
+                        FE Destination Pvt Ltd
+                    </h3>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Phone / WhatsApp
+                            </strong>
+
+                            <a href="tel:+923451450072">
+                                +92 345 1450072
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Email
+                            </strong>
+
+                            <a href="mailto:info@fedestination.com">
+                                info@fedestination.com
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Office
+                            </strong>
+
+                            <span>
+                                Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Website
+                            </strong>
+
+                            <a href="https://fedestination.com/" target="_blank">
+                                fedestination.com
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form">
+
+                    <h3>
+                        Send an Inquiry
+                    </h3>
+
+                    <!--
                 IMPORTANT:
                 Replace the Formspree URL below with your own
                 Formspree endpoint if you already have one.
                 -->
 
-                <form
-                    action="https://formspree.io/f/YOUR_FORM_ID"
-                    method="POST"
-                >
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-                    <div class="form-grid">
+                        <div class="form-grid">
 
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label>
-                                Full Name
-                            </label>
+                                <label>
+                                    Full Name
+                                </label>
 
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Your full name"
-                                required
-                            >
+                                <input type="text" name="name" placeholder="Your full name" required>
 
-                        </div>
+                            </div>
 
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label>
-                                Email
-                            </label>
+                                <label>
+                                    Email
+                                </label>
 
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Your email"
-                                required
-                            >
+                                <input type="email" name="email" placeholder="Your email" required>
 
-                        </div>
+                            </div>
 
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label>
-                                Phone / WhatsApp
-                            </label>
+                                <label>
+                                    Phone / WhatsApp
+                                </label>
 
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder="+92..."
-                                required
-                            >
+                                <input type="tel" name="phone" placeholder="+92..." required>
 
-                        </div>
+                            </div>
 
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label>
-                                Preferred Destination
-                            </label>
+                                <label>
+                                    Preferred Destination
+                                </label>
 
-                            <select name="destination">
+                                <select name="destination">
 
-                                <option value="">
-                                    Select Destination
-                                </option>
+                                    <option value="">
+                                        Select Destination
+                                    </option>
 
-                                <option>
-                                    UK
-                                </option>
+                                    <option>
+                                        UK
+                                    </option>
 
-                                <option>
-                                    Europe
-                                </option>
+                                    <option>
+                                        Europe
+                                    </option>
 
-                                <option>
-                                    Australia
-                                </option>
+                                    <option>
+                                        Australia
+                                    </option>
 
-                                <option>
-                                    Malaysia
-                                </option>
+                                    <option>
+                                        Malaysia
+                                    </option>
 
-                                <option>
-                                    New Zealand
-                                </option>
+                                    <option>
+                                        New Zealand
+                                    </option>
 
-                                <option>
-                                    UAE
-                                </option>
+                                    <option>
+                                        UAE
+                                    </option>
 
-                                <option>
-                                    Turkey
-                                </option>
+                                    <option>
+                                        Turkey
+                                    </option>
 
-                                <option>
-                                    Other
-                                </option>
+                                    <option>
+                                        Other
+                                    </option>
 
-                            </select>
+                                </select>
 
-                        </div>
+                            </div>
 
 
-                        <div class="form-group full">
+                            <div class="form-group full">
 
-                            <label>
-                                Message
-                            </label>
+                                <label>
+                                    Message
+                                </label>
 
-                            <textarea
-                                name="message"
-                                placeholder="Tell us about your education background and study plans..."
-                                required
-                            ></textarea>
+                                <textarea name="message"
+                                    placeholder="Tell us about your education background and study plans..."
+                                    required></textarea>
+
+                            </div>
+
+
+                            <div class="form-group full">
+
+                                <button type="submit" class="btn btn-primary" style="border:0;cursor:pointer;">
+                                    Send Inquiry
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+
+                            </div>
 
                         </div>
 
+                    </form>
 
-                        <div class="form-group full">
+                </div>
 
-                            <button
-                                type="submit"
-                                class="btn btn-primary"
-                                style="border:0;cursor:pointer;"
-                            >
-                                Send Inquiry
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </button>
+            </div>
 
-                        </div>
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== FOOTER ===================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <div class="footer-logo">
+
+                        <img src="LOGO.png" alt="FE Destination Pvt Ltd">
+
+                        <strong>
+                            FE Destination Pvt Ltd
+                        </strong>
 
                     </div>
 
-                </form>
+                    <p>
+                        Your Gateway to Global Education. We help students
+                        explore international education opportunities,
+                        university admissions, scholarships and student
+                        visa guidance.
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a href="https://www.facebook.com/fedestination" target="_blank">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/fedestination" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@fedestination" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@fedestination" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Quick Links
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="universities.html">
+                                Universities
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Destinations
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="uk.html">
+                                United Kingdom
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="europe.html">
+                                Europe
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="australia.html">
+                                Australia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="malaysia.html">
+                                Malaysia
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="newzealand.html">
+                                New Zealand
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="turkey.html">
+                                Turkey
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Contact
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="tel:+923451450072">
+                                +92 345 1450072
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mailto:info@fedestination.com">
+                                info@fedestination.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://fedestination.com/">
+                                fedestination.com
+                            </a>
+                        </li>
+
+                        <li>
+                            Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore
+                        </li>
+
+                    </ul>
+
+                </div>
 
             </div>
 
-        </div>
 
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-
-            <div class="footer-brand">
-
-                <div class="footer-logo">
-
-                    <img
-                        src="LOGO.png"
-                        alt="FE Destination Pvt Ltd"
-                    >
-
-                    <strong>
-                        FE Destination Pvt Ltd
-                    </strong>
-
-                </div>
+            <div class="footer-bottom">
 
                 <p>
-                    Your Gateway to Global Education. We help students
-                    explore international education opportunities,
-                    university admissions, scholarships and student
-                    visa guidance.
+                    © 2026 FE Destination Pvt Ltd. All Rights Reserved.
                 </p>
 
+                <div>
 
-                <div class="footer-social">
-
-                    <a
-                        href="https://www.facebook.com/fedestination"
-                        target="_blank"
-                    >
-                        <i class="fa-brands fa-facebook-f"></i>
+                    <a href="privacy.html">
+                        Privacy Policy
                     </a>
 
-                    <a
-                        href="https://www.instagram.com/fedestination"
-                        target="_blank"
-                    >
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                    &nbsp; | &nbsp;
 
-                    <a
-                        href="https://www.tiktok.com/@fedestination"
-                        target="_blank"
-                    >
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-
-                    <a
-                        href="https://www.youtube.com/@fedestination"
-                        target="_blank"
-                    >
-                        <i class="fa-brands fa-youtube"></i>
+                    <a href="terms.html">
+                        Terms & Conditions
                     </a>
 
                 </div>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Quick Links
-                </div>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">
-                            About Us
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="services.html">
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="universities.html">
-                            Universities
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Destinations
-                </div>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="uk.html">
-                            United Kingdom
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="europe.html">
-                            Europe
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="australia.html">
-                            Australia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="malaysia.html">
-                            Malaysia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="newzealand.html">
-                            New Zealand
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="turkey.html">
-                            Turkey
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Contact
-                </div>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="tel:+923451450072">
-                            +92 345 1450072
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mailto:info@fedestination.com">
-                            info@fedestination.com
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://fedestination.com/">
-                            fedestination.com
-                        </a>
-                    </li>
-
-                    <li>
-                        Office no. 12, 2nd Floor, Al-Hafeez Tower, Ghalib Road, Gulberg III, Lahore
-                    </li>
-
-                </ul>
 
             </div>
 
         </div>
 
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 FE Destination Pvt Ltd. All Rights Reserved.
-            </p>
-
-            <div>
-
-                <a href="privacy.html">
-                    Privacy Policy
-                </a>
-
-                &nbsp; | &nbsp;
-
-                <a href="terms.html">
-                    Terms & Conditions
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
 
 
-<!-- =====================================================
-     WHATSAPP FLOATING BUTTON
-===================================================== -->
+    <!-- ===================================================== WHATSAPP FLOATING BUTTON ===================================================== -->
 
-<a
-    href="https://wa.me/923451450072"
-    target="_blank"
-    class="whatsapp"
-    aria-label="WhatsApp"
->
+    <a href="https://wa.me/923451450072" target="_blank" class="whatsapp" aria-label="WhatsApp">
 
-    <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-whatsapp"></i>
 
-</a>
+    </a>
 
+    <!-- ===================================================== JAVASCRIPT ===================================================== -->
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+    <script>
 
-<script>
+        const mobileToggle =
+            document.getElementById("mobileToggle");
 
-const mobileToggle =
-    document.getElementById("mobileToggle");
-
-const navMenu =
-    document.getElementById("navMenu");
+        const navMenu =
+            document.getElementById("navMenu");
 
 
-mobileToggle.addEventListener("click", function(){
+        mobileToggle.addEventListener("click", function () {
 
-    navMenu.classList.toggle("active");
+            navMenu.classList.toggle("active");
 
-    const icon =
-        mobileToggle.querySelector("i");
+            const icon =
+                mobileToggle.querySelector("i");
 
-    if(navMenu.classList.contains("active")){
+            if (navMenu.classList.contains("active")) {
 
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
 
-    }else{
+            } else {
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
 
-    }
+            }
 
-});
-
-
-document.querySelectorAll(".nav-menu a").forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-        navMenu.classList.remove("active");
-
-        const icon =
-            mobileToggle.querySelector("i");
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-
-    });
-
-});
+        });
 
 
-/* Smooth active navigation */
+        document.querySelectorAll(".nav-menu a").forEach(function (link) {
 
-const sections =
-    document.querySelectorAll("section[id]");
+            link.addEventListener("click", function () {
 
-const navLinks =
-    document.querySelectorAll(".nav-menu a[href^='#']");
+                navMenu.classList.remove("active");
 
-window.addEventListener("scroll", function(){
+                const icon =
+                    mobileToggle.querySelector("i");
 
-    let current = "";
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
 
-    sections.forEach(function(section){
+            });
 
-        const sectionTop =
-            section.offsetTop - 120;
+        });
 
-        if(window.scrollY >= sectionTop){
 
-            current = section.getAttribute("id");
+        /* Smooth active navigation */
 
-        }
+        const sections =
+            document.querySelectorAll("section[id]");
 
-    });
+        const navLinks =
+            document.querySelectorAll(".nav-menu a[href^='#']");
 
-    navLinks.forEach(function(link){
+        window.addEventListener("scroll", function () {
 
-        link.classList.remove("active");
+            let current = "";
 
-        if(link.getAttribute("href") === "#" + current){
+            sections.forEach(function (section) {
 
-            link.classList.add("active");
+                const sectionTop =
+                    section.offsetTop - 120;
+
+                if (window.scrollY >= sectionTop) {
+
+                    current = section.getAttribute("id");
+
+                }
+
+            });
+
+            navLinks.forEach(function (link) {
+
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + current) {
+
+                    link.classList.add("active");
+
+                }
+
+            });
+
+        });
+
+
+        /* Prevent fake Formspree ID from silently pretending to work */
+
+        const contactForm =
+            document.querySelector(".contact-form form");
+
+        if (contactForm) {
+
+            contactForm.addEventListener("submit", function (event) {
+
+                const action =
+                    contactForm.getAttribute("action");
+
+                if (action.includes("YOUR_FORM_ID")) {
+
+                    event.preventDefault();
+
+                    alert(
+                        "Please connect your Formspree form ID before using the website contact form."
+                    );
+
+                }
+
+            });
 
         }
 
-    });
-
-});
-
-
-/* Prevent fake Formspree ID from silently pretending to work */
-
-const contactForm =
-    document.querySelector(".contact-form form");
-
-if(contactForm){
-
-    contactForm.addEventListener("submit", function(event){
-
-        const action =
-            contactForm.getAttribute("action");
-
-        if(action.includes("YOUR_FORM_ID")){
-
-            event.preventDefault();
-
-            alert(
-                "Please connect your Formspree form ID before using the website contact form."
-            );
-
-        }
-
-    });
-
-}
-
-</script>
+    </script>
 
 </body>
+
 </html>
