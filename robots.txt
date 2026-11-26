@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block server/system folders
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Point crawlers directly to your XML sitemap
+Sitemap: https://fedestination.com/sitemap.xml
